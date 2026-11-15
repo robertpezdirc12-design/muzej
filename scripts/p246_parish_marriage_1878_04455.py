@@ -5,6 +5,7 @@ import json, re, sys, urllib.request
 import os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_URL = os.environ.get("MUZEJ_URL", "http://localhost:3000")
 results, ok = [], True
 
 def check(ime, cond, detail=""):
@@ -120,15 +121,19 @@ check("I11e NODAT-0 + datumski-dueli + mladoletnica-v16",
       d.get("nodat") == 0 and "DATUMSKI-DUELI-1878" in an and "16-l-MLADOLETNICA" in an)
 
 # ——— I10: QA-živo ———
-try:
-    r = urllib.request.Request("http://localhost:3000/api/qa")
-    with urllib.request.urlopen(r, timeout=30) as resp:
-        qa_data = json.load(resp)
-    check("I10 QA-živo 256/256 ok:True (+qa-p246-id!)",
-          qa_data.get("ok") is True and qa_data.get("passed") == 256 and qa_data.get("failed") == 0,
-          f"passed={qa_data.get('passed')} failed={qa_data.get('failed')}")
-except Exception as e:
-    check("I10 QA-živo", False, str(e)[:80])
+live = "--live" in sys.argv
+if live:
+    try:
+        r = urllib.request.Request(f"{BASE_URL}/api/qa")
+        with urllib.request.urlopen(r, timeout=30) as resp:
+            qa_data = json.load(resp)
+        check("I10 QA-živo 256/256 ok:True (+qa-p246-id!)",
+              qa_data.get("ok") is True and qa_data.get("passed") == 256 and qa_data.get("failed") == 0,
+              f"passed={qa_data.get('passed')} failed={qa_data.get('failed')}")
+    except Exception as e:
+        check("I10 QA-živo", False, str(e)[:80])
+else:
+    print("[SKIP] I10 QA-živo — zazeni z --live ali MUZEJ_URL")
 
 # ——— --live: Matricula-04455 ———
 if "--live" in sys.argv:

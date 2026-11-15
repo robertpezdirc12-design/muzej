@@ -17,6 +17,7 @@ import base64
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_URL = os.environ.get("MUZEJ_URL", "http://localhost:3000")
 OK = 0
 FAIL = 0
 LIVE = "--live" in sys.argv
@@ -167,7 +168,7 @@ if LIVE:
             md5_live = hashlib.md5(r2.read()).hexdigest()
         check("I10b LIVE s17-JPEG md5 == 3b1f5b30 (2.-prenos-1:1!)",
               md5_live == "3b1f5b30ad03bcccf43cbb581e276ad2", f"md5={md5_live}")
-        qa_data = json.loads(urllib.request.urlopen("http://localhost:3000/api/qa", timeout=90).read())
+        qa_data = json.loads(urllib.request.urlopen(f"{BASE_URL}/api/qa", timeout=90).read())
         p261_live = [t for t in qa_data.get("tests", []) if t.get("id") == "qa-p261-parish-marriage-notranjost-01738-1836-1837"]
         check("I10c LIVE /api/qa 256/256 ok:True (+qa-p261-id!)",
               qa_data.get("ok") is True and qa_data.get("passed") == 256 and p261_live and p261_live[0]["pass"] is True,

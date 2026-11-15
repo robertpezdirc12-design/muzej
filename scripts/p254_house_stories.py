@@ -3,9 +3,11 @@
 Sintezna faza: agregacija korpusa HOUSE_VITALS (2023) po hišah — modul
 parish-house-stories.ts + dokaz parish-house-stories.json + qa-p254 (248. kontrola)."""
 import json
+import os
 import re
 import sys
 import urllib.request
+BASE_URL = os.environ.get("MUZEJ_URL", "http://localhost:3000")
 
 OK = 0
 FAIL = 0
@@ -97,7 +99,7 @@ check("I9 pt-luknja-2059 (P258: +16-1831k/32/33!)",
 if "--live" in sys.argv:
     try:
         qa_data = json.loads(urllib.request.urlopen(
-            urllib.request.Request("http://localhost:3000/api/qa"), timeout=30).read().decode())
+            urllib.request.Request(f"{BASE_URL}/api/qa"), timeout=30).read().decode())
         p254 = [t for t in qa_data.get("tests", []) if t.get("id") == "qa-p254-parish-house-stories"]
         check("I10 LIVE QA-živo 249/249 ok:True (+qa-p254 + qa-p255!)",
               qa_data.get("ok") is True and qa_data.get("passed") == 252 and qa_data.get("failed") == 0

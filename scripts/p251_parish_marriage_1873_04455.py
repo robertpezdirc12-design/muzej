@@ -5,6 +5,7 @@ import json, re, sys, urllib.request
 import os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_URL = os.environ.get("MUZEJ_URL", "http://localhost:3000")
 results, ok = [], True
 
 def check(ime, cond, detail=""):
@@ -118,7 +119,7 @@ check("I9b P252-lead (13/13-ZAKLJUČENA + SINTEZA-možnost!)",
 
 if "--live" in sys.argv:
     try:
-        r = urllib.request.Request("http://localhost:3000/api/qa")
+        r = urllib.request.Request(f"{BASE_URL}/api/qa")
         qa_live = json.loads(urllib.request.urlopen(r, timeout=30).read().decode())
         check("I10 LIVE qa ok=True", qa_live.get("ok") is True and qa_live.get("failed") == 0,
               f"pass={qa_live.get('passed')} fail={qa_live.get('failed')}")

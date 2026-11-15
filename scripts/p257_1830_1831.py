@@ -12,6 +12,7 @@ import base64
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_URL = os.environ.get("MUZEJ_URL", "http://localhost:3000")
 OK = 0
 FAIL = 0
 
@@ -143,7 +144,7 @@ check("I10 pt-luknja-2059/01738:31 (P257!)",
       and pt2.get("corpus", {}).get("byBook", {}).get("04455") == 269, "-")
 
 live = "--live" in sys.argv
-if live or "--check" not in sys.argv:
+if live:
     # LIVE: matrica-HTTP + inventar + /api/qa
     try:
         req = urllib.request.Request(
@@ -166,7 +167,7 @@ if live or "--check" not in sys.argv:
     except Exception as e:
         check("I10b LIVE-matricula", False, str(e)[:80])
     try:
-        r = urllib.request.Request("http://localhost:3000/api/qa")
+        r = urllib.request.Request(f"{BASE_URL}/api/qa")
         with urllib.request.urlopen(r, timeout=60) as resp:
             qa_data = json.load(resp)
         p257 = [q for q in qa_data.get("tests", []) if q.get("id", "").startswith("qa-p257")]

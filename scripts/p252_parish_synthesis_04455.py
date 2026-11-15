@@ -9,6 +9,7 @@ import json, re, sys, urllib.request
 import os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_URL = os.environ.get("MUZEJ_URL", "http://localhost:3000")
 results, ok = [], True
 
 def check(ime, cond, detail=""):
@@ -116,9 +117,9 @@ check("I9 README (povzetek-P252 + tabela + korpus + odprto; P254-sanacija: vezaj
       "README+worklog P252")
 
 live = "--live" in sys.argv
-if live or "--check" not in sys.argv:
+if live:
     try:
-        with urllib.request.urlopen("http://localhost:3000/api/qa", timeout=60) as r:
+        with urllib.request.urlopen(f"{BASE_URL}/api/qa", timeout=60) as r:
             qa_live = json.load(r)
         p252_live = [t for t in qa_live["tests"] if t["id"] == "qa-p252-parish-synthesis-04455-early"]
         check("I10 LIVE /api/qa ok=True — pass=256 + p252-pass",

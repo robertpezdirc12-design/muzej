@@ -16,6 +16,7 @@ import base64
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_URL = os.environ.get("MUZEJ_URL", "http://localhost:3000")
 OK = 0
 FAIL = 0
 LIVE = "--live" in sys.argv
@@ -145,7 +146,7 @@ if LIVE:
         check("I10 LIVE matricula-01738", False, str(e)[:80])
     # I10b: /api/qa 254/254
     try:
-        qaResp = json.load(urllib.request.urlopen("http://localhost:3000/api/qa", timeout=120))
+        qaResp = json.load(urllib.request.urlopen(f"{BASE_URL}/api/qa", timeout=120))
         check("I10b LIVE /api/qa == 254/254 ok:True",
               qaResp.get("ok") is True and qaResp.get("passed") == 254 and qaResp.get("failed") == 0,
               f"{qaResp.get('passed')}/{qaResp.get('passed', 0) + qaResp.get('failed', 0)}")
