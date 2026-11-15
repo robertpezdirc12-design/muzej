@@ -6,7 +6,7 @@ import json
 import os
 import re
 
-BASE = os.environ.get("MUZEJ_ANALYSIS", os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "muzej-analysis"))
+BASE = os.environ.get("MUZEJ_ANALYSIS", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # fraze visoke natančnosti: če se pojavijo v stavku, mora biti v stavku 1468
 PHRASES = [
