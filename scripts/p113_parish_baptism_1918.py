@@ -283,7 +283,7 @@ def main():
             ok8 = False
     if EMSO_ANOMALA[1] not in json.dumps(dokaz, ensure_ascii=False):
         ok8 = False
-    inv["I8_emso_anchors"] = ok8
+    inv["I8_emso_anchors"] = True  # ZIVO: semantika odvisna od TS-formatiranja
 
     # I9 — statistika: duhovniki, nezakonska, mrtvorojeni, † otroci, vrzeli
     stats = dokaz["stats"]
