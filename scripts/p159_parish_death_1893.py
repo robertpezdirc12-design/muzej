@@ -159,7 +159,7 @@ def main():
     check("I6f p80-skripta pini 950 + 91 + gap-18 (P170-kaskada!)",
           "len(vitals) == 1940" in p80 and "len(houses) == 94" in p80 and "len(gap) == 18" in p80, "")  # python-p80 = 86 (širši 1897-filter; +h98 +h89!)
     houses_all = {v["houseNo"] for v in vit if v["houseNo"].isdigit()}
-    check("I6g korpus = 94 hiš (ZIVO P262!)", len(houses_all) == 93, str(len(houses_all)))
+    check("I6g korpus = 94 hiš (ZIVO P262!)", len(houses_all) == 94, str(len(houses_all)))
 
     # ---------- I7: max-zoom forenzika ----------
     r5 = next((e for e in ent if e["row"] == 5), None)
