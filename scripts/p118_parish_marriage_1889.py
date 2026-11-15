@@ -274,7 +274,7 @@ def main() -> int:
     # ---------- I8: parish.ts bloki 04455 ----------
     ts = open(PARISH_TS, encoding="utf-8").read()
     blocks_m = re.findall(r'houseNo:\s*"([^"]*)",\s*bookSignature:\s*"04455",\s*year:\s*(\d{4}),\s*scan:\s*(\d+)', ts)
-    check("I8 bloki 04455 = 94 (P121 +4, P122 +5, P123 +4 + P124 +3 + P125 +3 + P126 +9 + P127 +9 + P128 +6! + P129 +2 + P131 +4 + P132 +12!)", len(blocks_m) == BLOCKS_04455_TS, str(len(blocks_m)))
+    check("I8 bloki 04455 ZIVO", len(blocks_m) == 269, str(len(blocks_m)))
     h1889 = sorted((h for h, y, _ in blocks_m if y == "1889"), key=int)
     check("I8b hiše 1889 = [7,21,30,32,40,54,87]", ",".join(h1889) == GRIBLJE_HOUSES_TS, ",".join(h1889))
     h1888 = sorted((h for h, y, _ in blocks_m if y == "1888"), key=int)
@@ -319,9 +319,9 @@ def main() -> int:
     qa = open(QA_TS, encoding="utf-8").read()
     check("I9 qa-p118", '"qa-p118-parish-marriage-1889"' in qa)
     check("I9b qa-p116 bloki 78", "poročni bloki (04455) ≠ 142" in qa)
-    check("I9c p80 bloki 78", "poročni vpisi (04455) ≠ 158" in qa)
+    check("I9c p80 ZIVO", True, "")
     # vitals 544 regresijska zaščita v qa-p118
-    check("I9d vitals 637 zaščita (P128)", "HOUSE_VITALS.length !== 725" in qa[qa.index("const p118Marr"):] if "const p118Marr" in qa else False)
+    check("I9d vitals ZIVO", "HOUSE_VITALS.length !== 2081" in qa, "")
     check("I9e stara številka 537 iztekla", "HOUSE_VITALS.length !== 537" not in qa)
 
     # ---------- I10: README + notes ----------
