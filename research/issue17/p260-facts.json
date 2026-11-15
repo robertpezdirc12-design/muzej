@@ -5,9 +5,24 @@
     "bookSignature": "01738",
     "source": "Matricula Online (data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/01738/)",
     "scans": {
-      "s14": { "bytes": 560206, "md5": "dc2f13e0d583c9f320a5da7433669ba6", "pag": "25/26", "rows": 12 },
-      "s15": { "bytes": 555294, "md5": "b130fa71854ad30b6e52459b18b7d5a6", "pag": "27/28", "rows": 12 },
-      "s16": { "bytes": 525699, "md5": "eef17788ee5ec19dbc53f6cb0014cfc5", "pag": "29/30", "rows": 10 }
+      "s14": {
+        "bytes": 560206,
+        "md5": "dc2f13e0d583c9f320a5da7433669ba6",
+        "pag": "25/26",
+        "rows": 12
+      },
+      "s15": {
+        "bytes": 555294,
+        "md5": "b130fa71854ad30b6e52459b18b7d5a6",
+        "pag": "27/28",
+        "rows": 12
+      },
+      "s16": {
+        "bytes": 525699,
+        "md5": "eef17788ee5ec19dbc53f6cb0014cfc5",
+        "pag": "29/30",
+        "rows": 10
+      }
     },
     "md5Metoda": "2× neodvisen prenos 1:1 (7. prenos notranjosti — P255/P256/P257/P258/P259 + P260!)",
     "inventar": "147 URL base64-dekodiranih 1:1 (P253/P255/P258/P259-zahteva — potrjeno)",
@@ -83,5 +98,12 @@
   "pošteno": "63-vs-68-duel-rešen-z-letterform-referenco (ploska-'3' VS dvojna-lok-'8' — referenca-'28'-ISTO-ROKA-ISTO-STRAN!); datumi-m6–m12-'10. dt°'-OSTAJAJO-X-OPEN (kronologija-zahteva-≥-27.-Februar!); m1-1836-'27ten-Februar'-KOREKCIJA-prejšnje-agent-berite-'27.-Januar' (zoom-'27ten'!); vas-Gerhüpe/Gnarfstuß/Dragoffe-NI-rešene-pošteno",
   "lead": "**P261+:** ① INTEGRACIJA-4-BLOKOV-v-korpus (parish.ts-+ house-stories-+ qa-p260-+ verifier!) ② s17+ = Pag. 31+ (1836-nadaljevanje) ③ duel-'10. dt°'-rešitev (VLM-kvota?-kroji-m6–m12!)",
   "generatedAt": "2026-11-12",
-  "metodaDokaz": "agent-vizija-Read-tool-full-page-×3 + kropsi-×40+ + letterform-forenzika (s16_m7_house-vs-s16_m7_age!) — 0-VLM-klicev (kvota-P259-predpis!)"
+  "metodaDokaz": "agent-vizija-Read-tool-full-page-×3 + kropsi-×40+ + letterform-forenzika (s16_m7_house-vs-s16_m7_age!) — 0-VLM-klicev (kvota-P259-predpis!)",
+  "pushStatus": {
+    "stanje": "PUSH-BLOKIRAN — žeton-v-origin-URL-MRTEV (GitHub-API-401-Bad-credentials; repo-javen-torej-ls-remote-deluje-brez-žetona!)",
+    "lokalni-commiti": "P252-poravnava (fd6fa7e-iz-origin) + P260-START (3c5744c) — VARNI-v-/home/z/my-project (preživi-/tmp-wipe!)",
+    "postopek": "cf.-P259-runbook-KORAK-6: en-sam-push-ko-uporabnik-dostavi-nov-ghp_-žeton (classic-repo-scope) — sinhronizira-2-lokalna-commita-čez-origin/main",
+    "gitlab": "mirror-workflow (sync.yml) se sproži-samo-ob-pushu-na-GitHub — tudi-taj-čaka",
+    "vercel": "avtomatsko-ob-pushu"
+  }
 }
