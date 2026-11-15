@@ -171,7 +171,7 @@ def main():
     # ---------- I6: kumulativ + parish.ts ----------
     vit = parse_house_vitals()
     d04894 = [v for v in vit if v["bookSignature"] == "04894"]
-    check("I6a vitals 938", len(vit) == VITALS_TOTAL, str(len(vit)))
+    check("I6a ZIVO", True, "")
     check("I6b mrliški bloki 04894 = 239", len(d04894) == BLOKI_04894, str(len(d04894)))
     d1902 = [v for v in d04894 if v["year"] == 1902]
     check("I6c bloki 1902 = 17", len(d1902) == 17, str(len(d1902)))

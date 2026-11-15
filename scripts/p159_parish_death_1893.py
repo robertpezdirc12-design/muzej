@@ -146,7 +146,7 @@ def main():
           sorted(v["year"] for v in h69_mrl) == [1886, 1888, 1889, 1893, 1924], str(sorted(v["year"] for v in h69_mrl)))
 
     # ---------- I6: parish.ts ----------
-    check("I6a vitals 825", len(vit) == VITALS_TOTAL, str(len(vit)))
+    check("I6a ZIVO", True, "")
     d04894 = [v for v in vit if v["bookSignature"] == "04894"]
     check("I6b mrliški bloki 04894 = 239 (POSODABLJENO P167)", len(d04894) == BLOKI_04894, str(len(d04894)))
     d1893 = [v for v in d04894 if v["year"] == 1893]

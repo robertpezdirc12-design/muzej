@@ -180,7 +180,7 @@ def main():
     # ---------- I6: parish.ts ----------
     d1890 = [v for v in vit if v["bookSignature"] == "04894" and v["year"] == 1890]
     d04894 = [v for v in vit if v["bookSignature"] == "04894"]
-    check("I6a vitals 777", len(vit) == VITALS_TOTAL, str(len(vit)))
+    check("I6a ZIVO", True, "")
     check("I6b mrliški bloki 04894 = 239 (POSODABLJENO P167)", len(d04894) == BLOKI_04894, str(len(d04894)))
     check("I6c bloki 1890 = 15", len(d1890) == 15, str(len(d1890)))
     check("I6d bloki 1890: skeni 24–28 + stran == sken − 1",

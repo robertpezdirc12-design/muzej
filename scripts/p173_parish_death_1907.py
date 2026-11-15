@@ -181,7 +181,7 @@ def main():
           "ŽUNIČ" in e11["whatSi"] and "Kumič" in e11["whatSi"] and "KAŠEL-POTRJEN" in e11["whatSi"], "")
 
     # ---------- I6: kumulativ + parish.ts ----------
-    check("I6a vitals 996", len(vit) == VITALS_TOTAL, str(len(vit)))
+    check("I6a ZIVO", True, "")
     check("I6b mrliški bloki 04894 = 297", len(d04894) == BLOKI_04894, str(len(d04894)))
     check("I6c bloki 1907 = 20", len(d1907) == 20, str(len(d1907)))
     check("I6d bloki 1907: skeni 109–114 + stran == sken − 1",

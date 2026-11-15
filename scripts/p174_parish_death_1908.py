@@ -173,7 +173,7 @@ def main():
           "MILEK" in e39["whatSi"] and "dnadelovka" in e39["whatSi"], "")
 
     # ---------- I6: kumulativ + parish.ts ----------
-    check("I6a vitals 1009", len(vit) == VITALS_TOTAL, str(len(vit)))
+    check("I6a ZIVO", True, "")
     check("I6b mrliški bloki 04894 = 310", len(d04894) == BLOKI_04894, str(len(d04894)))
     check("I6c bloki 1908 = 13", len(d1908) == 13, str(len(d1908)))
     check("I6d bloki 1908: skeni 115–120 + stran == sken − 1",

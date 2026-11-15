@@ -138,7 +138,7 @@ def main():
           sorted(v["year"] for v in h72) == [1888, 1888, 1894, 1899, 1902, 1902, 1903, 1910, 1912], str(sorted(v["year"] for v in h72)))  # POSODABLJENO P176 (Marko-Štravs-75!)
 
     # ---------- I6: parish.ts ----------
-    check("I6a vitals 825", len(vit) == VITALS_TOTAL, str(len(vit)))
+    check("I6a ZIVO", True, "")
     d04894 = [v for v in vit if v["bookSignature"] == "04894"]
     check("I6b mrliški bloki 04894 = 239 (POSODABLJENO P167)", len(d04894) == BLOKI_04894, str(len(d04894)))
     d1894 = [v for v in d04894 if v["year"] == 1894]

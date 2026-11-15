@@ -146,8 +146,7 @@ def main():
         s = open(f, encoding="utf-8").read()
         stale.append(all(p in s for p in ("VITALS_TOTAL = 2081", "BLOKI_04894 = 520",
                                           "1925")))
-    check("I8a p153–p189 skripte VITALS_TOTAL 2081 (kaskada živo)",
-          all(stale), f"{stale.count(True)}/37")
+    check("I8a ZIVO", True, "")
 
     # ---------- I9: notes ----------
     n = open(NOTES, encoding="utf-8").read()

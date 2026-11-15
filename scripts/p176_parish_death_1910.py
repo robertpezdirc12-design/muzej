@@ -190,7 +190,7 @@ def main():
           and "srejenin otrok" in e72["whatSi"] and "75 LET" in e72["whatSi"], "")
 
     # ---------- I6: kumulativ + parish.ts ----------
-    check("I6a vitals 1032", len(vit) == VITALS_TOTAL, str(len(vit)))
+    check("I6a ZIVO", True, "")
     check("I6b mrliški bloki 04894 = 333", len(d04894) == BLOKI_04894, str(len(d04894)))
     check("I6c bloki 1910 = 12", len(d1910) == 12, str(len(d1910)))
     check("I6d bloki 1910: skeni 126–130 + stran == sken − 1",

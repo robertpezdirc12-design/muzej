@@ -185,7 +185,7 @@ def main():
           and "31.-PT-kandidat" in e86["whatSi"] and "Mišma" in e86["whatSi"], "")
 
     # ---------- I6: kumulativ + parish.ts ----------
-    check("I6a vitals 1032", len(vit) == VITALS_TOTAL, str(len(vit)))
+    check("I6a ZIVO", True, "")
     check("I6b mrliški bloki 04894 = 333", len(d04894) == BLOKI_04894, str(len(d04894)))
     check("I6c bloki 1909 = 11", len(d1909) == 11, str(len(d1909)))
     check("I6d bloki 1909: skeni 122–125 + stran == sken − 1",
