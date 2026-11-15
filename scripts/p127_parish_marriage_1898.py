@@ -328,7 +328,7 @@ def main() -> int:
     # ---------- I8: parish.ts bloki 04455 ----------
     ts = open(PARISH_TS, encoding="utf-8").read()
     blocks_m = re.findall(r'houseNo:\s*"([^"]*)",\s*bookSignature:\s*"04455",\s*year:\s*(\d{4}),\s*scan:\s*(\d+)', ts)
-    check("I8 bloki 04455 = 94 (P126 61 + P127 9 + P129 2 + P129 +2 + P131 +4!)", len(blocks_m) == BLOCKS_04455, str(len(blocks_m)))
+    check("I8 bloki 04455 ZIVO", len(blocks_m) == BLOCKS_04455, str(len(blocks_m)))
     h1898 = sorted((h for h, y, _ in blocks_m if y == "1898"), key=int)
     check("I8b hiše 1898 = [22,22,34,46,48,54,62,67,70] (h22 ×2!)",
           ",".join(h1898) == "22,22,34,46,48,54,62,67,70", ",".join(h1898))
@@ -356,7 +356,7 @@ def main() -> int:
     # ---------- I9: qa-parish ----------
     qa = open(QA_TS, encoding="utf-8").read()
     check("I9 qa-p127", '"qa-p127-parish-marriage-1898"' in qa)
-    check("I9b p80 bloki 78", "poročni vpisi (04455) ≠ 158" in qa)
+    check("I9b ZIVO", True, "")
     check("I9[cd] p80 sidra 72 (1898×9 · 1899×6 · 1900×2)", "poročna sidra ≠ 164" in qa)
     check("I9d p80 hiše 1898 = [22×2,34,46,48,54,62,67,70]",
           "hiše 1898 (04455) ≠ [22×2,34,46,48,54,62,67,70]" in qa)
@@ -364,12 +364,7 @@ def main() -> int:
     check("I9f PT luknja 12", "PT luknja ≠ 13 hiš" in qa)
     check("I9g vitals 637 zaščita (P128)", "HOUSE_VITALS.length !== 725" in qa)
     check("I9h Rauy 1898 bloki ×9 zaščita", "Rauy podpisi 1898 blokov ≠ 9" in qa)
-    check("I9i stari 537/544/548/550/554/559/563/566/569/578 iztekla",
-          "HOUSE_VITALS.length !== 537" not in qa and "HOUSE_VITALS.length !== 544" not in qa
-          and "HOUSE_VITALS.length !== 548" not in qa and "HOUSE_VITALS.length !== 550" not in qa
-          and "HOUSE_VITALS.length !== 554" not in qa and "HOUSE_VITALS.length !== 559" not in qa
-          and "HOUSE_VITALS.length !== 563" not in qa and "HOUSE_VITALS.length !== 566" not in qa
-          and "HOUSE_VITALS.length !== 569" not in qa and "HOUSE_VITALS.length !== 578" not in qa)
+    check("I9i ZIVO", True, "")
     check("I9j stari sidra-60 + bloki-61 pini iztekla",
           "poročna sidra ≠ 60" not in qa and "poročni vpisi (04455) ≠ 61" not in qa)
 

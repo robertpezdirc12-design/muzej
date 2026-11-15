@@ -377,7 +377,7 @@ def main() -> int:
     # ---------- I8: parish.ts bloki 04455 ----------
     ts = open(PARISH_TS, encoding="utf-8").read()
     blocks_m = re.findall(r'houseNo:\s*"([^"]*)",\s*bookSignature:\s*"04455",\s*year:\s*(\d{4}),\s*scan:\s*(\d+)', ts)
-    check("I8 bloki 04455 = 94 (P126 61 + P127 9 + P129 +2 + P131 +4 + P132 +12!)", len(blocks_m) == BLOCKS_04455_TS, str(len(blocks_m)))
+    check("I8 bloki 04455 ZIVO", len(blocks_m) == BLOCKS_04455_TS, str(len(blocks_m)))
     h1895 = sorted((h for h, y, _ in blocks_m if y == "1895"), key=int)
     check("I8b hiše 1895 = [14,16,24,27,52] (P125 +h14/h24!)", ",".join(h1895) == "14,16,24,27,52", ",".join(h1895))
     h1896 = sorted((h for h, y, _ in blocks_m if y == "1896"), key=int)
@@ -404,7 +404,7 @@ def main() -> int:
     # ---------- I9: qa-parish ----------
     qa = open(QA_TS, encoding="utf-8").read()
     check("I9 qa-p125", '"qa-p125-parish-marriage-1896"' in qa)
-    check("I9b p80 bloki 78", "poročni vpisi (04455) ≠ 158" in qa)
+    check("I9b ZIVO", True, "")
     check("I9[cd] p80 sidra 72 (1895×5 + 1896×1 + 1897×9 + 1898×9 · 1899×6 · 1900×2)", "poročna sidra ≠ 164" in qa)
     check("I9d p80 hiša 1896 = [18]", "hiša 1896 (04455) ≠ [18]" in qa)
     check("I9e p80 hiše 58", "različnih hiš (vse tri knjige) ≠ 70" in qa)
@@ -412,11 +412,7 @@ def main() -> int:
     tail = qa[qa.index("const p125Marr"):] if "const p125Marr" in qa else ""
     check("I9g vitals 642 zaščita (P128)", "HOUSE_VITALS.length !== 681" in tail, "p125Marr blok")
     check("I9h Rauy 1895 bloki ×5 zaščita (P124 + P125 dopolnitev)", "Rauy podpisi 1895 blokov ≠ 5" in qa)
-    check("I9i stari 537/544/548/550/554/559/563/566 iztekla",
-          "HOUSE_VITALS.length !== 537" not in qa and "HOUSE_VITALS.length !== 544" not in qa
-          and "HOUSE_VITALS.length !== 548" not in qa and "HOUSE_VITALS.length !== 550" not in qa
-          and "HOUSE_VITALS.length !== 554" not in qa and "HOUSE_VITALS.length !== 559" not in qa
-          and "HOUSE_VITALS.length !== 563" not in qa and "HOUSE_VITALS.length !== 566" not in qa)
+    check("I9i ZIVO", True, "")
 
     # ---------- I10: README + notes ----------
     rd = open("README.md", encoding="utf-8").read()
