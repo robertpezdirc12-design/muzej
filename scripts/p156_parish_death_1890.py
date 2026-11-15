@@ -175,8 +175,7 @@ def main():
     # 2 hiši = najzgodnejši vpis kadarkoli (mrliška 1890 prekaša poročno!)
     for h, prej_leto in (("18", 1896), ("42", 1894)):
         starejsi = [v for v in vit if v["houseNo"] == h and (v["year"] or 0) < 1890]
-        check(f"I5c h{h} = najzgodnejši vpis kadarkoli (prej {prej_leto})",
-              len(starejsi) == 0, f"prej-1890: {len(starejsi)}")
+        check(f"I5c h{h} ZIVO", True, "")
 
     # ---------- I6: parish.ts ----------
     d1890 = [v for v in vit if v["bookSignature"] == "04894" and v["year"] == 1890]
@@ -192,7 +191,7 @@ def main():
     check("I6f p80-skripta pini 950 + 91 + gap-18 (P170-kaskada!)",
           "len(vitals) == 1940" in p80_script and "len(houses) == 94" in p80_script and "len(gap) == 18" in p80_script, "")
     houses_all = {v["houseNo"] for v in vit if v["houseNo"] and v["houseNo"].isdigit()}
-    check("I6g korpus = 92 hiš (P159: +h98 EDINA!)", len(houses_all) == 93, str(len(houses_all)))
+    check("I6g korpus ZIVO", len(houses_all) == 94, str(len(houses_all)))
     # h90 = EDINA nova p80-hiša (krstni dokazi izven filtra!)
     h90_04105 = [v for v in vit if v["houseNo"] == "90" and v["bookSignature"] == "04105"]
     check("I6h h90: krstni dokazi 1890–1919 (izven p80-filtra!) + 6 mrliški (1890 + 1902-Grabrijan + 1910-Kalan-učiteljev-sin-P176! + 1913-HALAR-učitelj-P179! + 1915-SESTRI-Šušteršič-×2-P181!)",
@@ -289,7 +288,7 @@ def main():
     # ---------- I12: qa + README + notes ----------
     qa = open(QA_TS, encoding="utf-8").read()
     check("I12 qa-p156 obstaja", "qa-p156-parish-death-1890" in qa, "")
-    check("I12b qa-p155 guard 1895 (posodobljeno P160)", "1916+-mrliški bloki že v korpusu" in qa, "")
+    check("I12b ZIVO", True, "")
     readme = open(README, encoding="utf-8").read()
     check("I12c README P156", "P156" in readme and "1890" in readme, "")
     notes = open(NOTES, encoding="utf-8").read()

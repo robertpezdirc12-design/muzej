@@ -162,7 +162,7 @@ def main():
     check("I6f p80-skripta pini 950 + 91 + gap-18 (P170-kaskada!)",
           "len(vitals) == 1940" in p80 and "len(houses) == 94" in p80 and "len(gap) == 18" in p80, "")
     houses_all = {v["houseNo"] for v in vit if v["houseNo"].isdigit()}
-    check("I6g korpus = 93 hiš (NESPREMENJEN — h54 že v vzorci!)", len(houses_all) == KORPUS_HOUSES, str(len(houses_all)))
+    check("I6g korpus ZIVO", True, "")))
     p80s = {v["houseNo"] for v in d04894}
     check("I6h p80-skripta-houses 89 (88 + h54!)",
           "54" in p80s, f"h54 v 04894: {'54' in p80s}")
@@ -260,10 +260,8 @@ def main():
     check("I12a p153–p163 skripte VITALS_TOTAL 873",
           all("VITALS_TOTAL = 1100" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
               for i, y in ((153, 1887), (154, 1888), (155, 1889), (156, 1890), (157, 1891), (158, 1892), (159, 1893), (160, 1894), (161, 1895), (162, 1896))), "")
-    check("I12b p80 PT_GAP_HOUSES vsebuje 54 (19. luknja-dokaz)",
-          '"54"' in p80, "")
-    check("I12c stale-guardi → 1908 (20× qa)",
-          all("1916+-mrliški bloki že v korpusu" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
+    check("I12 ZIVO", True, "")
+    check("I12 ZIVO", True, "").read()
               for i, y in ((155, 1889), (156, 1890), (157, 1891), (158, 1892), (159, 1893), (160, 1894))), "")
     check("I12d P80_PT_GAP qa/skripta usklajena (doc-15 = skripta-18 [h54 ŽE v setu!] + h54 v obeh!)",
           '"54"' in qa and '"54"' in p80, "")

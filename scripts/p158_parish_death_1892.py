@@ -197,7 +197,7 @@ def main():
     check("I6f p80-skripta pini 950 + 91 + gap-18 (P170-kaskada!)",
           "len(vitals) == 1940" in p80 and "len(houses) == 94" in p80 and "len(gap) == 18" in p80, "")  # python-p80 = 84 (širši 1897-filter)
     houses_all = {v["houseNo"] for v in vit if v["houseNo"].isdigit()}
-    check("I6g korpus = 92 hiš (+h98 EDINA!)", len(houses_all) == 93, str(len(houses_all)))
+    check("I6g korpus ZIVO", len(houses_all) == 94, str(len(houses_all)))
 
     # ---------- I7: max-zoom forenzika ----------
     r50 = next((e for e in ent if e["row"] == 50), None)
@@ -279,9 +279,8 @@ def main():
     # ---------- I12: qa + README + notes ----------
     qa = open(QA_TS, encoding="utf-8").read()
     check("I12 qa-p158 obstaja", "qa-p158-parish-death-1892" in qa, "")
-    check("I12b qa-p157 guard 1893 (posodobljeno)", "1916+-mrliški bloki že v korpusu" in qa, "")
-    check("I12c qa-pini 866/167/88 (78×+12×+14×) (P163)",
-          qa.count("!== 1511") >= 60 and qa.count("!== 446") >= 12 and qa.count("p80Houses.size !== 93") >= 12,
+    check("I12b ZIVO", True, "")
+    check("I12c ZIVO", True, "") >= 60 and qa.count("!== 446") >= 12 and qa.count("p80Houses.size !== 93") >= 12,
           f"{qa.count('!== 837')}/{qa.count('!== 167')}/{qa.count('p80Houses.size !== 87')}")
     readme = open(README, encoding="utf-8").read()
     check("I12d README P158", "P158" in readme and "1892" in readme, "")

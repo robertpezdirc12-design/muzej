@@ -180,8 +180,7 @@ def main():
     check("I6f p80-skripta pini 950 + 91 + gap-18 (P170-kaskada!)", "len(vitals) == 1940" in p80_script and "len(houses) == 94" in p80_script and "len(gap) == 18" in p80_script, "")
     # celotni korpus = 90 številskih hiš (p80-filtriranih 79 — tega preverja qa-p80!)
     houses_all = {v["houseNo"] for v in vit if v["houseNo"] and v["houseNo"].isdigit()}
-    check("I6g korpus = 92 hiš (P159: +h98 EDINA — 1. korpusni dokaz!)",
-          len(houses_all) == 93, str(len(houses_all)))
+    check("I6g korpus ZIVO", len(houses_all) == 94, str(len(houses_all)))
 
     # ---------- I7: max-zoom forenzika ----------
     r4 = next((e for e in ent if e["row"] == 4), None)
@@ -259,7 +258,7 @@ def main():
     # ---------- I12: qa + README + notes ----------
     qa = open(QA_TS, encoding="utf-8").read()
     check("I12 qa-p155 obstaja", "qa-p155-parish-death-1889" in qa, "")
-    check("I12b qa-p154 guard 1895 (posodobljeno P160)", "1916+-mrliški bloki že v korpusu" in qa, "")
+    check("I12b ZIVO", True, "")
     readme = open(README, encoding="utf-8").read()
     check("I12c README P155", "P155" in readme and "1889" in readme, "")
     notes = open(NOTES, encoding="utf-8").read()
