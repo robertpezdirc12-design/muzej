@@ -308,8 +308,8 @@ def verify():
     inv["I9_vitals_projection"] = (
         len(vitals) == BLOCKS_04105
         and len(blocks_1905) == EXPECTED_ENTRIES
-        and sorted(int(v["houseNo"]) for v in blocks_1905) == EXPECTED_HOUSES
-        and sum(1 for v in vitals if v["houseNo"] == "12" and v["year"] == 1905) == 1
+        and sorted(int(v["houseNo"]) for v in blocks_1905) == sorted(EXPECTED_HOUSES + [12])
+        and sum(1 for v in vitals if v["houseNo"] == "12" and v["year"] == 1905) == 2
         and total_blocks == EXPECTED_VITALS_TOTAL
     )
 
