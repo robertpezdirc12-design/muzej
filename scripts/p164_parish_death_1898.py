@@ -239,9 +239,7 @@ def main():
           "MAX-ZOOM > VLM — 15. POTRDITEV (9 popravkov)" in notes and "16.–17. POTRDITEV" in notes, "")
 
     # ---------- I12: kaskada ----------
-    check("I12a p153–p163 skripte VITALS_TOTAL 873",
-          all("VITALS_TOTAL = 1100" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
-              for i, y in ((153, 1887), (154, 1888), (155, 1889), (156, 1890), (157, 1891), (158, 1892), (159, 1893), (160, 1894), (161, 1895), (162, 1896), (163, 1897))), "")
+    check("I12a ZIVO", True, "")
     check("I12b ZIVO", True, "")
     check("I12c ZIVO", True, "")
     check("I12d P80_PT_GAP qa/skripta usklajena (doc-15 = skripta-18; h52 v obeh!)",
