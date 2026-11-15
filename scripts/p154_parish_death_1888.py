@@ -192,7 +192,7 @@ def main():
           and "NAPAČNA" in r15["whatSi"], "")
 
     # ---------- I8: P153-kontinuiteta ----------
-    p153 = json.load(open(DOKAZ_P153))
+    p153 = json.load(open(DOKAZ_P153, encoding="utf-8"))
     lead = next((e for e in ent if e["row"] == 5 and e["houseNo"] == "72"), None)
     check("I8a P153-lead r5 h72 potrjen (1 DAN, 31.1.)", bool(lead)
           and lead["whatSi"].startswith("umrla Marija Straus"), "")

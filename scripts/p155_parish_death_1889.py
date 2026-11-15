@@ -205,7 +205,7 @@ def main():
           and "ZADNJI gribeljski vpis 1889" in r33["whatSi"], "")
 
     # ---------- I8: P154-kontinuiteta ----------
-    p154 = json.load(open(DOKAZ_P154))
+    p154 = json.load(open(DOKAZ_P154, encoding="utf-8"))
     lead = next((e for e in ent if e["row"] == 4 and e["houseNo"] == "53"), None)
     check("I8a P154-lead r4 h53 potrjen + popravljen (67→49)",
           bool(lead) and lead["whatSi"].startswith("umrla Ana Perdihec"), "")

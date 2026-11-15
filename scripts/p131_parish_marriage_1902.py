@@ -76,7 +76,7 @@ def main():
     live = "--live" in sys.argv
 
     # ---------- I1: dokaz ----------
-    d = json.load(open(DOKAZ))
+    d = json.load(open(DOKAZ, encoding="utf-8"))
     ent = d["entries"]
     check("I1 dokaz JSON", len(ent) == EXPECTED_ENTRIES, f"{len(ent)}/{EXPECTED_ENTRIES} vpisov")
     check("I1b excluded []", d.get("excluded") == EXPECTED_EXCLUDED, str(d.get("excluded")))
@@ -118,7 +118,7 @@ def main():
     check("I4c drubel ×2", allsi.count("DRUBEL") >= 2, str(allsi.count("DRUBEL")))
 
     # ---------- I5: parish.ts ----------
-    ts = open(PARISH_TS).read()
+    ts = open(PARISH_TS, encoding="utf-8").read()
     n_04455_1902 = len(re.findall(r'houseNo:\s*"(\d+)",\s*bookSignature:\s*"04455",\s*year:\s*1902', ts))
     check("I5a parish.ts bloki 1902 = 4", n_04455_1902 == GRIBLJE_BLOCKS, str(n_04455_1902))
     for hn, pin in [("5", "ŠTRUPEC"), ("31", "MULH"), ("30", "LEGINA"), ("24", "BRIŠEC")]:
@@ -130,7 +130,7 @@ def main():
     check("I5e ženitovanjska v ts", "ženitovanjska" in ts)
 
     # ---------- I6: qa-parish.ts ----------
-    qa = open(QA_TS).read()
+    qa = open(QA_TS, encoding="utf-8").read()
     check("I6a qa-p131 test", "qa-p131-parish-marriage-1902" in qa)
     n599 = qa.count("HOUSE_VITALS.length !== 2043")
     n595 = qa.count("HOUSE_VITALS.length !== 2043")
@@ -158,17 +158,17 @@ def main():
     check("I8d C13 ženitovanjska", "C13" in ids and "Trauungs-Anzeige" in d["crossChecks"][12]["what"])
 
     # ---------- I9: kontinuiteta ----------
-    d130 = json.load(open(DOKAZ_P130))
+    d130 = json.load(open(DOKAZ_P130, encoding="utf-8"))
     check("I9 P130 dokaz nespremenjen (11)", len(d130["entries"]) == 11)
     check("I9b lead korekcije", "GRIBLJE 5" in allsi and "Sept 15" in allsi)
     check("I9c Dostál + lediga", "Dostál" in allsi and "lediga" in allsi)
     check("I9d P132 lead v dokazu", "GRIBLJE 11" in allsi and "Žunjič" in allsi)
 
     # ---------- I10: README + notes ----------
-    rd = open(README).read()
+    rd = open(README, encoding="utf-8").read()
     check("I10 README po P131", "P131" in rd)
     check("I10b README 611/94", "611" in rd and "94" in rd)
-    nt = open(NOTES).read()
+    nt = open(NOTES, encoding="utf-8").read()
     check("I10c notes faze + rekonstrukcija", "FAZA 0" in nt and "FAZA 2" in nt and "REKONSTRUKCIJA" in nt.upper())
     check("I10d notes drubel + dostál", "DRUBEL" in nt.upper() and "Dostál" in nt)
 

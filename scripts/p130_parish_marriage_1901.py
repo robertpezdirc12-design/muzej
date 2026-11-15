@@ -71,7 +71,7 @@ def main():
     live = "--live" in sys.argv
 
     # ---------- I1: dokaz ----------
-    d = json.load(open(DOKAZ))
+    d = json.load(open(DOKAZ, encoding="utf-8"))
     ent = d["entries"]
     check("I1 dokaz JSON", len(ent) == EXPECTED_ENTRIES, f"{len(ent)}/{EXPECTED_ENTRIES} vpisov")
     check("I1b excluded 0", d.get("excluded") == [], str(d.get("excluded")))
@@ -113,7 +113,7 @@ def main():
     check("I4b ASIMETRIJA opomba", "ASIMETRIJA" in allsi and "P96" in allsi)
 
     # ---------- I5: parish.ts ----------
-    ts = open(PARISH_TS).read()
+    ts = open(PARISH_TS, encoding="utf-8").read()
     n_1901 = ts.count("year: 1901")
     check("I5a parish.ts year:1901 (samo P96 krstne!)", n_1901 >= 8, str(n_1901))
     n_04455_1901 = len([
@@ -126,7 +126,7 @@ def main():
     n78 = ts.count("78")
 
     # ---------- I6: qa-parish.ts ----------
-    qa = open(QA_TS).read()
+    qa = open(QA_TS, encoding="utf-8").read()
     check("I6a qa-p130 test", "qa-p130-parish-marriage-1901" in qa)
     check("I6b masa 11.2. v qa", "11" in qa and "6" in qa)
     check("I6c Rauy 11/11 v qa", "11/11" in qa)
@@ -143,15 +143,15 @@ def main():
     check("I8d C5 ¾ v7", "C5" in ids and "P128 v7" in d["crossChecks"][4]["what"])
 
     # ---------- I9: kontinuiteta ----------
-    d129 = json.load(open(DOKAZ_P129))
+    d129 = json.load(open(DOKAZ_P129, encoding="utf-8"))
     check("I9 P129 dokaz nespremenjen (8)", len(d129["entries"]) == 8)
     check("I9b korekcije ×4", all(k in allsi for k in ["Jänner 28", "Otok 34", "KRIŽAN", "PALČIČ"]))
     check("I9c dispensi ×2", "Anverwantschaft" in allsi and "236" in allsi)
 
     # ---------- I10: README + notes ----------
-    rd = open(README).read()
+    rd = open(README, encoding="utf-8").read()
     check("I10 README po P130", "P130" in rd)
-    nt = open(NOTES).read()
+    nt = open(NOTES, encoding="utf-8").read()
     check("I10b notes faza 2 + masa", "FAZA 2" in nt and "6 POROK" in nt.upper() and "REKONSTRUKCIJA" in nt.upper())
 
     # ---------- live ----------

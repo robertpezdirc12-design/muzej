@@ -56,7 +56,7 @@ def main():
     live = "--live" in sys.argv
 
     # ---------- I1: dokaz ----------
-    d = json.load(open(DOKAZ))
+    d = json.load(open(DOKAZ, encoding="utf-8"))
     ent = d["entries"]
     check("I1 dokaz JSON 13 vpisov", len(ent) == EXPECTED_ENTRIES, f"{len(ent)}/{EXPECTED_ENTRIES}")
     unnum = [e for e in ent if not re.match(r"^\d+$", str(e["row"]))]
@@ -176,7 +176,7 @@ def main():
           all('"p80Houses.size !== 77"' in open(f, encoding="utf-8").read()
               for f in ("scripts/p137_parish_marriage_1908.py", "scripts/p142_parish_marriage_1913.py",
                         "scripts/p146_parish_marriage_1917.py")), "")
-    p150d = json.load(open(DOKAZ_P150))
+    p150d = json.load(open(DOKAZ_P150, encoding="utf-8"))
     check("I12d P150-kontinuiteta (31 vpisov 1921)", len(p150d["entries"]) == 31, "")
 
     # ---------- L1–L3: live ----------

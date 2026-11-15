@@ -118,7 +118,7 @@ def main() -> int:
 
     # ---------- I1: dokaz JSON ----------
     try:
-        d = json.load(open(DOKAZ))
+        d = json.load(open(DOKAZ, encoding="utf-8"))
     except Exception as e:  # noqa: BLE001
         print(f"I1 FAIL: {e}")
         return 1
@@ -265,14 +265,14 @@ def main() -> int:
     check("I7d CC9 = NOVAK varuh↔nevesta", "NOVAK" in cc9.get("verdict", "") and "varuh" in cc9.get("verdict", ""))
     # P117 dokaz ostaja nespremenjen (regresijska zaščita)
     try:
-        d117 = json.load(open(DOKAZ_P117))
+        d117 = json.load(open(DOKAZ_P117, encoding="utf-8"))
         check("I7e P117 dokaz stats vitals=537", d117["stats"].get("vitals") == 537,
               str(d117["stats"].get("vitals")))
     except Exception as e:  # noqa: BLE001
         check("I7e P117 dokaz branje", False, str(e))
 
     # ---------- I8: parish.ts bloki 04455 ----------
-    ts = open(PARISH_TS).read()
+    ts = open(PARISH_TS, encoding="utf-8").read()
     blocks_m = re.findall(r'houseNo:\s*"([^"]*)",\s*bookSignature:\s*"04455",\s*year:\s*(\d{4}),\s*scan:\s*(\d+)', ts)
     check("I8 bloki 04455 = 94 (P121 +4, P122 +5, P123 +4 + P124 +3 + P125 +3 + P126 +9 + P127 +9 + P128 +6! + P129 +2 + P131 +4 + P132 +12!)", len(blocks_m) == BLOCKS_04455_TS, str(len(blocks_m)))
     h1889 = sorted((h for h, y, _ in blocks_m if y == "1889"), key=int)
@@ -316,7 +316,7 @@ def main() -> int:
           str(sum(1 for w in whatsis1889 if "2. poročni dokaz h21" in w or "2. poročni dokaz h32" in w)))
 
     # ---------- I9: qa-parish ----------
-    qa = open(QA_TS).read()
+    qa = open(QA_TS, encoding="utf-8").read()
     check("I9 qa-p118", '"qa-p118-parish-marriage-1889"' in qa)
     check("I9b qa-p116 bloki 78", "poročni bloki (04455) ≠ 142" in qa)
     check("I9c p80 bloki 78", "poročni vpisi (04455) ≠ 158" in qa)
@@ -325,9 +325,9 @@ def main() -> int:
     check("I9e stara številka 537 iztekla", "HOUSE_VITALS.length !== 537" not in qa)
 
     # ---------- I10: README + notes ----------
-    rd = open("README.md").read()
+    rd = open("README.md", encoding="utf-8").read()
     check("I10 README po P118", "P118" in rd and ("124/124" in rd or "po P123" in rd))
-    nt = open("research/issue17/parish-marriage-1889-notes.md").read()
+    nt = open("research/issue17/parish-marriage-1889-notes.md", encoding="utf-8").read()
     check("I10b notes faza 2", "FAZA 2" in nt and "NEZAKONSKA" in nt.upper())
 
     # ---------- live ----------

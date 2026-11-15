@@ -75,7 +75,7 @@ def main():
     live = "--live" in sys.argv
 
     # ---------- I1: dokaz ----------
-    d = json.load(open(DOKAZ))
+    d = json.load(open(DOKAZ, encoding="utf-8"))
     ent = d["entries"]
     check("I1 dokaz JSON", len(ent) == EXPECTED_ENTRIES, f"{len(ent)}/{EXPECTED_ENTRIES} vpisov")
     check("I1b excluded 0", d.get("excluded") == [], str(d.get("excluded")))
@@ -113,7 +113,7 @@ def main():
     check("I4b Griblje hiše [7, 8]", gh == GRIBLJE_HOUSES, str(gh))
 
     # ---------- I5: parish.ts bloki ----------
-    ts = open(PARISH_TS).read()
+    ts = open(PARISH_TS, encoding="utf-8").read()
     n_1900 = ts.count('bookSignature: "04455",\n    year: 1900,')
     check("I5 2 bloka 1900 (04455)", n_1900 == GRIBLJE_BLOCKS, str(n_1900))
     pins = [("7", "1. POROČNI DOKAZ h7"), ("8", "1. POROČNI DOKAZ h8")]
@@ -128,7 +128,7 @@ def main():
     check("I5d P129 sekcija", "P129 razširitev: POROČNA KNJIGA 04455 — polno leto 1900" in ts)
 
     # ---------- I6: qa-parish pini ----------
-    qa = open(QA_TS).read()
+    qa = open(QA_TS, encoding="utf-8").read()
     n595 = qa.count("HOUSE_VITALS.length !== 2043")
     n593 = qa.count("HOUSE_VITALS.length !== 2043")
     n78 = qa.count("≠ 142 (")
@@ -158,7 +158,7 @@ def main():
     check("I8d C2 priča-po-poroki", "C2" in ids and "7 dni" in d["crossChecks"][1]["what"])
 
     # ---------- I9: kontinuiteta + korekcije lead ----------
-    d128 = json.load(open(DOKAZ_P128))
+    d128 = json.load(open(DOKAZ_P128, encoding="utf-8"))
     check("I9 P128 dokaz nespremenjen (9)", len(d128["entries"]) == 9)
     allsi = json.dumps(d, ensure_ascii=False)
     check("I9b ŽUPANIČ ×3 mreža", "ŽUPANIČ ×3" in allsi)
@@ -166,9 +166,9 @@ def main():
     check("I9d nezakonska nevesta C8", "C8" in ids and "NEVESTA" in allsi and "ČRTA" in allsi)
 
     # ---------- I10: README + notes ----------
-    rd = open(README).read()
+    rd = open(README, encoding="utf-8").read()
     check("I10 README po P129", "P129" in rd and "595" in rd and "78" in rd)
-    nt = open(NOTES).read()
+    nt = open(NOTES, encoding="utf-8").read()
     check("I10b notes faza 2 + korekcije", "FAZA 2" in nt and "KOREKCIJE" in nt.upper() and "ŽUPANIČ" in nt)
 
     # ---------- live ----------

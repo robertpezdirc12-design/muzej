@@ -116,7 +116,7 @@ def main() -> int:
 
     # ---------- I1: dokaz JSON ----------
     try:
-        d = json.load(open(DOKAZ))
+        d = json.load(open(DOKAZ, encoding="utf-8"))
     except Exception as e:  # noqa: BLE001
         print(f"I1 FAIL: {e}")
         return 1
@@ -323,7 +323,7 @@ def main() -> int:
           "04105" in c21.get("what", "") and "MEGA" in c21.get("what", ""), c21.get("what", "")[:60])
     # P125 dokaz ostaja nespremenjen (regresijska zaščita — lastna kumulativa)
     try:
-        d125 = json.load(open(DOKAZ_P125))
+        d125 = json.load(open(DOKAZ_P125, encoding="utf-8"))
         check("I7h P125 dokaz stats vitals=569 + bloki=52",
               d125["stats"].get("vitals") == 569 and d125["stats"].get("blocks04455") == 52,
               f'v{d125["stats"].get("vitals")} b{d125["stats"].get("blocks04455")}')
@@ -331,7 +331,7 @@ def main() -> int:
         check("I7h P125 dokaz branje", False, str(e))
 
     # ---------- I8: parish.ts bloki 04455 ----------
-    ts = open(PARISH_TS).read()
+    ts = open(PARISH_TS, encoding="utf-8").read()
     blocks_m = re.findall(r'houseNo:\s*"([^"]*)",\s*bookSignature:\s*"04455",\s*year:\s*(\d{4}),\s*scan:\s*(\d+)', ts)
     check("I8 bloki 04455 = 94 (P126 61 + P127 9 + P129 +2 + P131 +4 + P132 +12!)", len(blocks_m) == BLOCKS_04455, str(len(blocks_m)))
     h1897 = sorted((h for h, y, _ in blocks_m if y == "1897"), key=int)
@@ -357,7 +357,7 @@ def main() -> int:
     check("I8e regresija P125: h18-1896 GROSSJÄHRIGKEITS", p125_ok, "h18-1896 pin")
 
     # ---------- I9: qa-parish ----------
-    qa = open(QA_TS).read()
+    qa = open(QA_TS, encoding="utf-8").read()
     check("I9 qa-p126", '"qa-p126-parish-marriage-1897"' in qa)
     check("I9b p80 bloki 78", "poročni vpisi (04455) ≠ 158" in qa)
     check("I9[cd] p80 sidra 72 (1897×9 + 1898×9 · 1899×6 · 1900×2)", "poročna sidra ≠ 164" in qa)
@@ -375,9 +375,9 @@ def main() -> int:
           and "HOUSE_VITALS.length !== 569" not in qa)
 
     # ---------- I10: README + notes ----------
-    rd = open("README.md").read()
+    rd = open("README.md", encoding="utf-8").read()
     check("I10 README po P126", "P126" in rd and ("127/127" in rd or "po P126" in rd))
-    nt = open("research/issue17/parish-marriage-1897-notes.md").read()
+    nt = open("research/issue17/parish-marriage-1897-notes.md", encoding="utf-8").read()
     check("I10b notes faza 2 + GRIBLJE + fotograf-priča", "FAZA 2" in nt and "GRIBLJE" in nt
           and "fotograf" in nt.lower())
 

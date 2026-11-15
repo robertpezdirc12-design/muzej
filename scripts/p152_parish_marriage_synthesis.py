@@ -62,7 +62,7 @@ def main():
     live = "--live" in sys.argv
 
     # ---------- I1: dokaz-sinteza ----------
-    d = json.load(open(DOKAZ))
+    d = json.load(open(DOKAZ, encoding="utf-8"))
     py = d["perYear"]
     check("I1 dokaz-sinteza 37 let", len(py) == 37, str(len(py)))
     check("I1a perYear leta 1886–1922 zapored", [p["year"] for p in py] == YEARS, "")
@@ -136,7 +136,7 @@ def main():
     # ---------- I8: pomeri dokaze — gribljeBlocks*-ključi (23 let) ----------
     mism, present = [], 0
     for y in YEARS:
-        dd = json.load(open(f"research/issue17/parish-marriage-{y}.json"))
+        dd = json.load(open(f"research/issue17/parish-marriage-{y}.json", encoding="utf-8"))
         st = dd.get("stats", {})
         g = None
         for k in ("gribljeBlocks", "gribljeBlocksNew", "gribljeEntries"):
@@ -172,9 +172,9 @@ def main():
     check("I10d notes P152 obstajajo", "P152" in nt and "SYNTHESIS-M04455" in nt, "")
 
     # ---------- I11: kontinuiteta P115 + P151 ----------
-    d1886 = json.load(open("research/issue17/parish-marriage-1886.json"))
+    d1886 = json.load(open("research/issue17/parish-marriage-1886.json", encoding="utf-8"))
     check("I11a P115-1886 kontinuiteta (24 vpisov!)", len(d1886["entries"]) == 24, "")
-    d1922 = json.load(open("research/issue17/parish-marriage-1922.json"))
+    d1922 = json.load(open("research/issue17/parish-marriage-1922.json", encoding="utf-8"))
     check("I11b P151-1922 kontinuiteta (13 vpisov — KONEC!)", len(d1922["entries"]) == 13, "")
     check("I11c sinteza-vrsta SYNTHESIS-M04455", d["type"] == "SYNTHESIS-M04455", "")
     check("I11d openQuestions: odločitev uporabnika",

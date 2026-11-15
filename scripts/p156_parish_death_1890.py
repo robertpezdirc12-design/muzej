@@ -224,7 +224,7 @@ def main():
           bool(r43) and r43["houseNo"] == "71" and "ne 72" in r43["whatSi"].lower(), "")
 
     # ---------- I8: P155-kontinuiteta ----------
-    p155 = json.load(open(DOKAZ_P155))
+    p155 = json.load(open(DOKAZ_P155, encoding="utf-8"))
     check("I8a P155-lead r8 h90 potrjen (Klambič-učitelj)",
           bool(r8) and r8["whatSi"].startswith("umrl g. Peter Klambič"), "")
     p155_last = [e for e in p155["entries"] if e["row"] == 33]

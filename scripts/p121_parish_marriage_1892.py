@@ -97,7 +97,7 @@ def main() -> int:
 
     # ---------- I1: dokaz JSON ----------
     try:
-        d = json.load(open(DOKAZ))
+        d = json.load(open(DOKAZ, encoding="utf-8"))
     except Exception as e:  # noqa: BLE001
         print(f"I1 FAIL: {e}")
         return 1
@@ -282,7 +282,7 @@ def main() -> int:
     check("I7e C11 LAIPŠL ×5 (2. leto mreže)", "×5" in c11.get("text", ""), c11.get("text", "")[:60])
     # P120 dokaz ostaja nespremenjen (regresijska zaščita — lastna kumulativa)
     try:
-        d120 = json.load(open(DOKAZ_P120))
+        d120 = json.load(open(DOKAZ_P120, encoding="utf-8"))
         check("I7f P120 dokaz stats vitals=550 + bloki=33",
               d120["stats"].get("vitals") == 550 and d120["stats"].get("blocks04455") == 33,
               f'v{d120["stats"].get("vitals")} b{d120["stats"].get("blocks04455")}')
@@ -290,7 +290,7 @@ def main() -> int:
         check("I7f P120 dokaz branje", False, str(e))
 
     # ---------- I8: parish.ts bloki 04455 ----------
-    ts = open(PARISH_TS).read()
+    ts = open(PARISH_TS, encoding="utf-8").read()
     blocks_m = re.findall(r'houseNo:\s*"([^"]*)",\s*bookSignature:\s*"04455",\s*year:\s*(\d{4}),\s*scan:\s*(\d+)', ts)
     check("I8 bloki 04455 = 94 (P122 +5, P123 +4 + P124 +3 + P125 +3 + P126 +9 + P127 +9 + P128 +6! + P129 +2 + P131 +4 + P132 +12!)", len(blocks_m) == BLOCKS_04455_TS, str(len(blocks_m)))
     h1892 = sorted((h for h, y, _ in blocks_m if y == "1892"), key=int)
@@ -330,7 +330,7 @@ def main() -> int:
               for m in re.finditer(r'houseNo:\s*"([^"]*)",\s*bookSignature:\s*"04455",\s*year:\s*1892,[^}]*?whatSi:\s*"((?:[^"\\]|\\.)*)"', ts, re.S)))
 
     # ---------- I9: qa-parish ----------
-    qa = open(QA_TS).read()
+    qa = open(QA_TS, encoding="utf-8").read()
     check("I9 qa-p121", '"qa-p121-parish-marriage-1892"' in qa)
     check("I9b p80 bloki 78", "poročni vpisi (04455) ≠ 158" in qa)
     check("I9[cd] p80 sidra 72 (1898×9 · 1899×6 · 1900×2!)", "poročna sidra ≠ 164" in qa)
@@ -343,9 +343,9 @@ def main() -> int:
           and "HOUSE_VITALS.length !== 554" not in qa)
 
     # ---------- I10: README + notes ----------
-    rd = open("README.md").read()
+    rd = open("README.md", encoding="utf-8").read()
     check("I10 README po P121", "P121" in rd and ("124/124" in rd or "po P123" in rd))
-    nt = open("research/issue17/parish-marriage-1892-notes.md").read()
+    nt = open("research/issue17/parish-marriage-1892-notes.md", encoding="utf-8").read()
     check("I10b notes faza 2 + DRUBEL", "FAZA 2" in nt and "DRUBEL-GRIBLJE" in nt.upper())
 
     # ---------- live ----------

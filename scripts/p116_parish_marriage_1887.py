@@ -101,7 +101,7 @@ def main() -> int:
 
     # ---------- I1: dokaz JSON ----------
     try:
-        d = json.load(open(DOKAZ))
+        d = json.load(open(DOKAZ, encoding="utf-8"))
     except Exception as e:  # noqa: BLE001
         print(f"I1 FAIL: {e}")
         return 1
@@ -210,7 +210,7 @@ def main() -> int:
     check("I7b CC24 = Brine h23 (1888)", "Brine" in cc24.get("verdict", "") and "23" in cc24.get("verdict", ""))
 
     # ---------- I8: parish.ts bloki 04455 ----------
-    ts = open(PARISH_TS).read()
+    ts = open(PARISH_TS, encoding="utf-8").read()
     blocks_m = re.findall(r'houseNo:\s*"([^"]*)",\s*bookSignature:\s*"04455",\s*year:\s*(\d{4}),\s*scan:\s*(\d+)', ts)
     check("I8 bloki 04455 = 94 (P122 +5, P123 +4 + P124 +3 + P125 +3 + P126 +9 + P127 +9 + P128 +6! + P129 +2 + P131 +4 + P132 +12!)", len(blocks_m) == BLOCKS_04455, str(len(blocks_m)))
     h1887 = sorted((h for h, y, _ in blocks_m if y == "1887"), key=int)
@@ -233,7 +233,7 @@ def main() -> int:
     check("I8e stara branja iztekla", not stale, str(stale) if stale else "vse ✓")
 
     # ---------- I9: qa-parish ----------
-    qa = open(QA_TS).read()
+    qa = open(QA_TS, encoding="utf-8").read()
     check("I9 qa-p116", '"qa-p116-parish-marriage-1887"' in qa)
     check("I9b qa-p115 bloki 78", "poročni bloki (04455) ≠ 142" in qa)
     check("I9c p80 bloki 78", "poročni vpisi (04455) ≠ 158" in qa)
@@ -241,9 +241,9 @@ def main() -> int:
     check("I9d vitals 637 zaščita (P128)", "HOUSE_VITALS.length !== 725" in qa[qa.index("const p116Marr"):] if "const p116Marr" in qa else False)
 
     # ---------- I10: README + notes ----------
-    rd = open("README.md").read()
+    rd = open("README.md", encoding="utf-8").read()
     check("I10 README po P116", "P116" in rd and ("124/124" in rd or "po P123" in rd))
-    nt = open("research/issue17/parish-marriage-1887-notes.md").read()
+    nt = open("research/issue17/parish-marriage-1887-notes.md", encoding="utf-8").read()
     check("I10b notes faza 2", "FAZA 2" in nt and "FABLIĆ" in nt.upper())
 
     # ---------- live ----------

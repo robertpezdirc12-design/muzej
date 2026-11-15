@@ -90,7 +90,7 @@ def main():
     live = "--live" in sys.argv
 
     # ---------- I1: dokaz ----------
-    d = json.load(open(DOKAZ))
+    d = json.load(open(DOKAZ, encoding="utf-8"))
     ent = d["entries"]
     check("I1 dokaz 13 vpisov", len(ent) == EXPECTED_ENTRIES, f"{len(ent)}/{EXPECTED_ENTRIES}")
     check("I1b vsi DOCUMENTED + polja", all(
@@ -197,7 +197,7 @@ def main():
     check("I7d r63 starost ¼ ure (ne '½')", bool(h35) and "¼ ure" in h35["whatSi"], "")
 
     # ---------- I8: P80-kontinuiteta ----------
-    p80 = json.load(open(DOKAZ_P80))
+    p80 = json.load(open(DOKAZ_P80, encoding="utf-8"))
     p80_h44 = [e for e in p80["entries"] if e["bookSignature"] == "04894" and e.get("houseNo") == "44" and int(e["year"]) == 1887]
     p80_h36 = [e for e in p80["entries"] if e["bookSignature"] == "04894" and e.get("houseNo") == "36" and int(e["year"]) == 1887]
     check("I8a P80-sidri h44+h36 obstajata v dokazu P80", len(p80_h44) == 1 and len(p80_h36) == 1, "")

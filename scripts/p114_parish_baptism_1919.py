@@ -136,7 +136,7 @@ def main() -> int:
 
     # ---------- I1: dokaz JSON ----------
     try:
-        d = json.load(open(DOKAZ))
+        d = json.load(open(DOKAZ, encoding="utf-8"))
     except Exception as e:  # noqa: BLE001
         print(f"I1 FAIL: {e}")
         return 1
@@ -161,7 +161,7 @@ def main() -> int:
     check("I3c nova hiša h81", d["stats"].get("newHouseNos") == ["81"], str(d["stats"].get("newHouseNos")))
 
     # ---------- I4: kontinuiteta vs parish.ts (pred 1919) ----------
-    ts = open(PARISH_TS).read()
+    ts = open(PARISH_TS, encoding="utf-8").read()
     prior_map = {}
     for m in re.finditer(r'\{\s*houseNo:\s*"(\d+)",\s*bookSignature:\s*"04105",\s*year:\s*(\d{4})', ts):
         h, y = m.group(1), int(m.group(2))
@@ -219,7 +219,7 @@ def main() -> int:
     # ---------- I9: parish.ts bloki + vitals ----------
     blocks_04105 = len(re.findall(r'bookSignature:\s*"04105"', ts))
     check("I9 bloki 04105 ≥ 502", blocks_04105 >= BLOCKS_04105, str(blocks_04105))
-    qa_ts = open("src/lib/qa-parish.ts").read()
+    qa_ts = open("src/lib/qa-parish.ts", encoding="utf-8").read()
     n675 = qa_ts.count("HOUSE_VITALS.length !== 681")
     n578x = qa_ts.count("HOUSE_VITALS.length !== 578")
     n569 = qa_ts.count("HOUSE_VITALS.length !== 569")
@@ -250,11 +250,11 @@ def main() -> int:
     check("I9d sidra (10)", not missing, str(missing) if missing else "vse ✓")
 
     # ---------- I10: qa-p114 ----------
-    qa = open("src/lib/qa-parish.ts").read()
+    qa = open("src/lib/qa-parish.ts", encoding="utf-8").read()
     check("I10 qa-p114", '"qa-p114-parish-baptism-1919"' in qa or "qa-p114" in qa)
 
     # ---------- I11: README ----------
-    rd = open("README.md").read()
+    rd = open("README.md", encoding="utf-8").read()
     check("I11 README po P114", "P114" in rd and ("115/115" in rd or "po P114" in rd))
 
     # ---------- I12: live ----------

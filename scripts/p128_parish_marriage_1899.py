@@ -75,7 +75,7 @@ def main():
     live = "--live" in sys.argv
 
     # ---------- I1: dokaz ----------
-    d = json.load(open(DOKAZ))
+    d = json.load(open(DOKAZ, encoding="utf-8"))
     ent = d["entries"]
     check("I1 dokaz JSON", len(ent) == EXPECTED_ENTRIES, f"{len(ent)}/{EXPECTED_ENTRIES} vpisov")
     check("I1b excluded 0", d.get("excluded") == [], str(d.get("excluded")))
@@ -113,7 +113,7 @@ def main():
     check("I4b Griblje hiše", houses == GRIBLJE_HOUSES, str(houses))
 
     # ---------- I5: parish.ts bloki ----------
-    ts = open(PARISH_TS).read()
+    ts = open(PARISH_TS, encoding="utf-8").read()
     n_1899 = ts.count('bookSignature: "04455",\n    year: 1899,')
     check("I5 6 blokov 1899 (04455)", n_1899 == GRIBLJE_BLOCKS, str(n_1899))
     pins = [("34", "NAJSTAREJŠI PAR"), ("44", "1. POROČNI DOKAZ h44"),
@@ -129,7 +129,7 @@ def main():
     check("I5d P128 sekcija", "P128 razširitev: POROČNA KNJIGA 04455 — polno leto 1899" in ts)
 
     # ---------- I6: qa-parish pini ----------
-    qa = open(QA_TS).read()
+    qa = open(QA_TS, encoding="utf-8").read()
     n593 = qa.count("HOUSE_VITALS.length !== 2043")
     n587 = qa.count("HOUSE_VITALS.length !== 2043")
     n76 = qa.count("bloki 04455 ≠ 142")
@@ -157,7 +157,7 @@ def main():
     check("I8c C1 cross-entry v1→v4", "C1" in ids and "ŽENIN" in d["crossChecks"][0]["what"])
 
     # ---------- I9: kontinuiteta + glyph-familija ----------
-    d127 = json.load(open(DOKAZ_P127))
+    d127 = json.load(open(DOKAZ_P127, encoding="utf-8"))
     check("I9 P127 dokaz nespremenjen (27)", len(d127["entries"]) == 27)
     allsi = json.dumps(d, ensure_ascii=False)
     check("I9b glyph-familija C11", "C11" in ids and "ŠILAK" in allsi and "FILAK" in allsi)
@@ -165,9 +165,9 @@ def main():
     check("I9d Vranoviče korekcija C10", "C10" in ids and "Vranoviče" in json.dumps(ent, ensure_ascii=False))
 
     # ---------- I10: README + notes ----------
-    rd = open(README).read()
+    rd = open(README, encoding="utf-8").read()
     check("I10 README po P129", "P129" in rd and "595" in rd and "78" in rd)
-    nt = open(NOTES).read()
+    nt = open(NOTES, encoding="utf-8").read()
     check("I10b notes faza 2 + glyph + Šturm", "FAZA 2" in nt and "glyph-familija" in nt and "ŠTURM" in nt)
 
     # ---------- live ----------

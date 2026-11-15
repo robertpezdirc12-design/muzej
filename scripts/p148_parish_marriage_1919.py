@@ -53,7 +53,7 @@ def main():
     live = "--live" in sys.argv
 
     # ---------- I1: dokaz ----------
-    d = json.load(open(DOKAZ))
+    d = json.load(open(DOKAZ, encoding="utf-8"))
     ent = d["entries"]
     check("I1 dokaz JSON 40 vpisov", len(ent) == EXPECTED_ENTRIES, f"{len(ent)}/{EXPECTED_ENTRIES}")
     unnum = [e for e in ent if not re.match(r"^\d+$", str(e["row"]))]
@@ -106,7 +106,7 @@ def main():
 
     # ---------- I5: parish.ts bloki 1919 ----------
     try:
-        ts = open("src/data/atlas/parish.ts").read()
+        ts = open("src/data/atlas/parish.ts", encoding="utf-8").read()
         n_04455_1919 = len(re.findall(r'bookSignature:\s*"04455",\s*\n\s*year:\s*1919,', ts))
         check("I5a parish.ts bloki 1919 = 10", n_04455_1919 == GRIBLJE_BLOCKS, str(n_04455_1919))
         hs = re.findall(r'houseNo:\s*"(\d+)",\s*\n\s*bookSignature:\s*"04455",\s*\n\s*year:\s*1919', ts)
@@ -118,7 +118,7 @@ def main():
         check("I5 parish.ts", False, "datoteka manjka!")
 
     # ---------- I6: qa-parish.ts ----------
-    qa = open(QA_TS).read()
+    qa = open(QA_TS, encoding="utf-8").read()
     check("I6a qa-p148 id", "qa-p148-parish-marriage-1919" in qa)
     n698 = qa.count("HOUSE_VITALS.length !== 2043")
     check("I6b vitals pini 698", n698 >= 62, str(n698))
@@ -154,21 +154,21 @@ def main():
     # ---------- I9: anomalije + crossChecks + notes ----------
     check("I9 anomalije 22", len(d.get("anomalies", [])) == EXPECTED_ANOMALIES, str(len(d.get("anomalies", []))))
     check("I9b crossChecks 12", len(d.get("crossChecks", [])) == EXPECTED_CROSSCHECKS, str(len(d.get("crossChecks", []))))
-    notes = open(NOTES).read()
+    notes = open(NOTES, encoding="utf-8").read()
     check("I9c notes obstaja", "P148" in notes and "1919" in notes and "PEZDIRC" in notes, "")
     check("I9d honesty v dokazu (VERIF seznam)", len(d.get("honesty", [])) >= 20, str(len(d.get("honesty", []))))
     check("I9e P147-lead PODCENITEV ×3,6 v lead-correction",
           "PODCENITEV" in str(d.get("lead", {}).get("correction", "")), "")
 
     # ---------- I10: README ----------
-    rd = open(README).read()
+    rd = open(README, encoding="utf-8").read()
     check("I10a README P148 bullet", "po P148" in rd, "")
     check("I10b README 698/181", "698" in rd and "181" in rd, "")
     check("I10c README QA 149/149", "149/149" in rd, "")
     check("I10d README P149 lead", "P149" in rd, "")
 
     # ---------- I11: P147 dokaz nespremenjen ----------
-    d147 = json.load(open(DOKAZ_P147))
+    d147 = json.load(open(DOKAZ_P147, encoding="utf-8"))
     check("I11 P147 dokaz 4 vnosa", len(d147["entries"]) == 4, str(len(d147["entries"])))
 
     # ---------- I12: lead-korekcija ----------
