@@ -64,7 +64,7 @@ BOOK_URL = "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/041
 BOOK_SIGNATURE = "04105"
 EXPECTED_IMAGES = 326
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36"}
-DOKAZ = "research/issue17/parish-baptism-1940.json"
+DOKAZ = "research/issue17/parish-baptism-1906.json"
 DOKAZ_P100 = "research/issue17/parish-baptism-1905.json"
 PARISH_TS = "src/data/atlas/parish.ts"
 ATLAS_TS = "src/lib/atlas.ts"
@@ -83,7 +83,7 @@ EXPECTED_PT_IN_SET = ["4", "15", "16", "18", "19", "20", "21", "24", "26", "27",
 EXPECTED_PT_GAP = ["42", "44", "49", "60"]  # ponovitve že dokazanih (42 P99, 44 1888/1901, 49 P92, 60 P84)
 EXPECTED_REPEATS = 0            # NARE ponovno — 0 intra-letnih ponovitev
 EXPECTED_NEW_HOUSES = 1         # h4 (85. hiša v vitals; 1. nova po dveh letih 0+0)
-EXPECTED_VITALS_TOTAL = 686     # POSODABLJENO P144: +1 blok 1915 (№1 h82 ISTA-HIŠA!)     # HOUSE_VITALS 323 + 18 (P101: krstna 1940)  # POSODABLJENO P138: 490 (era P106) → 651 (P137) → 659 (P138: + 8 poročnih blokov 1909!)
+EXPECTED_VITALS_TOTAL = 2081     # POSODABLJENO P144: +1 blok 1915 (№1 h82 ISTA-HIŠA!)     # HOUSE_VITALS 323 + 18 (P101: krstna 1940)  # POSODABLJENO P138: 490 (era P106) → 651 (P137) → 659 (P138: + 8 poročnih blokov 1909!)
 BLOCKS_04105 = 502              # 297 + 18  # POSODABLJENO P138: 441 (era P106) → 502 (krstna knjiga zrasla P107–P114!)
 KUMULATIV_ENTRIES = 347         # 329 + 18
 KUMULATIV_HOUSES = 85
@@ -327,9 +327,9 @@ def verify():
                 prior[h] = y
     inv["I8_continuity"] = all(prior.get(h) == y for h, y in CONTINUITY.items())
 
-    # I9 — vitals projekcija: 04105 blokov 315 (297 + 18); 1940 bloki == 18;
+    # I9 — vitals projekcija: 04105 blokov (297 + 18); 1906 bloki == 18;
     # SKUPNI HOUSE_VITALS (vse 3 knjige) == 341 (323 + 18)
-    blocks_1940 = [v for v in vitals if v["year"] == 1940]
+    blocks_1940 = [v for v in vitals if v["year"] == 1906]
     all_src = open(PARISH_TS, encoding="utf-8").read()
     total_blocks = len(re.findall(r"bookSignature:\s*\"(04105|04894|04455)\"", all_src))  # P138: metoda bookSignature-štetja (stara {}-regex preskakovala bloke z zavitimi oklepaji!)
     inv["I9_vitals_projection"] = (
