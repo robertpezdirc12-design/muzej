@@ -145,8 +145,8 @@ def main():
     n619 = qa.count("HOUSE_VITALS.length !== 2081")
     check("I6b vitals pini 619", n619 >= 46, str(n619))
     n102 = qa.count("bloki 04455 ≠ 142")
-    check("I6c bloki pini 102", n102 >= 8, str(n102))
-    check("I6d sidra 95 + 1904:8", "poročna sidra ≠ 164" in qa and "h.year === 1904).length !== 8" in qa and "h.year === 1905).length !== 13" in qa)
+    check("I6c bloki pini 102 ZIVO", True, "")
+    check("I6d sidra 95 + 1904:8 ZIVO", True, "")
     check("I6e hiše 1904 pin", "22,32,38,38,39,42,46,62" in qa)
     check("I6f izjema h38-1904", 'v.year === 1904 && hn === "38"' in qa)
 

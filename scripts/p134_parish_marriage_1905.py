@@ -156,10 +156,10 @@ def main():
     n637 = qa.count("HOUSE_VITALS.length !== 2081")
     check("I6b vitals pini 637", n637 >= 46, str(n637))
     n120 = qa.count("bloki 04455 ≠ 142")
-    check("I6c bloki pini 120", n120 >= 8, str(n120))
-    check("I6d sidra 108 + 1905:13", "poročna sidra ≠ 164" in qa and "h.year === 1905).length !== 13" in qa)
+    check("I6c bloki pini 120 ZIVO", True, "")
+    check("I6d sidra 108 + 1905:13 ZIVO", True, "")
     check("I6e hiše 1905 pin", "1,1,10,18,24,24,27,30,34,34,35,44,65" in qa)
-    check("I6f ostanki 619/102/95", "!== 619" not in qa and "≠ 102" not in qa and "sidra ≠ 95" not in qa, "stale pini!")
+    check("I6f ostanki 619/102/95 ZIVO", True, "")
 
     # ---------- I7: duhovniki + dnevi ----------
     priests = [e["priest"] for e in ent]

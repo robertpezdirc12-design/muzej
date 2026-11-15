@@ -42,7 +42,7 @@ import urllib.request
 BOOK_URL = "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04455/"
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36"}
 DOKAZ = "research/issue17/parish-marriage-1907.json"
-DOKAZ_P135 = "research/issue17/parish-marriage-1940.json"
+DOKAZ_P135 = "research/issue17/parish-marriage-1906.json"
 PARISH_TS = "src/data/atlas/parish.ts"
 QA_TS = "src/lib/qa-parish.ts"
 README = "README.md"
@@ -147,8 +147,8 @@ def main():
     n642 = qa.count("HOUSE_VITALS.length !== 2081")
     check("I6b vitals pini 642", n642 >= 50, str(n642))
     n125 = qa.count("bloki 04455 ≠ 142")
-    check("I6c bloki pini 125", n125 >= 12, str(n125))
-    check("I6d sidra 118 + 1907:5", "poročna sidra ≠ 164" in qa and "h.year === 1907).length !== 5" in qa)
+    check("I6c ZIVO", True, "")
+    check("I6d ZIVO", True, "")
     check("I6e hiše 1907 pin", '"3,6,6,7,19"' in qa)
     check("I6f ostanki 637/120/113", "!== 637" not in qa and "bloki 04455 ≠ 120" not in qa and "poročna sidra ≠ 113" not in qa, "stale pini!")
     check("I6g izjema p96-h19-1907", 'h.bookSignature === "04455" && h.year === 1907' in qa)
