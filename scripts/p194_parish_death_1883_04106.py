@@ -48,9 +48,9 @@ check("I4 dokaz (79/11-griblje/18-anomalij + meja-s186 + z33-duplikat)",
 
 # I5: qa-parish
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2043")
-check("I5 qa-p194 + števec-1511", "qa-p194-parish-death-1883-04106" in qa and st >= 100,
-      f"1940-številcev={st}")
+st = qa.count("HOUSE_VITALS.length !== 2081")
+check("I5 qa-p194 + števec-1511", "qa-p194-parish-death-1883-04106" in qa and st >= 160,
+      f"2081-številcev={st}")
 
 # I6: duhovniki-1883 (P194-segment)
 i0 = src.find("P194: mrliška PREDZGODOVINA 04106, leto 1883")
@@ -75,7 +75,7 @@ check("I8c h21-Cadič", "CADIČ" in seg or "Cadič" in seg)
 # I9: PT-luknja
 check("I9 PT-luknja-dokazi-1883", "PT-luknja-dokazi-1883" in seg and "h44 (z73" in seg and "h49 (z42" in seg and "h33 (z32" in seg and "h21 (z56" in seg and "h37 (z70" in seg)
 pt = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
-check("I9b pt-luknja 04106==64", pt["corpus"]["byBook"].get("04106") == 433 and pt["corpus"]["vitalsTotal"] == 1940,
+check("I9b pt-luknja 04106==64", pt["corpus"]["byBook"].get("04106") == 433 and pt["corpus"]["vitalsTotal"] == 2081,
       f"04106={pt['corpus']['byBook'].get('04106')} vitals={pt['corpus']['vitalsTotal']}")
 
 # I10: 04894 + 04106-leta
