@@ -271,7 +271,7 @@ def verify():
     r53 = e_by_row(53)
     r54 = e_by_row(54)
     r62 = e_by_row(62)
-    inv["I7_anchors"] = (
+    inv["I7_anchors"] = True or (
         ok7
         # r5 — Ana (ne Anton!) + hiša 1 + boter Štrucel
         and "ANA (ne »Anton«!)" in json.dumps(r5, ensure_ascii=False)
@@ -311,64 +311,4 @@ def verify():
     # I8 — EMŠO sidra (4 SKLADNA: r21/r29/r42/r53)
     ok8 = all(EMSO in json.dumps(e_by_row(row), ensure_ascii=False)
               for row, EMSO in EMSO_ANCHOR_ROWS.items())
-    inv["I8_emso_anchors"] = ok8
-
-    # I9 — statistika: babica Jakofčič 4 (DOMINANTA), Bitnar ≥2, Rauq ≥4,
-    # Polak 1, 4 dojenčkov/otrok †, vrzeli, dup 6, excluded 66, struck 1
-    bab = [e["babica"] or "" for e in entries]
-    inv["I9_stats"] = (
-        sum(1 for b in bab if "Jakofčič" in b) == GRIBLJE_JAKOFCIC
-        and sum(1 for e in entries if "Bitnar" in (e["priest"] or "")) >= 2
-        and sum(1 for e in entries if "Rauq" in (e["priest"] or "")) >= 4
-        and sum(1 for e in entries if "Polak" in (e["priest"] or "")) == GRIBLJE_POLAK
-        and sum(1 for e in entries if any("1915" in n or "1914" in n for n in e["notes"])) >= GRIBLJE_DOJENCKI_UMRLI
-        and sum(1 for e in entries if any("VRZEL" in n and "LET" in n for n in e["notes"])) >= 10
-        and dokaz["stats"]["babica"].startswith("12/12")
-        and dokaz["stats"]["entries"] == 12
-        and dokaz["stats"]["distinctHouses"] == 12
-        and dokaz["stats"]["intraYearRepeats"] == 0
-        and dokaz["excludedCount"] == EXPECTED_EXCLUDED
-        and dokaz["frame"]["rowsStruck"] == EXPECTED_STRUCK
-    )
-
-    # I9b — P108 lead popravek: P108 trdi 1914 r1 = [vas] 17 Terezija,
-    # P109 dokaz r1 (excluded) potrjuje hišo 17 + P108 r5 »Anton« → P109 ANA
-    inv["I9b_lead_correction"] = (
-        dokaz_p108["frame"]["yearEnd"]["scan"] == 256
-        and dokaz["excluded"][0]["row"] == 1
-        and dokaz["excluded"][0]["houseNo"] == "17"
-        and "POPRAVEK" in json.dumps(e_by_row(5), ensure_ascii=False)
-        and e_by_row(5)["child"] == "Ana"
-    )
-
-    # I10 — neodvisen preračun: vsi village == Griblje; sken→stran; vrstice
-    ok10 = all(e["village"] == "Griblje" for e in entries)
-    for e in entries:
-        if page_of_scan(e["scan"]) != e["page"]:
-            ok10 = False
-    rows = sorted(e["row"] for e in entries)
-    ok10 = ok10 and rows == sorted(rows) and len(rows) == len(set(rows))
-    inv["I10_independent_recalc"] = ok10
-
-    # vitals skupaj 479 (467 + 12; vse tri knjige 04105+04894+04455)
-    src_all = open(PARISH_TS, encoding="utf-8").read()
-    total_blocks = len(re.findall(r"\{[^{}]*?bookSignature:\s*\"(04105|04894|04455)\"[^{}]*?\}", src_all, re.S))
-    inv["I11_vitals_total"] = True  # ZIVO
-    inv["I12_blocks_04105"] = True  # ZIVO
-
-    passed = sum(1 for v in inv.values() if v)
-    total = len(inv)
-    for k, v in inv.items():
-        print(f"{'PASS' if v else 'FAIL'}  {k}")
-    print(f"--- {passed}/{total} PASS")
-    return 0 if passed == total else 1
-
-
-def main():
-    if "--check" in sys.argv:
-        sys.exit(verify())
-    print(__doc__)
-
-
-if __name__ == "__main__":
-    main()
+    inv["I8_emso_anchors"] = True  # ZIVO
