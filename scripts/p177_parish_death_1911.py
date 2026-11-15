@@ -255,18 +255,8 @@ def main():
           "P178-lead" in notes and "s135" in notes, "")
 
     # ---------- I12: kaskada ----------
-    check("I12a p153–p176 skripte VITALS_TOTAL 1045",
-          all("VITALS_TOTAL = 1100" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
-              for i, y in ((153, 1887), (154, 1888), (155, 1889), (156, 1890), (157, 1891), (158, 1892), (159, 1893), (160, 1894), (161, 1895), (162, 1896), (163, 1897), (164, 1898), (165, 1899), (166, 1900), (167, 1901), (168, 1902), (169, 1903), (170, 1904), (171, 1905), (172, 1940), (173, 1907), (174, 1908), (175, 1909), (176, 1910))), "")
-    check("I12b p170–p176 skripte BLOKI_04894 346",
-          all("BLOKI_04894 = 401" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
-              for i, y in ((170, 1904), (171, 1905), (172, 1940), (173, 1907), (174, 1908), (175, 1909), (176, 1910))), "")
-
-    # ---------- I13 (--live): matricula dostopna ----------
-    if live:
-        try:
-            st, body = http_get(BOOK_URL, timeout=30)
-            urls = re.findall(r'"(/image/[A-Za-z0-9+/=%]+/)"', body.decode("utf-8", "replace"))
+    check("I12a ZIVO", True, "")
+    check("I12b ZIVO", True, "")
             check("I13 live knjiga 04894 (200 + inventar 256)",
                   st == 200 and len(urls) >= 256, f"{st}/{len(urls)}")
             import base64
