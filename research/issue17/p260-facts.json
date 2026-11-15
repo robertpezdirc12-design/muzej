@@ -1,0 +1,87 @@
+{
+  "phase": "P260-START",
+  "scope": "NOTRANJOST-01738: 1834-NADALJEVANJE + 1835 + 1836-RESTART (s14–s16 = Pag. 25/26–29/30) — P259-lead-①",
+  "vir": {
+    "bookSignature": "01738",
+    "source": "Matricula Online (data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/01738/)",
+    "scans": {
+      "s14": { "bytes": 560206, "md5": "dc2f13e0d583c9f320a5da7433669ba6", "pag": "25/26", "rows": 12 },
+      "s15": { "bytes": 555294, "md5": "b130fa71854ad30b6e52459b18b7d5a6", "pag": "27/28", "rows": 12 },
+      "s16": { "bytes": 525699, "md5": "eef17788ee5ec19dbc53f6cb0014cfc5", "pag": "29/30", "rows": 10 }
+    },
+    "md5Metoda": "2× neodvisen prenos 1:1 (7. prenos notranjosti — P255/P256/P257/P258/P259 + P260!)",
+    "inventar": "147 URL base64-dekodiranih 1:1 (P253/P255/P258/P259-zahteva — potrjeno)",
+    "foliacija": "Pag = 2·sken − 3 POTRJENA ×3: s14 = 25/26 + s15 = 27/28 + s16 = 29/30 (svinčnik, agent-vizija) → serija-13/13 notranjosti (P259 10/10 + P260 3/3!)",
+    "metoda": "AGENT-VIZIJA (Read-tool) — P259-predpis pri VLM-kvoti-0: full-page ×3 + kropsi ×40+ (dates/grooms/brides/house-nr/names/duels) + letterform-referenca ('28'-starost-vs-hišna-isto-roka!)"
+  },
+  "struktura": {
+    "s14": "Pag. 25/26 — leto-glava '1834/5' (PREHODNO leto v glavi!) — 12 vrstic: margine 19–20 (16. April + 30. Juli 1834 = NADALJEVANJE P259-rob-serije!-rob-1 = 27. Nov 1833!) + RESTART-1 (26. November 1834!) + 2–10 (11. Februar–18. Februar 1835!)",
+    "s15": "Pag. 27/28 — 12 vrstic: margine 11–19 (25. Februar ×3 + 1. März + 28. Juli + 20. August + 13. October + 21. October + 18. November 1835) + VELIKA GLAVA '1836' (z-okraskom!) PRED vrstico-1 + m1–m3 = 27. Februar ×3 ('27ten Februar' — NE Januar!)",
+    "s16": "Pag. 29/30 — leto-glava '1836' — 10 vrstic: m4–m13 (27. Februar ×2? + 10. dt° ×7 + 18. dt°)",
+    "pastoralnoStevilcenje": "★★★ NOV-STRUKTURNI-DOKAZ: ŠTEVILČENJE = SERIJE-PONOVNIH-ZAČETKOV: (A) rob-1 = 27. Nov 1833 (P259!) … 20 = 30. Juli 1834 (s14-r2!) — Nov→Juli; (B) RESTART-1 = 26. Nov 1834 (s14-r3!-brez glave!) … 19 = 18. Nov 1835 (s15-r10!) — Nov→Nov = PASTORALNO-LETNO-VZOREC [~X-OPEN: 2-zaporedna-novembrska-restarta!]; (C) RESTART + VELIKA GLAVA '1836' (s15-r11!-27. Februar — NE Januar!-prehod-na-koledarsko-leto-z-glavo-cf.-04455-1882-4.-MEJNA-VARIANTA-VELIKA-GLAVA-PRED-VRSTICO-1!)",
+    "glava1836": "★★★ 1.-VELIKA-GLAVA-v-notranjosti-01738 (P255–P259: restarti-samo-margino-1-brez-glav!) — vzorec-04455-velika-glava-pred-vrstico-1 (P241-1882)!",
+    "datumDueli": [
+      "s16-m4/m5: '27. Februar' (×2 — s15-m1–m3 že ×3 = 5×-27.-Februar-1836!-MNOŽIČNI-DAN-kand.?)",
+      "s16-m6–m12: '10. dt°' ×7 — KRONOLOŠKI-DUEL: dt°-po-'27.-Februar'-→-10.-Februar-NEMOŽE (< 27.!) → kandidati: 10. März (dt°-napaka) | 10. April (Apr-garble) | 30. (3-vs-1-Kurrent!) — [X-OPEN!]",
+      "s16-m13: '18. dt°' — isti-duel",
+      "s14-r1/r2: 16. April + 30. Juli 1834 — kronologija-OK (margine-19/20!)"
+    ]
+  },
+  "gribljeBloki": [
+    {
+      "id": "m14-s15",
+      "vpis": "m14 (margina-14, 1. März 1835, s15 = Pag. 27)",
+      "zenin": "Johann TOLLER [~Töller], Güntner [~], 36 l, vas-'Gnarfstuß-1' [~X-OPEN: Gnarfstuß/Granfstuz-garble!]",
+      "nevesta": "Hellena KRAUG [~Grauz/Kraus?], 32 l, **GRIBLJE 4** ('Grüble 4' — s15_hn14.png!)",
+      "dokaz": "h4-01738-1.-blok — 04455-h4-firstYear-1874 (P250!) → korpus-firstYear-1835-DVIG-ZA-39-LET!",
+      "urkunde": "'Buchaittg-Schein kmigt dito 1. März 1835' [~X-OPEN-garble]"
+    },
+    {
+      "id": "m15-s15",
+      "vpis": "m15 (margina-15, 28. Juli 1835, s15)",
+      "zenin": "Mathias KLEMERG [~Klemenz/Klemerš] — PREČRTANI-POPRAVEK: nad-prečrtanim-'Dragatz/Dragofg'! (pisarjev-popravek-cf.-P242-v9!-P249-m28!), Einwoner, 22 l, vas-'Dragoffe-2' [~X-OPEN: Gradac|Dragatuš-DUEL!]",
+      "nevesta": "Anna [T/Z]AHOFZHIG [~cf.-s16-m6/m7-ZAHOFZHIG-družina-h9!], 23 l, **GRIBLJE 6** ('Grüble 6' — s15_hn15.png!)",
+      "dokaz": "h6-01738-2.-blok (h6-1828-P255-že!-h6 = najdaljši-razpon-korpusa-1828–1924!)"
+    },
+    {
+      "id": "m6-s16",
+      "vpis": "m6 (margina-6, '10. dt°' [~März|April-DUEL-X-OPEN!], s16 = Pag. 29)",
+      "zenin": "Peter ZAHOFZHIG [~Jahofžič/Gabovšič-cf.-04455-m18-h13-JABOVŠIČ!], Einwoner, 19 l, **GRIBLJE 9** ('Grihle 9' + pripis-'2' [~X-OPEN!])",
+      "nevesta": "Maria KRISHAN (**KRIŽAN!**), 19 l, **GRIBLJE 63** ('Grihle 63' — DUEL-63-vs-68-RAZREŠEN-letterform-'3'-ploska-vez-VS-'8'-dvojna-lok-'28'-starost-referenca-s16_m7_house/age.png!)",
+      "dokaz": "POLNI-DVOJNI h9×h63! — h9-01738-1.-blok (04455-h9-kand.-1885!-dvig-~49!) + h63-KRIŽAN-nit-1:1-SKLAD-s-04455-h63-KRIŽAN-1878–1880 (P246-v6-Anna-HRIŽAN!-P244-v21-Dorothea!-P243-v14-Križan-Miklavčič!) → **NIT-42-LET (1836→1878!)**"
+    },
+    {
+      "id": "m7-s16",
+      "vpis": "m7 (margina-7, '10. dt°', ISTI-DAN-kot-m6!)",
+      "zenin": "Matthias KRISHAN (**KRIŽAN!**), 28 l, **GRIBLJE 63** (letterform-referenca-'28'-starost-VS-'63'-hišna-ISTO-ROKA!)",
+      "nevesta": "Anna ZAHOFZHIG, 20 l, **GRIBLJE 9**",
+      "dokaz": "POLNI-DVOJNI h63×h9 — **★★★★★ SIBLING-SWAP/IZMENA-VLOG: brat+sestra × brat+sestra (Peter+Anna-ZAHOFZHIG-h9 × Maria+Matthias-KRISHAN-h63!), ISTI DAN, ISTI PRIČI (Georg-Krishan + Dorothea-Kolshan-×2!)** = vzorec-MOH×BRODARIČ-1877-P247 (41-let-prej!) + P149-SIBLING-SWAP-№2+№3 — 1.-TA-VRSTA-V-01738!"
+    }
+  ],
+  "niti": {
+    "križan": "h63-KRIŽAN: m6-nevesta-Maria-KRISHAN + m7-ženin-Matthias-KRISHAN + m7-starši-[~Georg-Krishan × Dorothea-Kolshan?]-+ priče-Georg-Krishan ×2 — cf.-04455-h63 (1878-Anna-+ 1879-Dorothea-→-1880-Križan-Miklavčič-P246/P244/P243!) — **NIT-42-LET** + cf.-P259-KRIŽAN-GROZD-h28-m25 (4×-KRISCHAN-v-vrstici!)",
+    "zahofzhig": "ZAHOFZHIG/JAHOFZHIG: m14-ženin-[~?]-+ m15-nevesta-Anna-[T/Z]ahofzhig-+ m6-ženin-Peter-+ m7-nevesta-Anna — cf.-04455-m18-1873-ženin-Mathias-[J/G]ABOVŠIČ-h13 (P251!-4-branja-Jahovšič/Gahovšič!) — mreža-2-hiši (h9-01738 + h13-04455?) [~X-OPEN]",
+    "angel": "s14-r1-mati-Barbara-ANGEL + s15-m18-nevesta-Anna-ANGEL-Otok-2 + s16-m12-nevesta-Anna-ANGEL-Gradac-11? — cf.-P259-s11-r1-'Barbara-ANGEL-(družina-Angel-Dobravlje!)' — ANGEL-nit-se-nadaljuje!",
+    "kambig": "s14-r6-ženin-Jakob-Kambitz? + s15-m13-nevesta-Catharina-Kambig?-Krasinec-30 — cf.-P259-s13-r8-'Anna-KAMBICH!'-+ 04455-h41-KAMBIČ-1881 (P242!)",
+    "gerhüpe": "vas-'Gerhüpe/Gerhviše/Gersvipst': s14-r1-+ s14-r2-hiša-24-+ s14-nevesta-r1-'1'-+ s15-m16-nevesta-'22' — cf.-P259-s13-r1-'Gerhüpe-2'-+ s13-r9-'Gerhüpe-26/10' — vas-X-OPEN (kandidati: Gorjupa? Gorenje?)"
+  },
+  "xOpenOstanki": [
+    "vas-'Gerhüpe/Gerhviše' (s14-r1/r2 + s15-m16) — kandidati Gorjupa?/Gorenje? [X-OPEN-P259-dedovan!] — hiše-1/22/24!",
+    "vas-'Gnarfstuß-1' (m14-ženin) [~X-OPEN]",
+    "vas-'Dragoffe-2' (m15-ženin + s16-m4-ženin-'Dragoffe-1'?) — Gradac-vs-Dragatuš-DUEL [X-OPEN]",
+    "datum-'10. dt°'-×7 (s16-m6–m12) — März|April|30.-Kurrent-duel [X-OPEN]",
+    "63-vs-68-duel — RAZREŠEN (letterform-'3'-vs-'8'-referenca-'28'!) — h63-1:1",
+    "m6-pripis-'2'-pod-diagonalo (ženin-Peter-Zahofzhig-h9) [~X-OPEN]",
+    "m15-PREČRTANI-popravek-'Dragatz'-pod-'Klemerg' (pisarjev-popravek!) [~X-OPEN]"
+  ],
+  "korpusUcinek": {
+    "noviBloki": "4 (m14-h4-nevesta + m15-h6-nevesta + m6-h9-ženin × h63-nevesta-POLNO + m7-h63-ženin × h9-nevesta-POLNO!)",
+    "korpus": "vitals 2065 → 2069 · 01738 53 → 57 · sidra → +4",
+    "dvigi": "h4-firstYear-korpus-1874→1835-ZA-39 (P250-h43-34-rekord-IZENAČEN+PRESEKEN? 39>34 = NOV-ABSOLUTNI-REKORD-DVIGA-KORPUSA-ČEZ-VSE-KNJIGE!) · h9-kand.-1885→1836 · h63-04455-1878→1836-ZA-42 (KRIŽAN-nit!) · h6-2.-01738-blok",
+    "opomba": "INTEGRACIJA-V-KORPUS-V-NASLEDNJEM-KORAKU (parish.ts-4-bloki + house-stories + qa-p260-bump-253→254 + verifier-p260 + worklog + README) — P260-START-dokumentira-VIR-metodo-strukturo-4-bloke-duel-rešitve!"
+  },
+  "pošteno": "63-vs-68-duel-rešen-z-letterform-referenco (ploska-'3' VS dvojna-lok-'8' — referenca-'28'-ISTO-ROKA-ISTO-STRAN!); datumi-m6–m12-'10. dt°'-OSTAJAJO-X-OPEN (kronologija-zahteva-≥-27.-Februar!); m1-1836-'27ten-Februar'-KOREKCIJA-prejšnje-agent-berite-'27.-Januar' (zoom-'27ten'!); vas-Gerhüpe/Gnarfstuß/Dragoffe-NI-rešene-pošteno",
+  "lead": "**P261+:** ① INTEGRACIJA-4-BLOKOV-v-korpus (parish.ts-+ house-stories-+ qa-p260-+ verifier!) ② s17+ = Pag. 31+ (1836-nadaljevanje) ③ duel-'10. dt°'-rešitev (VLM-kvota?-kroji-m6–m12!)",
+  "generatedAt": "2026-11-12",
+  "metodaDokaz": "agent-vizija-Read-tool-full-page-×3 + kropsi-×40+ + letterform-forenzika (s16_m7_house-vs-s16_m7_age!) — 0-VLM-klicev (kvota-P259-predpis!)"
+}
