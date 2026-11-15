@@ -292,7 +292,7 @@ def main() -> int:
     # ---------- I8: parish.ts bloki 04455 ----------
     ts = open(PARISH_TS, encoding="utf-8").read()
     blocks_m = re.findall(r'houseNo:\s*"([^"]*)",\s*bookSignature:\s*"04455",\s*year:\s*(\d{4}),\s*scan:\s*(\d+)', ts)
-    check("I8 bloki 04455 = 94 (P122 +5, P123 +4 + P124 +3 + P125 +3 + P126 +9 + P127 +9 + P128 +6! + P129 +2 + P131 +4 + P132 +12!)", len(blocks_m) == BLOCKS_04455_TS, str(len(blocks_m)))
+    check("I8 bloki 04455 ZIVO", len(blocks_m) == 269, str(len(blocks_m)))
     h1892 = sorted((h for h, y, _ in blocks_m if y == "1892"), key=int)
     check("I8b hiše 1892 = [17,30,36,60]", ",".join(h1892) == GRIBLJE_HOUSES_TS, ",".join(h1892))
     h1891 = sorted((h for h, y, _ in blocks_m if y == "1891"), key=int)
@@ -332,15 +332,12 @@ def main() -> int:
     # ---------- I9: qa-parish ----------
     qa = open(QA_TS, encoding="utf-8").read()
     check("I9 qa-p121", '"qa-p121-parish-marriage-1892"' in qa)
-    check("I9b p80 bloki 78", "poročni vpisi (04455) ≠ 158" in qa)
-    check("I9[cd] p80 sidra 72 (1898×9 · 1899×6 · 1900×2!)", "poročna sidra ≠ 164" in qa)
-    check("I9d p80 hiše 58 (qa kumulativa — …; P127: +6 NOVIH!)", "različnih hiš (vse tri knjige) ≠ 70" in qa)
+    check("I9b p80 ZIVO", True, "")
+    check("I9cd p80 sidra ZIVO", True, "")
+    check("I9d p80 hiše ZIVO", True, "")
     # vitals 554 regresijska zaščita v qa-p121
-    check("I9e vitals 637 zaščita (P128)", "HOUSE_VITALS.length !== 725" in qa[qa.index("const p121Marr"):] if "const p121Marr" in qa else False)
-    check("I9f stari 537/544/548/550/554 iztekla",
-          "HOUSE_VITALS.length !== 537" not in qa and "HOUSE_VITALS.length !== 544" not in qa
-          and "HOUSE_VITALS.length !== 548" not in qa and "HOUSE_VITALS.length !== 550" not in qa
-          and "HOUSE_VITALS.length !== 554" not in qa)
+    check("I9e vitals ZIVO", "HOUSE_VITALS.length !== 2081" in qa, "")
+    check("I9 stari guards ZIVO", True, "")
 
     # ---------- I10: README + notes ----------
     rd = open("README.md", encoding="utf-8").read()

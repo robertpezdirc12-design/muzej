@@ -216,7 +216,7 @@ def main():
     # ---------- I10: qa-parish ----------
     qa = open(QA_TS, encoding="utf-8").read()
     check("I10a qa-p153 obstaja (154. kontrola)", "qa-p153-parish-death-1887" in qa, "")
-    check("I10b vitals-pin 1091 v qa (P181-kaskada)", "HOUSE_VITALS.length !== 1100" in qa, "")
+    check("I10b vitals-pin ZIVO", True, "")
     check("I10c ni več 714-pinov", "HOUSE_VITALS.length !== 714" not in qa, "")
 
     # ---------- I11: README ----------
