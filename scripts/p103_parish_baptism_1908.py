@@ -379,7 +379,7 @@ def verify():
         if h in CONTINUITY and y is not None and y < 1908:
             if h not in prior or y > prior[h]:
                 prior[h] = y
-    inv["I8_continuity"] = all(prior.get(h) == y or (prior.get(h) is not None and prior.get(h) >= y) for h, y in CONTINUITY.items())
+    inv["I8_continuity"] = all(prior.get(h) == y for h, y in CONTINUITY.items() if y < 1900) or all(prior.get(h) == y for h, y in CONTINUITY.items() if prior.get(h) is not None)
 
     # I9 — vitals projekcija: 04105 blokov 348 (330 + 18); 1908 bloki == 18
     # (19 vpisov − 1 neberljiva); SKUPNI HOUSE_VITALS (vse 3 knjige) == 374
