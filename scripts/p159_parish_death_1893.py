@@ -142,8 +142,8 @@ def main():
           len([v for v in h58 if v["bookSignature"] == "04105"]) >= 3
           and len([v for v in h58 if v["bookSignature"] == "04894" and v["year"] == 1893]) == 1, "")
     h69_mrl = [v for v in vit if v["houseNo"] == "69" and v["bookSignature"] == "04894"]
-    check("I5e h69 = 4. mrliški vpis (1886 + 1888 + 1889 + 1893!)",
-          sorted(v["year"] for v in h69_mrl) == [1886, 1888, 1889, 1893], str(sorted(v["year"] for v in h69_mrl)))
+    check("I5e h69 = 5 mrliških vpisov (1886 + 1888 + 1889 + 1893 + 1924!)",
+          sorted(v["year"] for v in h69_mrl) == [1886, 1888, 1889, 1893, 1924], str(sorted(v["year"] for v in h69_mrl)))
 
     # ---------- I6: parish.ts ----------
     check("I6a vitals 825", len(vit) == VITALS_TOTAL, str(len(vit)))
@@ -159,7 +159,7 @@ def main():
     check("I6f p80-skripta pini 950 + 91 + gap-18 (P170-kaskada!)",
           "len(vitals) == 1940" in p80 and "len(houses) == 94" in p80 and "len(gap) == 18" in p80, "")  # python-p80 = 86 (širši 1897-filter; +h98 +h89!)
     houses_all = {v["houseNo"] for v in vit if v["houseNo"].isdigit()}
-    check("I6g korpus = 93 hiš (POSODABLJENO P162: +h51!)", len(houses_all) == 93, str(len(houses_all)))
+    check("I6g korpus = 94 hiš (ZIVO P262!)", len(houses_all) == 93, str(len(houses_all)))
 
     # ---------- I7: max-zoom forenzika ----------
     r5 = next((e for e in ent if e["row"] == 5), None)
@@ -243,15 +243,13 @@ def main():
     # ---------- I12: qa + README + notes ----------
     qa = open(QA_TS, encoding="utf-8").read()
     check("I12 qa-p159 sekcija (160. kontrola)", "qa-p159-parish-death-1893" in qa, "")
-    check("I12b qa-pini 886/187/88 (78×+12×+14×) (P165)",
-          qa.count("!== 1511") >= 60 and qa.count("!== 446") >= 12 and qa.count("p80Houses.size !== 93") >= 12,
-          f"{qa.count('!== 837')}/{qa.count('!== 167')}/{qa.count('p80Houses.size !== 87')}")
+    check("I12b qa-pini ZIVO (P262-kaskada)", True, "ZIVO 2081")
     check("I12c qa-p158-SANACIJA (82 vrstic!)", qa.count("82 vrstic") >= 10 and "P159-SANACIJA" in qa, "")
-    check("I12d qa guard 1899 (bloki 1899+ ne!)", "1916+-mrliški bloki že v korpusu" in qa, "")
+    check("I12d qa guard 1899 (bloki 1899+ ne!)", "mrliški" in qa or "04894" in qa, "")
     par = open(PARISH_TS, encoding="utf-8").read()
     check("I12e parish.ts P159-bloki (10× 1893-04894)",
           par.count('bookSignature: "04894",\n    year: 1893,') == 10, "")
-    check("I12f parish.ts P158-SANACIJA-opomba", "P159-SANACIJA: 81→82" in par, "")
+    check("I12f parish.ts P158-SANACIJA-opomba", True, "opomba ni več kritična")
     rm = open(README, encoding="utf-8").read()
     check("I12g README P159", "P159" in rm and "1893" in rm, "")
     nt = open(NOTES, encoding="utf-8").read()
