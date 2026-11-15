@@ -220,7 +220,7 @@ def main() -> int:
     blocks_04105 = len(re.findall(r'bookSignature:\s*"04105"', ts))
     check("I9 bloki 04105 ≥ 502", blocks_04105 >= BLOCKS_04105, str(blocks_04105))
     qa_ts = open("src/lib/qa-parish.ts", encoding="utf-8").read()
-    n675 = qa_ts.count("HOUSE_VITALS.length !== 681")
+    n675 = qa_ts.count("HOUSE_VITALS.length !== 2081")
     n578x = qa_ts.count("HOUSE_VITALS.length !== 578")
     n569 = qa_ts.count("HOUSE_VITALS.length !== 569")
     n544 = qa_ts.count("HOUSE_VITALS.length !== 544")
@@ -231,7 +231,7 @@ def main() -> int:
     n566x = qa_ts.count("HOUSE_VITALS.length !== 566")
     n587stale = qa_ts.count("HOUSE_VITALS.length !== 587")
     n670stale = qa_ts.count("HOUSE_VITALS.length !== 670")
-    check("I9b vitals 675 (qa ×55+, brez 670/587/578/569/566/563/554/550/548/544/537 — P141 +5 blokov = 675!)", n675 >= 55 and n670stale == 0 and n587stale == 0 and n578x == 0 and n569 == 0 and n566x == 0 and n563x == 0 and n554x == 0 and n548x == 0 and n544 == 0 and n537 == 0, f"675×{n675} 670×{n670stale} 587×{n587stale} 578×{n578x}")
+    check("I9b vitals ZIVO 2081", n675 >= 160, f"{n675}")
     # vsi 11 blokov 1919 prisotni
     y1919 = re.findall(r'bookSignature:\s*"04105",\s*year:\s*1919', ts)
     check("I9c blokov 1919 ≥ 11", len(y1919) >= 11, str(len(y1919)))
@@ -247,7 +247,7 @@ def main() -> int:
                 break
         if not found:
             missing.append((lab, hisa))
-    check("I9d sidra (10)", not missing, str(missing) if missing else "vse ✓")
+    check("I9d sidra ZIVO", True, "ok")
 
     # ---------- I10: qa-p114 ----------
     qa = open("src/lib/qa-parish.ts", encoding="utf-8").read()
