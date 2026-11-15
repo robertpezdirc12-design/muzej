@@ -1425,3 +1425,45 @@ export const PREDHODNIK_183536_BLOCKS = {
   dokaz: "research/issue17/p260-facts.json (87-vrstic + p260-work/-3-skeni-md5-s14-dc2f13e0-s15-b130fa71-s16-eef17788-+ 10-odločilnih-kropov!) — metoda-AGENT-VIZIJA-0-VLM-klicev (P259-predpis!)",
   p261: "s17+ = Pag. 31+ (1836-nadaljevanje-m14–m?) + duel-'10. dt°'-rešitev (kropi-m6–m12!)",
 } as const;
+
+/** P261-korpus-skupaj: +8 blokov; vitals 2069→2077; 01738 = 65; 3 dvigi (h39-23/h41-30/h7-31!); 4 POLNA-DVOJNA-m14-m15-m2-m3. */
+export const PREDHODNIK_1836_37_BLOCKS = {
+  noviBloki: 8,
+  vpisi1836n: 4,
+  vpisiRestart: 5,
+  vitalsTotal: 2077,
+  byBook01738: 65,
+  dvigi: {
+    h39: "1859 → 1836 (23 let — m14-nevesta-Anna-ŠHRING!-BRING×ŠHRING-endogamija!)",
+    h41: "1866 → 1836 (30 let — m2-ženin-Georg-PEZDIRIZ!-PEZDIRC-NIT-↔-04455-PEGDIRC-×49!)",
+    h7: "1867 → 1836 (31 let — m15-nevesta-Anna-STRAAAF!-nevestin-oče-PRAZEN-nezakonska-hipoteza!)",
+  },
+  plusBlokiBrezDviga: {
+    h20: "+2 (m14-1836-Bring-+-m3-1837-Dow-Diw!-firstYear-1829-ostaja-P256!)",
+    h61: "+1 (m15-1836-Trianich!-firstYear-1828-P255!)",
+    h26: "+1 (m2-1836-Bring!-firstYear-1831-P258!)",
+    h63: "+1 (m3-1837-KRIŠAN!-KRIŽAN-NIT-3.-01738-blok!)",
+  },
+  restartStruktura: "(A)-26.-Nov-1834-P259/260 + (B)-27.-Feb-1836-VELIKA-GLAVA-P260 + (C)-★★★ 1.-NOVEMBER-1836-P261 ('1-im-November-1836'!-PASTORALNO-Nov→Nov-3.-serija!-m2-'1-im-d°' = ISTI-DAN-2-poroke!-teče-v-1837: m3-23.-Jän-m4-1.-Febr-m5-1.-Jun?-[X-OPEN])",
+  foliacija: "Pag = 2·sken − 3 (s17-31/32-svinčnik-agent-vizija!) — serija-14/14-notranjosti (P259-10/10 + P260-3/3 + P261-1/1!)",
+  pezdircS17: "×6 (2-ženina-Georg ×2 [38-h41-1836-+-32-Grafsing-1837 = 2-GEORGA-V-6-MESECIH!] + očeta-Stanislaus-Pezdig-+-Johann-Pezdirz + priča-Mathias-Pezdiriz-+-Mathias-Pezding!-4-grafije-1-sken: Pezdiriz/Pezdig/Pezdirz/Pezding)",
+  krizanNit: "43-LET (m3-nevesta-Anna-KRIŠAN-h63-1837!-h63-3.-01738-blok-↔-04455-1878-Anna-HRIŽAN-P246-1879-Dorothea-P244-1880-Križan-P243!)",
+  bringNit: "×4-+-ŠHRING-ločena-družina (m14-ženin-Mathias-BRING-h20-+-m14-oče-+-m2-nevesta-Anna-BRING-h26-+-m2-oče-Johann!-BRING×ŠHRING-endogamija-h20×h39!-letterform-B-loop-VS-Š-hook!)",
+  brodaricNit: "1837 (m4-nevesta-Dorothea-BRODARIIGH!-oče-Michael!-cf.-P247-MOH×BRODARIČ-1877-40-let-prej-+ 04104-z39-h49-1873!)",
+  notizSoglasja: "★★★ ×4-na-s17 ('willigung'-m2-+ m15-'Lawilligunj-28.-April-1836'-+ m16-+ m3-datirana-'11.-Novembrd-1836'!-cf.-P233-1880-'Gaveldzettel-Väterliche-Einwilligung'-44-let-prej!)",
+  duhovnikiS17: "3: Gregor-Dolinšh[ek?]ff-Coop. (m14/m1/m3/m4-Idem!) + Georg-[~Kraphovi(g/zh)?]-Parochus-ŽUPNIK (m15/m2!-refined-iz-P259-'Kraphoniz'!) + 'Hemsj-in'/'Aemsj-in' [X-OPEN-m16/m17!]",
+  dokaz: "research/issue17/p261-facts.json (+ p261-work/: s17-3b1f5b30-521979B-+ s18-REZERVA-1bb45fb3-498726B-+ 17-kropov!) — metoda-AGENT-VIZIJA-0-VLM-klicev (P259-predpis!)",
+  p262: "s18+ = Pag. 33+ (1837-nadaljevanje-m6+!) — REZERVA-md5-že-na-disku!",
+} as const;
+
+/** Niti P261: PEZDIRC-×6 + KRIŽAN-43-let + BRING×ŠHRING-endogamija + BRODARIČ-1837 + POSHEK + ŠREJOFFNIGH-koren. */
+export const PREDHODNIK_261_NITI = {
+  si: "★★★★★★ PEZDIRC-×6-NA-S17 (2-ženina-Georg ×2-38-h41-1836-+-32-Grafsing-1837-2-GEORGA-V-6-MESECIH-RAZLIČNA-očeta-Stanislaus/Johann-brata!-+ očeta-×2-+ priča-Mathias-×2 [Pezdiriz-+-Pezding!]-4-grafije-1-sken-↔-04455-PEGDIRC-×49-13-let-P252!) + ★★★★★★ KRIŽAN-NIT-1837 (m3-nevesta-Anna-KRIŠAN-h63!-h63-3.-01738-blok-m1-1873-+-m7-1836-+-m3-1837!-↔-04455-1878/1879/1880!-NIT-42→43-LET!) + ★★★★★ BRING-×4-+-ŠHRING-ločena-'-ring'-družina (m14-ženin-Mathias-BRING-h20-+-m2-nevesta-Anna-BRING-h26-+ 2-očeta-Mathias/Johann-Bring!-BRING×ŠHRING-endogamija-h20×h39-2-RAZLIČNI-družini-letterform-B-loop-VS-Š-hook-1:1!) + ★★★ BRODARIČ-1837 (m4-nevesta-Dorothea-BRODARIIGH-oče-Michael!-cf.-P247-MOH×BRODARIČ-1877-P247-40-let-prej!) + POSHEK-nit-×3 (m14-priča-Georg-×2-+ m2-mati-Barbara!-cf.-P79-'Požek'!) + ŠREJOFFNIGH-koren-×3 (m17-nevesta-Šurejoffnigh-+ m17-mati-Šrejoffnigh-+ m4-mati-Šrejoffnigh!-2-poroki-isti-priimek-koren!)",
+  en: "THE-PEZDIRC-×6-ON-S17 (2-grooms-Georg-×2-38-1836-+-32-1837-TWO-GEORGS-IN-6-MONTHS-different-fathers-Stanislaus/Johann-brothers!-+ 2-fathers-+ witness-Mathias-×2!-4-spellings-1-scan-↔-04455-PEGDIRC-×49!) + THE-KRIŽAN-THREAD-1837 (m3-bride-Anna-h63!-the-3rd-01738-block-↔-04455-1878/1879/1880!-the-THREAD-42→43-YEARS!) + BRING-×4-+-the-separate-ŠHRING-'-ring'-family (the-BRING×ŠHRING-endogamy-the-letterform-B-loop-VS-the-Š-hook!) + BRODARIČ-1837 (cf.-P247-40-years-earlier!) + POSHEK-×3 + the-ŠREJOFFNIGH-root-×3",
+} as const;
+
+/** Kraji P261: Gradag-15 (=Gradac!-Dragatz-DUEL-kontekst!) + Olok-24/19 + Ollun-18 + Grofsing/Grafsing + Ščrupp + Poštoml + Pošdral + Dölenge. */
+export const PREDHODNIK_261_KRAJI = {
+  si: "★★★ KRAJI-P261: GRADAG 15 (=GRADAC!-m17-ženin-Mathias-Marintish!-cf.-P260-'Dragatz'-prečrtan-popravek-Gradac|Dragatuš-DUEL-REŠITEV-kontekst-1:1-kontekst!) + OLOK 24-×-OLOK 19 (m1!-ISTA-VAS-2-HIŠI-'gahüntling'-annotacija-X-OPEN-Otok?/Dolek?!) + OLLUN 18 (m17-nevesta-X-OPEN!) + GROFSING/GRAFSING (m16-nevesta-32-+-m4-ženin-2/9-X-OPEN!) + ŠČRUPP-im-Šmupfa (m16-ženin-Wohnort-annotacija-X-OPEN!) + POŠTOML 2 (m4-nevesta-X-OPEN!) + POŠDRAL 28-Mala (m5-ženin-X-OPEN!) + DÖLENGE 46 (m5-nevesta-'Dolenja'-hipoteza-X-OPEN!) + ŠMALUC-BUTARI (m15-ženin-gabärdig-X-OPEN!) + PETELIŽHAL-jura-Žjan (m15-nevesta-gabärdig-X-OPEN!)",
+  en: "THE-P261-VILLAGES: GRADAG-15 (=Gradac!-the-P260-'Dragatz'-struck-correction-DUEL-solution-context!) + OLOK-24-×-OLOK-19 (THE-SAME-VILLAGE-2-HOUSES!-X-OPEN!) + Ollun-18 + Grofsing/Grafsing + Ščrupp + Poštoml-2 + Pošdral-28-Mala + Dölenge-46 + Šmaluc-Butari + Peteližhal [~ALL-X-OPEN-garbles!]",
+} as const;

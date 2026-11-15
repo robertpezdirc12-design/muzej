@@ -37,12 +37,12 @@ check("I2 HOUSE_STORIES == 100 (78 Griblje + 16 druga-vas + 6 neznan)",
 
 # ——— I3: vsota blokov == 2032; knjige 14/288/502/269/433/520 ———
 total = sum(int(b) for _, _, b, _ in entries)
-check("I3 vsota blokov HOUSE_STORIES == 2069 (P259: +6 + P260: +4!)", total == 2069, f"{total}")
+check("I3 vsota blokov HOUSE_STORIES == 2077 (P259: +6 + P260: +4 + P261: +8-bloki-1836/37!)", total == 2077, f"{total}")
 book_blocks = {"01738": 0, "04104": 0, "04105": 0, "04455": 0, "04106": 0, "04894": 0}
 for seg in re.finditer(r'houseNo: "([^"]+)".*?perBook: \[(.*?)\]', mod):
     for sig, n in re.findall(r'sig: "(\d+)", n: (\d+)', seg.group(2)):
         book_blocks[sig] += int(n)
-expected_books = {"01738": 57, "04104": 288, "04105": 502, "04455": 269, "04106": 433, "04894": 520}
+expected_books = {"01738": 65, "04104": 288, "04105": 502, "04455": 269, "04106": 433, "04894": 520}
 check("I3b bloki po knjigah 57/288/502/269/433/520 (== korpus! P260-01738-57!)", book_blocks == expected_books,
       f"{book_blocks}" if book_blocks != expected_books else "1:1")
 
@@ -50,7 +50,7 @@ check("I3b bloki po knjigah 57/288/502/269/433/520 (== korpus! P260-01738-57!)",
 six_m = re.search(r'export const HOUSE_STORY_SIX: HouseStorySix\[\] = \[(.*?)\n\];', mod, re.S)
 six_mod = re.findall(r'houseNo: "(\d+)", blocks: \d+, years: "[^"]+"', six_m.group(1)) if six_m else []
 check("I4 HOUSE_STORY_SIX == 36-šest-knjižnih (P258-31 → P259-34 → P260-36!)",
-      six_mod == ["1", "2", "3", "4", "5", "6", "8", "9", "10", "11", "12", "16", "18", "19", "20", "22", "24", "26", "27", "28", "32", "33", "35", "36", "42", "46", "47", "48", "53", "56", "60", "61", "62", "63", "65", "73"], str(six_mod))
+      six_mod == ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "16", "18", "19", "20", "22", "24", "26", "27", "28", "32", "33", "35", "36", "39", "41", "42", "46", "47", "48", "53", "56", "60", "61", "62", "63", "65", "73"], str(six_mod))
 six_stories = [h for h, k, b, bk in entries if int(bk) == 6]
 check("I4b šest-knjižne v HOUSE_STORIES == 9", sorted(six_stories, key=int) == six_mod, str(sorted(six_stories, key=int)))
 
@@ -65,7 +65,7 @@ check("I5b živa-rekalkulacija v kontroli (p254Agg iz HOUSE_VITALS!)",
 ev = json.load(open("research/issue17/parish-house-stories.json", encoding="utf-8"))
 check("I6 dokaz parish-house-stories.json (100 hiš v tabeli + tierji + 36-zgodb — P260!)",
       len(ev.get("houses", [])) == 100 and ev["structure"]["tiers"]["six"] == 36
-      and len(ev["sixBookHouses"]["stories"]) == 36 and ev["structure"]["tiersSum"] == 100,
+      and len(ev["sixBookHouses"]["stories"]) == 39 and ev["structure"]["tiersSum"] == 100,
       f"houses={len(ev.get('houses', []))}")
 
 # ——— I7: UI komponenta HouseStoriesP254 + uvoz modula ———
@@ -90,8 +90,8 @@ check("I8c zgodbe-šest-knjižnih: DRAGOŠ-50-LET + 56-LETNA-ZAKONSKA + KRIŽAN-
 pt = json.load(open("research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
 pt_corpus = pt.get("corpus", {})
 check("I9 pt-luknja-2059 (P258: +16-1831k/32/33!)",
-      pt_corpus.get("vitalsTotal") == 2069 and pt_corpus.get("byBook", {}).get("01738") == 57
-      and pt.get("vitalsTotal") == 2069)
+      pt_corpus.get("vitalsTotal") == 2077 and pt_corpus.get("byBook", {}).get("01738") == 65
+      and pt.get("vitalsTotal") == 2077)
 
 # ——— I10: LIVE /api/qa 249/249 ok:True (+qa-p254 pass!) ———
 if "--live" in sys.argv:

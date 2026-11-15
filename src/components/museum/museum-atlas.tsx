@@ -291,6 +291,9 @@ PREDHODNIK_1833N_STRUNA,
   PREDHODNIK_259_KRAJI,
   PREDHODNIK_1833N_BLOCKS,
   PREDHODNIK_183536_BLOCKS,
+  PREDHODNIK_1836_37_BLOCKS,
+  PREDHODNIK_261_NITI,
+  PREDHODNIK_261_KRAJI,
   PREDHODNIK_260_NITI,
   PREDHODNIK_260_KRAJI,
   PREDHODNIK_1828_STEVILCENIH,
@@ -2365,6 +2368,115 @@ function Notranjost01738Leto1835_1836() {
   );
 }
 
+
+function Notranjost01738Leto1836_1837() {
+  const { t } = useLang();
+  const e1836n: { m: string; d: string; h?: string; x?: boolean }[] = [
+    { m: "14", d: "13. 4. 1836", h: "20·39" },
+    { m: "15", d: "16. 5. 1836", h: "61·7" },
+    { m: "16", d: "8. 6. 1836", x: true },
+    { m: "17", d: "26. 10. 1836", x: true },
+  ];
+  const eRestart: { m: string; d: string; h?: string; x?: boolean }[] = [
+    { m: "1", d: "1. 11. 1836", x: true },
+    { m: "2", d: "1. im d°", h: "41·26" },
+    { m: "3", d: "23. 1. 1837", h: "20·63" },
+    { m: "4", d: "1. 2. 1837", x: true },
+    { m: "5", d: "1. 6.? d°", x: true },
+  ];
+  return (
+    <div className="rounded-xl border bg-card/60 p-5">
+      <h3 className="flex items-center gap-2 font-serif text-lg font-semibold">
+        <BookOpenCheck className="h-4 w-4 text-primary" aria-hidden />
+        {t(
+          "Notranjost knjige 01738: 1836-nadaljevanje + RESTART 1. november 1836 (4 + 5 vpisov — 8 blokov / 3 dvigi / PEZDIRC ×6!)",
+          "The interior of the book 01738: the 1836-continuation + the RESTART of Nov 1 1836 (4 + 5 entries — 8 blocks / 3 lifts / PEZDIRC ×6!)",
+        )}
+      </h3>
+      <p className="mt-2 text-sm text-muted-foreground [overflow-wrap:anywhere]">
+        {t(
+          "★★★ RESTART (C) = 1. NOVEMBER 1836 ('1 im November 1836' — PASTORALNO LETNO Nov→Nov — 3. zaporedna restart-struktura: (A) 26. 11. 1834 P259/260 + (B) 27. 2. 1836 VELIKA GLAVA P260 + (C) 1. 11. 1836 P261!) — restart-m2 '1 im d°' = ISTI DAN (2 poroke 1. 11. 1836!) — serija teče v 1837 (m3 23. 1. 1837 + m4 1. 2. 1837 + m5 1. 6.? [duel Jun↔Jän!]). Foliacija 'Pag = 2·sken−3' (s17 = 31/32) = serija 14/14 notranjosti. Metoda: agent-vizija pri kvoti 0 — cela stran + margin-stolpec + 6 rezin + 35+ kropov + letterform-forenzika (B-loop vs Š-hook!).",
+          "★★★ RESTART (C) = NOVEMBER 1 1836 ('1 im November 1836' — the PASTORAL YEAR Nov→Nov — the 3rd consecutive restart-structure!) — the restart-m2 '1 im d°' = THE SAME DAY (2 marriages Nov 1 1836!) — the series continues into 1837. The foliation 'Pag = 2·scan−3' (s17 = 31/32) = the series 14/14 of the interior. The method: agent vision at quota 0 — the full page + the margin column + 6 slices + 35+ crops + letterform forensics (the B-loop VS the Š-hook!).",
+        )}
+      </p>
+
+      {/* 8 blokov 3 dvigi — emerald */}
+      <div className="mt-4 rounded-lg border border-emerald-500/40 bg-emerald-500/10 p-4">
+        <p className="text-sm font-medium text-emerald-700 dark:text-emerald-300 [overflow-wrap:anywhere]">
+          {t("★★★★★★ 8 NOVIH BLOKOV — 3 DVIGI — 4 POLNA DVOJNA (ŠEST-KNJIŽNI KLUB 36→39!): ", "★★★★★★ 8 NEW BLOCKS — 3 LIFTS — 4 FULL DOUBLES (the six-book club 36→39!): ")}
+          {t(
+            `h39 1859→1836 (+23 — m14-nevesta-Anna-ŠHRING!-BRING×ŠHRING-endogamija!) · h41 1866→1836 (+30 — m2-ženin-Georg-PEZDIRIZ!-PEZDIRC-nit!) · h7 1867→1836 (+31 — m15-nevesta-Anna-STRAAAF!-nevestin-oče PRAZEN-pomišljaj!) · brez dviga: h20 +2 (m14-1836 + m3-1837!) · h61 (m15) · h26 (m2) · h63 (m3-1837-KRIŽAN!) — 4 POLNA DVOJNA: h20×h39 + h61×h7 + h41×h26 + h20×h63! — ★★★★★ Šest-knjižni klub 36→39 (+3: h7/h39/h41 — vsi 5→6 knjig!). Korpus ${PREDHODNIK_1836_37_BLOCKS.vitalsTotal} vitalov / 01738 = ${PREDHODNIK_1836_37_BLOCKS.byBook01738} blokov / leta 1828–1837+1873!`,
+            `h39 1859→1836 (+23 — the-m14-bride-Anna-ŠHRING!-the-BRING×ŠHRING-endogamy!) · h41 1866→1836 (+30 — the-m2-groom-Georg-PEZDIRIZ!-the-PEZDIRC-thread!) · h7 1867→1836 (+31 — the-m15-bride-Anna-STRAAAF!-the-bride's-father-EMPTY!) · no-lift: h20 +2 · h61 · h26 · h63-1837-KRIŽAN! — 4 FULL DOUBLES: h20×h39 + h61×h7 + h41×h26 + h20×h63! — ★★★★★ The six-book club 36→39 (+3: h7/h39/h41 — all 5→6 books!). The corpus ${PREDHODNIK_1836_37_BLOCKS.vitalsTotal} vitals / 01738 = ${PREDHODNIK_1836_37_BLOCKS.byBook01738} blocks / the years 1828–1837+1873!`,
+          )}
+        </p>
+      </div>
+
+      {/* PEZDIRC ×6 — primary card */}
+      <div className="mt-4 rounded-lg border border-primary/50 bg-primary/10 p-4">
+        <p className="text-sm font-medium [overflow-wrap:anywhere]">
+          {t(
+            "★★★★★★ PEZDIRC ×6 NA S17: 2 ženina Georg ×2 (38, h41, 1836 + 32, Grafsing, 1837 = 2 GEORGA V 6 MESECIH — različna očeta Stanislaus/Johann — brata!) + očeta Stanislaus-PEZDIG + Johann-PEZDIRZ + priča Mathias-PEZDIRIZ + Mathias-PEZDING = 4 grafije v 1 skenu (Pezdiriz/Pezdig/Pezdirz/Pezding!) ↔ 04455-PEGDIRC ×49 v 13 letih (P252!) + ★★★★★ KRIŽAN-NIT 1837: m3-nevesta-Anna-KRIŠAN h63 (h63 = 3. 01738-blok — m1-1873 + m7-1836 + m3-1837! ↔ 04455-1878/1879/1880!) = NIT 43 LET + BRING ×4 + BRODARIČ 1837 (m4-Dorothea — vzorec P247 40 let prej!) + NOTIZEN-soglasja ×4 ('willigung' + m3-datirana 11. 11. 1836 — cf. P233-1880 'Gaveldzettel' 44 let prej!).",
+            "★★★★★★ THE-PEZDIRC-×6 ON S17: 2 grooms Georg ×2 (38, h41, 1836 + 32, Grafsing, 1837 = TWO GEORGS IN 6 MONTHS — the different fathers Stanislaus/Johann — brothers!) + 2 fathers + 2 witness-Mathiases = 4 spellings in 1 scan (Pezdiriz/Pezdig/Pezdirz/Pezding!) ↔ 04455-PEGDIRC ×49 in 13 years (P252!) + ★★★★★ THE-KRIŽAN-THREAD-1837: the-m3-bride-Anna-h63 (the 3rd 01738-block! ↔ 04455-1878/1879/1880!) = the THREAD 43 YEARS + BRING ×4 + BRODARIČ 1837 (the-P247-pattern-40-years-earlier!) + the CONSENT-NOTICES ×4 ('willigung' + the-m3-dated Nov 11 1836 — cf. P233-1880 44 years earlier!).",
+          )}
+        </p>
+      </div>
+
+      {/* e1836n timeline */}
+      <div className="mt-4 overflow-x-auto pb-1">
+        <p className="mb-1 text-xs font-semibold text-muted-foreground">{t("1836-nadaljevanje (margine 14–17: April/Mai/Juni/Oktobar)", "The 1836-continuation (margins 14–17: Apr/May/Jun/Oct)")}</p>
+        <div className="flex min-w-[880px] items-end gap-1 sm:min-w-0" role="listbox" aria-label={t("Vrstice e1836n-P261", "The rows of e1836n-P261")}>
+          {e1836n.map((e, i) => {
+            const isDouble = (e.h || "").includes("·");
+            return (
+              <div key={`a-${e.m}-${i}`} role="option" aria-selected={false} className="flex flex-1 flex-col items-center gap-1 rounded-lg border border-transparent px-1 py-2">
+                <span className="text-[10px] font-medium text-muted-foreground" style={{ overflowWrap: "anywhere" }}>{e.d}</span>
+                <span className={`flex h-9 min-w-9 items-center justify-center rounded-full border px-1 text-[11px] font-semibold ${isDouble ? "border-emerald-500 bg-emerald-500/20 text-emerald-700 dark:text-emerald-300" : e.x ? "border-dashed border-amber-500/60 bg-amber-500/10 text-amber-700 dark:text-amber-300" : "border-primary/50 bg-primary/10 text-primary"}`}>{e.m}</span>
+                <span className="text-[10px] text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
+                  {e.h ? (isDouble ? e.h.replace("·", "×h") : e.h) : ""}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      {/* restart timeline */}
+      <div className="mt-4 overflow-x-auto pb-1">
+        <p className="mb-1 text-xs font-semibold text-muted-foreground">{t("RESTART 1. november 1836 (margine 1–5 — m2 ISTI DAN + 1837: Jän/Feb/Jun?)", "THE RESTART Nov 1 1836 (margins 1–5 — m2 the SAME DAY + 1837: Jan/Feb/Jun?)")}</p>
+        <div className="flex min-w-[880px] items-end gap-1 sm:min-w-0" role="listbox" aria-label={t("Vrstice restart-P261", "The rows of the restart-P261")}>
+          {eRestart.map((e, i) => {
+            const isDouble = (e.h || "").includes("·");
+            return (
+              <div key={`b-${e.m}-${i}`} role="option" aria-selected={false} className="flex flex-1 flex-col items-center gap-1 rounded-lg border border-transparent px-1 py-2">
+                <span className="text-[10px] font-medium text-muted-foreground" style={{ overflowWrap: "anywhere" }}>{e.d}</span>
+                <span className={`flex h-9 min-w-9 items-center justify-center rounded-full border px-1 text-[11px] font-semibold ${isDouble ? "border-emerald-500 bg-emerald-500/20 text-emerald-700 dark:text-emerald-300" : e.x ? "border-dashed border-amber-500/60 bg-amber-500/10 text-amber-700 dark:text-amber-300" : "border-primary/50 bg-primary/10 text-primary"}`}>{e.m}</span>
+                <span className="text-[10px] text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
+                  {e.h ? (isDouble ? e.h.replace("·", "×h") : e.h) : ""}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* KRAJI — amber card */}
+      <div className="mt-4 rounded-lg border border-amber-500/40 bg-amber-500/10 p-4">
+        <p className="text-sm font-medium text-amber-700 dark:text-amber-300 [overflow-wrap:anywhere]">
+          {t(
+            "★★★ KRAJI-P261: GRADAG 15 (= GRADAC! m17 — cf. P260-'Dragatz'-duel REŠITEV-kontekst!) + OLOK 24 × OLOK 19 (m1 — ISTA VAS 2 HIŠI [X-OPEN]!) + OLLUN 18 (m17) + GROFSING/GRAFSING (m16-32 + m4) + ŠČRUPP (m16) + POŠTOML 2 (m4) + POŠDRAL 28-Mala (m5) + DÖLENGE 46 (m5) [~vsi X-OPEN-garbles!].",
+            "★★★ THE-P261-VILLAGES: GRADAG 15 (= Gradac! m17 — the-P260-'Dragatz'-duel-solution-context!) + OLOK 24 × OLOK 19 (m1 — THE SAME VILLAGE 2 HOUSES [X-OPEN]!) + OLLUN 18 (m17) + GROFSING/GRAFSING (m16-32 + m4) + ŠČRUPP (m16) + POŠTOML 2 (m4) + POŠDRAL 28-Mala (m5) + DÖLENGE 46 (m5) [~all-X-OPEN-garbles!].",
+          )}
+        </p>
+      </div>
+      <p className="mt-2 text-xs text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
+        {t(
+          "★★★★★ X-OPEN ostanki: m5-datum '1 Jun? d°' (Jun↔Jän-duel!) · m15-starost 25-vs-28 · m16/m17-duhovnika ('Hemsj in'/'Aemsj in') · m14-bride-2.-vrstica ('?urghad iz Güblad') · m3-'gabsamnn Kahofnigh' · m1-ženi-š-opis ('šluymunnižad' — schulmeister?) · vasi-garbles. Duhovniki 3: župnik Georg-[~Kraphovi(g/ž)?]-Parochus (P259-refined!) + Coop.-Gregor-Dolinšh[ek?]ff (m14/m1/m3/m4-Idem!) + 'Hemsj in'. P262+: s18+ = Pag. 33+ (1837-nadaljevanje — rezerva-md5 že na disku!).",
+          "★★★★★ The X-OPEN remains: the-m5-date '1 Jun? d°' (the-Jun↔Jän-duel!) · the-m15-age 25-vs-28 · the-m16/m17-priests · the-m14-bride-2nd-line · the-m3-'gabsamnn Kahofnigh' · the-m1-groom-descriptor · the-village-garbles. The priests 3: the-parish-priest-Georg-[~Kraphovi(g/zh)?]-Parochus (the-P259-refined!) + the-Coop.-Gregor-Dolinšh[ek?]ff + 'Hemsj in'. P262+: s18+ = Pag. 33+ (the-1837-continuation — the-reserve-md5 already-on-disk!).",
+        )}
+      </p>
+    </div>
+  );
+}
+
 function HouseStoriesP254() {
   const { t } = useLang();
   const tierMax = Math.max(...HOUSE_STORY_TIERS.map((x) => x.houses));
@@ -3920,6 +4032,7 @@ function ParishTab() {
       <Notranjost01738Leto1832 />
       <Notranjost01738Leto1833_1834 />
       <Notranjost01738Leto1835_1836 />
+      <Notranjost01738Leto1836_1837 />
 
       {/* brskalnik knjig */}
       <div>
