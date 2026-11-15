@@ -33,8 +33,9 @@ his = sorted(bloki, key=int)
 check("I2 hiše-1885", ",".join(his) == "1,5,9,13,21,31,31,31,31,54,58,62,63,63,68,78", ",".join(his))
 
 # I3: vitals
+n04106 = src.count('bookSignature: "04106"')
 check("I3 vitals-1940 + 04106==433", "HOUSE_VITALS.length !== 1940" not in src and src.count('bookSignature: "04106"') == 433,
-      f"04106-bloki={src.count('bookSignature: \"04106\"')}")
+      f"04106-bloki={n04106}")
 
 # I4: dokaz
 d = json.load(open(f"{ROOT}/research/issue17/parish-death-1885-04106.json", encoding="utf-8"))

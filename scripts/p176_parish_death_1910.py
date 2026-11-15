@@ -298,9 +298,10 @@ def main():
           qa.count(">= 1916") >= 28, f"{qa.count('>= 1915')}")
     check("I10d qa-parish p80 = 92 (24× — NESPREMENJENO!)",
           qa.count("p80Houses.size !== 93") >= 24, f"{qa.count('p80Houses.size !== 92')}")
+    n1910 = qa.count('=== "04894" && v.year === 1910')
     check("I10e P176-allow-listi (h7/h90 + h91 + h14 + h49 — 1910!)",
-          qa.count('=== "04894" && v.year === 1910') == 4,
-          f"{qa.count('=== \"04894\" && v.year === 1910')}")
+          n1910 == 4,
+          f"{n1910}")
 
     # ---------- I11: parish.ts-kaskada ----------
     src = open(PARISH_TS, encoding="utf-8").read()

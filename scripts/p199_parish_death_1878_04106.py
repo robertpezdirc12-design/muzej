@@ -90,8 +90,9 @@ check("I9 pt-luknja (04106==433, vitals==1375)",
       f"04106={pt['corpus']['byBook']['04106']} vitals={pt['corpus']['vitalsTotal']}")
 
 # I10: 04894-still-520 + leta-nabor
+n04894 = src.count('bookSignature: "04894"')
 check("I10 04894-still-520", src.count('bookSignature: "04894"') == 520,
-      f"04894={src.count('bookSignature: \"04894\"')}")
+      f"04894={n04894}")
 leta = sorted(set(re.findall(r'bookSignature:\s*"04106",\s*year:\s*(\d{4})', src)))
 check("I10b 04106-leta-{1877,...,1885}", ",".join(leta) == "1857,1858,1859,1860,1861,1862,1863,1864,1865,1866,1867,1868,1869,1870,1871,1872,1873,1874,1875,1876,1877,1878,1879,1880,1881,1882,1883,1884,1885", ",".join(leta))
 
