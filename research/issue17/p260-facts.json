@@ -93,16 +93,16 @@
     "noviBloki": "4 (m14-h4-nevesta + m15-h6-nevesta + m6-h9-ženin × h63-nevesta-POLNO + m7-h63-ženin × h9-nevesta-POLNO!)",
     "korpus": "vitals 2065 → 2069 · 01738 53 → 57 · sidra → +4",
     "dvigi": "h4-firstYear-korpus-1874→1835-ZA-39 (P250-h43-34-rekord-IZENAČEN+PRESEKEN? 39>34 = NOV-ABSOLUTNI-REKORD-DVIGA-KORPUSA-ČEZ-VSE-KNJIGE!) · h9-kand.-1885→1836 · h63-04455-1878→1836-ZA-42 (KRIŽAN-nit!) · h6-2.-01738-blok",
-    "opomba": "INTEGRACIJA-V-KORPUS-V-NASLEDNJEM-KORAKU (parish.ts-4-bloki + house-stories + qa-p260-bump-253→254 + verifier-p260 + worklog + README) — P260-START-dokumentira-VIR-metodo-strukturo-4-bloke-duel-rešitve!"
+    "opomba": "INTEGRACIJA-V-KORPUS-KONČANA (2026-11-12-pm): parish.ts-4-bloki + house-stories-živo-1:1 + marriage-early-×3-izvozov + qa-p260-254.-kontrola + UI-Notranjost01738Leto1835_1836 + verifier-24/24 + 59/59-starih-verifierjev-PASS + browser-0-napak!"
   },
   "pošteno": "63-vs-68-duel-rešen-z-letterform-referenco (ploska-'3' VS dvojna-lok-'8' — referenca-'28'-ISTO-ROKA-ISTO-STRAN!); datumi-m6–m12-'10. dt°'-OSTAJAJO-X-OPEN (kronologija-zahteva-≥-27.-Februar!); m1-1836-'27ten-Februar'-KOREKCIJA-prejšnje-agent-berite-'27.-Januar' (zoom-'27ten'!); vas-Gerhüpe/Gnarfstuß/Dragoffe-NI-rešene-pošteno",
   "lead": "**P261+:** ① INTEGRACIJA-4-BLOKOV-v-korpus (parish.ts-+ house-stories-+ qa-p260-+ verifier!) ② s17+ = Pag. 31+ (1836-nadaljevanje) ③ duel-'10. dt°'-rešitev (VLM-kvota?-kroji-m6–m12!)",
   "generatedAt": "2026-11-12",
   "metodaDokaz": "agent-vizija-Read-tool-full-page-×3 + kropsi-×40+ + letterform-forenzika (s16_m7_house-vs-s16_m7_age!) — 0-VLM-klicev (kvota-P259-predpis!)",
   "pushStatus": {
-    "stanje": "PUSH-BLOKIRAN — žeton-v-origin-URL-MRTEV (GitHub-API-401-Bad-credentials; repo-javen-torej-ls-remote-deluje-brez-žetona!)",
-    "lokalni-commiti": "P252-poravnava (fd6fa7e-iz-origin) + P260-START (3c5744c) — VARNI-v-/home/z/my-project (preživi-/tmp-wipe!)",
-    "postopek": "cf.-P259-runbook-KORAK-6: en-sam-push-ko-uporabnik-dostavi-nov-ghp_-žeton (classic-repo-scope) — sinhronizira-2-lokalna-commita-čez-origin/main",
+    "stanje": "PUSH-BLOKIRAN — žeton-v-origin-URL-MRTEV (GitHub-API-401-Bad-credentials; repo-javen → ls-remote-brez-žetona-deluje!)",
+    "lokalni-commiti": "P260-START (3c5744c) + P260-START-dopolnilo (6f97e63) + P260-INTEGRACIJA (8b2e3d8) = 3-VARNI-v-/home/z/my-project (preživi-/tmp-wipe!) — INTEGRACIJA-KONČANA (QA-254/254 + 59/59-verifierjev + tsc-0 + lint-0 + browser-0-napak!)",
+    "postopek": "cf.-P259-runbook-KORAK-6: en-sam-push-ko-uporabnik-dostavi-nov-ghp_-žeton (classic-repo-scope) — sinhronizira-3-lokalna-commita-čez-origin/main",
     "gitlab": "mirror-workflow (sync.yml) se sproži-samo-ob-pushu-na-GitHub — tudi-taj-čaka",
     "vercel": "avtomatsko-ob-pushu"
   }

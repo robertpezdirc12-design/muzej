@@ -53,7 +53,7 @@ check("I4c h51-1881-PARALELA + BRINC-v16 + PEZDIRC-9.-leto + DOVGAN-9-let + KLO�
       and "KLO-ŠTER" in an2)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2059")
+st = qa.count("HOUSE_VITALS.length !== 2069")
 check("I5 qa-p247 + števec-2012 (×150!)", "HOUSE_VITALS.length !== 1985" not in qa and st >= 150, f"2012-številcev={st}")
 check("I5b sidra-262 + 1877:5-P247 (qa-sidra-message)", "poročna sidra ≠ 262 (1873:4-P251! · 1874:11-P250! · 1875:1-P249! · 1876:6-P248! · 1877:5-P247!" in qa)
 check("I5c dobe-214 + 44-pred-linijskih", "dobe-bloki ≠ 236/7/26" in qa and "66 pred-linijskih 1873-P251×4!+1874-P250×11!+1875-P249×1!+1876-P248×6!+1877-P247×5!" in qa)
@@ -89,12 +89,12 @@ pt = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding
 h51 = [x for x in pt["gapHouses"] if x["houseNo"] == "51"][0]
 h53 = [x for x in pt["gapHouses"] if x["houseNo"] == "53"][0]
 check("I8a pt-luknja-2008 + byBook-04455=265 + P247-note",
-      pt.get("vitalsTotal") == 2059 and pt.get("corpus", {}).get("byBook", {}).get("04455") == 269
+      pt.get("vitalsTotal") == 2069 and pt.get("corpus", {}).get("byBook", {}).get("04455") == 269
       and "P247" in pt.get("corpus", {}).get("housesNote", ""),
       f"vitalsTotal={pt.get('vitalsTotal')} 04455={pt.get('corpus', {}).get('byBook', {}).get('04455')}")
-check("I8b h51-posodobljen (6-blokov/04455=2/firstYear=1877/p247Note!) + h53-intakten (22/4!)",
-      h51["blocksTotal"] == 6 and h51["byBook"]["04455"] == 2 and h51["firstYear"] == 1877 and "p247Note" in h51
-      and h53["blocksTotal"] == 22 and h53["byBook"]["04455"] == 4)
+check("I8b h51-posodobljen (12-blokov/04455=2/firstYear=1834-P259-DVIG!-p247Note!) + h53-živo (34/4-P259!)",
+      h51["blocksTotal"] == 12 and h51["byBook"]["04455"] == 2 and h51["firstYear"] == 1834 and "p247Note" in h51
+      and h53["blocksTotal"] == 34 and h53["byBook"]["04455"] == 4)
 
 ui = open(f"{ROOT}/src/components/museum/museum-atlas.tsx", encoding="utf-8").read()
 check("I9 UI-MarriageEarly1877-v-ParishTab + importi + MOH-kartica!",
@@ -104,7 +104,7 @@ check("I9 UI-MarriageEarly1877-v-ParishTab + importi + MOH-kartica!",
       and "P247: poročna predzgodovina 04455 — leto 1877 = 9/13" in ui)
 check("I9b worklog-P247-vnos", "## P247" in open(f"{ROOT}/worklog.md", encoding="utf-8").read())
 check("I9c stari-verifikatorji-na-živih-številkah (P258: 2059!)",
-      "2059" in open(f"{ROOT}/scripts/p238_parish_marriage_1885_04455.py", encoding="utf-8").read()
+      "2069" in open(f"{ROOT}/scripts/p238_parish_marriage_1885_04455.py", encoding="utf-8").read()
       and "247" in open(f"{ROOT}/scripts/p242_parish_marriage_1881_04455.py", encoding="utf-8").read())
 
 # ——— I10: QA-živo ———
@@ -113,7 +113,7 @@ try:
     with urllib.request.urlopen(r, timeout=30) as resp:
         qa_data = json.load(resp)
     check("I10 QA-živo 252/252 ok:True (+qa-p247-id!)",
-          qa_data.get("ok") is True and qa_data.get("passed") == 252 and qa_data.get("failed") == 0,
+          qa_data.get("ok") is True and qa_data.get("passed") == 254 and qa_data.get("failed") == 0,
           f"passed={qa_data.get('passed')} failed={qa_data.get('failed')}")
 except Exception as e:
     check("I10 QA-živo", False, str(e)[:80])

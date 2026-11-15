@@ -290,6 +290,9 @@ PREDHODNIK_1833N_STRUNA,
   PREDHODNIK_259_NITI,
   PREDHODNIK_259_KRAJI,
   PREDHODNIK_1833N_BLOCKS,
+  PREDHODNIK_183536_BLOCKS,
+  PREDHODNIK_260_NITI,
+  PREDHODNIK_260_KRAJI,
   PREDHODNIK_1828_STEVILCENIH,
   PREDHODNIK_1828_NESTEVILCENIH,
   PREDHODNIK_1828_BLOCKI,
@@ -2214,6 +2217,154 @@ function Notranjost01738Leto1833_1834() {
   );
 }
 
+function Notranjost01738Leto1835_1836() {
+  const { t } = useLang();
+  const e1834n: { m: string; d: string; h?: string; x?: boolean }[] = [
+    { m: "19", d: "16. 4. 1834", x: true },
+    { m: "20", d: "30. 7. 1834", x: true },
+    { m: "R", d: "26. 11. 1834", x: true },
+    { m: "2", d: "11. 2. 1835", x: true },
+    { m: "3", d: "11. 2. d°", x: true },
+    { m: "4", d: "12. 2.", x: true },
+    { m: "5", d: "12. 2. d°", x: true },
+    { m: "6", d: "13. 2.", x: true },
+    { m: "7", d: "14. 2.", x: true },
+    { m: "8", d: "15. 2.", x: true },
+    { m: "9", d: "17. 2.", x: true },
+    { m: "10", d: "18. 2. 1835", x: true },
+  ];
+  const e1835: { m: string; d: string; h?: string; x?: boolean }[] = [
+    { m: "11", d: "25. 2.", x: true },
+    { m: "12", d: "25. 2. d°", x: true },
+    { m: "13", d: "25. 2. d°", x: true },
+    { m: "14", d: "1. 3.", h: "4★" },
+    { m: "15", d: "28. 7.", h: "6★" },
+    { m: "16", d: "20. 8.", x: true },
+    { m: "17", d: "13. 10.", x: true },
+    { m: "18", d: "21. 10.", x: true },
+    { m: "19", d: "18. 11. 1835", x: true },
+    { m: "1", d: "27. 2. 1836", x: true },
+    { m: "2", d: "27. 2. d°", x: true },
+    { m: "3", d: "27. 2. d°", x: true },
+  ];
+  const e1836: { m: string; d: string; h?: string; x?: boolean }[] = [
+    { m: "4", d: "27. 2.", x: true },
+    { m: "5", d: "27. 2. d°", x: true },
+    { m: "6", d: "10. dt°", h: "9·63★" },
+    { m: "7", d: "10. dt°", h: "63·9★" },
+    { m: "8", d: "10. dt°", x: true },
+    { m: "9", d: "10. dt°", x: true },
+    { m: "10", d: "10. dt°", x: true },
+    { m: "11", d: "10. dt°", x: true },
+    { m: "12", d: "10. dt°", x: true },
+    { m: "13", d: "18. dt°", x: true },
+  ];
+  return (
+    <div className="rounded-xl border bg-card/60 p-5">
+      <h3 className="flex items-center gap-2 font-serif text-lg font-semibold">
+        <BookOpenCheck className="h-4 w-4 text-primary" aria-hidden />
+        {t(
+          "Notranjost knjige 01738: 1834-konec + 1835 + 1836-restart (3 + 18 + 13 vpisov — h4 DVIG 39 = nov absolutni rekord korpusa!)",
+          "The interior of the book 01738: the 1834-end + 1835 + the 1836-restart (3 + 18 + 13 entries — the h4 LIFT 39 = the new absolute corpus record!)",
+        )}
+      </h3>
+      <p className="mt-2 text-sm text-muted-foreground [overflow-wrap:anywhere]">
+        {t(
+          "★★★ ŠTEVILČENJE = SERIJE PONOVNIH ZAČETKOV: (A) rob 19/20 (16. 4. + 30. 7. 1834) NADALJUJE P259-serijo (rob 1 = 27. 11. 1833!) + (B) RESTART 1 = 26. NOVEMBER 1834 → 18. 11. 1835 = PASTORALNO LETNO Nov→Nov + (C) 1. VELIKA GLAVA '1836' PRED vrstico 1 (s15 — z okraskom! 27. Februar, NE januar! prehod na koledarsko leto — vzorec 04455-1882!) = prva velika glava v notranjosti 01738! Foliacija 'Pag = 2·sken−3' ×3 (25/26 + 27/28 + 29/30) = serija 13/13 notranjosti. m1-'27ten Februar' KOREKCIJA (prej '27. Januar' — zoom!). Metoda: agent-vizija pri kvoti 0 — 3 polne strani + 40+ kropov + letterform-forenzika.",
+          "★★★ THE NUMBERING = A SERIES OF RESTARTS: (A) margins 19/20 (Apr 16 + Jul 30 1834) CONTINUE the P259-series (margin 1 = Nov 27 1833!) + (B) RESTART 1 = NOVEMBER 26 1834 → Nov 18 1835 = the PASTORAL YEAR Nov→Nov + (C) the 1st LARGE HEADING '1836' BEFORE row 1 (s15 — with an ornament! Feb 27, NOT January! the transition to the calendar year — the 04455-1882 pattern!) = the first large heading in the 01738 interior! The foliation 'Pag = 2·scan−3' ×3 (25/26 + 27/28 + 29/30) = the series 13/13 of the interior. The m1-'27ten Februar' CORRECTION (before '27. Januar' — zoom!). The method: agent vision at quota 0 — 3 full pages + 40+ crops + letterform forensics.",
+        )}
+      </p>
+
+      {/* 4 bloki 4 dvigi — emerald */}
+      <div className="mt-4 rounded-lg border border-emerald-500/40 bg-emerald-500/10 p-4">
+        <p className="text-sm font-medium text-emerald-700 dark:text-emerald-300 [overflow-wrap:anywhere]">
+          {t("★★★★★ 4 NOVI BLOKI — 4 DVOGI (h4-39 = NOV ABSOLUTNI REKORD!): ", "★★★★★ 4 NEW BLOCKS — 4 LIFTS (the h4-39 = THE NEW ABSOLUTE RECORD!): ")}
+          {t(
+            `h4 1874→1835 (+39 = NOV-ABSOLUTNI-REKORD-DVIGA-ČEZ-VSE-POROČNE-KNJIGE!-prej-h43-34-P250!-+ korpus-firstYear-1870→1835-span-36→71!) · h9 ~49 (kand. 1885→1836!-korpus-firstYear-1862→1836!) · h63 42 (KRIŽAN-NIT: 1836→04455-1878–1880!) · h6 2.-01738-blok (h6-1828 — najdaljši razpon 96 let ostaje!) — ★★★★★ Šest-knjižni klub 34→36 (+2: h4/h9 — oba 5→6 knjig!) + DUEL 63-vs-68 RAZREŠEN (letterform '3' ploska vez VS '8' dvojna lok — referenca '28' isto leto isto stran!). Korpus ${PREDHODNIK_183536_BLOCKS.vitalsTotal} vitalov / 01738 = ${PREDHODNIK_183536_BLOCKS.byBook01738} blokov / leta 1828–1836+1873!`,
+            `h4 1874→1835 (+39 = THE-NEW-ABSOLUTE-LIFT-RECORD-ACROSS-ALL-MARRIAGE-BOOKS!-the-previous-h43-34-P250!-+ the-corpus-firstYear-1870→1835-span-36→71!) · h9 ~49 (cand. 1885→1836!) · h63 42 (THE-KRIŽAN-THREAD: 1836→04455-1878–1880!) · h6 the-2nd-01738-block (h6-1828 — the-longest-96-year-span stands!) — ★★★★★ The six-book club 34→36 (+2: h4/h9!) + THE-63-vs-68-DUEL-RESOLVED (the-letterform-'3'-flat-loop VS '8'-double-arch — the-'28'-age-reference-the-same-year-the-same-page!). The corpus ${PREDHODNIK_183536_BLOCKS.vitalsTotal} vitals / 01738 = ${PREDHODNIK_183536_BLOCKS.byBook01738} blocks / the years 1828–1836+1873!`,
+          )}
+        </p>
+      </div>
+
+      {/* ★★★★★★ SIBLING-SWAP — primary card */}
+      <div className="mt-4 rounded-lg border border-primary/50 bg-primary/10 p-4">
+        <p className="text-sm font-medium [overflow-wrap:anywhere]">
+          {t(
+            "★★★★★★ SIBLING-SWAP m6+m7: Peter ZAHOFZHIG (19, h9) × Maria KRIŽAN (19, h63) + Matthias KRIŽAN (28, h63) × Anna ZAHOFZHIG (20, h9) — brat+sestra × brat+sestra, ISTI DAN ('10. dt°'), ISTI PRIČI (Georg Krishan + Dorothea-[~Kolshan?] ×2!) = 1. TA VRSTA V 01738 (vzorec MOH×BRODARIČ-1877-P247 — 41 let prej!) → KRIŽAN-NIT 42 LET (1836 → 04455-1878 Anna HRIŽAN-P246 + 1879 Dorothea-P244 + 1880 Križan-Miklavčič-P243 — konglomerat 5 hiš + HRIŽAN-h62 = 6!) · ZAHOFZHIG-NIT ×4 čez 2 hiši in 2 knjigi (m15-h6-1835 ↔ m6/m7-h9-1836 ↔ 04455-m18-h13-1873 'JABOVŠIČ'!).",
+            "★★★★★★ THE-SIBLING-SWAP-m6+m7: Peter ZAHOFZHIG (19, h9) × Maria KRIŽAN (19, h63) + Matthias KRIŽAN (28, h63) × Anna ZAHOFZHIG (20, h9) — brother+sister × brother+sister, THE SAME DAY ('10. dt°'), THE SAME WITNESSES (Georg Krishan + Dorothea-[~Kolshan?] ×2!) = the 1st OF THIS KIND IN 01738 (the MOH×BRODARIČ-1877-P247 pattern — 41 years earlier!) → THE-KRIŽAN-THREAD-42-YEARS (1836 → 04455-1878/1879/1880 — the conglomerate 5 houses + Hrižan-h62 = 6!) · THE-ZAHOFZHIG-THREAD ×4 across 2 houses and 2 books!",
+          )}
+        </p>
+      </div>
+
+      {/* e1834n timeline */}
+      <div className="mt-4 overflow-x-auto pb-1">
+        <p className="mb-1 text-xs font-semibold text-muted-foreground">{t("1834-konec (rob 19–20 nadaljevanje + RESTART 1 = 26. 11. 1834 + februar 1835)", "The 1834-end (margins 19–20 continuation + RESTART 1 = Nov 26 1834 + February 1835)")}</p>
+        <div className="flex min-w-[880px] items-end gap-1 sm:min-w-0" role="listbox" aria-label={t("Vrstice e1834n", "The rows of e1834n")}>
+          {e1834n.map((e, i) => (
+            <div key={`i-${e.m}-${i}`} role="option" aria-selected={false} className="flex flex-1 flex-col items-center gap-1 rounded-lg border border-transparent px-1 py-2">
+              <span className="text-[10px] font-medium text-muted-foreground" style={{ overflowWrap: "anywhere" }}>{e.d}</span>
+              <span className="flex h-9 min-w-9 items-center justify-center rounded-full border border-dashed border-amber-500/60 bg-amber-500/10 px-1 text-[11px] font-semibold text-amber-700 dark:text-amber-300">{e.m}</span>
+              <span className="text-[10px] text-muted-foreground" style={{ overflowWrap: "anywhere" }}>{e.h || ""}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      {/* e1835 timeline */}
+      <div className="mt-4 overflow-x-auto pb-1">
+        <p className="mb-1 text-xs font-semibold text-muted-foreground">{t("Leto 1835 (margine 11–19 + VELIKA GLAVA '1836' + m1–m3 = 27. 2. ×3)", "The year 1835 (margins 11–19 + the LARGE HEADING '1836' + m1–m3 = Feb 27 ×3)")}</p>
+        <div className="flex min-w-[880px] items-end gap-1 sm:min-w-0" role="listbox" aria-label={t("Vrstice e1835", "The rows of e1835")}>
+          {e1835.map((e, i) => {
+            const isDouble = (e.h || "").includes("·");
+            return (
+              <div key={`j-${e.m}-${i}`} role="option" aria-selected={false} className="flex flex-1 flex-col items-center gap-1 rounded-lg border border-transparent px-1 py-2">
+                <span className="text-[10px] font-medium text-muted-foreground" style={{ overflowWrap: "anywhere" }}>{e.d}</span>
+                <span className={`flex h-9 min-w-9 items-center justify-center rounded-full border px-1 text-[11px] font-semibold ${isDouble ? "border-emerald-500 bg-emerald-500/20 text-emerald-700 dark:text-emerald-300" : e.h ? "border-emerald-500 bg-emerald-500/20 text-emerald-700 dark:text-emerald-300" : e.x ? "border-dashed border-amber-500/60 bg-amber-500/10 text-amber-700 dark:text-amber-300" : "border-primary/50 bg-primary/10 text-primary"}`}>{e.m}</span>
+                <span className="text-[10px] text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
+                  {e.h ? (isDouble ? e.h.replace("·", "×h").replace("★", "!") : e.h.replace("★", "!")) : ""}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      {/* e1836 timeline */}
+      <div className="mt-4 overflow-x-auto pb-1">
+        <p className="mb-1 text-xs font-semibold text-muted-foreground">{t("Leto 1836 (m4–m13 — 27. 2. ×2 + '10. dt°' ×7 [duel!] + '18. dt°')", "The year 1836 (m4–m13 — Feb 27 ×2 + '10. dt°' ×7 [the duel!] + '18. dt°')")}</p>
+        <div className="flex min-w-[880px] items-end gap-1 sm:min-w-0" role="listbox" aria-label={t("Vrstice e1836", "The rows of e1836")}>
+          {e1836.map((e, i) => {
+            const isDouble = (e.h || "").includes("·");
+            return (
+              <div key={`k-${e.m}-${i}`} role="option" aria-selected={false} className="flex flex-1 flex-col items-center gap-1 rounded-lg border border-transparent px-1 py-2">
+                <span className="text-[10px] font-medium text-muted-foreground" style={{ overflowWrap: "anywhere" }}>{e.d}</span>
+                <span className={`flex h-9 min-w-9 items-center justify-center rounded-full border px-1 text-[11px] font-semibold ${isDouble ? "border-emerald-500 bg-emerald-500/20 text-emerald-700 dark:text-emerald-300" : e.x ? "border-dashed border-amber-500/60 bg-amber-500/10 text-amber-700 dark:text-amber-300" : "border-primary/50 bg-primary/10 text-primary"}`}>{e.m}</span>
+                <span className="text-[10px] text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
+                  {e.h ? (isDouble ? e.h.replace("·", "×h").replace("★", "!") : e.h) : ""}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* KRAJI — secondary card */}
+      <div className="mt-4 rounded-lg border border-amber-500/40 bg-amber-500/10 p-4">
+        <p className="text-sm font-medium text-amber-700 dark:text-amber-300 [overflow-wrap:anywhere]">
+          {t(
+            "★★★ KRAJI-P260: 'Gnarfstuß 1' (m14-ženin-TOLLER — garble [~X-OPEN]!) + 'Dragoffe 2' (m15-ženin-KLEMERG + s16-m4 — Gradac-vs-Dragatuš DUEL [X-OPEN]!) + 'Gerhüpe/Gerhviše' dedovščina-P259 (hiše 1/22/24!) + ANGEL ×3 se nadaljuje (s14-mati + s15-m18-Otok-2 + s16-m12-Gradac-11? — cf. P259-Dobravlje!) + KAMBIG ×2 (s14-r6 + s15-m13-Krasinec-30 — cf. 04455-h41-1881!).",
+            "★★★ THE-P260-VILLAGES: 'Gnarfstuß 1' (the-m14-groom-TOLLER — garble [~X-OPEN]!) + 'Dragoffe 2' (the-m15-groom-KLEMERG + s16-m4 — the-Gradac-vs-Dragatuš DUEL [X-OPEN]!) + 'Gerhüpe/Gerhviše' the-P259-inheritance (houses 1/22/24!) + ANGEL ×3 continues + KAMBIG ×2 (cf. 04455-h41-1881!).",
+          )}
+        </p>
+      </div>
+      <p className="mt-2 text-xs text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
+        {t(
+          "★★★★★ X-OPEN ostanki: datum '10. dt°' ×7 (März|April|30.-Kurrent!) · m6-pripis '2' pod diagonalo (h9) · m13/m16-priimki-garble. P261+: s17+ = Pag. 31+ (1836-nadaljevanje) + duel-rešitev.",
+          "★★★★★ The X-OPEN remains: the '10. dt°' date ×7 (Mar|Apr|30-the-cursive!) · the-m6-note '2' under the diagonal (h9) · garble-surnames. P261+: s17+ = Pag. 31+ (the 1836 continuation) + the duel-resolution.",
+        )}
+      </p>
+    </div>
+  );
+}
+
 function HouseStoriesP254() {
   const { t } = useLang();
   const tierMax = Math.max(...HOUSE_STORY_TIERS.map((x) => x.houses));
@@ -3768,6 +3919,7 @@ function ParishTab() {
       <Notranjost01738Leto1830_1831 />
       <Notranjost01738Leto1832 />
       <Notranjost01738Leto1833_1834 />
+      <Notranjost01738Leto1835_1836 />
 
       {/* brskalnik knjig */}
       <div>

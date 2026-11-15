@@ -32,8 +32,8 @@
    "sub dioe."
   ],
   "tiers": {
-   "six": 34,
-   "five": 34,
+   "six": 36,
+   "five": 32,
    "four": 8,
    "three": 8,
    "two": 8,
@@ -78,7 +78,7 @@
    "65",
    "73"
   ],
-  "count": 34,
+  "count": 36,
   "note": "blok v VSEH 6 knjigah = polni življenjski cikel — P254: 9 → P255: 12 → P256: 16 → P257: 23 (h1/h11/h26/h27/h33/h56/h65 vstopajo prek 1831!)",
   "stories": {
    "1": {
@@ -216,6 +216,14 @@
    "73": {
     "si": "★ TIHA-HIŠA — samo 9 blokov v 6 knjigah (1–2 na knjigo, najtišja šest-knjižna — naslednja h61 ima 17!): m12-KUPAMIČ-1873 s pisarjevim popravkom '13'→'73' (P253!); Županič/Lupanič/Lepančič-garble-continuum 1869–1921; PEZDIRC-mati ×4 (Pezdire/Pegdire/Pozdirec/Pegdirec — 4 grafije!).",
     "en": "★ THE QUIET HOUSE — only 9 blocks in 6 books (1–2 per book, the quietest six-book house — the next, h61, has 17!): the m12-KUPAMIČ-1873 with the scribe's correction '13'→'73' (P253!); the Županič/Lupanič/Lepančič garble continuum 1869–1921; the PEZDIRC mother ×4 (four spellings!)."
+   },
+   "4": {
+    "si": "★★★★★ P260-hiša-NOV-ABSOLUTNI-REKORD-DVIGA: m14-1835-nevesta-Hellena-KRAUG-32-l-GRIBLJE-4-×-Johann-TOLLER-'Gnarfstuß-1' = h4-1.-01738-BLOK — POROČNA-firstYear-1874→1835-DVIG-ZA-39-LET = NOV-ABSOLUTNI-REKORD (prej-h43-34-P250!) — ŠEST-KNJIŽNA-5→6!",
+    "en": "★★★★★ THE-P260-HOUSE-THE-NEW-ABSOLUTE-LIFT-RECORD: the m14-1835 bride Hellena KRAUG (GRIBLJE 4) × Johann TOLLER = the-h4-01738-FIRST-BLOCK — the-MARRIAGE-firstYear-1874→1835-LIFT-BY-39 = THE-NEW-ABSOLUTE-RECORD (the-previous-h43-34-P250!) — SIX-BOOK-5→6!"
+   },
+   "9": {
+    "si": "★★★★★ P260-hiša-SIBLING-SWAP: m6-1836-ženin-Peter-ZAHOFZHIG-19-l-GRIBLJE-9-×-Maria-KRIŽAN-h63 + m7-sestra-Anna-ZAHOFZHIG-h9-NEVESTA-×-Matthias-KRIŽAN-h63 — ISTI-DAN-ISTI-PRIČI = 1.-TA-VRSTA-V-01738 (vzorec-MOH×BRODARIČ-1877-P247!) — h9-korpus-firstYear-1862→1836-DVIG-26 — ŠEST-KNJIŽNA-5→6!",
+    "en": "★★★★★ THE-P260-HOUSE-THE-SIBLING-SWAP: the m6-1836 groom Peter ZAHOFZHIG (GRIBLJE 9) × Maria KRIŽAN-h63 + the m7-sister Anna ZAHOFZHIG × Matthias KRIŽAN-h63 — THE-SAME-DAY-THE-SAME-WITNESSES = the-1st-OF-THIS-KIND-IN-01738! — the-corpus-firstYear-1862→1836-LIFT-26 — SIX-BOOK-5→6!"
    }
   }
  },
@@ -517,7 +525,7 @@
   {
    "houseNo": "4",
    "kind": "griblje",
-   "blocks": 7,
+   "blocks": 8,
    "books": 5,
    "perBook": {
     "04104": 1,
@@ -550,7 +558,7 @@
   {
    "houseNo": "6",
    "kind": "griblje",
-   "blocks": 36,
+   "blocks": 37,
    "books": 6,
    "perBook": {
     "01738": 1,
@@ -600,7 +608,7 @@
   {
    "houseNo": "9",
    "kind": "griblje",
-   "blocks": 23,
+   "blocks": 24,
    "books": 5,
    "perBook": {
     "04104": 5,
@@ -1485,7 +1493,7 @@
   {
    "houseNo": "63",
    "kind": "griblje",
-   "blocks": 29,
+   "blocks": 30,
    "books": 6,
    "perBook": {
     "01738": 1,

@@ -45,8 +45,8 @@ check("I1c foliacija: Pag. 9/11 (2·sken−3 ×7)",
 vseh = re.findall(r'bookSignature: "01738"', src)
 skupaj = len(re.findall(r'bookSignature: "', src))
 leta = [int(y) for y in re.findall(r'bookSignature: "[^"]+",\s*year: (\d+)', src)]
-check("I2 vitals == 2059 + 01738 == 47 + korpus-prvi-vpis == 1828",
-      "HOUSE_VITALS.length !== 2059" not in src and len(vseh) == 47 and skupaj == 2059 and min(leta) == 1828,
+check("I2 vitals == 2069 + 01738 == 57 + korpus-prvi-vpis == 1828",
+      "HOUSE_VITALS.length !== 2069" not in src and len(vseh) == 57 and skupaj == 2069 and min(leta) == 1828,
       f"01738={len(vseh)} skupaj={skupaj} min-leto={min(leta)}")
 
 # ——— I3: modul PREDHODNIK_1830_* (8) + PREDHODNIK_1831_* (6) + PREDHODNIK_257_KORPUS ———
@@ -92,12 +92,12 @@ check("I5d h65-BILA-PRVA-HIŠA-KORPUSA-1857 + MILEK-h65-NIT-43-let",
 
 # ——— I6: hišne zgodbe regenerirane (SIX-23 + bothEra-26 + h50-span-93!) ———
 check("I6 stories: SIX-×31 + blocks-2043 + bothEraPorocna-34 + tierji-31/35",
-      stories.count('houseNo: "') >= 31 and 'blocks: 2059,' in stories
-      and "bothEraPorocna: 34" in stories and "sixBook: 23" in stories
-      and "fiveBook: 41" in stories and "longestSpan: 96" in stories
+      stories.count('houseNo: "') >= 31 and 'blocks: 2069,' in stories
+      and "bothEraPorocna: 41" in stories and "sixBook: 36" in stories
+      and "fiveBook: 32" in stories and "longestSpan: 96" in stories
       and 'longestSpanHouses: ["6"]' in stories
-      and len(re.findall(r'firstYear: 1831, lastYear', stories)) == 10, "-")
-h50m = re.search(r'houseNo: "50", kind: "griblje", blocks: 12, books: 5.*?firstYear: 1831, lastYear: 1924, span: 93', stories)
+      and len(re.findall(r'firstYear: 1831, lastYear', stories)) == 15, "-")
+h50m = re.search(r'houseNo: "50", kind: "griblje", blocks: 13, books: 5.*?firstYear: 1831, lastYear: 1924, span: 93', stories)
 check("I6b h50-story: 13-blokov-1831–1924-span-93 (3.-mesto!)",
       bool(h50m), "-" if h50m else "h50-ni-tako")
 h65m = re.search(r'houseNo: "65", kind: "griblje", blocks: 44, books: 6.*?firstYear: 1831, lastYear: 1914, span: 83', stories)
@@ -105,14 +105,14 @@ check("I6c h65-story: 44-blokov-1831–1914-span-83 (2.-najglasnejša!)",
       bool(h65m), "-" if h65m else "h65-ni-tako")
 pt = json.load(open(f"{ROOT}/research/issue17/parish-house-stories.json", encoding="utf-8"))
 check("I6d dokaz-stories: 100-hiš + tiers-six-31 + stories-23 + P257-lifts",
-      len(pt.get("houses", [])) == 100 and pt["structure"]["tiers"]["six"] == 23
-      and len(pt["sixBookHouses"]["stories"]) == 23
+      len(pt.get("houses", [])) == 100 and pt["structure"]["tiers"]["six"] == 36
+      and len(pt["sixBookHouses"]["stories"]) == 36
       and pt["records"]["firstYearLiftsP257"]["h54"] == 37, "-")
 
 # ——— I7: qa-p257 (251.) + živa kontrola ———
 check("I7 qa-p257-notranjost kontrola obstaja + korpus-prvi-vpis-živo",
       '"qa-p257-parish-marriage-notranjost-01738-1830-1831"' in qa
-      and "korpus-prvi-vpis ≠ 1828" in qa and "HOUSE_VITALS.length !== 2043" in qa, "-")
+      and "korpus-prvi-vpis ≠ 1828" in qa and "HOUSE_VITALS.length !== 2069" in qa, "-")
 
 # ——— I8: dokaza JSON (1830: 8 + 1831: 13) ———
 d30 = json.load(open(f"{ROOT}/research/issue17/parish-marriage-notranjost-1830.json", encoding="utf-8"))
@@ -138,7 +138,7 @@ check("I9b HouseStoriesP254-regresija (obe-eri-26-tekst)",
 # ——— I10: pt-luknja + LIVE ———
 pt2 = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
 check("I10 pt-luknja-2059/01738:31 (P257!)",
-      pt2.get("vitalsTotal") == 2059 and pt2.get("corpus", {}).get("byBook", {}).get("01738") == 47
+      pt2.get("vitalsTotal") == 2069 and pt2.get("corpus", {}).get("byBook", {}).get("01738") == 57
       and pt2.get("corpus", {}).get("byBook", {}).get("04455") == 269, "-")
 
 live = "--live" in sys.argv
@@ -170,7 +170,7 @@ if live or "--check" not in sys.argv:
             qa_data = json.load(resp)
         p257 = [q for q in qa_data.get("tests", []) if q.get("id", "").startswith("qa-p257")]
         check("I10c LIVE-/api/qa 251/251 ok:True (+qa-p257-id!)",
-              qa_data.get("ok") is True and qa_data.get("passed") == 252 and qa_data.get("failed") == 0
+              qa_data.get("ok") is True and qa_data.get("passed") == 254 and qa_data.get("failed") == 0
               and len(p257) == 1 and p257[0].get("pass") is True,
               f"passed={qa_data.get('passed')} p257={len(p257)}")
     except Exception as e:

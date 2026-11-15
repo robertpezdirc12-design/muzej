@@ -40,8 +40,8 @@ bloki1832 = re.findall(r'houseNo: "([^"]+)",\s*bookSignature: "01738",\s*year: 1
 check("I1b bloki-01738/1832 == [22,35,2,42,36,35,66,56,61] (h35-×2-DVE-DRUŽINI!)",
       bloki1832 == ["22", "35", "2", "42", "36", "35", "66", "56", "61"], ",".join(bloki1832))
 bloki1833 = re.findall(r'houseNo: "([^"]+)",\s*bookSignature: "01738",\s*year: 1833,', src)
-check("I1c bloki-01738/1833 == [50,49] (m6-PESDIRZ×HIMIZ — POLNI-DVOJNI!)",
-      bloki1833 == ["50", "49"], ",".join(bloki1833))
+check("I1c bloki-01738/1833 == [50,49,53,24,60,28] (P258-m6-PESDIRZ×HIMIZ!-+ P259-m8/m24/m25/m12!)",
+      bloki1833 == ["50", "49", "53", "24", "60", "28"], ",".join(bloki1833))
 check("I1d foliacija: Pag. 13/15/17 (2·sken−3 ×9 — svinčnik 15/16 + 17/18!)",
       'page: 13,' in src and 'page: 15,' in src and 'page: 17,' in src, "-")
 
@@ -49,9 +49,9 @@ check("I1d foliacija: Pag. 13/15/17 (2·sken−3 ×9 — svinčnik 15/16 + 17/18
 vseh = re.findall(r'bookSignature: "01738"', src)
 skupaj = len(re.findall(r'bookSignature: "', src))
 leta1738 = sorted(set(int(y) for h, b, y in re.findall(r'houseNo: "([^"]+)",\s*bookSignature: "(01738)",\s*year: (\d+)', src) if b == "01738"))
-check("I2 vitals == 2059 + 01738 == 47 + leta == 1828–1833+1873",
-      "HOUSE_VITALS.length !== 2059" not in src and len(vseh) == 47 and skupaj == 2059
-      and leta1738 == [1828, 1829, 1830, 1831, 1832, 1833, 1873],
+check("I2 vitals == 2069 + 01738 == 57 + leta == 1828–1833+1873",
+      "HOUSE_VITALS.length !== 2069" not in src and len(vseh) == 57 and skupaj == 2069
+      and leta1738 == [1828, 1829, 1830, 1831, 1832, 1833, 1834, 1835, 1836, 1873],
       f"01738={len(vseh)} skupaj={skupaj} leta={leta1738}")
 
 # ——— I3: modul PREDHODNIK_1831K/1832/1833 + 258_NITI/KRAJI/KORPUS ———
@@ -128,9 +128,9 @@ check("I7d h66-m22: KRIŽAN×KRIŽAN-PAR + 3:1-'66' + BREZ-04455",
       "KRIŽAN×KRIŽAN-PAR" in w66 and "3:1" in w66 and "BREZ-04455" in w66, "-")
 
 # ——— I8: hišne zgodbe — 31 šest-knjižnih + p258Dvigi + tierji 31/35/10 ———
-check("I8 HOUSE_STORY_SIX == 31 (+8: h2/h8/h35/h36/h42/h46/h47/h48) + TOTALS-2059",
-      "sixBook: 31" in stories and "fiveBook: 35" in stories and "fourBook: 10" in stories
-      and "blocks: 2059" in stories and "bothEraPorocna: 34" in stories
+check("I8 HOUSE_STORY_SIX == 36 (+5: h24/h53/h60-P259 + h4/h9-P260!) + TOTALS-2069",
+      "sixBook: 36" in stories and "fiveBook: 32" in stories and "fourBook: 8" in stories
+      and "blocks: 2069" in stories and "bothEraPorocna: 41" in stories
       and "p258Dvigi" in stories and "h8/h46/h66/h35/h47/h42/h2/h48/h36/h49" in stories, "-")
 for h, n in [("2", 34), ("8", 39), ("35", 37), ("36", 34), ("42", 28), ("46", 39), ("47", 19), ("48", 33), ("50", 13), ("56", 15), ("61", 18), ("66", 14), ("22", 36), ("49", 29)]:
     m = re.search(rf'houseNo: "{h}", kind: "griblje", blocks: (\d+),', stories)
@@ -180,7 +180,7 @@ if LIVE:
     try:
         qaResp = json.load(urllib.request.urlopen("http://localhost:3000/api/qa", timeout=90))
         check("I10b LIVE /api/qa == 252/252 ok:True",
-              qaResp.get("ok") is True and qaResp.get("passed") == 252 and qaResp.get("failed") == 0,
+              qaResp.get("ok") is True and qaResp.get("passed") == 254 and qaResp.get("failed") == 0,
               f"{qaResp.get('passed')}/{qaResp.get('passed', 0) + qaResp.get('failed', 0)}")
     except Exception as e:
         check("I10b LIVE /api/qa", False, str(e)[:80])

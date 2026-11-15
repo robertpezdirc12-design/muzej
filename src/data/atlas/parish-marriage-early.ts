@@ -1388,3 +1388,40 @@ export const PREDHODNIK_1833N_BLOCKS = {
   dokaz: "parish-marriage-notranjost-1833n.json (36-vpisov-13+12+11 + md5-s11-b56f04a5/s12-ed62d632/s13-8afbec80 + niti + kraji + korpusUcinek + xOpen + p259-agent-vizija-potrditev!)",
   p260: "1834-nadaljevanje (s14+ = Pag. 25+) → desetletja-1830er-do-šiva-1873",
 } as const;
+
+/** Kraji P260: Gnarfstuß-1 [~X-OPEN] + Dragoffe-2 [~Gradac|Dragatuš-DUEL!] + Gerhüpe/Gerhviše-dedovščina-P259 + ANGEL-×3 + KAMBIG-×2. */
+export const PREDHODNIK_260_KRAJI = {
+  si: "★★★ KRAJI-P260: vas-'Gnarfstuß-1' (m14-ženin-Johann-TOLLER!-Gnarfstuß/Granfstuz-garble-[~X-OPEN!]) + vas-'Dragoffe-2' (m15-ženin-Mathias-KLEMERG-+-s16-m4-ženin?-'Dragoffe-1'!-Gradac-vs-Dragatuš-DUEL-[X-OPEN!]) + vas-'Gerhüpe/Gerhviše'-X-OPEN-DEDIZŠČINA-P259 (s14-r1/r2-+-s15-m16-hiše-1/22/24!-kandidati-Gorjupa?/Gorenje?) + ANGEL-×3-nadaljevanje (s14-r1-mati-Barbara-ANGEL + s15-m18-nevesta-Anna-ANGEL-Otok-2 + s16-m12-nevesta-Anna-ANGEL-Gradac-11? — cf.-P259-Dobravlje-družina!) + KAMBIG-×2 (s14-r6-ženin-Jakob-Kambitz? + s15-m13-nevesta-Catharina-Kambig?-Krasinec-30 — cf.-P259-s13-r8-'Anna-KAMBICH!'-+ 04455-h41-KAMBIČ-1881-P242!)",
+  en: "THE-P260-VILLAGES: 'Gnarfstuß-1' (the-m14-groom!-garble-X-OPEN) + 'Dragoffe-2' (the-m15-groom-+-s16-m4?-the-Gradac-vs-Dragatuš-DUEL-X-OPEN!) + 'Gerhüpe/Gerhviše' the-P259-inheritance (houses-1/22/24!) + ANGEL-×3-continues (cf.-P259!) + KAMBIG-×2 (cf.-04455-h41-1881!)",
+} as const;
+
+/** Niti P260: KRIŽAN-nit-42-let + ZAHOFZHIG/AHOFZHIG-×4-2-hiši + ANGEL + KAMBIG + GERHÜPE. */
+export const PREDHODNIK_260_NITI = {
+  si: "★★★★★★ KRIŽAN-NIT-42-LET (m6-nevesta-Maria-KRISHAN-h63 + m7-ženin-Matthias-KRISHAN-h63 + priča-Georg-Krishan-×2!-↔-04455-h63-1878-Anna-HRIŽAN-P246-v6!-1879-Dorothea-P244-v21!-1880-Križan-Miklavčič-P243-v14!-konglomerat-5-GRIBLJE-hiš-3+36+66+63+28-+HRIŽAN-h62-ŠIV = 6!-cf.-P259-KRIŽAN-GROZD-h28-4×!) + ★★★★★ ZAHOFZHIG/AHOFZHIG-nit-×4-2-hiši-2-let-zapored (m15-nevesta-Anna-h6-1835!-+ m6-ženin-Peter-+-m7-nevesta-Anna-h9-1836!-↔-04455-m18-ženin-Mathias-[J/G]ABOVŠIČ-h13-1873-P251-4-branja!-mreža-2-knjig-3-hiši [~X-OPEN]) + ★★★★ SIBLING-SWAP/IZMENA-VLOG-m6+m7 (brat+sestra-×-brat+sestra-ISTI-DAN-ISTI-PRIČI-Georg-Krishan-+-Dorothea-[~Kolshan?]-×2!-1.-TA-VRSTA-V-01738!-vzorec-MOH×BRODARIČ-1877-P247-41-let-prej!-cf.-P149-№2+№3!) + ANGEL-nit-×3-se-nadaljuje + KAMBIG-nit-×2 + TOLLER/KRAUG-+KLEMERG-nova-priimkovna-parica [~X-OPEN]",
+  en: "THE-42-YEAR-KRIŽAN-THREAD (m6-bride-Maria-h63 + m7-groom-Matthias-h63 + the-witness-Georg-×2!-↔-04455-h63-1878/1879/1880!-the-conglomerate-5-houses-+Hrižan-h62 = 6!) + the-ZAHOFZHIG-thread-×4-2-houses-2-consecutive-years (cf.-04455-m18-h13-1873!) + the-SIBLING-SWAP-m6+m7 (brother+sister × brother+sister-the-same-day-the-same-witnesses!-the-1st-IN-01738!-the-MOH×BRODARIČ-1877-pattern!) + ANGEL-×3 + KAMBIG-×2 + the-new-TOLLER/KRAUG-+-KLEMERG-surname-pairs [~X-OPEN]",
+} as const;
+
+/** P260-korpus-skupaj: +4 blokov; vitals 2065→2069; 01738 = 57; 4 dvigi (h4-39 NOV-ABSOLUTNI-REKORD!); šest-knjižne 34→36 (+2: h4/h9!). */
+export const PREDHODNIK_183536_BLOCKS = {
+  noviBloki: 4,
+  vpisi1834n: 3,
+  vpisi1835: 18,
+  vpisi1836: 13,
+  vitalsTotal: 2069,
+  byBook01738: 57,
+  dvigi: {
+    h4: "1874 → 1835 (39 let — ★★★★★ NOV-ABSOLUTNI-REKORD-DVIGA-ČEZ-VSE-POROČNE-KNJIGE!-prej-h43-34-P250!-01738-PRVIČ-5→6-knjig-ŠEST-KNJIŽNI-KLUB!-+ korpus-firstYear-1870→1835-DVIG-35-span-36→71!)",
+    h6: "2.-01738-blok (h6-1828-m6-P255!-najdaljši-razpon-korpusa-96-let-ostaja!)",
+    h9: "kand. 1885 → 1836 (~49 let — 01738-PRVIČ-5→6-knjig-ŠEST-KNJIŽNI-KLUB!-+ korpus-firstYear-1862→1836-DVIG-26!)",
+    h63: "1878 → 1836 (42 let — KRIŽAN-NIT!-h63-2.-01738-blok-za-m1-1873-P253!-+ korpus-firstYear-1862→1836-DVIG-26!)",
+  },
+  sestKnjiznih: "34 → 36 (+2: h4/h9 — oba-5→6-knjig!)",
+  struktura: "ŠTEVILČENJE-=-SERIJE-PONOVNIH-ZAČETKOV: (A)-rob-19/20-NA-s14-NADALJEVANJE-P259-serije (27.-Nov-1833-rob-1-→-30.-Juli-1834-rob-20!) + (B)-RESTART-1-26.-Nov-1834→18.-Nov-1835-PASTORALNO-LETNO-Nov→Nov + (C)-1.-VELIKA-GLAVA-'1836'-PRED-vrstico-1 (s15-r11!-prehod-na-koledarsko-leto-cf.-04455-1882-P241!)",
+  foliacija: "Pag = 2·sken − 3 ×3 (s14-25/26 + s15-27/28 + s16-29/30-svinčnik-agent-vizija!) — serija-13/13-notranjosti (P259-10/10 + P260-3/3!)",
+  masniDan1836: "27.-Februar-1836-×5 (s15-m1–m3 + s16-m4/m5!-MNOŽIČNI-DAN-kand.) + '10.-dt°'-×7-s16-m6–m12-KRONOLOŠKI-DUEL-[X-OPEN: 10.-März|April|30.-Kurrent!]",
+  siblingSwap: "m6+m7: Peter-ZAHOFZHIG-h9 × Maria-KRIŽAN-h63 + Matthias-KRIŽAN-h63 × Anna-ZAHOFZHIG-h9 — brat+sestra-×-brat+sestra-ISTI-DAN-ISTI-PRIČI (Georg-Krishan + Dorothea-[~Kolshan?]-×2!) = 1.-TA-VRSTA-V-01738 (vzorec-MOH×BRODARIČ-1877-P247!)",
+  duelRazresen: "63-vs-68-RAZREŠEN-letterform-'3'-ploska-vez-VS-'8'-dvojna-lok (referenca-'28'-starost-ISTO-ROKA-ISTO-STRAN-s16_m7_house/age.png!) — h63-1:1",
+  korekcija: "m1-1836-'27ten-Februar'-KOREKCIJA-prej-'27.-Januar' (zoom-'27ten'!)",
+  dokaz: "research/issue17/p260-facts.json (87-vrstic + p260-work/-3-skeni-md5-s14-dc2f13e0-s15-b130fa71-s16-eef17788-+ 10-odločilnih-kropov!) — metoda-AGENT-VIZIJA-0-VLM-klicev (P259-predpis!)",
+  p261: "s17+ = Pag. 31+ (1836-nadaljevanje-m14–m?) + duel-'10. dt°'-rešitev (kropi-m6–m12!)",
+} as const;

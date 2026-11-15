@@ -29,11 +29,11 @@ for m in BLOK_RE.finditer(src):
     house, sig, year, what = m.group(1), m.group(2), int(m.group(3)), m.group(4)
     bloki.append({"house": house, "sig": sig, "year": year, "what": what})
 
-check("I1 korpus razčlenjen == 2059 blokov (križ z HOUSE_VITALS) — P257-živo!",
-      len(bloki) == 2059, f"razčlenjenih={len(bloki)}")
+check("I1 korpus razčlenjen == 2069 blokov (križ z HOUSE_VITALS) — P260-živo!",
+      len(bloki) == 2069, f"razčlenjenih={len(bloki)}")
 po_knjigi = {k: sum(1 for b in bloki if b["sig"] == k) for k in ("04104", "04105", "04106", "04894", "04455", "01738")}  # P258: +01738!
-check("I1b bloki-po-knjigah == {04104:288, 04105:502, 04106:433, 04894:520, 04455:269, 01738:47} (P258-živo!)",
-      po_knjigi == {"04104": 288, "04105": 502, "04106": 433, "04894": 520, "04455": 269, "01738": 47},
+check("I1b bloki-po-knjigah == {04104:288, 04105:502, 04106:433, 04894:520, 04455:269, 01738:57} (P260-živo!)",
+      po_knjigi == {"04104": 288, "04105": 502, "04106": 433, "04894": 520, "04455": 269, "01738": 57},
       ",".join(f"{k}:{v}" for k, v in po_knjigi.items()))
 
 milic_po_knjigi = {k: sum(1 for b in bloki if b["sig"] == k and MILIC_RE.search(b["what"])) for k in po_knjigi}

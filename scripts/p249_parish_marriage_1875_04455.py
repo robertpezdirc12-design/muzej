@@ -54,7 +54,7 @@ check("I4c P248-NAPAVED-FALSIFICIRANA + '4.'-×10 + mesec-samo-ob-spremembi + MI
       and "Anna-Milek" in an2 and "MIGRANT" in an2 and "Jatnopir" in an2)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2059")
+st = qa.count("HOUSE_VITALS.length !== 2069")
 check("I5 qa-p249 + števec-2012 (×150!)", "HOUSE_VITALS.length !== 1996" not in qa and st >= 150, f"2012-številcev={st}")
 check("I5b sidra-262 + 1875:1-P249 (qa-sidra-message)", "poročna sidra ≠ 262 (1873:4-P251! · 1874:11-P250! · 1875:1-P249!" in qa)
 check("I5c dobe-221 + 51-pred-linijskih", "dobe-bloki ≠ 236/7/26" in qa and "66 pred-linijskih 1873-P251×4!+1874-P250×11!+1875-P249×1!" in qa)
@@ -92,10 +92,10 @@ check("I7c FOLIACIJA-23/23 + DUP-8 + '21'-anomalija + finis-1874-v-modulu",
 pt = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
 h42 = [x for x in pt["gapHouses"] if x["houseNo"] == "42"][0]
 check("I8a pt-luknja-2008 + byBook-04455=265",
-      pt.get("vitalsTotal") == 2059 and pt.get("corpus", {}).get("byBook", {}).get("04455") == 269,
+      pt.get("vitalsTotal") == 2069 and pt.get("corpus", {}).get("byBook", {}).get("04455") == 269,
       f"vitalsTotal={pt.get('vitalsTotal')} 04455={pt.get('corpus', {}).get('byBook', {}).get('04455')}")
 check("I8b h42-p249Note (tail-kandidat-PROMOCIJA-P250!-bloki-16!)",
-      h42["blocksTotal"] == 16 and "p249Note" in h42 and "Maria Pegdirc" in h42["p249Note"]
+      h42["blocksTotal"] == 28 and "p249Note" in h42 and "Maria Pegdirc" in h42["p249Note"]
       and "P250" in h42["p249Note"])
 
 ui = open(f"{ROOT}/src/components/museum/museum-atlas.tsx", encoding="utf-8").read()
@@ -107,7 +107,7 @@ check("I9 UI-MarriageEarly1875-v-ParishTab + importi + h42-kartica!",
       and "Poročna predzgodovina 04455 (P249): leto 1875 = 11/13" in ui)
 check("I9b worklog-P249-vnos", "## P249" in open(f"{ROOT}/worklog.md", encoding="utf-8").read())
 check("I9c stari-verifikatorji-na-živih-številkah (P258: 2059!)",
-      "2059" in open(f"{ROOT}/scripts/p238_parish_marriage_1885_04455.py", encoding="utf-8").read()
+      "2069" in open(f"{ROOT}/scripts/p238_parish_marriage_1885_04455.py", encoding="utf-8").read()
       and "265" in open(f"{ROOT}/scripts/p242_parish_marriage_1881_04455.py", encoding="utf-8").read())
 
 # ——— I10: QA-živo ———
