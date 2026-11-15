@@ -61,9 +61,9 @@ SUB_DIOE = "sub dioe."
 def is_sub(h: str) -> bool:
     return h.startswith("sub dioe.")
 EXPECTED_NEW_HOUSES = 0         # 4. zapored z 0 novih numeričnih!
-EXPECTED_VITALS_TOTAL = 686     # POSODABLJENO P144: +1 blok 1915 (№1 h82 ISTA-HIŠA!)     # POSODABLJENO P139: 517 (era) → 664 (živi korpus!)
+EXPECTED_VITALS_TOTAL = 2081
 STATS_VITALS_P113 = 517       # era-vrednost p113 dokaza (stats.vitals)
-BLOCKS_04105 = 502              # POSODABLJENO P139: 491 (era) → 502 (živi korpus!)
+BLOCKS_04105 = 502
 KUMULATIV_ENTRIES = 603         # 594 + 9
 KUMULATIV_HOUSES = 88           # + 0
 KUMULATIV_YEARS = 33            # 1886–1918

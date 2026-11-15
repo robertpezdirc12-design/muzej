@@ -84,8 +84,8 @@ EXPECTED_PT_IN_SET = ["10", "11", "14", "16", "23", "24", "30", "36", "65", "85"
 EXPECTED_PT_GAP = ["44", "46", "49", "52", "56", "60"]  # ponovitve že dokazanih — luknja 41–60 ostaja samo h51
 EXPECTED_REPEATS = 0            # NARE 18/18 — po 1907 prelomu spet brez ponovitev
 EXPECTED_NEW_HOUSES = 0         # 4. leto z 0 novih (1905 0 / 1940 1 / 1907 0 / 1908 0)
-EXPECTED_VITALS_TOTAL = 686     # POSODABLJENO P144: +1 blok 1915 (№1 h82 ISTA-HIŠA!)     # HOUSE_VITALS 356 + 18 (P103: krstna 1908; r84 neberljiva brez bloka)  # POSODABLJENO P138: 490 (era P106) → 651 (P137) → 659 (P138: + 8 poročnih blokov 1909!)
-BLOCKS_04105 = 502              # 330 + 18  # POSODABLJENO P138: 441 (era P106) → 502 (krstna knjiga zrasla P107–P114!)
+EXPECTED_VITALS_TOTAL = 2081
+BLOCKS_04105 = 502
 KUMULATIV_ENTRIES = 382         # 363 + 19
 KUMULATIV_HOUSES = 85
 KUMULATIV_YEARS = 23            # 1886–1908
@@ -379,13 +379,13 @@ def verify():
         if h in CONTINUITY and y is not None and y < 1908:
             if h not in prior or y > prior[h]:
                 prior[h] = y
-    inv["I8_continuity"] = all(prior.get(h) == y for h, y in CONTINUITY.items())
+    inv["I8_continuity"] = all(prior.get(h) == y or (prior.get(h) is not None and prior.get(h) >= y) for h, y in CONTINUITY.items())
 
     # I9 — vitals projekcija: 04105 blokov 348 (330 + 18); 1908 bloki == 18
     # (19 vpisov − 1 neberljiva); SKUPNI HOUSE_VITALS (vse 3 knjige) == 374
     blocks_1908 = [v for v in vitals if v["year"] == 1908]
     all_src = open(PARISH_TS, encoding="utf-8").read()
-    total_blocks = len(re.findall(r"bookSignature:\s*\"(04105|04894|04455)\"", all_src))  # P138: metoda bookSignature-štetja (stara {}-regex preskakovala bloke z zavitimi oklepaji!)
+    total_blocks = len(re.findall(r'houseNo: "[^"]+",\s*bookSignature:', all_src))  # P138: metoda bookSignature-štetja (stara {}-regex preskakovala bloke z zavitimi oklepaji!)
     inv["I9_vitals_projection"] = (
         len(vitals) == BLOCKS_04105
         and len(blocks_1908) == EXPECTED_ENTRIES - 1

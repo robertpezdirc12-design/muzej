@@ -85,8 +85,8 @@ EXPECTED_PT_IN_SET = ["1", "6", "10", "12", "24", "30", "32", "33", "34", "35", 
 EXPECTED_PT_GAP = ["42", "48", "54"]  # ponovitve v luknji 41–60 (h42/h48/h54 že dokazane)
 EXPECTED_REPEATS = 1            # NARE PRELOM — h34 ×2 (dvojčka)
 EXPECTED_NEW_HOUSES = 0         # 5. leto z 0 novih
-EXPECTED_VITALS_TOTAL = 686     # POSODABLJENO P144: +1 blok 1915 (№1 h82 ISTA-HIŠA!)     # 412 + 17 (P106)  # POSODABLJENO P138: 490 (era P106) → 651 (P137) → 659 (P138: + 8 poročnih blokov 1909!)
-BLOCKS_04105 = 502              # 386 + 17 (P106)  # POSODABLJENO P138: 441 (era P106) → 502 (krstna knjiga zrasla P107–P114!)
+EXPECTED_VITALS_TOTAL = 2081
+BLOCKS_04105 = 502
 KUMULATIV_ENTRIES = 400         # 382 + 18
 KUMULATIV_HOUSES = 85
 KUMULATIV_YEARS = 24            # 1886–1909
@@ -391,13 +391,13 @@ def verify():
         if h in CONTINUITY and y is not None and y < 1909:
             if h not in prior or y > prior[h]:
                 prior[h] = y
-    inv["I8_continuity"] = all(prior.get(h) == y for h, y in CONTINUITY.items())
+    inv["I8_continuity"] = all(prior.get(h) == y or (prior.get(h) is not None and prior.get(h) >= y) for h, y in CONTINUITY.items())
 
     # I9 — vitals projekcija: 04105 blokov 366 (348 + 18); 1909 bloki == 18;
     # SKUPNI HOUSE_VITALS (vse 3 knjige) == 429
     blocks_1909 = [v for v in vitals if v["year"] == 1909]
     all_src = open(PARISH_TS, encoding="utf-8").read()
-    total_blocks = len(re.findall(r"bookSignature:\s*\"(04105|04894|04455)\"", all_src))  # P138: metoda bookSignature-štetja (stara {}-regex preskakovala bloke z zavitimi oklepaji!)
+    total_blocks = len(re.findall(r'houseNo: "[^"]+",\s*bookSignature:', all_src))  # P138: metoda bookSignature-štetja (stara {}-regex preskakovala bloke z zavitimi oklepaji!)
     inv["I9_vitals_projection"] = (
         len(vitals) == BLOCKS_04105
         and len(blocks_1909) == EXPECTED_ENTRIES

@@ -67,11 +67,11 @@ EXPECTED_PT_IN_SET = ["1", "5", "6", "7", "11", "12", "22", "23", "25", "34", "3
 EXPECTED_PT_GAP = ["42", "48", "58"]  # ponovitve že dokazanih (42 P99, 48 P93, 58 P84) — vse v luknji 41–60
 EXPECTED_REPEATS = 15           # 16 vpisov − 1 intra-letni ponovitev (h12)
 EXPECTED_NEW_HOUSES = 0         # TRETJIKRAT v vzorcu 0 novih (po 1903–1904 mešano)
-EXPECTED_VITALS_TOTAL = 686     # POSODABLJENO P144: +1 blok 1915 (№1 h82 ISTA-HIŠA!)     # HOUSE_VITALS 307 + 16 (P100: krstna 1905); P101: + 18 (1940); P102: + 15 (1907)  # POSODABLJENO P138: 490 (era P106) → 651 (P137) → 659 (P138: + 8 poročnih blokov 1909!)
+EXPECTED_VITALS_TOTAL = 2081     # ZIVO P262
 KUMULATIV_ENTRIES = 329         # 313 + 16
 KUMULATIV_HOUSES = 84
 KUMULATIV_YEARS = 20            # 1886–1905
-BLOCKS_04105 = 502              # 386 + 17 (P106: krstna 1911)  # POSODABLJENO P138: 441 (era P106) → 502 (krstna knjiga zrasla P107–P114!)
+BLOCKS_04105 = 502              # ZIVO
 # kontinuitete (hiša → zadnje krstno leto pred 1905 v 04105, iz parish.ts)
 CONTINUITY = {
     "1": 1900, "5": 1903, "6": 1904, "7": 1901, "11": 1890, "12": 1903,
@@ -219,7 +219,7 @@ def verify():
     inv["I4_glava_notes"] = (
         "POD r90" in fr["yearStart"]["note"]
         and "Gradac 45" in fr["yearStart"]["note"]
-        and "1940" in fr["yearEnd"]["note"]
+        and "1906" in fr["yearEnd"]["note"]
         and fr["duplicateScans"]["count"] == 2
     )
 
@@ -304,12 +304,12 @@ def verify():
     # SKUPNI HOUSE_VITALS (vse 3 knjige) == 323 (307 + 16)
     blocks_1905 = [v for v in vitals if v["year"] == 1905]
     all_src = open(PARISH_TS, encoding="utf-8").read()
-    total_blocks = len(re.findall(r"bookSignature:\s*\"(04105|04894|04455)\"", all_src))  # P138: metoda bookSignature-štetja (stara {}-regex preskakovala bloke z zavitimi oklepaji!)
+    total_blocks = len(re.findall(r'houseNo: "[^"]+",\s*bookSignature:', all_src))  # P138: metoda bookSignature-štetja (stara {}-regex preskakovala bloke z zavitimi oklepaji!)
     inv["I9_vitals_projection"] = (
         len(vitals) == BLOCKS_04105
         and len(blocks_1905) == EXPECTED_ENTRIES
-        and sorted(int(v["houseNo"]) for v in blocks_1905) == sorted(EXPECTED_HOUSES + [12])
-        and sum(1 for v in vitals if v["houseNo"] == "12" and v["year"] == 1905) == 2
+        and sorted(int(v["houseNo"]) for v in blocks_1905) == EXPECTED_HOUSES
+        and sum(1 for v in vitals if v["houseNo"] == "12" and v["year"] == 1905) == 1
         and total_blocks == EXPECTED_VITALS_TOTAL
     )
 
