@@ -40,8 +40,8 @@
    "one": 8
   },
   "tiersSum": 100,
-  "sixBook": 39,
-  "fiveBook": 29
+  "sixBook": 41,
+  "fiveBook": 27
  },
  "sixBookHouses": {
   "houses": [
@@ -55,6 +55,7 @@
    "11",
    "12",
    "16",
+   "17",
    "18",
    "19",
    "20",
@@ -63,6 +64,7 @@
    "26",
    "27",
    "28",
+   "31",
    "32",
    "33",
    "35",
@@ -80,8 +82,8 @@
    "65",
    "73"
   ],
-  "count": 39,
-  "note": "blok v VSEH 6 knjigah = polni življenjski cikel — P254: 9 → P255: 12 → P256: 16 → P257: 23 (h1/h11/h26/h27/h33/h56/h65 vstopajo prek 1831!) | P261: +3-h7/h39/h41 (vsi-5→6-knjig-prek-s17-01738-blokov!)",
+  "count": 41,
+  "note": "blok v VSEH 6 knjigah = polni življenjski cikel — P254: 9 → P255: 12 → P256: 16 → P257: 23 (h1/h11/h26/h27/h33/h56/h65 vstopajo prek 1831!) | P261: +3-h7/h39/h41 (vsi-5→6-knjig-prek-s17-01738-blokov!) | P262: +2-h17/h31 (vsi-5→6-knjig-prek-s18-01738-blokov-1838!-h17-DVIG-37-2.-NAJVEČJI-NOTRANJOSTI!-h31-DVIG-19!)",
   "stories": {
    "1": {
     "si": "★★★ P257-hiša: m13-1831-ŽENIN-Math.-[Ianigl?~Muniz/Kranigh — 3-variant-GARBLE!] (ledina, GRIBLJE 1 × [Podierz?]-h11 — POLNI-DVOJNI!) — h1-firstYear-1861→1831 (DVIG 30!); 42 blokov 1831–1914 = 83 let (11 v 04106!); [~Muniz?-MUZ-kand. (1828-Semelj-nit!)]; h1 = ena-najstarejših-hiš-Griblja-številka-1!",
@@ -229,7 +231,9 @@
    },
    "7": "★★★ P261-hiša: m15-1836-NEVESTA-Anna-STRAAAF-Šemif? [X-OPEN]-GRIBLJE-7-×-Hyeronimus-von-TRIANICH-h61-POLNI-DVOJNI! — nevestin-oče-PRAZEN-pomišljaj! — h7-DVIG-1867→1836-ZA-31-LET + h7-ŠEST-KNJIŽNA-5→6-knjig (01738-1.-blok!)",
    "39": "★★★ P261-hiša: m14-1836-NEVESTA-Anna-ŠHRING-GRIBLJE-39-×-Mathias-BRING-h20-POLNI-DVOJNI! — h39-DVIG-1859→1836-ZA-23-LET + h39-ŠEST-KNJIŽNA-5→6 (01738-1.-blok!) — BRING×ŠHRING-endogamija!",
-   "41": "★★★★★ P261-hiša: m2-RESTART-1836-ŽENIN-Georg-PEZDIRIZ-38-l-GRIBLJE-41-×-Anna-BRING-h26-POLNI-DVOJNI-ISTI-DAN-kot-m1! — h41-DVIG-1866→1836-ZA-30-LET + h41-ŠEST-KNJIŽNA-5→6 (01738-1.-blok!) — PEZDIRC-NIT!"
+   "41": "★★★★★ P261-hiša: m2-RESTART-1836-ŽENIN-Georg-PEZDIRIZ-38-l-GRIBLJE-41-×-Anna-BRING-h26-POLNI-DVOJNI-ISTI-DAN-kot-m1! — h41-DVIG-1866→1836-ZA-30-LET + h41-ŠEST-KNJIŽNA-5→6 (01738-1.-blok!) — PEZDIRC-NIT!",
+   "17": "★★★★★★ P262-hiša-DVIG-37-2.-NAJVEČJI-NOTRANJOSTI: m10-1838 (1. Februar d°!-proklamacija-6-Nov-1837!-s18-Pag. 33) — NEVESTA-Maria-KRAL-24-l-GRABLJE-17-×-ženin-Martin-PAPIGH-33-l-'Gerzhich-33'-[~X-OPEN!] = h17-1.-01738-BLOK — POROČNA-firstYear-1875→1838-DVIG-ZA-37-LET (2.-NAJVEČJI-DVIG-NOTRANJOSTI-po-h22-41-P255!-NAJVEČJI-P262!) — ŠEST-KNJIŽNA-5→6-knjig!",
+   "31": "★★★★★★ P262-hiša-DVIG-19: m8-1838 (1. Februar d°!-proklamacija-1-Nov-1837!-s18-Pag. 33) — NEVESTA-Anna-TILAH-18-l-GRABLJE-31-×-ženin-Johann-KRISCHAN-20-l-GRABLJE-63-POLNI-DVOJNI-ALL-GRABLJE = h31-1.-01738-BLOK — POROČNA-firstYear-1857→1838-DVIG-ZA-19-LET — ŠEST-KNJIŽNA-5→6-knjig! + mladoletni-par-18l×20l-NAJMLAJŠI-01738-ženin!"
   }
  },
  "missingBookAnalysis": {

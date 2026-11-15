@@ -1467,3 +1467,39 @@ export const PREDHODNIK_261_KRAJI = {
   si: "★★★ KRAJI-P261: GRADAG 15 (=GRADAC!-m17-ženin-Mathias-Marintish!-cf.-P260-'Dragatz'-prečrtan-popravek-Gradac|Dragatuš-DUEL-REŠITEV-kontekst-1:1-kontekst!) + OLOK 24-×-OLOK 19 (m1!-ISTA-VAS-2-HIŠI-'gahüntling'-annotacija-X-OPEN-Otok?/Dolek?!) + OLLUN 18 (m17-nevesta-X-OPEN!) + GROFSING/GRAFSING (m16-nevesta-32-+-m4-ženin-2/9-X-OPEN!) + ŠČRUPP-im-Šmupfa (m16-ženin-Wohnort-annotacija-X-OPEN!) + POŠTOML 2 (m4-nevesta-X-OPEN!) + POŠDRAL 28-Mala (m5-ženin-X-OPEN!) + DÖLENGE 46 (m5-nevesta-'Dolenja'-hipoteza-X-OPEN!) + ŠMALUC-BUTARI (m15-ženin-gabärdig-X-OPEN!) + PETELIŽHAL-jura-Žjan (m15-nevesta-gabärdig-X-OPEN!)",
   en: "THE-P261-VILLAGES: GRADAG-15 (=Gradac!-the-P260-'Dragatz'-struck-correction-DUEL-solution-context!) + OLOK-24-×-OLOK-19 (THE-SAME-VILLAGE-2-HOUSES!-X-OPEN!) + Ollun-18 + Grofsing/Grafsing + Ščrupp + Poštoml-2 + Pošdral-28-Mala + Dölenge-46 + Šmaluc-Butari + Peteližhal [~ALL-X-OPEN-garbles!]",
 } as const;
+
+/** P262-korpus-skupaj: +4 bloki; vitals 2077→2081; 01738 = 69; 2 dvigi (h17-37/h31-19!); 1 POLNI-DVOJNI m8 (h63×h31 ALL-GRABLJE!). */
+export const PREDHODNIK_1838_BLOCKS = {
+  noviBloki: 4,
+  vpisi: 7,
+  vitalsTotal: 2081,
+  byBook01738: 69,
+  dvigi: {
+    h17: "1875 → 1838 (37 let — m10-nevesta-Maria-KRAL!-2.-NAJVEČJI-DVIG-NOTRANJOSTI-po-h22-41-P255!-NOVA-01738-hiša!)",
+    h31: "1857 → 1838 (19 let — m8-nevesta-Anna-TILAH!-NOVA-01738-hiša!)",
+  },
+  plusBlokiBrezDviga: {
+    h36: "+1 (m6-1838-nevesta-Anna-KRISCHAN!-firstYear-1832-P258-Nicol-KRIŽAN-ostaja!)",
+    h63: "+1 (m8-1838-ženin-Johann-KRISCHAN!-4.-01738-blok-firstYear-1836-P260-ostaja!)",
+  },
+  restartStruktura: "(A)-26.-Nov-1834-P259/260 + (B)-27.-Feb-1836-VELIKA-GLAVA-P260 + (C)-1.-Nov-1836-P261 + (D)-★★★ 1.-FEBRUAR-1838-P262 (7-VPISOV-ALL-'1.-Februar'-d°-BREZ-leta!-header-'1837'-pastoralno-leto-1837/38-Nov→Nov-4.-serija!-MNOŽIČNI-DAN-×7-VSI-VPISI-1-sam-dan!-proklamacije-mali-annot: m6–m9-'1-Nov'-1837-×4-+-m10–m12-'6-Nov'-1837-×3!)",
+  foliacija: "Pag = 2·sken − 3 (s18-33/34-agent-vizija!) — serija-15/15-notranjosti (P259-10/10 + P260-3/3 + P261-1/1 + P262-1/1!)",
+  krishanNit: "×4-s18 (m6-ženin-Georg-KRISCHAN-vas-35?-+ m8-ženin-Johann-KRISCHAN-Grablje-63!-+ m8-oče-Georg-KRISCHAN-+ m12-mat-Maria-KRISCHAN!-ist-priimek-×-ist-priimek-endogamija-m6!-↔-KRIŽAN-konglomerat-5-hiš-+HRIŽAN-h62 = 6!-cf.-h36-P258-Nicol-KRIŽAN-1832!)",
+  noviPrimeki: "×9-s18: TILAH (m8-n-Anna-oče-Mathias!) + BILIZHIGH (m9-ž-Mathias-oče-Jacob!-mat-Maria-NOVAK!) + KAJSHA-×2 (m9-n-Maria-oče-Joseph-+-m12-n-Agnes-oče-Stephan-brata?!) + NAGEL (m11-ž-Georg-oče-Nicholas!) + VIPSAUZ (m11-n-Maria-oče-Georg!) + PAPIGH (m10-ž-Martin-oče-Mathias-priča-SEST!) + KRAL (m10-n-Maria-oče-Stanislaus!) + SIMONIGH (m12-ž-Martin-oče-Joseph!) + HALZIGH (m7-ž-Peter-oče-Mathias!) + BULVEG-m7 + ŠTAMPAHAR-m7-priča-Nicholas + HLEBEG-m7-mat + HORVATH-m9-mat!",
+  urkunden1837: "×7-ALL-1837-PRED-porokami (m6-'cop.-Bajand?'-X-OPEN + m7-'25.-Juni?-1837'-Ajbunu-X-OPEN + m8-'15.-Juni-1837'-1:1-Jüunu + m9–m11-'d°'-veriga-15.-Juni + m12-'3.-Februar-1837'-LEVŠJI-od-proklamacije-6-Nov-SMISELNO-dispens-prej!)",
+  duhovnikiS18: "3-podpisnikov: Gregor-Dolinšek-Coop. (m6-1:1-IDEM-P261!) + podpis-'Ivan'-valva (m7–m9-skrižan!) + podpis-'Georg-?'-+(K)erpay-ič (m10-m11–m12!-[X-OPEN])",
+  dokaz: "research/issue17/p262-work/ (s18-REZERVA-1bb45fb3-498726B-+ s18_full-+-margins-+-slices-A/B/C-L/R-6-+-row1–7-L/R-14-+-z1–z7-cell-zoomi-42-+-date1–7_big-7-+-odločilni-mega-mz_r1–r7-14!-83-izrezkov-skupaj-+ 5-sklepanjskih-skladišč-skladiščnih-skenov-p262_s18_slice/rows/zooms/dates/mega.py!) — metoda-AGENT-VIZIJA-0-VLM-klicev (P259-predpis!)",
+  p263: "s19+ = Pag. 35+ (1838-nadaljevanje-m13+!) — REZERVA-ni-na-disku-ni-ščečni-naložiti!",
+} as const;
+
+/** Niti P262: KRIŠAN-×4 + NOVI-PRIMEKI-×9 + 2-dvigi + URKUNDEN-1837. */
+export const PREDHODNIK_262_NITI = {
+  si: "★★★★★★ KRIŠAN-NIT-×4-NA-S18 (m6-ženin-Georg-KRISCHAN-vas-35?-ist-priimek-×-ist-priimek-ENDOGAMIJA-×-nevesta-Anna-KRISCHAN-h36!-+ m8-ženin-Johann-KRISCHAN-h63-20-l-NAJMLAJŠI-01738-ženin-+ m8-oče-Georg-KRISCHAN + m12-mat-Maria-KRISCHAN!-↔-KRIŽAN-konglomerat-5-hiš-+HRIŽAN-h62 = 6-hiš!-cf.-h36-P258-Nicol-KRIŽAN-1832-h63-P260-m6/m7-SIBLING-SWAP-1836-h63-P261-m3-Anna-KRIŠAN-1837!) + ★★★★★ NOVI-PRIMEKI-×9-NA-S18 (TILAH-m8 + BILIZHIGH-m9 + KAJSHA-×2-m9+m12-očeta-Joseph/Stephan-brata? + NAGEL-m11 + VIPSAUZ-m11 + PAPIGH-m10 + KRAL-m10 + SIMONIGH-m12 + HALZIGH-m7!-+ BULVEG-m7 + ŠTAMPAHAR-m7-priča + HLEBEG-m7-mat + NOVAK-m9-mat + HORVATH-m9-mat!-9-NOVIH-PRIMEKOV-V-1-SKENU!) + ★★★ URKUNDEN-1837-×7-ALL-PRED-porokami-1838 (m12-'3.-Feb-1837'-LEVŠJI-od-proklamacije-SMISELNO-dispens-prej!)",
+  en: "THE-KRIŠAN-THREAD-×4-ON-S18 (m6-groom-Georg-KRISCHAN-the-same-surname-ENDOGAMY-×-bride-Anna-KRISCHAN-h36!-+ m8-groom-Johann-KRISCHAN-h63-20-the-youngest-+ m8-father-Georg + m12-mother-Maria!-↔-the-KRIŽAN-conglomerate-5-houses-+Hrižan-h62 = 6!) + ★★★★★ THE-NEW-SURNAMES-×9-ON-S18 (TILAH + BILIZHIGH + KAJSHA-×2 + NAGEL + VIPSAUZ + PAPIGH + KRAL + SIMONIGH + HALZIGH!-+ BULVEG + ŠTAMPAHAR + HLEBEG + NOVAK + HORVATH!-9-new-surnames-in-1-scan!) + ★★★ the-URKUNDEN-1837-×7-ALL-BEFORE-the-marriages-1838 (the-m12-'Feb-3-1837'-EARLIER-than-the-proclamation-the-SMART-dispense-first!)",
+} as const;
+
+/** Kraji P262: NOVE-VASI-×7-X-OPEN + OLOK-2 + GRADAG-20 + GRABLJE-×4. */
+export const PREDHODNIK_262_KRAJI = {
+  si: "★★★ NOVE-VASI-×7-P262 [~ALL-X-OPEN-garbles]: '(Kris)ching 35'-m6-ženin-Georg-Krischan + 'HARVINJHA/Garvinjha 11+5'-m7-ženin-Peter-Halzigh-+-m7-nevesta-Anna-Bulveg-ISTA-VAS-2-HIŠI! + '(PREČRTAN) 31'-m9-ženin-Mathias-Bilizhigh-PREČRTANA-VAS-1:1-forenzika! + 'GERZHICH/Gerzhigh 33'-m10-ženin-Martin-Papigh + 'VRANOVICH 14+6'-m9-nevesta-Maria-Kajsha-+-m12-nevesta-Agnes-Kajsha-ISTA-VAS-2-HIŠI-1:1-POTRDITEV! + 'KREASING 22'-m11-nevesta-Maria-Vipsauz + 'RUMPHANZ'-m12-annot-X-OPEN! + POZNAME-VASI: OLOK 2 (m11-ženin-Georg-Nagel-3.-OLOK-hiša-po-24/19-P261!) + GRADAG 20 (m12-ženin-Martin-Simonigh-GRADAC-2.-vpis-po-15-P261-P260-'Dragatz'-kontekst!) + GRABLJE-×4-hiše (m6-n-h36 + m8-ž-h63 + m8-n-h31 + m10-n-h17!)",
+  en: "THE-NEW-VILLAGES-×7-P262 [~ALL-X-OPEN-garbles!]: '(Kris)ching-35'-m6 + 'HARVINJHA-11+5'-m7-THE-SAME-VILLAGE-2-HOUSES! + '(STRUCK-OUT)-31'-m9-THE-STRUCK-OUT-VILLAGE-1:1-forensics! + 'GERZHICH-33'-m10 + 'VRANOVICH-14+6'-m9+m12-THE-SAME-VILLAGE-2-HOUSES-1:1! + 'KREASING-22'-m11 + 'RUMPHANZ'-m12 [X-OPEN!] + the-known-villages: OLOK-2 (the-3rd-OLOK-house!) + GRADAG-20 (GRADAC-the-2nd-entry!) + GRABLJE-×4-houses (h36 + h63 + h31 + h17!)",
+} as const;

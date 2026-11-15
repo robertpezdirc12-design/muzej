@@ -40,8 +40,8 @@ check("I1b m13 = dva bloka s3 (scan: 3-×2!)", src.count('bookSignature: "01738"
 vseh = re.findall(r'bookSignature: "01738"', src)
 skupaj = len(re.findall(r'bookSignature: "', src))
 leta = [int(y) for y in re.findall(r'bookSignature: "[^"]+",\s*year: (\d+)', src)]
-check("I2 vitals == 2077 + 01738 == 65 + korpus-prvi-vpis == 1828",
-      "HOUSE_VITALS.length !== 2077" not in src and len(vseh) == 65 and skupaj == 2077 and min(leta) == 1828,
+check("I2 vitals == 2081 + 01738 == 69 + korpus-prvi-vpis == 1828",
+      "HOUSE_VITALS.length !== 2081" not in src and len(vseh) == 69 and skupaj == 2081 and min(leta) == 1828,
       f"01738={len(vseh)} skupaj={skupaj} min-leto={min(leta)}")
 
 # ——— I3: modul PREDHODNIK_1828_* (10 izvozov) ———
@@ -75,7 +75,7 @@ check("I5 dvigi: h6-32 + h22-41-ABSOLUTNI-REKORD + h61-34",
 
 # ——— I6: hišne zgodbe regenerirane (12 šest-knjižnih + h6-96 + bothEra 13) ———
 check("I6 stories: SIX-×31 + h6-36-bl-96-let + bothEraPorocna-34 + blocks-2043",
-      stories.count('houseNo: "') >= 31 and 'blocks: 2077,' in stories
+      stories.count('houseNo: "') >= 31 and 'blocks: 2081,' in stories
       and "bothEraPorocna: 41" in stories and 'houseNo: "6", kind: "griblje", blocks: 37, books: 6' in stories
       and "firstYear: 1828" in stories and "longestSpan: 96" in stories
       and "longestSpanHouses: [\"6\"]" in stories
@@ -84,7 +84,7 @@ check("I6 stories: SIX-×31 + h6-36-bl-96-let + bothEraPorocna-34 + blocks-2043"
 pt = json.load(open(f"{ROOT}/research/issue17/parish-house-stories.json", encoding="utf-8"))
 check("I6b dokaz-stories: 100-hiš + tiers-six-31 + stories-31 (P258!)",
       len(pt.get("houses", [])) == 100 and pt["structure"]["tiers"]["six"] == 36
-      and len(pt["sixBookHouses"]["stories"]) == 39, "-")
+      and len(pt["sixBookHouses"]["stories"]) == 41, "-")
 
 # ——— I7: qa-p255 (249.) + živa kontrola ———
 check("I7 qa-p255-notranjost kontrola obstaja + korpus-prvi-vpis-živo",
@@ -107,7 +107,7 @@ check("I9 dokaz: 16-vrstic + 13-številčenih + 3-neštevilčenih + 3-bloki + ni
 # ——— I10: LIVE Matricula-01738 + pt-luknja-2026 ———
 pt2 = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
 check("I9b pt-luknja-2059/20438:31",
-      pt2.get("vitalsTotal") == 2077 and pt2.get("corpus", {}).get("byBook", {}).get("01738") == 65, "-")
+      pt2.get("vitalsTotal") == 2081 and pt2.get("corpus", {}).get("byBook", {}).get("01738") == 69, "-")
 live = "--live" in sys.argv
 if live or "--check" not in sys.argv:
     try:

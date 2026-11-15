@@ -292,6 +292,7 @@ PREDHODNIK_1833N_STRUNA,
   PREDHODNIK_1833N_BLOCKS,
   PREDHODNIK_183536_BLOCKS,
   PREDHODNIK_1836_37_BLOCKS,
+  PREDHODNIK_1838_BLOCKS,
   PREDHODNIK_261_NITI,
   PREDHODNIK_261_KRAJI,
   PREDHODNIK_260_NITI,
@@ -2477,6 +2478,112 @@ function Notranjost01738Leto1836_1837() {
   );
 }
 
+function Notranjost01738Leto1837_1838() {
+  const { t } = useLang();
+  const eProkl1: { m: string; d: string; h?: string; x?: boolean }[] = [
+    { m: "6", d: "1. Nov. 1837 prokl.", x: true },
+    { m: "7", d: "1. Nov. 1837 prokl.", x: true },
+    { m: "8", d: "1. Nov. 1837 prokl.", h: "63·31" },
+    { m: "9", d: "1. Nov. 1837 prokl.", x: true },
+  ];
+  const eProkl2: { m: string; d: string; h?: string; x?: boolean }[] = [
+    { m: "10", d: "6. Nov. 1837 prokl.", h: "17" },
+    { m: "11", d: "6. Nov. 1837 prokl.", x: true },
+    { m: "12", d: "6. Nov. 1837 prokl.", x: true },
+  ];
+  return (
+    <div className="rounded-xl border bg-card/60 p-5">
+      <h3 className="flex items-center gap-2 font-serif text-lg font-semibold">
+        <BookOpenCheck className="h-4 w-4 text-primary" aria-hidden />
+        {t(
+          "Notranjost knjige 01738: 1837-nadaljevanje (m6–m12) → poroke 1. februar 1838 (7 vpisov — 4 bloki / 2 dvigi / KRIŠAN ×4!)",
+          "The interior of the book 01738: the 1837-continuation (m6–m12) → the marriages of Feb 1 1838 (7 entries — 4 blocks / 2 lifts / KRIŠAN ×4!)",
+        )}
+      </h3>
+      <p className="mt-2 text-sm text-muted-foreground [overflow-wrap:anywhere]">
+        {t(
+          "★★★ STRUKTURNO ODKRITJE: glavni datum ×7 vse '1. Februar' d° = POROKE 1. FEBRUAR 1838 (header '1837' = pastoralno leto 1837/38 Nov→Nov!) — zgornje mali annotacije = PROKLAMACIJE: m6–m9 '1-Nov' 1837 (×4) + m10–m12 '6-Nov' 1837 (×3) — RESTART (D) = 4. zaporedna restart-struktura (A) 26. 11. 1834 + (B) 27. 2. 1836 + (C) 1. 11. 1836 + (D) 1. 2. 1838! MNOŽIČNI DAN ×7 — vseh 7 porok na 1 dan! Foliacija 'Pag = 2·sken−3' (s18 = 33/34) = serija 15/15 notranjosti. Metoda: agent-vizija pri kvoti 0 — cela stran + margin + 6 rezin + 14 vrstičnih kropov + 42 celičnih zoomov + 7 datum-mega + 14 odločilnih mega ≈ 83 izrezkov!",
+          "★★★ THE STRUCTURAL DISCOVERY: the main date ×7 all 'Feb 1' d° = THE MARRIAGES OF FEB 1 1838 (the header '1837' = the pastoral year 1837/38 Nov→Nov!) — the small annotations above = THE PROCLAMATIONS: m6–m9 'Nov-1' 1837 (×4) + m10–m12 'Nov-6' 1837 (×3) — THE RESTART (D) = the 4th consecutive restart-structure (A) Nov 26 1834 + (B) Feb 27 1836 + (C) Nov 1 1836 + (D) Feb 1 1838! THE MASS DAY ×7 — all 7 marriages on 1 day! The foliation 'Pag = 2·scan−3' (s18 = 33/34) = the series 15/15 of the interior. The method: agent vision at quota 0 — the full page + the margin + 6 slices + 14 row-crops + 42 cell-zooms + 7 date-megas + 14 decisive-megas ≈ 83 crops!",
+        )}
+      </p>
+
+      {/* 4 bloki 2 dvigi — emerald */}
+      <div className="mt-4 rounded-lg border border-emerald-500/40 bg-emerald-500/10 p-4">
+        <p className="text-sm font-medium text-emerald-700 dark:text-emerald-300 [overflow-wrap:anywhere]">
+          {t("★★★★★★ 4 NOVI BLOKI — 2 DVIGI — 1 POLNI DVOJNI (ŠEST-KNJIŽNI KLUB 39→41!): ", "★★★★★★ 4 NEW BLOCKS — 2 LIFTS — 1 FULL DOUBLE (the six-book club 39→41!): ")}
+          {t(
+            `h17 1875→1838 (+37 — m10-nevesta-Maria-KRAL!-2.-NAJVEČJI-DVIG-NOTRANJOSTI-po-h22-41-P255!-NOVA-01738-hiša!) · h31 1857→1838 (+19 — m8-nevesta-Anna-TILAH!-NOVA-01738-hiša!) · brez dviga: h36 (m6-nevesta-Anna-KRISCHAN-firstYear-1832-P258!) · h63 (m8-ženin-Johann-KRISCHAN-4.-01738-blok!) — POLNI DVOJNI m8 h63×h31 ALL-GRABLJE! — ★★★★★ Šest-knjižni klub 39→41 (+2: h17/h31 — vsi 5→6 knjig!). Korpus ${PREDHODNIK_1838_BLOCKS.vitalsTotal} vitalov / 01738 = ${PREDHODNIK_1838_BLOCKS.byBook01738} blokov / leta 1828–1838+1873 (11 let notranjosti!)`,
+            `h17 1875→1838 (+37 — the-m10-bride-Maria-KRAL!-THE-2ND-LARGEST-INTERIOR-LIFT!-the-NEW-01738-house!) · h31 1857→1838 (+19 — the-m8-bride-Anna-TILAH!-the-NEW-01738-house!) · no-lift: h36 (m6-bride-Anna-KRISCHAN!) · h63 (m8-groom-Johann-KRISCHAN-the-4th-01738-block!) — THE FULL DOUBLE m8 h63×h31 ALL-GRABLJE! — ★★★★★ The six-book club 39→41 (+2: h17/h31 — both 5→6 books!). The corpus ${PREDHODNIK_1838_BLOCKS.vitalsTotal} vitals / 01738 = ${PREDHODNIK_1838_BLOCKS.byBook01738} blocks / the years 1828–1838+1873 (11 years of the interior!)`,
+          )}
+        </p>
+      </div>
+
+      {/* KRIŠAN ×4 — primary card */}
+      <div className="mt-4 rounded-lg border border-primary/50 bg-primary/10 p-4">
+        <p className="text-sm font-medium [overflow-wrap:anywhere]">
+          {t(
+            "★★★★★★ KRIŠAN-NIT ×4 NA S18: m6-ženin-Georg-KRISCHAN × m6-nevesta-Anna-KRISCHAN h36 (IST PRIIMEK × IST PRIIMEK = ENDOGAMIJA!) + m8-ženin-Johann-KRISCHAN h63 (20 l = NAJMLAJŠI 01738-ženin!) + m8-oče-Georg-KRISCHAN + m12-mat-Maria-KRISCHAN — ↔ KRIŽAN-konglomerat 5 hiš + HRIŽAN-h62 = 6 hiš istega korena (cf. h36-P258-Nicol-KRIŽAN-1832 + h63-P260-SIBLING-SWAP-1836 + h63-P261-m3-Anna-KRIŠAN-1837!) + ★★★★★ NOVI PRIMEKI ×9 (TILAH + BILIZHIGH + KAJSHA ×2-očeta-Joseph/Stephan + NAGEL + VIPSAUZ + PAPIGH + KRAL + SIMONIGH + HALZIGH — 9 novih priimkov v 1 skenu!) + URKUNDEN 1837 ×7 pred porokami (m12 '3.-Feb-1837' LEVŠJI od proklamacije — SMISELNO dispens prej!) + DUHOVNIKI 3 podpisnikov (Dolinšek-Coop. m6 IDEM-P261!).",
+            "★★★★★★ THE-KRIŠAN-THREAD ×4 ON S18: the-m6-groom-Georg-KRISCHAN × the-m6-bride-Anna-KRISCHAN h36 (THE-SAME-SURNAME × THE-SAME-SURNAME = ENDOGAMY!) + the-m8-groom-Johann-KRISCHAN h63 (20 = THE-YOUNGEST-01738-groom!) + the-m8-father-Georg + the-m12-mother-Maria — ↔ the-KRIŽAN-conglomerate 5 houses + Hrižan-h62 = 6 houses-of-one-root + ★★★★★ THE-NEW-SURNAMES ×9 (9 new surnames in 1 scan!) + the-URKUNDEN-1837 ×7 before the marriages (the-m12-'Feb-3-1837'-EARLIER-than-the-proclamation — the-SMART-dispense-first!) + the-PRIESTS 3 signers (Dolinšek-Coop. m6 IDEM-P261!).",
+          )}
+        </p>
+      </div>
+
+      {/* prokl1 timeline */}
+      <div className="mt-4 overflow-x-auto pb-1">
+        <p className="mb-1 text-xs font-semibold text-muted-foreground">{t("Proklamacije 1. novembar 1837 (margine 6–9 — vse poroke 1. 2. 1838 d°)", "The proclamations of Nov 1 1837 (margins 6–9 — all marriages Feb 1 1838 d°)")}</p>
+        <div className="flex min-w-[880px] items-end gap-1 sm:min-w-0" role="listbox" aria-label={t("Vrstice prokl1-P262", "The rows of prokl1-P262")}>
+          {eProkl1.map((e, i) => {
+            const isDouble = (e.h || "").includes("·");
+            return (
+              <div key={`c-${e.m}-${i}`} role="option" aria-selected={false} className="flex flex-1 flex-col items-center gap-1 rounded-lg border border-transparent px-1 py-2">
+                <span className="text-[10px] font-medium text-muted-foreground" style={{ overflowWrap: "anywhere" }}>{e.d}</span>
+                <span className={`flex h-9 min-w-9 items-center justify-center rounded-full border px-1 text-[11px] font-semibold ${isDouble ? "border-emerald-500 bg-emerald-500/20 text-emerald-700 dark:text-emerald-300" : e.x ? "border-dashed border-amber-500/60 bg-amber-500/10 text-amber-700 dark:text-amber-300" : "border-primary/50 bg-primary/10 text-primary"}`}>{e.m}</span>
+                <span className="text-[10px] text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
+                  {e.h ? (isDouble ? e.h.replace("·", "×h") : e.h) : ""}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      {/* prokl2 timeline */}
+      <div className="mt-4 overflow-x-auto pb-1">
+        <p className="mb-1 text-xs font-semibold text-muted-foreground">{t("Proklamacije 6. novembar 1837 (margine 10–12 — vse poroke 1. 2. 1838 d°)", "The proclamations of Nov 6 1837 (margins 10–12 — all marriages Feb 1 1838 d°)")}</p>
+        <div className="flex min-w-[880px] items-end gap-1 sm:min-w-0" role="listbox" aria-label={t("Vrstice prokl2-P262", "The rows of prokl2-P262")}>
+          {eProkl2.map((e, i) => {
+            const isDouble = (e.h || "").includes("·");
+            return (
+              <div key={`d-${e.m}-${i}`} role="option" aria-selected={false} className="flex flex-1 flex-col items-center gap-1 rounded-lg border border-transparent px-1 py-2">
+                <span className="text-[10px] font-medium text-muted-foreground" style={{ overflowWrap: "anywhere" }}>{e.d}</span>
+                <span className={`flex h-9 min-w-9 items-center justify-center rounded-full border px-1 text-[11px] font-semibold ${isDouble ? "border-emerald-500 bg-emerald-500/20 text-emerald-700 dark:text-emerald-300" : e.x ? "border-dashed border-amber-500/60 bg-amber-500/10 text-amber-700 dark:text-amber-300" : "border-primary/50 bg-primary/10 text-primary"}`}>{e.m}</span>
+                <span className="text-[10px] text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
+                  {e.h ? (isDouble ? e.h.replace("·", "×h") : e.h) : ""}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* KRAJI — amber card */}
+      <div className="mt-4 rounded-lg border border-amber-500/40 bg-amber-500/10 p-4">
+        <p className="text-sm font-medium text-amber-700 dark:text-amber-300 [overflow-wrap:anywhere]">
+          {t(
+            "★★★ NOVE VASI ×7 P262 [~ALL-X-OPEN!]: '(Kris)ching 35' (m6-ženin) + HARVINJHA 11+5 (m7-ženin+nevesta — ISTA VAS 2 HIŠI!) + '(PREČRTAN) 31' (m9-ženin — PREČRTANA VAS forenzika!) + GERZHICH 33 (m10-ženin) + VRANOVICH 14+6 (m9 + m12 nevesti — ISTA VAS 2 HIŠI 1:1!) + KREASING 22 (m11-nevesta) + RUMPHANZ (m12-annot) + POZNAME: OLOK 2 (m11 — 3. OLOK-hiša!) + GRADAG 20 (m12 = GRADAC 2. vpis!) + GRABLJE ×4 hiše (h36/h63/h31/h17!).",
+            "★★★ THE-NEW-VILLAGES ×7 P262 [~ALL-X-OPEN!]: '(Kris)ching-35' (m6) + HARVINJHA-11+5 (m7 — THE SAME VILLAGE 2 HOUSES!) + '(STRUCK-OUT)-31' (m9 — the struck-out-village forensics!) + GERZHICH-33 (m10) + VRANOVICH-14+6 (m9 + m12 — THE SAME VILLAGE 2 HOUSES 1:1!) + KREASING-22 (m11) + RUMPHANZ (m12) + the-known: OLOK-2 (m11 — the 3rd OLOK-house!) + GRADAG-20 (m12 = GRADAC the 2nd entry!) + GRABLJE ×4 houses (h36/h63/h31/h17!).",
+          )}
+        </p>
+      </div>
+      <p className="mt-2 text-xs text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
+        {t(
+          "★★★★★ X-OPEN ostanki: m6-dvovrstični datum ('1-Nov' gor + '1.-Februar' glavni!) · annotacije 'Raja/Zunglau' ×6 (gospodarja-kategorija?) · m8-priči 'Kruhar?' + 'Jahnepsigh?' · m7-mat 'Fampader/Štampahar' duel · m6-vas '(Kris)ching' + m10-vas 'Gerzhich' garbles · 'Sumat'-annotacija ×3 (m10/m11/m12!). Duhovniki 3 podpisnikov: Gregor-Dolinšek-Coop. (m6 — 1:1 IDEM P261!) + podpis 'Ivan'-valva (m7–m9) + podpis 'Georg-?' + '(K)erpay-ič' (m10–m12). P263+: s19+ = Pag. 35+ (1838-nadaljevanje m13+ — rezerva še ni na disku!).",
+          "★★★★★ The X-OPEN remains: the-m6-double-line-date ('Nov-1' above + 'Feb-1' the main!) · the 'Raja/Zunglau' annotations ×6 (a landowner-category?) · the-m8-witnesses garbles · the-m7-mother 'Fampader/Štampahar' duel · the m6/m10 village garbles · the 'Sumat'-annotation ×3! The priests 3 signers: Gregor-Dolinšek-Coop. (m6 — 1:1 IDEM P261!) + the 'Ivan'-signature (m7–m9) + the 'Georg-?' + '(K)erpay-ič' (m10–m12). P263+: s19+ = Pag. 35+ (the-1838-continuation m13+ — the reserve not-yet-on-disk!).",
+        )}
+      </p>
+    </div>
+  );
+}
+
 function HouseStoriesP254() {
   const { t } = useLang();
   const tierMax = Math.max(...HOUSE_STORY_TIERS.map((x) => x.houses));
@@ -4033,6 +4140,7 @@ function ParishTab() {
       <Notranjost01738Leto1833_1834 />
       <Notranjost01738Leto1835_1836 />
       <Notranjost01738Leto1836_1837 />
+      <Notranjost01738Leto1837_1838 />
 
       {/* brskalnik knjig */}
       <div>

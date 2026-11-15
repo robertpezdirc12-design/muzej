@@ -29,8 +29,8 @@ check("I4 dokaz (73/11-griblje/anomalije + meja-s86-'vsota' + 73-vrstic)",
       f"entries={len(d['entries'])} griblje={len(grib)} anomalije={len(d['anomalije'])}")
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2077")
-check("I5 qa-p206 + števec-1472", "qa-p206-parish-death-1871-04106" in qa and st >= 100, f"2077-številcev={st}")
+st = qa.count("HOUSE_VITALS.length !== 2081")
+check("I5 qa-p206 + števec-1472", "qa-p206-parish-death-1871-04106" in qa and st >= 100, f"2081-številcev={st}")
 
 i0 = src.find("P206: mrliška PREDZGODOVINA 04106, leto 1871")
 seg = src[i0:] if i0 >= 0 else ""
@@ -46,7 +46,7 @@ check("I8c KROP-POPOLNO-SOGLASJE-z50 (5¾-J!)", "KROP-POPOLNO-SOGLASJE" in seg a
 check("I8d 11-hiš-vsi-različni", "11 hiš" in seg)
 check("I9 qa-p206 (206. kontrola!)", "qa-p206" in qa and "206. kontrola" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9 pt-luknja-292/2043", '"vitalsTotal": 2077' in pt and '"04106": 433' in pt)
+check("I9 pt-luknja-292/2043", '"vitalsTotal": 2081' in pt and '"04106": 433' in pt)
 
 try:
     req = urllib.request.Request("https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04106/",
