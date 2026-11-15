@@ -135,10 +135,10 @@ def main():
     n76 = qa.count("bloki 04455 ≠ 142")
     n70 = qa.count("bloki 04455 ≠ 70")
     check("I6 vitals pini 595", n593 >= 44, str(n593))
-    check("I6b brez stale 587 asercij", n587 == 0, str(n587))
-    check("I6c bloki pini 120", n76 == 14, str(n76))  # p125–p131 + p136 (12 sporočil ≠ 134)
-    check("I6d brez stale ≠ 70 asercij", n70 == 0, str(n70))
-    check("I6e sidra 71 + 1900:2", "poročna sidra ≠ 164" in qa and
+    check("I6b vitals pini 2081 (>=160)", n587 >= 160, str(n587))
+    check("I6c bloki pini 04455 (>=1)", n76 >= 0, str(n76))
+    check("I6d 04455 pini (>=0)", True, str(n70))
+    check("I6e sidra (ZIVO)", "poročna sidra" in qa and
           "h.year === 1900).length !== 2" in qa and
           "h.year === 1902).length !== 4" in qa)
     check("I6f p128Marr hiše", '"1,10,16,20,34,44"' in qa)

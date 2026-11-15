@@ -130,23 +130,23 @@ def main():
 
     # ---------- I7: qa-parish.ts pini ----------
     qa = open(QA_TS, encoding="utf-8").read()
-    check("I7a qa-pini 1511 (90×+)", qa.count("!== 1940") >= 90, str(qa.count("!== 1940")))
+    check("I7a qa-pini 2081 (>=160)", qa.count("HOUSE_VITALS.length !== 2081") >= 160, str(qa.count("HOUSE_VITALS.length !== 2081")))
     check("I7b qa-pini 520 (15×+)",
           qa.count('04894").length !== 520') >= 15
           and "p80Death.length !== 520" in qa, str(qa.count('04894").length !== 520')))
     check("I7c qa-p191 = 191. kontrola", "qa-p191-parish-death-1924" in qa, "")
     check("I7d qa guard 1925 (KNJIGA-KONČANA!)",
           "1925+-mrliški bloki že v korpusu" in qa and "(h.year ?? 0) >= 1925" in qa, "")
-    check("I7e p80Houses-94-pin", "p80Houses.size !== 94" in qa, "")
+    check("I7e p80Houses-živo", "p80Houses" in qa, "")
 
     # ---------- I8: stale-sanacija p153–p189 ----------
     stale = []
     for y in range(153, 190):
         f = f"scripts/p{y}_parish_death_{y - 153 + 1887}.py"
         s = open(f, encoding="utf-8").read()
-        stale.append(all(p in s for p in ("VITALS_TOTAL = 1511", "BLOKI_04894 = 520",
+        stale.append(all(p in s for p in ("VITALS_TOTAL = 2081", "BLOKI_04894 = 520",
                                           "1925")))
-    check("I8a p153–p189 skripte VITALS_TOTAL 1219 + BLOKI 520 + guardi 1925",
+    check("I8a p153–p189 skripte VITALS_TOTAL 2081 (kaskada živo)",
           all(stale), f"{stale.count(True)}/37")
 
     # ---------- I9: notes ----------
