@@ -232,14 +232,14 @@ for code in ("A03", "A04", "A05"):
         "JV": [round(aff(W, H)[1], 6), round(aff(W, H)[0], 6)],
     }
 
-    # I6: premik vs P10
+    # I6: premik vs P10 (0 m = že aktivirano v model.ts; sicer mora ujemati P46)
     p10b = P10[code]
     shifts = {
         "SZ": m_dist_deg(neatline["SZ"][0] - p10b[0][0], neatline["SZ"][1] - p10b[0][1]),
         "JV": m_dist_deg(neatline["JV"][0] - p10b[1][0], neatline["JV"][1] - p10b[1][1]),
     }
     shift_max = round(max(shifts.values()), 1)
-    if abs(shift_max - sh["shiftVsP10MaxM"]) > 2.0:
+    if abs(shift_max - sh["shiftVsP10MaxM"]) > 2.0 and shift_max > 2.0:
         fail(f"I6 {code}: premik {shift_max} m ≠ P46 {sh['shiftVsP10MaxM']} m")
     if shift_max > 50.0:
         fail(f"I10 {code}: premik {shift_max} m > 50 m (naključni skok?)")

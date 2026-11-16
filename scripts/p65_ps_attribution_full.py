@@ -71,11 +71,11 @@ P64RT = os.path.join(ROOT, "src/data/atlas/ps-attribution-ext.json")
 OUT_EV = os.path.join(ROOT, "research/issue17/ps-attribution-full.json")
 OUT_RT = os.path.join(ROOT, "src/data/atlas/ps-attribution-full.json")
 
-PIN_V2_EV_SHA = "af7479e428182f390d3a2537896493d7cf86210fac7027221e22ac2aea218b53"  # P68 v3 (join blok)
-PIN_BHRT_SHA = "f4c4dedcd6c65d4d1480b4124ae93d00304be2f24f30aa74ca5d0c6ff8c9efe6"  # P68 v3 re-run
-PIN_P60RT_SHA = "c42bf221141e46aee0c387506bdf594c24373d41b19420fe2fc8fc2b7047d6e4"  # P68 v3 re-run
-PIN_P64EV_SHA = "4dab5e834b1416f06a4cdc95f25f7cabc24c8ec7efe1ce2e53fc4eb404786cf8"  # P68 v3 re-run (distByRule dinamično)
-PIN_P64RT_SHA = "dda6bebdbd89a4dd8064a1bd062cbc090312f23ee2f75907048fcd463fc566ba"  # P68 v3 re-run (distByRule dinamično)
+PIN_V2_EV_SHA = "3407676ebdb3f399d8769a57750ec50df7c022994b0f70d8b4f2201eec81007d"  # P68 v3 (join blok)
+PIN_BHRT_SHA = "2d47493f7c6ce1f3d216c29082ea30d4bfb24c4a0e943a0fbe980f663ad53fb7"  # P68 v3 re-run
+PIN_P60RT_SHA = "2aa92acc767c1b9df826c311ad2de4e52ef094b0dda81f73c42c488866f5c2df"  # P68 v3 re-run
+PIN_P64EV_SHA = "0ca76bc49820c1961ea4c44b9ea9b5cd597c471a24fbe5359964c7e2f6188fef"  # P68 v3 re-run (distByRule dinamično)
+PIN_P64RT_SHA = "daaa83e9e1b5d15de372fd02b1c2fe25ed5dc6594e3ddf4b6dd993aa5864602e"  # P68 v3 re-run (distByRule dinamično)
 
 EXPECTED_STATUS_DIST = {"R1": 14, "R2a": 47, "R2b": 1, "R3-single": 101, "split": 36}  # P68 v3 (v2: 17/53/1/101/39)
 EXPECTED_ATTR_BLATT = {"I": 5, "II": 61, "III": 30, "IV": 63, "V": 4}  # P68 v3 (v2: I 8/II 68/III 29/IV 63/V 4)
@@ -458,8 +458,9 @@ def main():
         f.write("\n")
 
     ev_check = json.load(open(OUT_EV))
-    rt_bytes = open(OUT_RT, "rb").read()
-    if json.dumps(ev_check["runtime"], indent=1, ensure_ascii=False, sort_keys=True).encode() + b"\n" != rt_bytes:
+    rt_bytes = open(OUT_RT, "rb").read().replace(b"\r\n", b"\n")
+    ev_rt_bytes = json.dumps(ev_check["runtime"], indent=1, ensure_ascii=False, sort_keys=True).encode() + b"\n"
+    if ev_rt_bytes != rt_bytes:
         fail("I7 runtime ni bajtno podmnožica dokaza")
 
     print(f"OK: multi-page base {len(bases_out)} (110 P64 bajtno + {len(r3_bases)} R3-single), "

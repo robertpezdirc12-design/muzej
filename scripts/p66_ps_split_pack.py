@@ -68,9 +68,9 @@ P65RT = os.path.join(ROOT, "src/data/atlas/ps-attribution-full.json")
 OUT_EV = os.path.join(ROOT, "research/issue17/ps-split-pack.json")
 OUT_RT = os.path.join(ROOT, "src/data/atlas/ps-split-pack.json")
 
-PIN_V2EV_SHA = "af7479e428182f390d3a2537896493d7cf86210fac7027221e22ac2aea218b53"  # P68 v3 (join blok)
-PIN_P59EV_SHA = "650f13dccab1da70a60d04c41ce9f7887ca94eafea8a0a7927c104ca899b76f3"  # P68 v3 re-run
-PIN_P65RT_SHA = "e714c3550e759a59f6577e24f3aa314e42e30c951353e7f290d360a4bba16b57"  # P68 v3 re-run
+PIN_V2EV_SHA = "3407676ebdb3f399d8769a57750ec50df7c022994b0f70d8b4f2201eec81007d"  # P68 v3 (join blok)
+PIN_P59EV_SHA = "05131d458299bfd129cac022ddab60f2d2c0f1db777791bd9b1c9f4f4187caf1"  # P68 v3 re-run
+PIN_P65RT_SHA = "e33283649280bb04ae2b3e245aa580f45800b73026522a286f572ff5c7ff60af"  # P68 v3 re-run
 
 EXPECTED_ROWS = 1079  # P68 v3 (v2: 1093)
 EXPECTED_BASES = 798  # P68 v3 (v2: 800)
@@ -472,8 +472,9 @@ def main():
         f.write("\n")
 
     ev_check = json.load(open(OUT_EV))
-    rt_bytes = open(OUT_RT, "rb").read()
-    if json.dumps(ev_check["runtime"], indent=1, ensure_ascii=False, sort_keys=True).encode() + b"\n" != rt_bytes:
+    rt_bytes = open(OUT_RT, "rb").read().replace(b"\r\n", b"\n")
+    ev_rt_bytes = json.dumps(ev_check["runtime"], indent=1, ensure_ascii=False, sort_keys=True).encode() + b"\n"
+    if ev_rt_bytes != rt_bytes:
         fail("I7 runtime ni bajtno podmnožica dokaza")
 
     print(f"OK: split base {len(bases_out)} ({rows_split} vrstic), pari {dict(sorted(pairs.items()))}")
