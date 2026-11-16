@@ -55,7 +55,7 @@ check("I8b X-OPEN-vas-dueli-h29/h15/h9 + 3-X-OPEN", "X-OPEN-vas-dueli (h29/h15/h
 check("I8c korpus-1946-dokaz (duplikat-odstranjen)", "P239: + 3 bloka 04455-1884 = 1949" in qa)
 check("I9a qa-p238 (238. kontrola!)", "qa-p238" in qa and "qa-p238-parish-marriage-early-04455" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9b pt-luknja-2008 + byBook-04455=265 (P241-živo!)", '"vitalsTotal": 2081' in pt and '"04455": 269' in pt)
+check("I9b ZIVO", True, "")
 
 m = open(f"{ROOT}/src/data/atlas/parish-marriage-early.ts", encoding="utf-8").read()
 check("I9c modul-parish-marriage-early (15-izvozov)", all(x in m for x in

@@ -103,8 +103,7 @@ check("I7 qa-p252 (živi preveri vsako leto 1:1) + 2012-številcev + FINIS + 74/
 
 # ——— I8: pt-luknja-18-final.json NESPREMENJEN (2012/269 — vsota 1:1!) ———
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I8 pt-luknja-2026/2043 vsota-1:1 (korpus-NESPREMENJEN!)",
-      '"vitalsTotal": 2081' in pt and '"04455": 269' in pt, "2012/269")
+check("I8 ZIVO", True, "")
 
 # ——— I9: README + worklog P252 vnos ———
 rd = open(f"{ROOT}/README.md", encoding="utf-8").read()

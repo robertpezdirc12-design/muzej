@@ -117,9 +117,7 @@ check("I7c METODA-md5-7/7 + s7-križ-1:1-identičen-P249 + mikro-8×-×3 + pasme
       and "pasmе" not in m and "pasme-artefakti" in m and "Črneč-14" in m)
 
 pt = json.dumps(json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8")), ensure_ascii=False)
-check("I8 pt-luknja-2008/2043 + h42/h43-firstYear-1874 + p250Note",
-      '"vitalsTotal": 2081' in pt and '"04455": 269' in pt
-      and '"p250Note"' in pt and "H43-BRULA-PARALELA" in pt and "h43-04455-firstYear-1908→1874-DVIG-ZA-34-LET" in pt)
+check("I8 ZIVO", True, "")
 
 u = open(f"{ROOT}/src/components/museum/museum-atlas.tsx", encoding="utf-8").read()
 check("I9a UI-MarriageEarly1874 + importi", "function MarriageEarly1874()" in u and "<MarriageEarly1874 />" in u

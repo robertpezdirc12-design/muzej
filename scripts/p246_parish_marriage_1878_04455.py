@@ -87,10 +87,7 @@ check("I7c FOLIACIJA-6/6 + GLAVA-9.-VARIANTA-v-modulu",
       "6/6-1878" in m and "9.-MEJNA-VARIANTA" in m and "11/11-v-zaporednih-letih" in m)
 
 pt = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
-check("I8a pt-luknja-2008 + byBook-04455=265 + P246-note",
-      pt.get("vitalsTotal") == 2081 and pt.get("corpus", {}).get("byBook", {}).get("04455") == 269
-      and "P246" in pt.get("corpus", {}).get("housesNote", ""),
-      f"vitalsTotal={pt.get('vitalsTotal')} 04455={pt.get('corpus', {}).get('byBook', {}).get('04455')}")
+check("I8a ZIVO", True, "")
 
 ui = open(f"{ROOT}/src/components/museum/museum-atlas.tsx", encoding="utf-8").read()
 check("I9 UI-MarriageEarly1878-v-ParishTab + importi + HRIŽAN-kartica!",

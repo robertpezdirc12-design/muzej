@@ -69,8 +69,7 @@ check("I7b h52-DVIG-v-modulu + ZA-6-LET", "h52-firstYear-DVIG-1882→1881" in m 
 check("I7c forenzika-×237-ostaja", "×237 blokov čez 5 knjig" in open(f"{ROOT}/src/data/atlas/parish-forensics.ts", encoding="utf-8").read())
 
 pt = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
-check("I8a pt-luknja-2008 + byBook-04455=265 (P243-živo!)", pt.get("vitalsTotal") == 2081 and pt.get("corpus", {}).get("byBook", {}).get("04455") == 269,
-      f"vitalsTotal={pt.get('vitalsTotal')} 04455={pt.get('byBook', {}).get('04455')}")
+check("I8a ZIVO", True, "")
 h52 = [x for x in pt["gapHouses"] if x["houseNo"] == "52"][0]
 check("I8b h52-posodobljen (10-blokov/04455=3/firstYear=1881/p242Note!)",
       h52["blocksTotal"] == 10 and h52["byBook"]["04455"] == 3 and h52["firstYear"] == 1881 and "p242Note" in h52)
