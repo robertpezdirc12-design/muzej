@@ -185,6 +185,9 @@ def main() -> int:
     rows, sel = load_chosen_rows()
     p55 = json.loads(P55_EVIDENCE.read_text(encoding="utf-8"))
     p55_rows = p55["rows"]
+    if not PARCELS.exists():
+        print(f"[SKIP] manjka vhod: {PARCELS}")
+        return 0
     parcels = json.loads(PARCELS.read_text(encoding="utf-8"))
 
     print(

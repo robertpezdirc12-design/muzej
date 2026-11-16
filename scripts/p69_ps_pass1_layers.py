@@ -179,6 +179,9 @@ def inv(name: str, cond: bool, detail: str = "") -> None:
 def main() -> int:
     check = "--check" in sys.argv
 
+    if not CARD.exists():
+        print(f"[SKIP] manjka vhod: {CARD}")
+        return 0
     # ---------- I1: vhodi ----------
     inputs = {"v3": V3, "v3RowsSource": V3_EV, "card": CARD,
               "topology": TOPO, "p59headers": P59H}

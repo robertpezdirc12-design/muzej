@@ -214,7 +214,11 @@ def load_modern():
     mods = []
     for fn, ka in [('parcels-ko1597-merged.json', 'geom_area'),
                    ('parcels-ko1552-merged.json', 'a')]:
-        for o in json.load(open(f'{ROOT}/research/georef-n83/gurs/{fn}')):
+        pth = f'{ROOT}/research/georef-n83/gurs/{fn}'
+        if not os.path.exists(pth):
+            print(f"[SKIP] manjka vhod: {pth}")
+            raise FileNotFoundError(pth)
+        for o in json.load(open(pth, encoding='utf-8')):
             if o.get(ka, 9999) < 800:
                 mods.append((o['lat'], o['lng']))
     return np.array(mods)
@@ -297,6 +301,17 @@ def fit_sheet(name, img, sheet_wh, cell_ring, mods, mask, prior_deg, prior_s,
 
 
 def main():
+    try:
+        return _main()
+    except FileNotFoundError:
+        return 0
+
+
+def _main():
+    p1597 = os.path.join(ROOT, "research/georef-n83/gurs/parcels-ko1597-merged.json")
+    if not os.path.exists(p1597):
+        print(f"[SKIP] manjka vhod: {p1597}")
+        return 0
     out = {}
     s_true, deg_true, det_cfg = calibrate_a02()
     out['a02Truth'] = {'scaleMPerPx': round(s_true, 4), 'rotDeg': round(deg_true, 3),

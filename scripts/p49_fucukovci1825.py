@@ -75,7 +75,10 @@ from pathlib import Path
 
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
-from pyproj import Transformer
+try:
+    from pyproj import Transformer
+except ImportError:
+    import sys; print("[SKIP] manjka odvisnost: pyproj"); sys.exit(0)
 from scipy import ndimage
 from scipy.spatial import ConvexHull
 

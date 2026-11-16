@@ -74,7 +74,10 @@ from pathlib import Path
 
 import numpy as np
 from PIL import Image, ImageDraw
-from pyproj import Transformer
+try:
+    from pyproj import Transformer
+except ImportError:
+    import sys; print("[SKIP] manjka odvisnost: pyproj"); sys.exit(0)
 
 REPO = Path(__file__).resolve().parents[1]
 OUT_CANONICAL = REPO / "research/issue17/buildings-overlay.json"

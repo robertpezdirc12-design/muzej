@@ -157,6 +157,9 @@ def main() -> int:
     # ——— vhodi ———
     rows, sel = load_chosen_rows()
     propagate_wohnort(rows)
+    if not PARCELS.exists():
+        print(f"[SKIP] manjka vhod: {PARCELS}")
+        return 0
     parcels = json.loads(PARCELS.read_text(encoding="utf-8"))
     bybase: dict[str, list[dict]] = {}
     for x in parcels:

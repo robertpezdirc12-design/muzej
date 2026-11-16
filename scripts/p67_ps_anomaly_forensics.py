@@ -276,7 +276,10 @@ def main():
     p65 = json.load(open(P65RT))
     p66 = json.load(open(P66RT))
     topo = json.load(open(TOPO))
-    geo = json.load(open(GEO))
+    if not os.path.exists(GEO):
+        print(f"[SKIP] manjka vhod: {GEO}")
+        return
+    geo = json.load(open(GEO, encoding="utf-8"))
 
     rows = v2["rowsEvidence"]
     page_attr = p59["pageAttribution"]

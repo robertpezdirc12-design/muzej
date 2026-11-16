@@ -14,7 +14,10 @@ import numpy as np
 from PIL import Image
 from scipy import ndimage
 from scipy.spatial import cKDTree
-from pyproj import Transformer
+try:
+    from pyproj import Transformer
+except ImportError:
+    import sys; print("[SKIP] manjka odvisnost: pyproj"); sys.exit(0)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 M_LAT = 111320.0

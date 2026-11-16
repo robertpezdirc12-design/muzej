@@ -213,6 +213,9 @@ def main() -> int:
     p56 = read_json(P56_RUNTIME)
     psv2 = read_json(PS_FULL_V2)
     ps5 = read_json(PS_005)
+    if not Path(PARCELS).exists():
+        print(f"[SKIP] manjka vhod: {PARCELS}")
+        return 0
     parcels = read_json(PARCELS)
 
     full_rows, full_sums = {}, {}

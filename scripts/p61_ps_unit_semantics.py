@@ -145,7 +145,10 @@ def main():
     v2 = json.load(open(V2))
     p59_ev = json.load(open(P59))
     p60_ev = json.load(open(P60_EV))
-    gurs = json.load(open(GURS))
+    if not os.path.exists(GURS):
+        print(f"[SKIP] manjka vhod: {GURS}")
+        return
+    gurs = json.load(open(GURS, encoding="utf-8"))
 
     rows = v2["rowsEvidence"]
     page_attr = p59_ev["pageAttribution"]

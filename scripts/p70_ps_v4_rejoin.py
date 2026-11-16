@@ -189,6 +189,9 @@ def compute():
     v3rt = json.loads(V3_RT.read_text(encoding="utf-8"))
     p69 = json.loads(P69_EV.read_text(encoding="utf-8"))
     p59 = json.loads(P59_EV.read_text(encoding="utf-8"))
+    if not PARCELS.exists():
+        print(f"[SKIP] manjka vhod: {PARCELS}")
+        return None
     parcels = json.loads(PARCELS.read_text(encoding="utf-8"))
 
     bybase: dict[str, list[dict]] = defaultdict(list)
@@ -660,10 +663,13 @@ def compute():
 
 
 def build_documents():
+    res = compute()
+    if res is None:
+        return 0
     (out_rows, removed, added, brez_vira, renum_spec, coll_set, amb_changes,
      conf_changes, join_block, per_blatt_amb, area_proof, spatial_proof,
      page_sel, ps_unique, read_conf_bi, furkovce, rejoin_spec, multi,
-     cross, bases4) = compute()
+     cross, bases4) = res
     page_sel = page_sel or json.loads(
         (REPO / "src/data/atlas/ps-parcels-geo.json").read_text(
             encoding="utf-8"))["pageSelection"]

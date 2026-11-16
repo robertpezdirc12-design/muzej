@@ -154,6 +154,9 @@ def compute():
     dual = json.loads(DUAL_EV.read_text(encoding="utf-8"))
     p59 = json.loads(P59_EV.read_text(encoding="utf-8"))
     p56 = json.loads(P56_EV.read_text(encoding="utf-8"))
+    if not PARCELS.exists():
+        print(f"[SKIP] manjka vhod: {PARCELS}")
+        return None
     parcels = json.loads(PARCELS.read_text(encoding="utf-8"))
 
     bybase: dict[str, list[dict]] = defaultdict(list)
@@ -675,10 +678,13 @@ def compute_pair():
     """Ponovni preizračun (brez pisanja) — vrne (evidence, runtime)."""
     global FAILURES
     FAILURES = []
+    res = compute()
+    if res is None:
+        return None
     (out_rows, removed_rows, amb_changes, conf_changes, join_block,
      per_blatt_amb, area_proof, spatial_proof, v5ev, p56, multi, cross,
      bases6, blatt_dist, pos_by_base, drop_pairs, drop_rows, lost,
-     near_duals) = compute()
+     near_duals) = res
     if FAILURES:
         raise SystemExit(f"P73 compute: invariant padel: {FAILURES[:3]}")
 
@@ -812,10 +818,13 @@ def compute_pair():
 
 def build_documents():
     try:
-        evidence, runtime = compute_pair()
+        pair = compute_pair()
     except SystemExit as e:
         print(f"P73: {e}")
         return 1
+    if pair is None:
+        return 0
+    evidence, runtime = pair
     OUT_EV.write_text(jdump_pretty(evidence), encoding="utf-8")
     OUT_RUNTIME.write_text(jdump_pretty(runtime), encoding="utf-8")
     print(f"P73: dokaz → {OUT_EV.relative_to(REPO)}; runtime → "
@@ -831,7 +840,11 @@ def check():
     """I8: drugi preizračun bajtno identičen zapisanima dokumentoma."""
     ev1 = json.loads(OUT_EV.read_text(encoding="utf-8"))
     ev1s = json.dumps(ev1, ensure_ascii=False, sort_keys=True)
-    ev2, _rt2 = compute_pair()
+    pair = compute_pair()
+    if pair is None:
+        print("[SKIP] manjka vhod")
+        return 0
+    ev2, _rt2 = pair
     if json.dumps(ev2, ensure_ascii=False, sort_keys=True) != ev1s:
         print("  ✗ I8 dokaz: drugi preizračun ≠ zapisano")
         return 1

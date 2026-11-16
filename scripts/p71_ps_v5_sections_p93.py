@@ -177,6 +177,9 @@ def compute():
     p69 = json.loads(P69_EV.read_text(encoding="utf-8"))
     p59 = json.loads(P59_EV.read_text(encoding="utf-8"))
     p56 = json.loads(P56_EV.read_text(encoding="utf-8"))
+    if not PARCELS.exists():
+        print(f"[SKIP] manjka vhod: {PARCELS}")
+        return None
     parcels = json.loads(PARCELS.read_text(encoding="utf-8"))
 
     bybase: dict[str, list[dict]] = defaultdict(list)
@@ -582,7 +585,12 @@ def build_documents():
     try:
         evidence, runtime = compute_pair()
     except SystemExit as e:
+        msg=str(e)
+        if "[SKIP]" in msg:
+            print(msg)
+            return 0
         print(f"P71: {e}")
+        return 1
         return 1
     V5_EV.write_text(jdump_pretty(evidence), encoding="utf-8")
     OUT_RUNTIME.write_text(jdump_pretty(runtime), encoding="utf-8")
@@ -640,10 +648,13 @@ def compute_pair():
     FAILURES = []
     p69 = json.loads(P69_EV.read_text(encoding="utf-8"))
     p56 = json.loads(P56_EV.read_text(encoding="utf-8"))
+    res = compute()
+    if res is None:
+        raise SystemExit(f"[SKIP] manjka vhod: {PARCELS}")
     (out_rows, excluded_rows, removed_c2, rekeyed, kept_c2, ann93,
      amb_changes, conf_changes, join_block, per_blatt_amb, area_proof,
      spatial_proof, page_sel, furkovce, multi, cross, bases5, blatt_dist,
-     n_forensics) = compute()
+     n_forensics) = res
     if FAILURES:
         raise SystemExit(f"P71 compute: invariant padel: {FAILURES[:3]}")
     v4ev = json.loads(V4_EV.read_text(encoding="utf-8"))

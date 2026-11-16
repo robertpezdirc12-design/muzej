@@ -157,6 +157,9 @@ def compute():
     v2rt = json.loads(V2_RT.read_text(encoding="utf-8"))
     p67 = json.loads(P67_EV.read_text(encoding="utf-8"))
     p59 = json.loads(P59_EV.read_text(encoding="utf-8"))
+    if not PARCELS.exists():
+        print(f"[SKIP] manjka vhod: {PARCELS}")
+        return None
     parcels = json.loads(PARCELS.read_text(encoding="utf-8"))
 
     bybase: dict[str, list[dict]] = defaultdict(list)
@@ -579,9 +582,12 @@ def compute():
 
 
 def build_documents():
+    res = compute()
+    if res is None:
+        return 0
     (out_rows, removed, renum_spec, deltas, join_block, per_blatt_amb,
      area_proof, spatial_proof, amb_changes, conf_changes,
-     page_sel, ps_unique, read_conf_bi, furkovce) = compute()
+     page_sel, ps_unique, read_conf_bi, furkovce) = res
     if FAILURES:
         print(f"P68: {len(FAILURES)} invariant(ov) PADLO")
         return 1
