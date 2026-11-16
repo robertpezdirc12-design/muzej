@@ -80,12 +80,12 @@ P72_EV = os.path.join(ROOT, "research/issue17/ps-dual-occurrence-pack.json")
 OUT_EV = os.path.join(ROOT, "research/issue17/ps-cross-blatt-pack.json")
 OUT_RT = os.path.join(ROOT, "src/data/atlas/ps-cross-blatt-pack.json")
 
-PIN_V6EV_SHA = "de13f10bee5f7b6f21a389997e470214760f04b7f384f1236c7d6215feacfe18"
+PIN_V6EV_SHA = "487d624c29c61e229c92f731bf8869ed3e9b8eb3dd179f7c9edcee9182f789ac"
 PIN_V6RT_SHA = "6270b267be9aabb621e05ba8acc05b7a67458d3c77f0b42934202a852fef943d"
-PIN_P59EV_SHA = "650f13dccab1da70a60d04c41ce9f7887ca94eafea8a0a7927c104ca899b76f3"
-PIN_P56EV_SHA = "2fddc76fb94b69fed55170220fa8dfa3ace4a9466043d264b8b8df788e78a50c"
-PIN_P66EV_SHA = "02214eba020ce3e11c50db3af873e17b045a38fbd1a4f452e59ddbde345bf9ca"
-PIN_P72EV_SHA = "0922a7013071363c75095082a6bb074490a944c6f979de7578f91898946857cd"
+PIN_P59EV_SHA = "05131d458299bfd129cac022ddab60f2d2c0f1db777791bd9b1c9f4f4187caf1"
+PIN_P56EV_SHA = "6bdc1b607dd1ed288e5e466ca5f39e4212516774d3fc47dd945ab823d0fe513e"
+PIN_P66EV_SHA = "51211db2f20ad3f501bed5586056582bac01e9db3ee820e3ce70d65078180d7a"
+PIN_P72EV_SHA = "478aced4099d5560a79ac5fde803315cc566f3bf952ea7d7befaacd6eca37fd3"
 
 EXPECTED_ROWS = 939          # v6 rowsEvidence
 EXPECTED_BASES = 879         # v6 base

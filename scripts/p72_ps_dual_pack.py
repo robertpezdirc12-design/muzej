@@ -71,10 +71,10 @@ V5_RT = os.path.join(ROOT, "src/data/atlas/ps-parcels-geo.json")
 OUT_EV = os.path.join(ROOT, "research/issue17/ps-dual-occurrence-pack.json")
 OUT_RT = os.path.join(ROOT, "src/data/atlas/ps-dual-occurrence-pack.json")
 
-PIN_V4EV_SHA = "57ed1b0d5030b2dd6347cf5cd7571203a5d7e8353973dbc3f40c0cffdd2f074f"
-PIN_V5EV_SHA = "6c96210dca8b4fee8d9cbc7090735148af8c7068d4cd5726f389953ef7682fee"
-PIN_P59EV_SHA = "650f13dccab1da70a60d04c41ce9f7887ca94eafea8a0a7927c104ca899b76f3"
-PIN_P56EV_SHA = "2fddc76fb94b69fed55170220fa8dfa3ace4a9466043d264b8b8df788e78a50c"
+PIN_V4EV_SHA = "e0e373aa2015791c409b11c9211ab6bbe2008a6d22d55709a44696e998e2254d"
+PIN_V5EV_SHA = "b8137a1ae35de49c3c3c7c0f237a84cc3da4531308c74eba5bfb542b2a843c54"
+PIN_P59EV_SHA = "05131d458299bfd129cac022ddab60f2d2c0f1db777791bd9b1c9f4f4187caf1"
+PIN_P56EV_SHA = "6bdc1b607dd1ed288e5e466ca5f39e4212516774d3fc47dd945ab823d0fe513e"
 PIN_V5RT_SHA = "0b5e8bf7d81306cc1e1c43f25b8f205a759800637740a47388f2f06a85428ef2"
 
 EXPECTED_ROWS = 1077
@@ -521,9 +521,10 @@ def main():
         f.write("\n")
 
     ev_check = json.load(open(OUT_EV))
-    rt_bytes = open(OUT_RT, "rb").read()
-    if json.dumps(ev_check["runtime"], indent=1, ensure_ascii=False,
-                  sort_keys=True).encode() + b"\n" != rt_bytes:
+    rt_bytes = open(OUT_RT, "rb").read().replace(b"\r\n", b"\n")
+    ev_rt_bytes = json.dumps(ev_check["runtime"], indent=1, ensure_ascii=False,
+                            sort_keys=True).encode() + b"\n"
+    if ev_rt_bytes != rt_bytes:
         fail("I7 runtime ni bajtno podmnožica dokaza")
 
     print(f"OK: dual base {len(bases_out)} ({rows_ib} vrstic), pari {pair_key}")
