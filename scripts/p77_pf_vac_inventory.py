@@ -29,7 +29,7 @@
 # Edini protokol-slični vir = N083PT "Seznam stavbnih parcel" (373416),
 # ki je ŽE v repu (PT: 105 vrstic, 84 hišnih + 21 parcelnih — audit §13).
 #
-# Izhod: /home/z/muzej/research/issue17/pf-vac-inventory.json
+# Izhod: research/issue17/pf-vac-inventory.json
 # Status: PROVEN-NEGATIVE-INVENTORY (vir identitete pas-instanc = fizični
 #         arhiv / drugi fond — operativna lastniška akcija, P77+).
 

@@ -38,7 +38,7 @@
 #     Sanacija je LASTNIŠKA akcija (Billing & plans — plačilna metoda /
 #     spending limit); API je ne more opraviti (token brez admin:billing).
 #
-# Izhod: /home/z/muzej/research/issue17/tokens-production-audit.json
+# Izhod: research/issue17/tokens-production-audit.json
 # Status: OPERATIONAL-AUDIT (produkcija + žetoni + Actions zdravje;
 #         dokaz ponovljiv z --check — live probe, brez mutacij).
 
