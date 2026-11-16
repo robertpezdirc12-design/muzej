@@ -11,8 +11,10 @@ import urllib.parse
 import urllib.request
 from html import unescape
 from pathlib import Path
+import os
+ROOT = Path(__file__).resolve().parents[1]
 
-RAW = Path("/home/z/muzej/research/issue17/lexicon-verification-raw")
+RAW = ROOT / "research/issue17/lexicon-verification-raw"
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) muzej-griblje-verify/1.0"}
 
 # target id -> headwords to query on fran.si (search form)

@@ -106,7 +106,9 @@ def load_passes():
     p1, p2 = {}, {}
     for f in sorted(glob.glob(str(RAW / "ps-*.json"))):
         d = json.loads(Path(f).read_text(encoding="utf-8"))
-        page = d["page"]
+        page = d.get("page")
+        if page is None:
+            continue
         rows = (d.get("parsed") or {}).get("vrstice") or []
         if "pass2" in Path(f).name:
             p2[page] = rows
