@@ -2,18 +2,18 @@
   "phase": "P78",
   "title": "Produkcija & žetoni: operativni zdravstveni audit (issue #6)",
   "status": "OPERATIONAL-AUDIT",
-  "issuedAt": "2026-10-24T19:56:39Z",
+  "issuedAt": "2026-11-16T11:28:45Z",
   "vercel": {
     "home": {
       "http": 200,
-      "bytes": 1055035
+      "bytes": 1655255
     },
     "qa": {
       "http": 200,
       "ok": true,
-      "passed": 139,
+      "passed": 256,
       "failed": 0,
-      "tests": 139,
+      "tests": 256,
       "qaP76Pass": true
     },
     "geo": {
@@ -29,11 +29,11 @@
   "gitlab": {
     "pat": {
       "http": 200,
-      "id": 28762432,
-      "name": "sdarg",
+      "id": 29613604,
+      "name": "asd",
       "active": true,
       "revoked": false,
-      "expiresAt": "2026-11-23",
+      "expiresAt": "2026-12-16",
       "scopes": [
         "ai_features",
         "api",
@@ -60,9 +60,9 @@
     }
   },
   "mirrors": {
-    "gitlabMain": "4a88006018a7b343ee70472bf101a744f0024627",
-    "githubMain": "4a88006018a7b343ee70472bf101a744f0024627",
-    "localHead": "4a88006018a7b343ee70472bf101a744f0024627",
+    "gitlabMain": "53f477282618daf17fe5e3e267240d8da420d39d",
+    "githubMain": "53f477282618daf17fe5e3e267240d8da420d39d",
+    "localHead": "53f477282618daf17fe5e3e267240d8da420d39d",
     "method": "git ls-remote po eksplicitnem URL-ju (Task 103+: origin = github brez žetona v URL-ju, žetona iz credential store; GitHub REST GET /commits/main vrne 404 neavtentificirano — repozitorij zaseben)"
   },
   "workflowsPresent": {
@@ -76,22 +76,22 @@
       "billingBlocked": false,
       "annotation": null,
       "syncLatest": {
-        "runId": 40124290195,
-        "createdAt": "2026-10-24T19:13:14Z",
+        "runId": 43857919819,
+        "createdAt": "2026-11-16T11:27:30Z",
         "event": "push",
         "conclusion": "success",
         "jobConclusion": "success",
         "steps": 8,
-        "runnerId": 1000002806
+        "runnerId": 1000005325
       },
       "tokenHealthLatest": {
-        "runId": 40087832112,
-        "createdAt": "2026-10-24T10:55:35Z",
+        "runId": 43721367078,
+        "createdAt": "2026-11-15T13:53:32Z",
         "event": "schedule",
         "conclusion": "success",
         "jobConclusion": "success",
         "steps": 5,
-        "runnerId": 1000002786
+        "runnerId": 1000005080
       }
     },
     "billingBlocked": false,
