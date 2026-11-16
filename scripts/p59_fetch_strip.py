@@ -17,14 +17,15 @@ import json
 import os
 import subprocess
 import sys
+import tempfile
 import time
 
 from PIL import Image
 
 BASE = ("https://vac.sjas.gov.si/vac/util/pdfPageImage"
         "?uodid=373415&docid=41780&page={}")
-RAW_DIR = "/tmp/p59/raw"
-OUT_DIR = "/tmp/p59"
+OUT_DIR = os.path.join(tempfile.gettempdir(), "p59")
+RAW_DIR = os.path.join(OUT_DIR, "raw")
 CROP = (30, 0, 250, None)  # levo, zgoraj, desno, spodaj(None=do konca)
 SCALE = 3
 PAGES = list(range(5, 140))  # S1 (5–127) + S2 (128–137) + S3 (138–139)

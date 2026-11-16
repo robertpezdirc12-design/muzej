@@ -38,6 +38,7 @@ import os
 import subprocess
 import sys
 import time
+import tempfile
 import urllib.parse
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -46,7 +47,8 @@ DOKAZ = os.path.join(REPO, "research", "issue17", "pf-vac-inventory.json")
 BASE = "https://vac.sjas.gov.si"
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36")
-COOKIE_JAR = "/tmp/p77/vac-cookies.txt"
+TMP_DIR = os.path.join(tempfile.gettempdir(), "p77")
+COOKIE_JAR = os.path.join(TMP_DIR, "vac-cookies.txt")
 
 DOCID_OFFSET = -331635  # docid = uodid - 331635 (PS: 373415→41780; PG: 373413→41778)
 
@@ -172,8 +174,8 @@ def walk_tektonika():
 
 def probe_image(uodid, page=1):
     docid = uodid + DOCID_OFFSET
-    out = f"/tmp/p77/probe-{uodid}-{page}.jpg"
-    os.makedirs("/tmp/p77", exist_ok=True)
+    os.makedirs(TMP_DIR, exist_ok=True)
+    out = os.path.join(TMP_DIR, f"probe-{uodid}-{page}.jpg")
     url = (f"{BASE}/vac/util/pdfPageImage"
            f"?uodid={uodid}&docid={docid}&page={page}")
     code, _ = curl(url, out=out)
