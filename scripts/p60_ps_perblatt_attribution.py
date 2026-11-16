@@ -349,8 +349,9 @@ def main():
         f.write("\n")
 
     ev_check = json.load(open(OUT_EV))
-    rt_bytes = open(OUT_RT, "rb").read()
-    if json.dumps(ev_check["runtime"], indent=1, ensure_ascii=False, sort_keys=True).encode() + b"\n" != rt_bytes:
+    rt_bytes = open(OUT_RT, "rb").read().replace(b"\r\n", b"\n")
+    ev_rt_bytes = json.dumps(ev_check["runtime"], indent=1, ensure_ascii=False, sort_keys=True).encode() + b"\n"
+    if ev_rt_bytes != rt_bytes:
         fail("I7 runtime ni bajtno podmnožica dokaza")
 
     print(f"OK: base {len(bases_out)}, pas-vrstice {n_rows}, atribucije {dict(sorted(attr_blatt_dist.items()))}")
