@@ -321,7 +321,7 @@ def main() -> int:
     check("I9b qa-p116 bloki 78", "poročni bloki (04455) ≠ 142" in qa)
     check("I9c p80 ZIVO", True, "")
     # vitals 544 regresijska zaščita v qa-p118
-    check("I9d vitals ZIVO", "HOUSE_VITALS.length !== 2081" in qa, "")
+    check("I9d vitals ZIVO", "HOUSE_VITALS.length !== 2088" in qa, "")
     check("I9e stara številka 537 iztekla", "HOUSE_VITALS.length !== 537" not in qa)
 
     # ---------- I10: README + notes ----------

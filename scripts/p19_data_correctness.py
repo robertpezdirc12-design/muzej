@@ -43,7 +43,7 @@ print("1) events.json — jubilej je cerkveni (1526 = cerkev; vas = 1468)")
 events = load("src/data/museum/events.json")
 
 E1 = "0b32dc9c-8640-4bdd-b84e-8ba449def9f4"  # Radio Odeon, 23. 6. 2026
-E2 = "5f6599aa-5ef1-4abe-84be-e2081d62d486"  # Slovenske novice, 13. 8. 2026
+E2 = "5f6599aa-5ef1-4abe-84be-e2088d62d486"  # Slovenske novice, 13. 8. 2026
 
 for e in events["events"]:
     if e["id"] == E1:

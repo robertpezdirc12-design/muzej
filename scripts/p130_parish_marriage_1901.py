@@ -47,7 +47,7 @@ EXPECTED_ANOMALIES = 11
 EXPECTED_CROSSCHECKS = 18
 GRIBLJE_ROWS = []               # 1901: 0 omemb Griblje!
 GRIBLJE_BLOCKS = 0              # 0 novih blokov (vitals 595 nespremenjen!)
-VITALS_TOTAL = 2081              # nespremenjen (P129)
+VITALS_TOTAL = 2088              # nespremenjen (P129)
 BLOKI_04455 = 78                # nespremenjen (P129)
 SIDRA_TOTAL = 71                # nespremenjen (0 Griblje sidra)
 RAUY_COUNT = 11                 # Jos. Rauy v vseh 11 vpisih = 100%!

@@ -20,7 +20,7 @@ check("I1 bloki 04455/1873 == 4 hiše / 2 POLNA-DVOJNA (h13×h62 + h22×h50!)",
       len(bloki) == 4 and bloki == ["13", "62", "22", "50"],
       f"najdeno {len(bloki)}: {','.join(bloki)}")
 skupaj = src.count('bookSignature: "04455"')
-check("I2 vitals-2085 + 04455==269", "HOUSE_VITALS.length !== 2085" not in src and skupaj == 269, f"04455={skupaj}")
+check("I2 vitals-2088 + 04455==269", "HOUSE_VITALS.length !== 2088" not in src and skupaj == 269, f"04455={skupaj}")
 
 nove = re.findall(r'houseNo: "(\d+)",\s*bookSignature: "04455",\s*year: 1873,\s*scan: (\d+),\s*page: (\d+),', src)
 pag_ok = all(int(p) == int(s) - 1 for _, s, p in nove)
@@ -64,8 +64,8 @@ check("I4c kontekst-m19-KLAGENFURT-IBERER + m21-VETRHVIŠČE + FERCHER-TERŽEK +
       and "50%-količnik" in an and "GABOFAIČ" in an2)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2085")
-check("I5 qa-p251 + števec-2043 (×150!)", "HOUSE_VITALS.length !== 2011" not in qa and st >= 150, f"2085-številcev={st}")
+st = qa.count("HOUSE_VITALS.length !== 2088")
+check("I5 qa-p251 + števec-2043 (×150!)", "HOUSE_VITALS.length !== 2011" not in qa and st >= 150, f"2088-številcev={st}")
 check("I5b sidra-262 + 1873:4-P251 (qa-sidra-message)", "poročna sidra ≠ 262 (1873:4-P251!" in qa)
 check("I5c dobe-236 + 66-pred-linijskih", "dobe-bloki ≠ 236/7/26" in qa and "66 pred-linijskih 1873-P251×4!" in qa)
 check("I5d p80-1873:4-garda + sken-garda-s2", 'p80MarrAnchors.filter((h) => h.year === 1873).length !== 4' in qa and "poročna sidra 1873: sken ≠ 2 (P251: samo-s2-Pag.-1!-s1-vezalo!" in qa)

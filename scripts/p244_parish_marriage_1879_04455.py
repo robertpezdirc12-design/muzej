@@ -22,7 +22,7 @@ check("I1b vrstni-red-9 (16,50,61,21,32,13,42,17,16!-h16-×2!)",
       [b.replace(" [~]", "") for b in bloki] == ["16", "50", "61", "21", "32", "13", "42", "17", "16"],
       ",".join(bloki))
 skupaj = src.count('bookSignature: "04455"')
-check("I2 vitals-2085 + 04455==269", "HOUSE_VITALS.length !== 2011" not in src and skupaj == 269, f"04455={skupaj}")
+check("I2 vitals-2088 + 04455==269", "HOUSE_VITALS.length !== 2011" not in src and skupaj == 269, f"04455={skupaj}")
 
 nove = re.findall(r'houseNo: "([^"]+)",\s*bookSignature: "04455",\s*year: 1879,\s*scan: (\d+),\s*page: (\d+),', src)
 check("I3 skeni+pagi (27/26 · 28/27 · 29/28 · 30/29 · 31/30 · 32/31 ×2 · 33/32 ×2 — pag=sken−1!)",
@@ -54,8 +54,8 @@ check("I4c PEZDIRC-7.-leto + DOVGAN-7-let + MILEH-križ + TRIPLE-DUEL-v1",
       and "Mileh" in an2 and "TRIPLE-DUEL" in an2)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2085")
-check("I5 qa-p244 + števec-2012 (×155!)", "qa-p244-parish-marriage-early-04455-1879" in qa and st >= 150, f"2085-številcev={st}")
+st = qa.count("HOUSE_VITALS.length !== 2088")
+check("I5 qa-p244 + števec-2012 (×155!)", "qa-p244-parish-marriage-early-04455-1879" in qa and st >= 150, f"2088-številcev={st}")
 check("I5b sidra-262 + 1878:7-P246 + 1879:9-P244 (qa-sidra-message)", "poročna sidra ≠ 262 (1873:4-P251! · 1874:11-P250! · 1875:1-P249! · 1876:6-P248! · 1877:5-P247! · 1878:7-P246! · 1879:9-P244!" in qa)
 check("I5c dobe-209 + 39-pred-linijskih", "dobe-bloki ≠ 236/7/26" in qa and "66 pred-linijskih 1873-P251×4!+1874-P250×11!+1875-P249×1!+1876-P248×6!+1877-P247×5!" in qa)
 check("I5d ZIVO", True, "")
@@ -99,8 +99,8 @@ check("I9 UI-MarriageEarly1879-v-ParishTab + importi + P245-KOREKCIJA-kartica!",
       and "FINIS_1878_S25" in ui and "MARRIAGE_1879_KONTEKST" in ui)
 check("I9b worklog-P244-vnos", "## P244" in open(f"{ROOT}/worklog.md", encoding="utf-8").read())
 check("I9c stari-verifikatorji-na-živih-številkah (P258: 2059!)",
-      "2085" in open(f"{ROOT}/scripts/p238_parish_marriage_1885_04455.py", encoding="utf-8").read()
-      and "2085" in open(f"{ROOT}/scripts/p242_parish_marriage_1881_04455.py", encoding="utf-8").read())
+      "2088" in open(f"{ROOT}/scripts/p238_parish_marriage_1885_04455.py", encoding="utf-8").read()
+      and "2088" in open(f"{ROOT}/scripts/p242_parish_marriage_1881_04455.py", encoding="utf-8").read())
 
 # ——— I11: P245-KOREKCIJA ————
 kj = json.dumps(d.get("korekcija", {}), ensure_ascii=False)

@@ -1539,3 +1539,56 @@ export const PREDHODNIK_263_KRAJI = {
   si: "GRÜBLE (GRIBLJE): h60 (m14-ženin) + h29 (m14-nevesta) + h11 (m18-×2-oba-partnerja!) + pripisi-»zu Grüblau (dorf)« (m12+m15+m16+m1+m2!) · KRAFING: h4 (m12) + h7 (m15) + h3 (m15) + h22 (m2) [~Kranjig/Krajing-cf.-P257/P258] · GRADAZ (GRADAC): h9 (m17) + h15 (m1) · MOLLING (METLIKA): h59 (m17-+-Trauungsschein!) · [~X-OPEN]: 'Krapisse?'-h6 (m12) · 'Tribuche?'-h46 (m15) · 'Dobrauj?'-h10 (m16) · 'Gerzihje?'-h3 (m16) · '(R)Haun?'-h18 (m1) · 'Germ?'-h27 (m2)",
   en: "GRÜBLE (GRIBLJE): h60 (m14-groom) + h29 (m14-bride) + h11 (m18-×2-both-partners!) + the-»zu Grüblau (dorf)«-notes (m12+m15+m16+m1+m2!) · KRAFING: h4 + h7 + h3 + h22 · GRADAZ (GRADAC): h9 + h15 · MOLLING (METLIKA): h59 (m17-+-the-Trauungsschein!) · [~X-OPEN]: 'Krapisse?'-h6 · 'Tribuche?'-h46 · 'Dobrauj?'-h10 · 'Gerzihje?'-h3 · '(R)Haun?'-h18 · 'Germ?'-h27",
 } as const;
+
+// ——— P264 (NOTRANJOST-01738 — leto 1838, s20 = Pag. 37/38): 6 vpisov / 3 bloki / 2 dviga ———
+
+/** P264-korpus: +3 blokov (h67/h64/h24); vitals 2085→2088; 01738 = 73→76; ŠEST-KNJIŽNI-KLUB 42→43! */
+export const PREDHODNIK_264_KORPUS = {
+  noviBloki: 3,
+  vpisi: 6,
+  vitalsTotal: 2088,
+  byBook01738: 76,
+  hise01738: 48,
+  dvigi: {
+    h67: "1861 → 1838 (23 let — PRVI-01738-blok!-knjige-3→4!)",
+    h64: "1857 → 1838 (19 let — PRVI-01738-blok!-knjige-5→6-=-ŠEST-KNJIŽNI-KLUB-42→43!)",
+  },
+  brezDviga: {
+    h24: "+1 (m2-1838-ženin-Marcus-DRNIG!-firstYear-1833-P259-ostaja!-span-1833–1920-=-87!)",
+  },
+  sestKnjizniKlub: 43,
+  petKnjiznih: 25,
+  leta: "1828–1838 + 1873 (11 let notranjosti!-12-koledarskih!)",
+} as const;
+
+/** Bloki P264: h67 + h64 (POLNI DVOJNI Grüble×Grüble!) + h24 (restart 2. 11. 1838). */
+export const PREDHODNIK_264_BLOKI = {
+  si: "★★★ 3 GRIBLJE BLOKI — 2 DVIGA — 1 POLNI DVOJNI GRÜBLE×GRÜBLE: h67 (m6-25.-Feb-1838-ženin-Marcus-[~Spring]-30-l-GRÜBLE-67-»in gulden«-PRVI-01738-blok-DVIG-1861→1838-ZA-23-LET-knjige-3→4!-span-62!) + h64 (m6-nevesta-Dorothea-[~Thimig]-25-l-GRÜBLE-64-PRVI-01738-blok-DVIG-1857→1838-ZA-19-LET-ŠEST-KNJIŽNI-KLUB-42→43-5→6-knjig!-span-85!) + h24 (m2-2.-Nov-1838-ženin-Marcus-DRNIG-27-l-GRÜBLE-24-2.-01738-blok-BREZ-dviga!) — POLNI DVOJNI h67×h64 = oba partnerja iz Gribelj (intra-vasični par po P263 h11×h11!) · m5 = POLNI DVOJNI Otok 4×Otok 4 (vas izven Gribelj!)",
+  en: "★★★ 3 GRIBLJE BLOCKS — 2 LIFTS — 1 FULL DOUBLE GRÜBLE×GRÜBLE: h67 (m6-Feb-25-1838-groom-Marcus-[~Spring]-30-GRÜBLE-67-the-FIRST-01738-block-LIFT-1861→1838-BY-23-knjige-3→4!) + h64 (m6-bride-Dorothea-[~Thimig]-25-GRÜBLE-64-the-FIRST-01738-block-LIFT-1857→1838-BY-19-the-SIX-BOOK-CLUB-42→43!) + h24 (m2-Nov-2-1838-groom-Marcus-DRNIG-27-GRÜBLE-24-the-2nd-01738-block-NO-LIFT!) — the-FULL-DOUBLE-h67×h64 = both-of-Griblje! · m5 = the-FULL-DOUBLE-Otok-4×Otok-4 (outside-Griblje!)",
+} as const;
+
+/** Struktura P264: pastoralno leto Nov→Nov POTRJENO + rešitev P263 X-OPEN ① (1838!). */
+export const PREDHODNIK_264_STRUKTURA = {
+  stevilcenje: "št. 3–6 = 4./11./18./25. Februar 1838 → RESTART št. 1–2 = 1./2. NOVEMBER 1838",
+  model: "PASTORALNO-LETO-Nov→Nov-POTRJEN (P262-hipoteza!): št.-1–2/Feb-1838 = prvi-poroki-pastoralnega-leta-1838 + št.-3–6/Feb-1838-isto-leto → št.-1–2/Nov-1838 = pastoralno-leto-1839 — »letni-restart« je NOVEMBRSKI, ne februarski",
+  praznina: "11. september 1837 → 1. februar 1838 = 5 mesecev brez porok (cf. P256 prazna polovica 1830!)",
+  p263Xopen1: "RAZREŠENO — letnica restart-vrstic s19 = 1838 (v obeh vrsticah nedvoumno izpisano) → hipoteza 1839 ZAVRŽENA",
+  p263Xopen2: "ODPRTO — dnevna pripadnost št. 1/2 s19: št. 1 = 4. Februar, št. 2 = 1. Februar (vrstni red ni kronološki — masa 1. feb. cf. P262 ×7!)",
+  foliacija: "Pag = 2·sken − 3 (s20 = 37/38) — serija-17/17-notranjosti (P259-10/10 + P260-3/3 + P261-1/1 + P262-1/1 + P263-1/1 + P264-1/1!)",
+  urkunden: "2×'ohne Aufgebot' (m3+m5) + 'Mit obrigkeitlicher Bewilligung' (m4) + 'Mit Einwilligung des … Nr … 1838' (m6) + k.k. Consens VOJAŠKI »5. 8br 838« = 5. oktober 1838 (m1-k.k.-3te-Jäger-Compagnie!) + 'Mit Verbindungsschein vom 17. November 1838' (m2)",
+  duhovniki: "Gregor-Dolinšek-Coop. (m2-4.-zaporedna-faza-P261–P264!) + Georg-[~Kraphovi(g/ž)]-Parochus (m3) + [~Dempf?] (m4) + [~Kraug?] (m5) + [~Georg-Praufs?] (m6)",
+  dokaz: "research/issue17/p264-work/ (s20-1:1-md5-13cbb85d-486259B + transcript.md — 20-izrezov; s21–s23-rezerve-md5-1:1!) — metoda-AGENT-VIZIJA-0-VLM-klicev",
+  p265: "s21+ = Pag. 39/40 (nadaljevanje pastoralnega leta 1839 — rezerve-s21–s23-že-na-disku: 8c0faae3/e66f3d8a/8c64fd37!)",
+} as const;
+
+/** Niti P264: KRAL-×3 (zaklep!) + JUREJEFZHIG-×4 + KLEPEC-×3 + KRIŽAN/KRISBAN + DRNIG + DOLINŠEK. */
+export const PREDHODNIK_264_NITI = {
+  si: "★★★★★ KRAL-NIT-×3-ZAKLEPA (m6-mati-ženina-Anna-KRAL-h67 ↔ P262-m10-nevesta-Maria-KRAL ↔ P263-m18-»Maria-[~Kraz/Kral]«-h11 — 3-neodvisne-omembe-1837–1838!) + ★★★★ JUREJEFZHIG-×4 (m6-mati-neveste-Katherina-JUREJEFZHIG-h64 ↔ P263-m12-ženin-Georg+oče-Mathias+ m1-nevesta-Maria+oče-Martin+priča-Nicolaus!) + ★★★ KLEPEC-×3 (m4-mati-neveste-Maria-KLEPEC ↔ P263-m15-mati-Maria-+-m1-mati-Katherina!) + ★★★ KRIŽAN/KRISBAN (m5-ženin-Johann-Krisban+oče-Johann-Otok-4 ↔ P263-m17-Jacob-Hob.-Krisch-Gradaz-9 ↔ P262-×4 — konglomerat-se-širi-IZVEN-Gribelj!) + ★★★ DRNIG-m2-×3 (ženin-Marcus+oče-Michael+hiša-24 — nova-družina-na-h24!-[X-OPEN: ali-=[~Spring]-m6-isto-hišno-ime?]) + ★★ DOLINŠEK-m2 (Gregor-Dolinšek-Coop.-4.-zaporedna-faza!) + ★★ »in gulden«-×5-v-6-vrsticah (pomen-[X-OPEN]: denarna/urbarska-omemba-ob-imenu!)",
+  en: "★★★★★ the-KRAL-THREAD-×3-CLOSES (m6-the-groom's-mother-Anna-KRAL-h67 ↔ P262-m10-bride-Maria-KRAL ↔ P263-m18-»Maria-[~Kraz/Kral]«-h11!) + ★★★★ JUREJEFZHIG-×4 + ★★★ KLEPEC-×3 + ★★★ KRIŽAN/KRISBAN (Otok-4-outside-Griblje!) + ★★★ DRNIG-×3 (a-NEW-family-at-h24!) + ★★ DOLINŠEK-m2 + ★★ the-»in gulden«-note-×5-of-6-rows [X-OPEN]",
+} as const;
+
+/** Kraji P264: GRÜBLE ×3 hiše + Krafing ×4 + Gradaz + Otok + 3 X-OPEN vasi. */
+export const PREDHODNIK_264_KRAJI = {
+  si: "GRÜBLE (GRIBLJE): h67 + h64 + h24 — vsi trije bloki tega skena! · KRAFING: h43 (m3-nevesta) + h9 (m1-ženin) + h29 (m1-nevesta) = 4 omembe (najpogostejša vas skena — kanonična uvrstitev [X-OPEN: Krasinec?]) · GRADAZ (GRADAC): h17 (m4-ženin!) · OTOK: h4 × h4 (m5-POLNI-DVOJNI-izven-Gribelj!) · [~X-OPEN]: [~Jerlsche/Gerlsche]-h17 (m3-ženin) · [~Dorscht]-h20 (m4-nevesta) · [~Fehirsche]-h4 (m2-nevesta)",
+  en: "GRÜBLE (GRIBLJE): h67 + h64 + h24 — all three blocks of this scan! · KRAFING: h43 + h9 + h29 (4 mentions — the-scan's-most-frequent-village, canonical [X-OPEN]) · GRADAZ (GRADAC): h17 · OTOK: h4 × h4 (the-FULL-DOUBLE-outside-Griblje!) · [~X-OPEN]: [~Jerlsche/Gerlsche]-17 · [~Dorscht]-20 · [~Fehirsche]-4",
+} as const;

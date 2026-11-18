@@ -31,8 +31,8 @@ check("I4 dokaz (212/38-griblje/14-anomalij + KOLERA + meja-s102 + 212-vrstic)",
       f"entries={len(d['entries'])} griblje={len(grib)} anomalije={len(d['anomalije'])}")
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2085")
-check("I5 qa-p204 + števec-1444", "qa-p204-parish-death-1873-04106" in qa and st >= 100, f"2085-številcev={st}")
+st = qa.count("HOUSE_VITALS.length !== 2088")
+check("I5 qa-p204 + števec-1444", "qa-p204-parish-death-1873-04106" in qa and st >= 100, f"2088-številcev={st}")
 
 i0 = src.find("P204: mrliška PREDZGODOVINA 04106, leto 1873")
 seg = src[i0:] if i0 >= 0 else ""
@@ -52,7 +52,7 @@ check("I8d BRIME-h24-NIT (→P203-z6!)", "BRIME-h24-NIT" in qa and "BRIME-NIT" i
 check("I8e ULEDBA-×3-konec-1873", "ULEDBA-×3" in qa and "ULEDBA" in seg)
 check("I8f Griblje-DVOJNOST-h58 (Krasinec-mimo-Griblje-Dozeth-MOŠKI!)", "Griblje-DVOJNOST" in seg)
 check("I9 peščeni-števec-qa-p204 (204. kontrola!)", "qa-p204" in qa and "204. kontrola" in qa)
-check("I9 pt-luknja-292/2043", '"vitalsTotal": 2085' in open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read())
+check("I9 pt-luknja-292/2043", '"vitalsTotal": 2088' in open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read())
 
 # I10 LIVE-verifikacija matricula (s102-naslovnica-dostopna)
 try:

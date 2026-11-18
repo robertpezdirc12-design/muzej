@@ -294,6 +294,8 @@ PREDHODNIK_1833N_STRUNA,
   PREDHODNIK_1836_37_BLOCKS,
   PREDHODNIK_1838_BLOCKS,
   PREDHODNIK_1837_BLOCKS,
+  PREDHODNIK_264_BLOKI,
+  PREDHODNIK_264_STRUKTURA,
   PREDHODNIK_261_NITI,
   PREDHODNIK_261_KRAJI,
   PREDHODNIK_260_NITI,
@@ -2668,6 +2670,87 @@ function Notranjost01738Leto1837() {
   );
 }
 
+function Notranjost01738Leto1838() {
+  const { t } = useLang();
+  const rows: { m: string; d: string; h?: string; x?: boolean }[] = [
+    { m: "3", d: "4. Feb. 1838", x: true },
+    { m: "4", d: "11. Feb. 1838", x: true },
+    { m: "5", d: "18. Feb. 1838", h: "4·4" },
+    { m: "6", d: "25. Feb. 1838", h: "67·64" },
+    { m: "1", d: "1. Nov. 1838", x: true },
+    { m: "2", d: "2. Nov. 1838", h: "24" },
+  ];
+  return (
+    <div className="rounded-xl border bg-card/60 p-5">
+      <h3 className="flex items-center gap-2 font-serif text-lg font-semibold">
+        <BookOpenCheck className="h-4 w-4 text-primary" aria-hidden />
+        {t(
+          "Notranjost knjige 01738: leto 1838 (s20 = Pag. 37/38) — 6 vpisov, 3 bloki, 2 dviga, polni dvojni Grüble × Grüble",
+          "The interior of the book 01738: the year 1838 (s20 = Pag. 37/38) — 6 entries, 3 blocks, 2 lifts, a full double Grüble × Grüble",
+        )}
+      </h3>
+      <p className="mt-2 text-sm text-muted-foreground [overflow-wrap:anywhere]">
+        {t(
+          `★★★★★ STRUKTURNO: model pastoralnega leta nov→nov je POTRJEN (P262 hipoteza). Številčenje: 3–6 = 4./11./18./25. februar 1838 → RESTART 1–2 = 1./2. NOVEMBER 1838 = pastoralno leto 1839. »Letni restart« je torej novembrski — februar 1838 je le prvi vpis v letu (med 11. sep. 1837 in 1. feb. 1838 ni bilo porok: 5 mesecev praznine). S tem je REŠEN P263 X-OPEN ①: letnica na restart-vrsticah s19 je 1838 → hipoteza 1839 ZAVRŽENA. Foliacija 'Pag = 2·sken − 3' (s20 = 37/38) = serija 17/17 notranjosti. Metoda: agent-vizija pri kvoti 0 — 20 izrezov.`,
+          `★★★★★ STRUCTURAL: the pastoral-year model Nov→Nov is CONFIRMED (the P262 hypothesis). The numbering: 3–6 = Feb 4/11/18/25 1838 → RESTART 1–2 = NOV 1/2 1838 = the pastoral year 1839. The »annual restart« is therefore November-based — Feb 1838 is merely the first entry of that year (no marriages between Sep 11 1837 and Feb 1 1838: a 5-month gap). This RESOLVES the P263 X-OPEN ①: the year on the s19 restart rows is 1838 → the 1839 hypothesis REJECTED. The foliation 'Pag = 2·scan−3' (s20 = 37/38) = the 17/17 series of the interior. The method: agent vision at quota 0 — 20 crops.`,
+        )}
+      </p>
+
+      <div className="mt-4 rounded-lg border border-emerald-500/40 bg-emerald-500/10 p-4">
+        <p className="text-sm font-medium text-emerald-700 dark:text-emerald-300 [overflow-wrap:anywhere]">
+          {t("★★★★★ 3 GRIBLJE BLOKI — 2 DVIGA — 1 POLNI DVOJNI GRÜBLE × GRÜBLE: ", "★★★★★ 3 GRIBLJE BLOCKS — 2 LIFTS — 1 FULL DOUBLE GRÜBLE × GRÜBLE: ")}
+          {t(
+            `h67 (m6 — ženin Marcus [~Spring] 30 l, Grüble 67 · PRVI 01738-blok · dvig 1861→1838 ZA 23 LET, knjige 3→4) · h64 (m6 — nevesta Dorothea [~Thimig] 25 l, Grüble 64 · PRVI 01738-blok · dvig 1857→1838 ZA 19 LET · ŠEST-KNJIŽNI KLUB 42→43!) · h24 (m2, 2. nov. 1838 — ženin Marcus DRNIG 27 l, Grüble 24 · 2. 01738-blok · brez dviga, firstYear 1833 ostaja). Korpus ${PREDHODNIK_264_BLOKI.si.includes("h67") ? "2088" : "—"} vitalov / 01738 = 76 blokov / 48 hiš / leta 1828–1838 + 1873.`,
+            `h67 (m6 — groom Marcus [~Spring] 30, Grüble 67 · the FIRST 01738 block · lift 1861→1838 BY 23 YEARS, books 3→4) · h64 (m6 — bride Dorothea [~Thimig] 25, Grüble 64 · the FIRST 01738 block · lift 1857→1838 BY 19 YEARS · the SIX-BOOK CLUB 42→43!) · h24 (m2, Nov 2 1838 — groom Marcus DRNIG 27, Grüble 24 · the 2nd 01738 block · no lift, firstYear 1833 remains). The corpus 2088 vitals / 01738 = 76 blocks / 48 houses / the years 1828–1838 + 1873.`,
+          )}
+        </p>
+      </div>
+
+      <div className="mt-4 rounded-lg border border-primary/50 bg-primary/10 p-4">
+        <p className="text-sm font-medium [overflow-wrap:anywhere]">
+          {t(
+            "★★★★★ KRAL-nit ×3 se ZAKLEPA (m6 mati ženina Anna KRAL ↔ P262 m10 nevesta Maria KRAL ↔ P263 m18 »Maria [~Kraz/Kral]« — tri neodvisne omembe 1837–1838!) + ★★★★ JUREJEFZHIG ×4 (m6 mati neveste Katherina) + ★★★ KLEPEC ×3 (m4 mati Maria) + ★★★ KRIŽAN/KRISBAN (m5 ženin Johann + oče — Otok 4, izven Gribelj) + ★★★ DRNIG ×3 v eni vrstici (nova družina na h24) + ★★ DOLINŠEK (m2 — 4. zaporedna faza) + ★★ URKUNDEN: k.k. Consens vojaški »5. 8br 838« = 5. oktober 1838 (m1, k.k. 3te Jäger Compagnie) + Verbindungsschein 17. november 1838 (m2) + 2× »ohne Aufgebot«.",
+            "★★★★★ The KRAL thread ×3 CLOSES (m6 the groom's mother Anna KRAL ↔ P262 m10 bride Maria KRAL ↔ P263 m18 »Maria [~Kraz/Kral]«!) + ★★★★ JUREJEFZHIG ×4 + ★★★ KLEPEC ×3 + ★★★ KRIŽAN/KRISBAN (m5 — Otok 4, outside Griblje) + ★★★ DRNIG ×3 in one row + ★★ DOLINŠEK (m2 — the 4th consecutive phase) + ★★ the URKUNDEN: a military k.k. Consens »5. 8br 838« = Oct 5 1838 (m1, k.k. 3te Jäger Compagnie) + a Verbindungsschein Nov 17 1838 (m2) + 2× »ohne Aufgebot«.",
+          )}
+        </p>
+      </div>
+
+      <div className="mt-4 overflow-x-auto pb-1">
+        <p className="mb-1 text-xs font-semibold text-muted-foreground">{t("Vrstice s20: št. 3–6 (feb 1838) → restart 1–2 (nov 1838) — polna dvojna zelena", "The s20 rows: No 3–6 (Feb 1838) → the restart 1–2 (Nov 1838) — full doubles in green")}</p>
+        <div className="flex min-w-[880px] items-end gap-1 sm:min-w-0" role="listbox" aria-label={t("Vrstice s20-P264", "The rows of s20-P264")}>
+          {rows.map((e, i) => {
+            const isDouble = (e.h || "").includes("·");
+            return (
+              <div key={`p264-${e.m}-${i}`} role="option" aria-selected={false} className="flex flex-1 flex-col items-center gap-1 rounded-lg border border-transparent px-1 py-2">
+                <span className="text-[10px] font-medium text-muted-foreground" style={{ overflowWrap: "anywhere" }}>{e.d}</span>
+                <span className={`flex h-9 min-w-9 items-center justify-center rounded-full border px-1 text-[11px] font-semibold ${isDouble ? "border-emerald-500 bg-emerald-500/20 text-emerald-700 dark:text-emerald-300" : e.x ? "border-dashed border-amber-500/60 bg-amber-500/10 text-amber-700 dark:text-amber-300" : "border-primary/50 bg-primary/10 text-primary"}`}>{e.m}</span>
+                <span className="text-[10px] text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
+                  {e.h ? (isDouble ? `h${e.h.replace("·", " × h")}` : `h${e.h}`) : ""}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div className="mt-4 rounded-lg border border-amber-500/40 bg-amber-500/10 p-4">
+        <p className="text-sm font-medium text-amber-700 dark:text-amber-300 [overflow-wrap:anywhere]">
+          {t(
+            "★★★ KRAJI P264: GRÜBLE h67 + h64 + h24 (vsi trije bloki!) · KRAFING ×4 (hiše 43/9/29 — najpogostejša vas skena, kanonično [X-OPEN]) · GRADAZ 17 (Gradac) · OTOK h4 × h4 (polni dvojni izven Gribelj!) · X-OPEN vasi: [~Jerlsche/Gerlsche] 17 · [~Dorscht] 20 · [~Fehirsche] 4 · X-OPEN priimki: [~Jelloschig/Sanofschighe] · [~Stichel Pille] · [~Hanefshingl] · [~Spring] · [~Thimig] · [~Butkov] · m5-nevesta 14|19.",
+            "★★★ THE P264 VILLAGES: GRÜBLE h67 + h64 + h24 (all three blocks!) · KRAFING ×4 (houses 43/9/29) · GRADAZ 17 (Gradac) · OTOK h4 × h4 (a full double outside Griblje!) · X-OPEN villages: [~Jerlsche/Gerlsche] 17 · [~Dorscht] 20 · [~Fehirsche] 4 · X-OPEN surnames: [~Jelloschig/Sanofschighe] · [~Stichel Pille] · [~Hanefshingl] · [~Spring] · [~Thimig] · [~Butkov] · the m5 bride 14|19.",
+          )}
+        </p>
+      </div>
+      <p className="mt-2 text-xs text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
+        {t(
+          `X-OPEN ostanki: dnevna pripadnost št. 1/2 na s19 (št. 1 = 4. feb., št. 2 = 1. feb. — vrstni red ni kronološki) · pomen pripisa »in gulden« (×5 od 6 vrstic) · m4/m5/m6 nepodpisani duhovniki · P262 s18-letni model (P264 ga podpira: vsa leta 1837–1838 so v istem pastoralnem letu 1838). P265+: s21 = Pag. 39/40 (nadaljevanje pastoralnega leta 1839 — rezerve s21–s23 so že na disku).`,
+          `X-OPEN remains: the day assignment of No 1/2 on s19 · the meaning of the »in gulden« note (×5 of 6 rows) · the unsigned priests of m4/m5/m6 · the P262 s18 year-model (P264 supports it: all of 1837–1838 sit in the same pastoral year 1838). P265+: s21 = Pag. 39/40 (the continuation of the pastoral year 1839 — the s21–s23 reserves are already on disk).`,
+        )}
+      </p>
+    </div>
+  );
+}
+
 function HouseStoriesP254() {
   const { t } = useLang();
   const tierMax = Math.max(...HOUSE_STORY_TIERS.map((x) => x.houses));
@@ -4226,6 +4309,7 @@ function ParishTab() {
       <Notranjost01738Leto1836_1837 />
       <Notranjost01738Leto1837_1838 />
       <Notranjost01738Leto1837 />
+      <Notranjost01738Leto1838 />
 
       {/* brskalnik knjig */}
       <div>

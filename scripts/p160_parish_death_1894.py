@@ -34,7 +34,7 @@ EXPECTED_EXCLUDED = 8
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 10
 GRIBLJE_HOUSES = "24,35,49,57,72,87"
-VITALS_TOTAL = 2081             # 1205 + 14! (P190 = KONEC-KNJIGE!)
+VITALS_TOTAL = 2088             # 1205 + 14! (P190 = KONEC-KNJIGE!)
 BLOKI_04894 = 520               # 506 + 14! (P190 = KONEC-KNJIGE!)
 P80_HOUSES = 87                  # 86 → 87 (+h49 EDINA — mrliška-1894; 04105-izven-filtra — 17. PT-luknja-dokaz!)
 KORPUS_HOUSES = 94               # POSODABLJENO P162: 92 + 1 (+h51 — 1. dokaz kadarkoli)!

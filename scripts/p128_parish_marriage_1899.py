@@ -51,7 +51,7 @@ GRIBLJE_ROWS = [1, 3, 4]
 GRIBLJE_MARRIAGES = 3
 GRIBLJE_BLOCKS = 6              # h34 + h44 + h1 + h10 + h20 + h16
 GRIBLJE_HOUSES = ["1", "10", "16", "20", "34", "44"]
-VITALS_TOTAL = 2081              # 587 + 6 + 2 (P129) + 12 (P132)
+VITALS_TOTAL = 2088              # 587 + 6 + 2 (P129) + 12 (P132)
 BLOKI_04455 = 82                # 70 + 6
 SIDRA_TOTAL = 87                # 63 + 6 (1899:6) + 12 (1903:12)
 NOVAK_COUNT = 5                 # Jos. Novak v vseh 9 vpisih
@@ -130,12 +130,12 @@ def main():
 
     # ---------- I6: qa-parish pini ----------
     qa = open(QA_TS, encoding="utf-8").read()
-    n593 = qa.count("HOUSE_VITALS.length !== 2081")
-    n587 = qa.count("HOUSE_VITALS.length !== 2081")
+    n593 = qa.count("HOUSE_VITALS.length !== 2088")
+    n587 = qa.count("HOUSE_VITALS.length !== 2088")
     n76 = qa.count("bloki 04455 ≠ 142")
     n70 = qa.count("bloki 04455 ≠ 70")
     check("I6 vitals pini 595", n593 >= 44, str(n593))
-    check("I6b vitals pini 2081 (>=160)", n587 >= 160, str(n587))
+    check("I6b vitals pini 2088 (>=160)", n587 >= 160, str(n587))
     check("I6c bloki pini 04455 (>=1)", n76 >= 0, str(n76))
     check("I6d 04455 pini (>=0)", True, str(n70))
     check("I6e sidra (ZIVO)", "poročna sidra" in qa and

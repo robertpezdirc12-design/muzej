@@ -53,8 +53,8 @@ check("I1c foliacija: Pag. 27/27/29/29 (2·sken−3 ×4 — svinčnik 25/26-27/2
 vseh = re.findall(r'bookSignature: "01738"', src)
 skupaj = len(re.findall(r'bookSignature: "', src))
 leta1738 = sorted(set(int(y) for h, b, y in re.findall(r'houseNo: "([^"]+)",\s*bookSignature: "(01738)",\s*year: (\d+)', src) if b == "01738"))
-check("I2 vitals == 2085 + 01738 == 69 + leta == 1828–1836+1873",
-      "HOUSE_VITALS.length !== 2085" in qa and len(vseh) == 73 and skupaj == 2085
+check("I2 vitals == 2088 + 01738 == 69 + leta == 1828–1836+1873",
+      "HOUSE_VITALS.length !== 2088" in qa and len(vseh) == 73 and skupaj == 2088
       and leta1738 == [1828, 1829, 1830, 1831, 1832, 1833, 1834, 1835, 1836, 1837, 1838, 1873],
       f"01738={len(vseh)} skupaj={skupaj} leta={leta1738}")
 
@@ -75,7 +75,7 @@ check("I4c siblingSwap-ISTI-DAN-ISTI-PRIČI + duelRazresen-63-vs-68 + VELIKA-GLA
       "siblingSwap:" in early and "ISTI-DAN-ISTI-PRIČI" in early
       and "63-vs-68-RAZREŠEN-letterform" in early and "1.-VELIKA-GLAVA-'1836'-PRED-vrstico-1" in early, "-")
 
-# ——— I5: house-stories h4/h6/h9/h63 + SIX-42 + TIERS-42/26 + BOOKS-01738-73/46 ———
+# ——— I5: house-stories h4/h6/h9/h63 + SIX-43 + TIERS-42/26 + BOOKS-01738-73/46 ———
 check("I5 h4 vrsta: 8-blokov/6-knjig/01738-1/firstYear-1835/span-71",
       re.search(r'houseNo: "4", kind: "griblje", blocks: 8, books: 6, perBook: \[\{ sig: "01738", n: 1 \}.*firstYear: 1835, lastYear: 1906, span: 71', stories) is not None, "-")
 check("I5b h6 vrsta: 37-blokov/01738-2 + h9 vrsta: 24-blokov/6-knjig/01738-1/firstYear-1836/span-86",
@@ -84,10 +84,10 @@ check("I5b h6 vrsta: 37-blokov/01738-2 + h9 vrsta: 24-blokov/6-knjig/01738-1/fir
 check("I5c h63 vrsta: 31-blokov/01738-3/firstYear-1836/span-85 (P261: +1-m3-1837!)",
       'houseNo: "63", kind: "griblje", blocks: 32, books: 6, perBook: [{ sig: "01738", n: 4 }' in stories
       and re.search(r'houseNo: "63", kind: "griblje", blocks: 32.*firstYear: 1836, lastYear: 1921, span: 85', stories) is not None, "-")
-check("I5d SIX-42 (P263: +h29!) + TIERS-42/26 + TOTALS-2085/42/26/42 + p260Dvigi",
+check("I5d SIX-43 (P263: +h29!) + TIERS-42/26 + TOTALS-2088/42/26/42 + p260Dvigi",
       'houseNo: "4", blocks: 8, years: "1835–1906"' in stories and 'houseNo: "9", blocks: 24, years: "1836–1922"' in stories
       and "{ books: 6, houses: 42," in stories and "{ books: 5, houses: 26," in stories
-      and "blocks: 2085," in stories and "sixBook: 42," in stories and "fiveBook: 26," in stories
+      and "blocks: 2088," in stories and "sixBook: 42," in stories and "fiveBook: 26," in stories
       and "bothEraPorocna: 42," in stories and "p260Dvigi:" in stories, "-")
 check("I5e BOOKS-01738: blocks-65/houses-43/years-1828–1837 (P261!)",
       'years: "1828–1838 + 1873", blocks: 73, houses: 46,' in stories, "-")
@@ -96,7 +96,7 @@ check("I5e BOOKS-01738: blocks-65/houses-43/years-1828–1837 (P261!)",
 check("I6 qa-p260-id + importi-3 + živi-števci-4/57/2069",
       "qa-p260-parish-marriage-notranjost-01738-1835-1836" in qa
       and "PREDHODNIK_183536_BLOCKS," in qa and "PREDHODNIK_260_NITI," in qa and "PREDHODNIK_260_KRAJI," in qa
-      and "HOUSE_VITALS.length !== 2085" in qa, "-")
+      and "HOUSE_VITALS.length !== 2088" in qa, "-")
 check("I6b QA-bumpi: šest-seznam-vsebuje-'4'-'9' + tierji-36 + bothEra-41 + p91-izjema-01738-1836-h9",
       '"1", "2", "3", "4", "5", "6", "7", "8", "9", "10",' in qa and "tierji ≠ 41/27/8/8/8/8=100 (P261: 39 → P262: +2-h17/h31!)" in qa
       and "obe-eri-pokritje ≠ 69/75/41" in qa and '"01738" && v.year === 1836 && hn === "9"' in qa, "-")

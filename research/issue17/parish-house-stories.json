@@ -82,7 +82,7 @@
    "65",
    "73"
   ],
-  "count": 41,
+  "count": 43,
   "note": "blok v VSEH 6 knjigah = polni življenjski cikel — P254: 9 → P255: 12 → P256: 16 → P257: 23 (h1/h11/h26/h27/h33/h56/h65 vstopajo prek 1831!) | P261: +3-h7/h39/h41 (vsi-5→6-knjig-prek-s17-01738-blokov!) | P262: +2-h17/h31 (vsi-5→6-knjig-prek-s18-01738-blokov-1838!-h17-DVIG-37-2.-NAJVEČJI-NOTRANJOSTI!-h31-DVIG-19!)",
   "stories": {
    "1": {
@@ -239,7 +239,8 @@
     "firstYear": 1837,
     "span": 85,
     "note": "P263: m14-1837-nevesta-Anna-MILEK-45-l-GRÜBLE-29 × Georg-SIMIG-62-l-h60 (isti-mož-1833-59-l!)-DVIG-22-ŠEST-KNJIŽNI-41→42"
-   }
+   },
+   "64": "★★★★★ P264-hiša — ŠESTA KNJIGA ODPRTA Z 01738: m6-25.-Februar-1838-nevesta-Dorothea-[~Thimig]-25-l-GRÜBLE-64 × ženin-Marcus-[~Spring]-30-l-GRÜBLE-67 — POLNI DVOJNI h67×h64 (OBA GRIBLJE!) — firstYear 1857→1838 = DVIG 19 + ŠEST-KNJIŽNI KLUB 42→43; 21 blokov 1838–1923 = 85 let; JUREJEFZHIG-nit ×4"
   }
  },
  "missingBookAnalysis": {
@@ -446,8 +447,9 @@
    "sig": "01738",
    "role": "poročna-predhodnik",
    "years": "1828–1838 + 1873",
-   "blocks": 73,
-   "houses": 46
+   "blocks": 76,
+   "houses": 48,
+   "recordSi": "P264: 3 bloki 1838 (s20 = Pag. 37/38 — h67-1861→1838-DVIG-23 + h64-1857→1838-DVIG-19-ŠEST-KNJIŽNI-42→43 + h24-2.-blok (POLNI DVOJNI h67×h64 — OBA GRIBLJE!) + RESTART 1./2. NOVEMBER 1838 = pastoralno leto Nov→Nov POTRJENO + KRAL-nit ×3 ZAKLEPA!) · "
   },
   {
    "sig": "04104",
@@ -871,10 +873,10 @@
   {
    "houseNo": "24",
    "kind": "griblje",
-   "blocks": 46,
+   "blocks": 47,
    "books": 6,
    "perBook": {
-    "01738": 1,
+    "01738": 2,
     "04104": 8,
     "04105": 18,
     "04455": 5,
@@ -1526,18 +1528,19 @@
   {
    "houseNo": "64",
    "kind": "griblje",
-   "blocks": 20,
-   "books": 5,
+   "blocks": 21,
+   "books": 6,
    "perBook": {
+    "01738": 1,
     "04104": 3,
     "04105": 2,
     "04455": 3,
     "04106": 5,
     "04894": 7
    },
-   "firstYear": 1857,
+   "firstYear": 1838,
    "lastYear": 1923,
-   "span": 66
+   "span": 85
   },
   {
    "houseNo": "65",
@@ -1575,16 +1578,17 @@
   {
    "houseNo": "67",
    "kind": "griblje",
-   "blocks": 5,
-   "books": 3,
+   "blocks": 6,
+   "books": 4,
    "perBook": {
+    "01738": 1,
     "04105": 1,
     "04455": 1,
     "04106": 3
    },
-   "firstYear": 1861,
+   "firstYear": 1838,
    "lastYear": 1900,
-   "span": 39
+   "span": 62
   },
   {
    "houseNo": "68",
@@ -2043,7 +2047,7 @@
   }
  ],
  "korpusUcinek": {
-  "vitalsTotal": 2085,
+  "vitalsTotal": 2088,
   "p255": "+3 bloki 1828 — šest-knjižne 9→12, razpon 66→96 (h6)",
   "p256": "+5 blokov 1829 — šest-knjižne 12→16, bothEra-poročna 13→17, dvigi 35/34/30/30/29",
   "p257": "+11 blokov 1830/1831 (1×h22-1830 + 10×1831!) — šest-knjižne 16→23 (NAJVEČJI-SKOK!), bothEra-poročna 17→26, dvigi h54-37 (2. vseh časov!)/h56-36/h27-33/h11-32/h1-30/h26-28[~]/h33-28[~]/h3-27/h50-27 (PEZDIRC-NIT-42-let!)/h65-26 (bila-prva-hiša-1857!), h22-3.-zaporedno-leto-1830, h50-span-93 (3. mesto!)",
@@ -2052,6 +2056,7 @@
   "ui": "HouseStoriesP254 v ParishTab (Matrike) + Notranjost01738Leto1829 (P256) + P257-kartice",
   "qa": "qa-p254 (živa rekalkulacija!) + qa-p255/256 + qa-p257 (251. kontrola!)",
   "verifier": "scripts/p254_house_stories.py --check + scripts/p256_1829.py + scripts/p257_1830_1831.py (I1–I10 + --live!)",
-  "p263": "+4 bloki 1837 (s19: h60+h29+h11×2) — šest-knjižne 41→42 (h29!), bothEra-poročna 41→42, dvig h29 1859→1837 (22 let)"
+  "p263": "+4 bloki 1837 (s19: h60+h29+h11×2) — šest-knjižne 41→42 (h29!), bothEra-poročna 41→42, dvig h29 1859→1837 (22 let)",
+  "p264": "+3 bloki 1838 (s20 = Pag. 37/38) — h67-DVIG-23 (1861→1838, knjige 3→4) + h64-DVIG-19 (1857→1838, 5→6 = ŠEST-KNJIŽNI-KLUB 42→43!) + h24-2.-blok (firstYear 1833 ostaja) — POLNI DVOJNI h67×h64 (oba Griblje!) + pastoralno leto Nov→Nov POTRJENO (restart 1./2. november 1838) + KRAL-nit ×3 zaklep + JUREJEFZHIG ×4 + KLEPEC ×3"
  }
 }

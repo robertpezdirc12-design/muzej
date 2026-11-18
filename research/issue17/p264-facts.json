@@ -1,0 +1,296 @@
+{
+ "phase": "P264",
+ "scope": "NOTRANJOST-01738 — leto 1838 (s20 = Pag. 37/38)",
+ "vir": {
+  "sken": "s20.jpg",
+  "bajtov": 486259,
+  "dimenzije": [
+   2118,
+   1500
+  ],
+  "md5": "13cbb85d7b680cd28eba97ccfee0358a",
+  "foliacija": "levo 37 / desno 38 → Pag = 2·sken − 3, serija 17/17 notranjosti",
+  "inventar147": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/01738/ (1:1)",
+  "metoda": "AGENT-VIZIJA, 0 VLM klicev — 20 izrezov (full ×2, polovici ×2, robovi, datumi, pasovi po 2 vrstici ×3, imena ×2, vasi ×7, starši ×3, priče/urkunde/podpis ×3)"
+ },
+ "struktura": {
+  "letnica": 1838,
+  "stevilcenje": "3–6 (feb 1838) → RESTART 1–2 (1./2. november 1838)",
+  "model": "PASTORALNO LETO Nov→Nov POTRJENO (P262 hipoteza): nr 1–2/Feb 1838 = prvi poroki pastoralnega leta 1838, nr 3–6/Feb 1838 isto leto, nr 1–2/Nov 1838 = pastoralno leto 1839",
+  "praznina": "11. sep. 1837 → 1. feb. 1838 (5 mesecev brez porok)",
+  "p263Xopen1": "RAZREŠENO — letnica restart-vrstic s19 = 1838 (hipoteza 1839 zavržena)",
+  "p263Xopen2": "ODPRTO — dnevna pripadnost št. 1/2 na s19 (št. 1 = 4. feb., št. 2 = 1. feb.; vrstni red ni kronološki)"
+ },
+ "vpisi": [
+  {
+   "st": 3,
+   "datum": "4. Februar 1838",
+   "zenin": {
+    "ime": "Georg [~Jelloschig/Sanofschighe]",
+    "starost": 27,
+    "wohnort": "[~Jerlsche/Gerlsche]",
+    "hisa": 17,
+    "stan": "ledig",
+    "pripis": "in gulden",
+    "starsi": {
+     "oce": "Georg [~Jelloschig] (in gulden)",
+     "mati": "Anna [~Vrk/Kremen]"
+    }
+   },
+   "nevesta": {
+    "ime": "Katherina [~Hanefshingl/Hamebigh]",
+    "starost": 35,
+    "wohnort": "Krafing",
+    "hisa": 43,
+    "stan": "[~Witwe]",
+    "starsi": {
+     "oce": "Johann [~Hanafshingl] (in gulden)",
+     "mati": "Maria [~Hanafshig/Kremen]"
+    }
+   },
+   "urkunde": "ohne Aufgebot",
+   "duhovnik": "Georg [~Kraphovi(g/ž)] Parochus",
+   "blok": false
+  },
+  {
+   "st": 4,
+   "datum": "11. Februar 1838",
+   "zenin": {
+    "ime": "Mathias [~Stichel Prille]",
+    "starost": 21,
+    "wohnort": "Gradaz (= Gradac)",
+    "hisa": 17,
+    "stan": "ledig",
+    "pripis": "in gulden",
+    "starsi": {
+     "oce": "Sebastian [~Stichel] (in gulden)",
+     "mati": "Maria [~Michelish]"
+    }
+   },
+   "nevesta": {
+    "ime": "Anna [~Muz]",
+    "starost": 19,
+    "wohnort": "[~Dorscht]",
+    "hisa": 20,
+    "stan": "ledig",
+    "starsi": {
+     "oce": "Mathias [~Muz] (in gulden)",
+     "mati": "Maria KLEPEC"
+    }
+   },
+   "urkunde": "Mit obrigkeitlicher Bewilligung …",
+   "duhovnik": "[~Dempf?]",
+   "blok": false
+  },
+  {
+   "st": 5,
+   "datum": "18. Februar 1838",
+   "zenin": {
+    "ime": "Johann KRISBAN [KRIŽAN/KRIŠAN]",
+    "starost": 22,
+    "wohnort": "Otok",
+    "hisa": 4,
+    "stan": "ledig",
+    "pripis": "in gulden",
+    "starsi": {
+     "oce": "Johann Krisban (in gulden)",
+     "mati": "Dorothea [~Kalligh]"
+    }
+   },
+   "nevesta": {
+    "ime": "Margareth [~Petschig]",
+    "starost": "14|19 [X-OPEN]",
+    "wohnort": "Otok",
+    "hisa": 4,
+    "stan": "ledig",
+    "starsi": {
+     "oce": "Andreas [~Petschig] (in gulden)",
+     "mati": "Katherina [~Marentigh]"
+    }
+   },
+   "urkunde": "ohne Aufgebot",
+   "duhovnik": "[~Kraug?]",
+   "blok": false,
+   "opazka": "POLNI DVOJNI Otok 4 × Otok 4 (oba partnerja ista hiša, vas NI Griblje)"
+  },
+  {
+   "st": 6,
+   "datum": "25. Februar 1838",
+   "zenin": {
+    "ime": "Marcus [~Spring]",
+    "starost": 30,
+    "wohnort": "Grüble (= Griblje)",
+    "hisa": 67,
+    "stan": "ledig",
+    "pripis": "in gulden",
+    "starsi": {
+     "oce": "Johann [~Spring] (in gulden)",
+     "mati": "Anna KRAL"
+    }
+   },
+   "nevesta": {
+    "ime": "Dorothea [~Thimig]",
+    "starost": 25,
+    "wohnort": "Grüble",
+    "hisa": 64,
+    "stan": "ledig",
+    "starsi": {
+     "oce": "Mathias [~Thimig] (in gulden)",
+     "mati": "Katherina JUREJEFZHIG"
+    }
+   },
+   "urkunde": "Mit Einwilligung des … Nr … 1838",
+   "duhovnik": "[~Georg Praufs?]",
+   "prici": [
+    "[~Nicolaus]",
+    "[~Peter]",
+    "[~Franz]",
+    "[~Georg]"
+   ],
+   "blok": true,
+   "hisi": [
+    67,
+    64
+   ],
+   "opazka": "★★★ POLNI DVOJNI h67 × h64 — OBA PARTNERJA IZ GRIBELJ (intra-vasični par!)"
+  },
+  {
+   "st": 1,
+   "datum": "1. November 1838",
+   "zenin": {
+    "ime": "[~Benizjig] — vojaški",
+    "starost": 28,
+    "wohnort": "Krafing",
+    "hisa": 9,
+    "stan": "ledig",
+    "pripis": "k.k. 3te Jäger Compagnie, zugetheilt, gebürtig …",
+    "starsi": {
+     "oce": "Mathias [~König]",
+     "mati": "Ursula UNGER"
+    }
+   },
+   "nevesta": {
+    "ime": "Theresia [~Thuefl]",
+    "starost": 24,
+    "wohnort": "Krafing",
+    "hisa": 29,
+    "stan": "ledig",
+    "starsi": {
+     "oce": "Johann [~Schrey]",
+     "mati": "Theresia [~Kleine] (Dienst…)"
+    }
+   },
+   "urkunde": "k.k. Consens (vojaški) — »5. 8br 838« = 5. oktober 1838",
+   "duhovnik": "[?]",
+   "blok": false
+  },
+  {
+   "st": 2,
+   "datum": "2. November 1838",
+   "zenin": {
+    "ime": "Marcus DRNIG",
+    "starost": 27,
+    "wohnort": "Grüble",
+    "hisa": 24,
+    "stan": "ledig",
+    "pripis": "in gulden",
+    "starsi": {
+     "oce": "Michael Drnig (in gulden)",
+     "mati": "Barbara HAJER"
+    }
+   },
+   "nevesta": {
+    "ime": "Dorothea [~Butkov]",
+    "starost": 25,
+    "wohnort": "[~Fehirsche]",
+    "hisa": 4,
+    "stan": "ledig",
+    "starsi": {
+     "oce": "Peter [~Butkovz] (in gulden)",
+     "mati": "Catharina [~Jokopzhig]"
+    }
+   },
+   "prici": [
+    "Michael [~Teltsch?]",
+    "Joh. […]",
+    "Georg […]"
+   ],
+   "urkunde": "Mit Verbindungsschein vom 17. November 1838",
+   "duhovnik": "Gregor Dolinšek Coop.",
+   "blok": true,
+   "hisi": [
+    24
+   ]
+  }
+ ],
+ "blokiGriblje": {
+  "skupaj": 3,
+  "hisi": [
+   67,
+   64,
+   24
+  ],
+  "polniDvojni": "h67 × h64 (oba Grüble!) — intra-vasični par",
+  "dvigi": {
+   "h67": "1861 → 1838 (23 let)",
+   "h64": "1857 → 1838 (19 let)"
+  },
+  "brezDviga": {
+   "h24": "firstYear 1833 (P259 m8) ostaja; span 1833–1920 = 87; 2. 01738-blok"
+  },
+  "sestKnjizniKlub": "42 → 43 (h64: 5 → 6 knjig)",
+  "petKnjiznih": "26 → 25"
+ },
+ "niti": {
+  "KRAL": "m6-mati ženina Anna KRAL (h67) ↔ P262 m10 Maria KRAL ↔ P263 m18 »Maria [~Kraz/Kral]« (h11) = ×3 v 1837–1838",
+  "JUREJEFZHIG": "m6-mati neveste Katherina JUREJEFZHIG (h64) ↔ P263 m12 (ženin + oče Mathias) + m1 (nevesta + oče Martin + priča Nicolaus) = ×4",
+  "KLEPEC": "m4-mati neveste Maria KLEPEC ↔ P263 m15 mati Maria + m1 mati Katherina = ×3",
+  "KRIZAN": "m5 ženin Johann KRISBAN + oče Johann (Otok 4 — izven Gribelj) ↔ P263 m17 Jacob Hob. Krisch (Gradaz 9) + P262 KRIŠAN ×4",
+  "DRNIG": "m2 ×3 (ženin Marcus + oče Michael + hiša 24) = nova družina na h24; X-OPEN ali je [~Spring] (r4) isto hišno ime",
+  "DOLINSEK": "m2 duhovnik Gregor Dolinšek Coop. — 4. zaporedna faza (P261–P264)"
+ },
+ "kraji": {
+  "GRUBLE": "h67 + h64 + h24 (3 hiše — vsi trije bloki!)",
+  "KRAFING": "×4 omembe (hiše 43, 9, 29) — najpogostejša vas skena, kanonična uvrstitev [X-OPEN: Krasinec?]",
+  "GRADAZ": "m4 ženin — Gradac 17 (P261: GRADAG = GRADAC)",
+  "OTOK": "m5 — Otok 4 × Otok 4 (polni dvojni, vas izven Gribelj)",
+  "XOPEN": [
+   "[~Jerlsche/Gerlsche] 17",
+   "[~Dorscht] 20",
+   "[~Fehirsche] 4"
+  ]
+ },
+ "opazke": [
+  "★★★ model pastoralnega leta Nov→Nov potrjen (P262 hipoteza) — edini strukturni dokaz te faze",
+  "P263 X-OPEN ① (1838|1839) RAZREŠEN → 1838",
+  "P263 X-OPEN ② (m1/m2 dnevna pripadnost) ostaja odprt — vrstni red 1=4. feb., 2=1. feb.",
+  "5 mesecev praznine (11. sep. 1837 → 1. feb. 1838) — cf. P256 prazna polovica 1830",
+  "vojaški poroki ×2 v skenu: m1 (k.k. Jäger + k.k. Consens 5. 10. 1838) in P263 m18 (k.k. Trauungsschein Nr 21)",
+  "»in gulden« se ponavlja v 5 od 6 vrstic (verjetno denarna/urbarska opomba ob imenu) — [X-OPEN pomen]"
+ ],
+ "korpusUcinek": {
+  "po": {
+   "vitals": 2088,
+   "01738": 76
+  },
+  "pred": {
+   "vitals": 2085,
+   "01738": 73
+  },
+  "hiše01738": "46 → 48 (h64, h67 prvič)",
+  "leta01738": "1828–1838 + 1873",
+  "sestKnjizniKlub": 43,
+  "petKnjiznih": 25
+ },
+ "metodaDokaz": {
+  "izrezki": 20,
+  "mapa": "research/issue17/p264-work/",
+  "transcript": "research/issue17/p264-work/transcript.md",
+  "skeniNaDisku": {
+   "s21": "8c0faae3",
+   "s22": "e66f3d8a",
+   "s23": "8c64fd37"
+  }
+ },
+ "pushStatus": "lokalni commit; push na GitHub origin + GitLab mirror (workflow) + Vercel deploy"
+}

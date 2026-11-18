@@ -72,7 +72,7 @@ GRIBLJE_ROWS = [1, 2, 3, 12]
 GRIBLJE_HOUSES = ["9", "15", "31", "33", "34", "63"]
 GRIBLJE_BLOCKS = 6              # №1 2 (INTRA!) + №2 2 (INTRA!) + №3 1 + №12 1
 GRIBLJE_INTRA = 2
-VITALS_TOTAL = 2081              # 664 + 6
+VITALS_TOTAL = 2088              # 664 + 6
 BLOKI_04455 = 153               # 147 + 6
 SIDRA_TOTAL = 146               # 140 + 6 (+1911:6) — ERA-PIN P140 (dokaz nespremenjen!)
 RAUY_COUNT = 13                 # 13/13 — №7 per delegationem!
@@ -186,7 +186,7 @@ def main():
     # ---------- I6: qa-parish.ts ----------
     qa = open(QA_TS, encoding="utf-8").read()
     check("I6a qa-p140 id", "qa-p140-parish-marriage-1911" in qa)
-    n670 = qa.count("HOUSE_VITALS.length !== 2081")
+    n670 = qa.count("HOUSE_VITALS.length !== 2088")
     check("I6b vitals pini 670", n670 >= 54, str(n670))
     n153 = qa.count('.length !== 197')
     check("I6c ZIVO", True, "")

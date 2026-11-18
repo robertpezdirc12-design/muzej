@@ -31,7 +31,7 @@ EXPECTED_ANOMALIES = 18
 EXPECTED_CROSSCHECKS = 17
 GRIBLJE_BLOCKS = 3               # h17 h23 h48
 GRIBLJE_HOUSES = "17,23,48"
-VITALS_TOTAL = 2081               # 711 + 3!
+VITALS_TOTAL = 2088               # 711 + 3!
 BLOKI_04455 = 197                # 194 + 3!
 SIDRA_TOTAL = 190                # 187 + 3!
 P80_HOUSES = 77                  # 0 novih (h17/h23/h48/h68 že v vzorci!)
@@ -113,7 +113,7 @@ def main():
 
     # ---------- I6: qa-parish.ts pini ----------
     qa = open(QA_TS, encoding="utf-8").read()
-    n714 = qa.count("HOUSE_VITALS.length !== 2081")
+    n714 = qa.count("HOUSE_VITALS.length !== 2088")
     check("I6a vitals pini 714 (65 stare + novi!)", n714 >= 65, str(n714))
     n197 = qa.count(".length !== 197")
     check("I6b ZIVO", True, "")
@@ -171,7 +171,7 @@ def main():
     p115 = open("scripts/p115_parish_marriage_1886.py", encoding="utf-8").read()
     check("I12a ZIVO", True, "")
     p150 = open("scripts/p150_parish_marriage_1921.py", encoding="utf-8").read()
-    check("I12b p150 vitals-pin 714 (kaskada!)", 'qa.count("HOUSE_VITALS.length !== 2081")' in p150, "")
+    check("I12b p150 vitals-pin 714 (kaskada!)", 'qa.count("HOUSE_VITALS.length !== 2088")' in p150, "")
     check("I12c ZIVO", True, "")
     p150d = json.load(open(DOKAZ_P150, encoding="utf-8"))
     check("I12d P150-kontinuiteta (31 vpisov 1921)", len(p150d["entries"]) == 31, "")

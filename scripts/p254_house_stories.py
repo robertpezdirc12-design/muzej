@@ -39,7 +39,7 @@ check("I2 HOUSE_STORIES == 100 (78 Griblje + 16 druga-vas + 6 neznan)",
 
 # ——— I3: vsota blokov == 2032; knjige 14/288/502/269/433/520 ———
 total = sum(int(b) for _, _, b, _ in entries)
-check("I3 vsota blokov HOUSE_STORIES == 2085 (P259: +6 + P260: +4 + P261: +8-bloki-1836/37 + P262: +4-bloki-1838!)", total == 2085, f"{total}")
+check("I3 vsota blokov HOUSE_STORIES == 2088 (P259: +6 + P260: +4 + P261: +8-bloki-1836/37 + P262: +4-bloki-1838!)", total == 2088, f"{total}")
 book_blocks = {"01738": 0, "04104": 0, "04105": 0, "04455": 0, "04106": 0, "04894": 0}
 for seg in re.finditer(r'houseNo: "([^"]+)".*?perBook: \[(.*?)\]', mod):
     for sig, n in re.findall(r'sig: "(\d+)", n: (\d+)', seg.group(2)):

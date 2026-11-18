@@ -19,7 +19,7 @@ check("I1 bloki 04455/1885-numeric == 7", len(bloki) == 7, f"najdeno {len(bloki)
 pri = ["58", "60", "32", "71", "29 [~X-OPEN]", "26", "13"]
 check("I2 hiše-1885 (file-order, h29-X-OPEN)", bloki == pri, ",".join(bloki))
 skupaj = src.count('bookSignature: "04455"')
-check("I3 vitals-2085 + 04455==269 (P246-živo!)", "HOUSE_VITALS.length !== 2011" not in src and skupaj == 269, f"04455={skupaj}")
+check("I3 vitals-2088 + 04455==269 (P246-živo!)", "HOUSE_VITALS.length !== 2011" not in src and skupaj == 269, f"04455={skupaj}")
 
 d = json.load(open(f"{ROOT}/research/issue17/parish-marriage-1885-04455.json", encoding="utf-8"))
 an = json.dumps(d["anomalies"], ensure_ascii=False)
@@ -38,8 +38,8 @@ check("I4c PEZDIRC-×3 + BRINC-mreža + h71-STRAUS + P84-korekcija",
       and "straus-h71-1885" in an and "P84-okvir-korekcija-dokumentirana" in json.dumps(d["crossChecks"], ensure_ascii=False))
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2085")
-check("I5 qa-p238 + števec-2012", "qa-p238-parish-marriage-early-04455" in qa and st >= 148, f"2085-številcev={st}")
+st = qa.count("HOUSE_VITALS.length !== 2088")
+check("I5 qa-p238 + števec-2012", "qa-p238-parish-marriage-early-04455" in qa and st >= 148, f"2088-številcev={st}")
 
 i0 = src.find("P238: poročna PREDZGOVINA 04455, leto 1885")
 seg = src[i0:] if i0 >= 0 else ""

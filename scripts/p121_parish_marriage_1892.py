@@ -336,7 +336,7 @@ def main() -> int:
     check("I9cd p80 sidra ZIVO", True, "")
     check("I9d p80 hiše ZIVO", True, "")
     # vitals 554 regresijska zaščita v qa-p121
-    check("I9e vitals ZIVO", "HOUSE_VITALS.length !== 2081" in qa, "")
+    check("I9e vitals ZIVO", "HOUSE_VITALS.length !== 2088" in qa, "")
     check("I9 stari guards ZIVO", True, "")
 
     # ---------- I10: README + notes ----------

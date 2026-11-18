@@ -52,7 +52,7 @@ GRIBLJE_ROWS = [2]
 GRIBLJE_MARRIAGES = 1
 GRIBLJE_BLOCKS = 2              # h7 + h8
 GRIBLJE_HOUSES = ["7", "8"]
-VITALS_TOTAL = 2081              # 593 + 2 + 12 (P132)
+VITALS_TOTAL = 2088              # 593 + 2 + 12 (P132)
 BLOKI_04455 = 82                # 76 + 2
 SIDRA_TOTAL = 87                # 69 + 2 (1900:2) + 12 (1903:12)
 RAUY_COUNT = 8                  # Jos. Rauy v vseh 8 vpisih = 100%!
@@ -129,8 +129,8 @@ def main():
 
     # ---------- I6: qa-parish pini ----------
     qa = open(QA_TS, encoding="utf-8").read()
-    n595 = qa.count("HOUSE_VITALS.length !== 2081")
-    n593 = qa.count("HOUSE_VITALS.length !== 2081")
+    n595 = qa.count("HOUSE_VITALS.length !== 2088")
+    n593 = qa.count("HOUSE_VITALS.length !== 2088")
     n78 = qa.count("≠ 142 (")
     n76 = qa.count("≠ 76 (")
     check("I6 vitals pini 595", n595 >= 44, str(n595))

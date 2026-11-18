@@ -30,7 +30,7 @@ EXPECTED_ANOMALIES = 12
 EXPECTED_CROSSCHECKS = 5
 GRIBLJE_HOUSES = "6,6,7,14,16,31,35,49,72,74,90,91"
 GRIBLJE_ZAPS = [3, 9, 10, 13, 23, 38, 40, 41, 45, 46, 51, 53]
-VITALS_TOTAL = 2081             # ZIVO (P262): 1511 -> 2081 (kaskada P238-P262!)
+VITALS_TOTAL = 2088             # ZIVO (P262): 1511 -> 2088 (kaskada P238-P262!)
 BLOKI_04894 = 520               # 506 + 14! (P190 = KONEC-KNJIGE!)
 P80_HOUSES = 92                 # NESPREMENJENO — vseh-11-hiš-ŽE-v-p80!
 KORPUS_HOUSES = 94              # ZIVO: 93 -> 94 (P178-h79; vseh-100-his, 94 s-tevkami!)
@@ -291,9 +291,9 @@ def main():
     # ---------- I10: qa-parish + pin-kaskada ----------
     qa = open(QA_TS, encoding="utf-8").read()
     check("I10a qa-p176 = 177. kontrola", "qa-p176-parish-death-1910" in qa, "")
-    check("I10b qa-parish ZIVI-števec vitals-2081 (P176-kaskada!)",
-          qa.count("HOUSE_VITALS.length !== 2081") >= 160,
-          f"2081×{qa.count('HOUSE_VITALS.length !== 2081')}")
+    check("I10b qa-parish ZIVI-števec vitals-2088 (P176-kaskada!)",
+          qa.count("HOUSE_VITALS.length !== 2088") >= 160,
+          f"2088×{qa.count('HOUSE_VITALS.length !== 2088')}")
     check("I10c qa-parish ZIVI byBook01738==69 (P176-kaskada!)",
           qa.count("byBook01738 !== 69") >= 1, f"{qa.count('byBook01738 !== 69')}")
     check("I10d qa-parish ZIVI p80Houses-guardi (≥70×)",

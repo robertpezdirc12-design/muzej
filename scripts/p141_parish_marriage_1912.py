@@ -79,7 +79,7 @@ GRIBLJE_ROWS = [1, 9, 15, 17]
 GRIBLJE_HOUSES = ["21", "44", "46", "63", "78"]
 GRIBLJE_BLOCKS = 5              # №1 2 (INTRA!) + №9 1 + №15 1 + №17 1
 GRIBLJE_INTRA = 1
-VITALS_TOTAL = 2081              # 670 + 5 (ZAMRNJEN 1912-evidence pin — NE posodabljati v kaskadi!; tekoči korpus = 685 od P143)
+VITALS_TOTAL = 2088              # 670 + 5 (ZAMRNJEN 1912-evidence pin — NE posodabljati v kaskadi!; tekoči korpus = 685 od P143)
 BLOKI_04455 = 158               # 153 + 5
 SIDRA_TOTAL = 151               # 146 + 5 blokov (+1912:5) (ZAMRNJEN 1912-evidence pin — NE posodabljati v kaskadi!; tekoči korpus = 161 od P143)
 EXPECTED_MONDAYS = 14           # + 1 nedelja + 1 torek (№1!) + 1 petek (№5!)
@@ -198,7 +198,7 @@ def main():
     # ---------- I6: qa-parish.ts ----------
     qa = open(QA_TS, encoding="utf-8").read()
     check("I6a qa-p141 id", "qa-p141-parish-marriage-1912" in qa)
-    n675 = qa.count("HOUSE_VITALS.length !== 2081")
+    n675 = qa.count("HOUSE_VITALS.length !== 2088")
     check("I6b vitals pini 675", n675 >= 55, str(n675))
     n158 = qa.count('.length !== 197')
     check("I6c ZIVO", True, "")

@@ -39,8 +39,8 @@ check("I1b griblje-po-letih 1:1-z-runtime (7+3+2+7+9+3+9+7+5+6+1+11+4 = 74!)",
 
 # ——— I2: razcep korpusa 74 + 195 = 269 — pt-luknja 1:1 (vitals 2012 NESPREMENJEN!) ———
 skupaj = src.count('bookSignature: "04455"')
-check("I2 vitals-2085 + 04455==269 + razcep-74/195 (NI novih branj — MERI!)",
-      "HOUSE_VITALS.length !== 2085" not in src and skupaj == 269 and sum(run.values()) == 74
+check("I2 vitals-2088 + 04455==269 + razcep-74/195 (NI novih branj — MERI!)",
+      "HOUSE_VITALS.length !== 2088" not in src and skupaj == 269 and sum(run.values()) == 74
       and skupaj - 74 == 195, f"04455={skupaj} predzgodovina={sum(run.values())}")
 
 # ——— I3: dokaz research/issue17/parish-marriage-synthesis-early.json ———
@@ -93,13 +93,13 @@ check("I6b restart-vpis-1 dokumentiran 13/13 + FOLIACIJA-29/29-na-odprtanj",
 
 # ——— I7: qa-parish.ts — qa-p252 sekcija + živi preveri vsako leto 1:1 ———
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st2012 = qa.count("HOUSE_VITALS.length !== 2085")
+st2012 = qa.count("HOUSE_VITALS.length !== 2088")
 check("I7 qa-p252 (živi preveri vsako leto 1:1) + 2012-številcev + FINIS + 74/195-razcep",
       "qa-p252-parish-synthesis-04455-early" in qa and "MARRIAGE_EARLY_LINE_YEARS" in qa
       and "runtime !== yl.griblje" in qa and st2012 >= 100
       and 'p252Pre !== 74 || p252Line !== 195' in qa
       and "PEZDIRC_MARRIAGE_TOTAL !== 35" in qa and "SINTEZA-PREDZGODOVINE-KOMPLETNA" in qa,
-      f"2085-številcev={st2012}")
+      f"2088-številcev={st2012}")
 
 # ——— I8: pt-luknja-18-final.json NESPREMENJEN (2012/269 — vsota 1:1!) ———
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()

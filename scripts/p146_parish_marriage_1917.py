@@ -26,7 +26,7 @@ GRIBLJE_ROWS = [3]             # №3 — edini Griblje-vpis leta (h15 × h38 IN
 GRIBLJE_HOUSES = ["15", "38"]  # №3 ženin h15 + nevesta h38 (obe znani!)
 GRIBLJE_BLOCKS = 1              # №2 → 1 blok
 GRIBLJE_INTRA = 1               # №3 INTRA-GRIBLJE h15 × h38!
-VITALS_TOTAL = 2081              # 687 + 1 (tekoči pin P146)
+VITALS_TOTAL = 2088              # 687 + 1 (tekoči pin P146)
 BLOKI_04455 = 171               # 170 + 1
 SIDRA_TOTAL = 164               # 163 + 1 blok (+1917:1)
 EXPECTED_MONDAYS = 1            # №7 22.10. ponedeljek
@@ -150,7 +150,7 @@ def main():
     # ---------- I6: qa-parish.ts ----------
     qa = open(QA_TS, encoding="utf-8").read()
     check("I6a qa-p146 id", "qa-p146-parish-marriage-1917" in qa)
-    n688 = qa.count("HOUSE_VITALS.length !== 2081")
+    n688 = qa.count("HOUSE_VITALS.length !== 2088")
     check("I6b vitals pini 688", n688 >= 57, str(n688))
     n171 = qa.count(".length !== 197")
     check("I6c ZIVO", True, "")

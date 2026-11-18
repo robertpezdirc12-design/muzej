@@ -34,7 +34,7 @@ LIVE_URL = "https://griblje-museum.vercel.app/api/qa"
 EXPECTED_GAP = ["42", "43", "44", "45", "46", "47", "48", "49",
                 "51", "52", "53", "54", "55", "56", "57", "58", "59", "60"]
 EXPECTED_CORPUS = {"04105": 502, "04455": 197, "04106": 433, "04894": 520, "04104": 288}  # POSODABLJENO P234: + krstna-04104 = 271 (25×1885-P221 + 21×1884-P222 + 19×1883-P223 + 25×1882-P224 + 17×1881-P225 + 22×1880-P226 + 22×1879-P227 + 16×1878-P228 + 20×1877-P229 + 14×1876-P230 + 17×1875-P231 + 19×1874-P232 + 17×1873-P233 + 17×1872-P234!)
-VITALS_TOTAL = 2081
+VITALS_TOTAL = 2088
 
 
 def load():
@@ -60,7 +60,7 @@ def check(report):
 
     # I2
     corpus = report["corpus"]
-    ok("I2 korpus ZIVO", corpus.get("vitalsTotal")==2081 and sum(corpus.get("byBook",{}).values())==2081, str(corpus.get("vitalsTotal")))
+    ok("I2 korpus ZIVO", corpus.get("vitalsTotal")==2088 and sum(corpus.get("byBook",{}).values())==2088, str(corpus.get("vitalsTotal")))
 
 
     # I3

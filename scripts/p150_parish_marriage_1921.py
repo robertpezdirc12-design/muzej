@@ -33,7 +33,7 @@ EXPECTED_CROSSCHECKS = 14
 GRIBLJE_BLOCKS = 9               # h63 h68 h64 h53 h59 h92 h72 h10 h7
 GRIBLJE_HOUSES = "7,10,53,59,63,64,68,72,92"
 NEW_HOUSES = ["72", "92"]
-VITALS_TOTAL = 2081               # 702 + 9!
+VITALS_TOTAL = 2088               # 702 + 9!
 BLOKI_04455 = 194                # 185 + 9!
 SIDRA_TOTAL = 187                # 178 + 9!
 P80_HOUSES = 77                  # 75 + h92 + h72!
@@ -112,7 +112,7 @@ def main():
 
     # ---------- I6: qa-parish.ts pini ----------
     qa = open(QA_TS, encoding="utf-8").read()
-    n710 = qa.count("HOUSE_VITALS.length !== 2081")
+    n710 = qa.count("HOUSE_VITALS.length !== 2088")
     check("I6a vitals pini 711", n710 >= 64, str(n710))
     n193 = qa.count(".length !== 197")
     check("I6b ZIVO", True, "")

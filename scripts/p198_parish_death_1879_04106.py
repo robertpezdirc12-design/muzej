@@ -40,7 +40,7 @@ check("I2 hiše-1879 (h20-×2)", ",".join(his) == "1,20,20,30,32,40,44,53,56", "
 
 # I3: 04106-skupaj + vitals-1940
 skupaj = src.count('bookSignature: "04106"')
-check("I3 vitals-1940 + 04106==433", "HOUSE_VITALS.length !== 2081" not in src and skupaj == 433,
+check("I3 vitals-1940 + 04106==433", "HOUSE_VITALS.length !== 2088" not in src and skupaj == 433,
       f"04106-bloki={skupaj}")
 
 # I4: dokaz
@@ -56,9 +56,9 @@ check("I4 dokaz (64/9-griblje/14-anomalij + meja-s158-Incipit + s164-tail + 64-v
 
 # I5: qa-parish
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2081")
+st = qa.count("HOUSE_VITALS.length !== 2088")
 check("I5 qa-p198 + števec-1511", "qa-p198-parish-death-1879-04106" in qa and st >= 160,
-      f"2081-številcev={st}")
+      f"2088-številcev={st}")
 
 # I6: duhovniki-1879 (P198-segment)
 i0 = src.find("P198: mrliška PREDZGODOVINA 04106, leto 1879")
@@ -91,7 +91,7 @@ check("I8j SANACIJA-RE-RUN (deterministična-reprodukcija)", "SANACIJA-RE-RUN" i
 # I9: PT-luknja
 pt = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
 gap_ids = sorted(int(g["houseNo"]) for g in pt["gapHouses"])
-check("I9 pt-luknja 04106==433", pt["corpus"]["byBook"].get("04106") == 433 and pt["corpus"]["vitalsTotal"] == 2081,
+check("I9 pt-luknja 04106==433", pt["corpus"]["byBook"].get("04106") == 433 and pt["corpus"]["vitalsTotal"] == 2088,
       f"04106={pt['corpus']['byBook'].get('04106')} vitals={pt['corpus']['vitalsTotal']}")
 check("I9b pt-vzorca-kontekst", 42 in gap_ids and 50 not in gap_ids, f"gap={gap_ids[:4]}...{gap_ids[-2:]}")
 

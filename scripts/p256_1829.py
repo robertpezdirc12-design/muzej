@@ -46,8 +46,8 @@ check("I1c foliacija: Pag. 5/7/9 (2·sken−3)",
 vseh = re.findall(r'bookSignature: "01738"', src)
 skupaj = len(re.findall(r'bookSignature: "', src))
 leta = [int(y) for y in re.findall(r'bookSignature: "[^"]+",\s*year: (\d+)', src)]
-check("I2 vitals == 2085 + 01738 == 69 + korpus-prvi-vpis == 1828",
-      "HOUSE_VITALS.length !== 2085" not in src and len(vseh) == 73 and skupaj == 2085 and min(leta) == 1828,
+check("I2 vitals == 2088 + 01738 == 69 + korpus-prvi-vpis == 1828",
+      "HOUSE_VITALS.length !== 2088" not in src and len(vseh) == 73 and skupaj == 2088 and min(leta) == 1828,
       f"01738={len(vseh)} skupaj={skupaj} min-leto={min(leta)}")
 
 # ——— I3: modul PREDHODNIK_1829_* (9 izvozov) ———
@@ -82,8 +82,8 @@ check("I5b KRIŽAN-1829 + HRIŽAN-1873-ŠIV = ISTA-HIŠA-44-LET",
       and "THE-SAME-HOUSE-44-YEARS" in src, "-")
 
 # ——— I6: hišne zgodbe regenerirane (16 šest-knjižnih + h62-95 + bothEra 17) ———
-check("I6 stories: SIX-×42 + blocks-2085 + bothEraPorocna-34 + tierji-42/26",
-      stories.count('houseNo: "') >= 31 and 'blocks: 2085,' in stories
+check("I6 stories: SIX-×42 + blocks-2088 + bothEraPorocna-34 + tierji-42/26",
+      stories.count('houseNo: "') >= 31 and 'blocks: 2088,' in stories
       and "bothEraPorocna: 42" in stories and "sixBook: 42" in stories
       and "fiveBook: 26" in stories and "firstYear: 1829" in stories
       and "longestSpan: 96" in stories and 'longestSpanHouses: ["6"]' in stories
@@ -103,7 +103,7 @@ check("I6d dokaz-stories: 100-hiš + tiers-six-42 + stories-42 + bothEra-42 (P26
 # ——— I7: qa-p256 (250.) + živa kontrola ———
 check("I7 qa-p256-notranjost kontrola obstaja + korpus-prvi-vpis-živo",
       '"qa-p256-parish-marriage-notranjost-01738-1829"' in qa
-      and "korpus-prvi-vpis ≠ 1828" in qa and "HOUSE_VITALS.length !== 2085" in qa, "-")
+      and "korpus-prvi-vpis ≠ 1828" in qa and "HOUSE_VITALS.length !== 2088" in qa, "-")
 
 # ——— I8: UI Notranjost01738Leto1829 (komponenta + render + uvozi) ———
 check("I8 UI Notranjost01738Leto1829 (komponenta + render + uvozi-×9)",

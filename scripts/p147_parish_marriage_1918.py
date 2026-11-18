@@ -23,7 +23,7 @@ EXPECTED_EXCLUDED = 0           # s163-dno + s164-dno = čisti rob; s165-vrh = g
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 10
 GRIBLJE_ROWS = []              # ★★ 0 Griblje-vpisov = 2. leto linije BREZ (po 1901!)
-VITALS_TOTAL = 2081              # NESPREMENJENO (0 novih blokov!)
+VITALS_TOTAL = 2088              # NESPREMENJENO (0 novih blokov!)
 BLOKI_04455 = 171               # NESPREMENJENO
 SIDRA_TOTAL = 164               # NESPREMENJENO (1918:0)
 P80_HOUSES = 72                 # NESPREMENJENO
@@ -126,7 +126,7 @@ def main():
     # ---------- I6: qa-parish.ts ----------
     qa = open(QA_TS, encoding="utf-8").read()
     check("I6a qa-p147 id", "qa-p147-parish-marriage-1918" in qa)
-    n688 = qa.count("HOUSE_VITALS.length !== 2081")
+    n688 = qa.count("HOUSE_VITALS.length !== 2088")
     check("I6b vitals pini 688", n688 >= 58, str(n688))
     n171 = qa.count(".length !== 197")
     check("I6c ZIVO", True, "")

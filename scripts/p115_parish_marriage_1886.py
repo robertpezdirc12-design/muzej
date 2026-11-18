@@ -216,7 +216,7 @@ def main() -> int:
     check("I9 qa-p115", '"qa-p115-parish-marriage-1886"' in qa)
     check("I9b qa-p115 hiše 1886", "16,25,31,56,60,65,71" in qa)
     # vitals 528 regresijska zaščita v qa-p115
-    check("I9c vitals ZIVO", "HOUSE_VITALS.length !== 2081" in qa, "ok")
+    check("I9c vitals ZIVO", "HOUSE_VITALS.length !== 2088" in qa, "ok")
 
     # ---------- I10: README + notes ----------
     rd = open("README.md", encoding="utf-8").read()
