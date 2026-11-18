@@ -4,11 +4,31 @@
     "bookSignature": "01738",
     "source": "Matricula Online (data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/01738/)",
     "scans": {
-      "s19": { "file": "p263-work/scans/s19.jpg", "pag": "35/36", "rowsVisible": "r1–r8 (r8 prazna)" },
-      "s20": { "file": "p263-work/scans/s20.jpg", "pag": "37/38", "rowsVisible": "r1–r8 (r7–r8 prazni)" },
-      "s21": { "file": "p263-work/scans/s21.jpg", "pag": "39/40", "rowsVisible": "r1–r8 (r8 verj. prazna)" },
-      "s22": { "file": "p263-work/scans/s22.jpg", "pag": "41/42", "rowsVisible": "r1–r8 (r8 verj. prazna)" },
-      "s23": { "file": "p263-work/scans/s23.jpg", "pag": "43/44", "rowsVisible": "r1–r8 (r8 verj. prazna)" }
+      "s19": {
+        "file": "p263-work/scans/s19.jpg",
+        "pag": "35/36",
+        "rowsVisible": "r1–r8 (r8 prazna)"
+      },
+      "s20": {
+        "file": "p263-work/scans/s20.jpg",
+        "pag": "37/38",
+        "rowsVisible": "r1–r8 (r7–r8 prazni)"
+      },
+      "s21": {
+        "file": "p263-work/scans/s21.jpg",
+        "pag": "39/40",
+        "rowsVisible": "r1–r8 (r8 verj. prazna)"
+      },
+      "s22": {
+        "file": "p263-work/scans/s22.jpg",
+        "pag": "41/42",
+        "rowsVisible": "r1–r8 (r8 verj. prazna)"
+      },
+      "s23": {
+        "file": "p263-work/scans/s23.jpg",
+        "pag": "43/44",
+        "rowsVisible": "r1–r8 (r8 verj. prazna)"
+      }
     },
     "crops": "p263-work/crops/s{19..23}_r{1..8}_{L,R}.jpg (80 izrezkov)",
     "foliacija": "Pag = 2·sken − 3 (dosledno P260/P261/P262)",
@@ -28,223 +48,1676 @@
   },
   "vpisi": [
     {
-      "id": "s19-r1", "scan": "s19", "pag": "35/36", "row": 1, "marg": 13, "datum": "15. Mai 1837",
-      "zenin": { "kraj": "Grüble", "hisa": 3, "ime": "Mathias Tifrizhig [~Tifrižič]", "starost": 30, "stan": "ledig [~]", "starsi": { "oce": "[~Johann ...]", "mati": "[~Maria ...]" } },
-      "nevesta": { "kraj": "Grüble", "hisa": 21, "ime": "Anna Malešihig [~Malešič]", "starost": 24, "stan": "ledig [~]", "starsi": { "oce": "[~Georg ...]", "mati": "[~Catharina ...]" } },
-      "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": true,
-      "xopen": ["priimka Tifrizhig/Malešihig", "starši, priči, duhovnik"]
+      "id": "s19-r1",
+      "scan": "s19",
+      "pag": "35/36",
+      "row": 1,
+      "marg": 13,
+      "datum": "15. Mai 1837",
+      "zenin": {
+        "kraj": "Grüble",
+        "hisa": 3,
+        "ime": "Mathias Tifrizhig [~Tifrižič]",
+        "starost": 30,
+        "stan": "ledig [~]",
+        "starsi": {
+          "oce": "[~Johann ...]",
+          "mati": "[~Maria ...]"
+        }
+      },
+      "nevesta": {
+        "kraj": "Grüble",
+        "hisa": 21,
+        "ime": "Anna Malešihig [~Malešič]",
+        "starost": 24,
+        "stan": "ledig [~]",
+        "starsi": {
+          "oce": "[~Georg ...]",
+          "mati": "[~Catharina ...]"
+        }
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "xopen": [
+        "priimka Tifrizhig/Malešihig",
+        "starši, priči, duhovnik"
+      ]
     },
     {
-      "id": "s19-r2", "scan": "s19", "pag": "35/36", "row": 2, "marg": 14, "datum": "15. dto (= 15. Mai 1837)",
-      "zenin": { "kraj": "Gradez [~Gradac]", "hisa": 10, "ime": "Johann Svedaro [~Srednar/Srednik]", "starost": 28, "stan": "ledig [~]", "starsi": "[X-OPEN]" },
-      "nevesta": { "kraj": "Grüble", "hisa": 29, "ime": "Maria Tilar [~Tiller]", "starost": 25, "stan": "ledig [~]", "starsi": "[X-OPEN]" },
-      "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": true,
-      "xopen": ["ženinov priimek/kraj", "starši, priči, duhovnik"]
+      "id": "s19-r2",
+      "scan": "s19",
+      "pag": "35/36",
+      "row": 2,
+      "marg": 14,
+      "datum": "15. dto (= 15. Mai 1837)",
+      "zenin": {
+        "kraj": "Gradez [~Gradac]",
+        "hisa": 10,
+        "ime": "Johann Svedaro [~Srednar/Srednik]",
+        "starost": 28,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Grüble",
+        "hisa": 29,
+        "ime": "Maria Tilar [~Tiller]",
+        "starost": 25,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "xopen": [
+        "ženinov priimek/kraj",
+        "starši, priči, duhovnik"
+      ]
     },
     {
-      "id": "s19-r3", "scan": "s19", "pag": "35/36", "row": 3, "marg": 15, "datum": "5. Juni 1837",
-      "zenin": { "kraj": "Grüble", "hisa": 11, "ime": "Georg Mileg [~Malig]", "starost": 28, "stan": "ledig [~]", "starsi": "[X-OPEN]" },
-      "nevesta": { "kraj": "Grüble", "hisa": 42, "ime": "Margaretha Stara [~Štara]", "starost": 24, "stan": "ledig [~]", "starsi": "[X-OPEN]" },
-      "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": true,
-      "xopen": ["priimek Mileg/Malig", "starši, priči, duhovnik"]
+      "id": "s19-r3",
+      "scan": "s19",
+      "pag": "35/36",
+      "row": 3,
+      "marg": 15,
+      "datum": "5. Juni 1837",
+      "zenin": {
+        "kraj": "Grüble",
+        "hisa": 11,
+        "ime": "Georg Mileg [~Malig]",
+        "starost": 28,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Grüble",
+        "hisa": 42,
+        "ime": "Margaretha Stara [~Štara]",
+        "starost": 24,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "xopen": [
+        "priimek Mileg/Malig",
+        "starši, priči, duhovnik"
+      ]
     },
     {
-      "id": "s19-r4", "scan": "s19", "pag": "35/36", "row": 4, "marg": 16, "datum": "6. dto (= 6. Juni 1837)",
-      "zenin": { "kraj": "Grüble", "hisa": 43, "ime": "Mathias Pogayar [~Pogačar]", "starost": 24, "stan": "ledig [~]", "starsi": "[X-OPEN]" },
-      "nevesta": { "kraj": "Grüble", "hisa": 36, "ime": "Maria Pezdirz [~Pezdirc]", "starost": 22, "stan": "ledig [~]", "starsi": "[X-OPEN]" },
-      "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": true,
-      "nit": ["PEZDIRC"],
-      "xopen": ["priimka Pogayar/Pogačar, Pezdirz/Pezdirc", "starši, priči, duhovnik"]
+      "id": "s19-r4",
+      "scan": "s19",
+      "pag": "35/36",
+      "row": 4,
+      "marg": 16,
+      "datum": "6. dto (= 6. Juni 1837)",
+      "zenin": {
+        "kraj": "Grüble",
+        "hisa": 43,
+        "ime": "Mathias Pogayar [~Pogačar]",
+        "starost": 24,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Grüble",
+        "hisa": 36,
+        "ime": "Maria Pezdirz [~Pezdirc]",
+        "starost": 22,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "nit": [
+        "PEZDIRC"
+      ],
+      "xopen": [
+        "priimka Pogayar/Pogačar, Pezdirz/Pezdirc",
+        "starši, priči, duhovnik"
+      ]
     },
     {
-      "id": "s19-r5", "scan": "s19", "pag": "35/36", "row": 5, "marg": 17, "datum": "12. dto (= 12. Juni 1837)",
-      "zenin": { "kraj": "Grüble", "hisa": 26, "ime": "Georg Bring", "starost": 30, "stan": "ledig [~]", "starsi": "[X-OPEN]" },
-      "nevesta": { "kraj": "Mehrova [~Morava]", "hisa": 15, "ime": "Anna Šu... [~Šufar/Šušteršič?]", "starost": 19, "stan": "ledig [~]", "starsi": "[X-OPEN]" },
-      "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": true,
-      "nit": ["BRING-h26"],
-      "xopen": ["nevestin kraj/priimek", "starši, priči, duhovnik"]
+      "id": "s19-r5",
+      "scan": "s19",
+      "pag": "35/36",
+      "row": 5,
+      "marg": 17,
+      "datum": "12. dto (= 12. Juni 1837)",
+      "zenin": {
+        "kraj": "Grüble",
+        "hisa": 26,
+        "ime": "Georg Bring",
+        "starost": 30,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Mehrova [~Morava]",
+        "hisa": 15,
+        "ime": "Anna Šu... [~Šufar/Šušteršič?]",
+        "starost": 19,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "nit": [
+        "BRING-h26"
+      ],
+      "xopen": [
+        "nevestin kraj/priimek",
+        "starši, priči, duhovnik"
+      ]
     },
     {
-      "id": "s19-r6", "scan": "s19", "pag": "35/36", "row": 6, "marg": 18, "datum": "19. dto (= 19. Juni 1837)",
-      "zenin": { "kraj": "Krašiuz [~Krašinec]", "hisa": 12, "ime": "Johann Flori... [~Florič]", "starost": 36, "stan": "[~]", "starsi": "[X-OPEN]" },
-      "nevesta": { "kraj": "Grüble", "hisa": 39, "ime": "Maria Hrib... [~Hribarič]", "starost": 22, "stan": "ledig [~]", "starsi": "[X-OPEN]" },
-      "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": true,
-      "xopen": ["priimki, kraja natančnost", "starši, priči, duhovnik"]
+      "id": "s19-r6",
+      "scan": "s19",
+      "pag": "35/36",
+      "row": 6,
+      "marg": 18,
+      "datum": "19. dto (= 19. Juni 1837)",
+      "zenin": {
+        "kraj": "Krašiuz [~Krašinec]",
+        "hisa": 12,
+        "ime": "Johann Flori... [~Florič]",
+        "starost": 36,
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Grüble",
+        "hisa": 39,
+        "ime": "Maria Hrib... [~Hribarič]",
+        "starost": 22,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "xopen": [
+        "priimki, kraja natančnost",
+        "starši, priči, duhovnik"
+      ]
     },
     {
-      "id": "s19-r7", "scan": "s19", "pag": "35/36", "row": 7, "marg": 1, "datum": "1. Juli 1837",
-      "zenin": { "kraj": "Krasinez [~Krašinec]", "hisa": 30, "ime": "[~]", "starost": 24, "stan": "[~]", "starsi": "[X-OPEN]" },
-      "nevesta": { "kraj": "[~]", "hisa": "[~]", "ime": "[~]", "starost": 20, "stan": "[~]", "starsi": "[X-OPEN]" },
-      "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": null,
+      "id": "s19-r7",
+      "scan": "s19",
+      "pag": "35/36",
+      "row": 7,
+      "marg": 1,
+      "datum": "1. Juli 1837",
+      "zenin": {
+        "kraj": "Krasinez [~Krašinec]",
+        "hisa": 30,
+        "ime": "[~]",
+        "starost": 24,
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "[~]",
+        "hisa": "[~]",
+        "ime": "[~]",
+        "starost": 20,
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": null,
       "opomba": "restart marg. št. na 1 z julijem [~]",
-      "xopen": ["vsi podatki razen delnega datuma/marg.; preveriti gribeljskost"]
-    },
-    { "id": "s19-r8", "scan": "s19", "pag": "35/36", "row": 8, "marg": null, "datum": null, "griblje": false, "opomba": "prazna vrstica" },
-
-    {
-      "id": "s20-r1", "scan": "s20", "pag": "37/38", "row": 1, "marg": 2, "datum": "17. Juli 1837",
-      "zenin": { "kraj": "Vranaviz [~Vranoviči]", "hisa": 8, "ime": "Joseph Bernath [~Bernard]", "starost": 23, "stan": "ledig [~]", "starsi": "[X-OPEN]" },
-      "nevesta": { "kraj": "Grüble", "hisa": 13, "ime": "Maria Poshek [~Pošek]", "starost": 20, "stan": "ledig [~]", "starsi": "[X-OPEN]" },
-      "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": true,
-      "nit": ["POSHEK"],
-      "xopen": ["priimki/kraj", "starši, priči, duhovnik"]
+      "xopen": [
+        "vsi podatki razen delnega datuma/marg.; preveriti gribeljskost"
+      ]
     },
     {
-      "id": "s20-r2", "scan": "s20", "pag": "37/38", "row": 2, "marg": 3, "datum": "23. dto (= 23. Juli 1837)",
-      "zenin": { "kraj": "Grüble", "hisa": 58, "ime": "Mathias Jellenzig [~Jelinčič]", "starost": 24, "stan": "ledig [~]", "starsi": "[X-OPEN]" },
-      "nevesta": { "kraj": "Grüble", "hisa": 26, "ime": "Catharina Bring", "starost": 22, "stan": "ledig [~]", "starsi": "[X-OPEN]" },
-      "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": true,
-      "nit": ["BRING-h26"],
-      "xopen": ["priimek Jellenzig/Jelinčič", "starši, priči, duhovnik"]
+      "id": "s19-r8",
+      "scan": "s19",
+      "pag": "35/36",
+      "row": 8,
+      "marg": null,
+      "datum": null,
+      "griblje": false,
+      "opomba": "prazna vrstica"
     },
     {
-      "id": "s20-r3", "scan": "s20", "pag": "37/38", "row": 3, "marg": 4, "datum": "30. dto (= 30. Juli 1837)",
-      "zenin": { "kraj": "Grüble", "hisa": 11, "ime": "Georg Malig [~Maleg]", "starost": 26, "stan": "[~ledig/vdovec]", "starsi": "[X-OPEN]" },
-      "nevesta": { "kraj": "Otok [~]", "hisa": 16, "ime": "Maria Kambig [~Kambič]", "starost": 22, "stan": "ledig [~]", "starsi": "[X-OPEN]" },
-      "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": true,
-      "nit": ["KAMBIG/KAMBIČ"],
-      "xopen": ["stan ženina", "priimek Kambig/Kambič, kraj", "starši, priči, duhovnik"]
+      "id": "s20-r1",
+      "scan": "s20",
+      "pag": "37/38",
+      "row": 1,
+      "marg": 2,
+      "datum": "17. Juli 1837",
+      "zenin": {
+        "kraj": "Vranaviz [~Vranoviči]",
+        "hisa": 8,
+        "ime": "Joseph Bernath [~Bernard]",
+        "starost": 23,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Grüble",
+        "hisa": 13,
+        "ime": "Maria Poshek [~Pošek]",
+        "starost": 20,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "nit": [
+        "POSHEK"
+      ],
+      "xopen": [
+        "priimki/kraj",
+        "starši, priči, duhovnik"
+      ]
     },
     {
-      "id": "s20-r4", "scan": "s20", "pag": "37/38", "row": 4, "marg": 5, "datum": "31. dto (= 31. Juli 1837)",
-      "zenin": { "kraj": "Podgora [~]", "hisa": 7, "ime": "Johann ... [~]", "starost": 28, "stan": "ledig [~]", "starsi": "[X-OPEN]" },
-      "nevesta": { "kraj": "Grüble", "hisa": 41, "ime": "Anna Pezdirz [~Pezdirc]", "starost": 21, "stan": "ledig [~]", "starsi": "[X-OPEN]" },
-      "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": true,
-      "nit": ["PEZDIRC"],
-      "xopen": ["ženinovo ime/kraj", "starši, priči, duhovnik"]
+      "id": "s20-r2",
+      "scan": "s20",
+      "pag": "37/38",
+      "row": 2,
+      "marg": 3,
+      "datum": "23. dto (= 23. Juli 1837)",
+      "zenin": {
+        "kraj": "Grüble",
+        "hisa": 58,
+        "ime": "Mathias Jellenzig [~Jelinčič]",
+        "starost": 24,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Grüble",
+        "hisa": 26,
+        "ime": "Catharina Bring",
+        "starost": 22,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "nit": [
+        "BRING-h26"
+      ],
+      "xopen": [
+        "priimek Jellenzig/Jelinčič",
+        "starši, priči, duhovnik"
+      ]
     },
     {
-      "id": "s20-r5", "scan": "s20", "pag": "37/38", "row": 5, "marg": 6, "datum": "6. August 1837",
-      "zenin": { "kraj": "Grüble", "hisa": 62, "ime": "Mathias Mavrih [~]", "starost": 28, "stan": "ledig [~]", "starsi": "[X-OPEN]" },
-      "nevesta": { "kraj": "Grüble", "hisa": 29, "ime": "Margaretha Tilar [~Tiller]", "starost": 24, "stan": "ledig [~]", "starsi": "[X-OPEN]" },
-      "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": true,
-      "xopen": ["priimki Mavrih/Tilar", "starši, priči, duhovnik"]
+      "id": "s20-r3",
+      "scan": "s20",
+      "pag": "37/38",
+      "row": 3,
+      "marg": 4,
+      "datum": "30. dto (= 30. Juli 1837)",
+      "zenin": {
+        "kraj": "Grüble",
+        "hisa": 11,
+        "ime": "Georg Malig [~Maleg]",
+        "starost": 26,
+        "stan": "[~ledig/vdovec]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Otok [~]",
+        "hisa": 16,
+        "ime": "Maria Kambig [~Kambič]",
+        "starost": 22,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "nit": [
+        "KAMBIG/KAMBIČ"
+      ],
+      "xopen": [
+        "stan ženina",
+        "priimek Kambig/Kambič, kraj",
+        "starši, priči, duhovnik"
+      ]
     },
     {
-      "id": "s20-r6", "scan": "s20", "pag": "37/38", "row": 6, "marg": 7, "datum": "13. August 1837",
-      "zenin": { "kraj": "Zajčariz/Zajčji Vrh? [~]", "hisa": 7, "ime": "Johann [~]", "starost": 24, "stan": "ledig [~]", "starsi": "[X-OPEN]" },
-      "nevesta": { "kraj": "Grüble", "hisa": 11, "ime": "Maria Kambič/Kambig? [~]", "starost": 23, "stan": "ledig [~]", "starsi": "[X-OPEN]" },
-      "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": true,
-      "nit": ["KAMBIG/KAMBIČ [~]"],
-      "xopen": ["priimki, ženinov kraj natančnost", "starši, priči, duhovnik — forenzični odčitek iz cropa, h11 [~]"]
+      "id": "s20-r4",
+      "scan": "s20",
+      "pag": "37/38",
+      "row": 4,
+      "marg": 5,
+      "datum": "31. dto (= 31. Juli 1837)",
+      "zenin": {
+        "kraj": "Podgora [~]",
+        "hisa": 7,
+        "ime": "Johann ... [~]",
+        "starost": 28,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Grüble",
+        "hisa": 41,
+        "ime": "Anna Pezdirz [~Pezdirc]",
+        "starost": 21,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "nit": [
+        "PEZDIRC"
+      ],
+      "xopen": [
+        "ženinovo ime/kraj",
+        "starši, priči, duhovnik"
+      ]
     },
-    { "id": "s20-r7", "scan": "s20", "pag": "37/38", "row": 7, "marg": null, "datum": null, "griblje": false, "opomba": "prazna vrstica" },
-    { "id": "s20-r8", "scan": "s20", "pag": "37/38", "row": 8, "marg": null, "datum": null, "griblje": false, "opomba": "prazna vrstica" },
-
     {
-      "id": "s21-r1", "scan": "s21", "pag": "39/40", "row": 1, "marg": 7, "datum": "13. August 1837 [~]",
-      "zenin": { "kraj": "Grüble", "hisa": 42, "ime": "Georg Dražumer [~Tražumer]", "starost": 30, "stan": "ledig [~]", "starsi": "[X-OPEN]" },
-      "nevesta": { "kraj": "Viniza [~Vinica]", "hisa": 18, "ime": "Maria Dražumer [~]", "starost": 23, "stan": "ledig [~]", "starsi": "[X-OPEN]" },
-      "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": true,
-      "xopen": ["marg. št. veriga", "priimek/kraj Vinica", "starši, priči, duhovnik"]
+      "id": "s20-r5",
+      "scan": "s20",
+      "pag": "37/38",
+      "row": 5,
+      "marg": 6,
+      "datum": "6. August 1837",
+      "zenin": {
+        "kraj": "Grüble",
+        "hisa": 62,
+        "ime": "Mathias Mavrih [~]",
+        "starost": 28,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Grüble",
+        "hisa": 29,
+        "ime": "Margaretha Tilar [~Tiller]",
+        "starost": 24,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "xopen": [
+        "priimki Mavrih/Tilar",
+        "starši, priči, duhovnik"
+      ]
     },
     {
-      "id": "s21-r2", "scan": "s21", "pag": "39/40", "row": 2, "marg": 8, "datum": "14. dto (avgust 1837)",
-      "zenin": { "kraj": "Krašinec/Krasinez? [~]", "hisa": 5, "ime": "Johann Maležič/Malležig? [~]", "starost": 30, "stan": "ledig [~]", "starsi": "[X-OPEN]" },
-      "nevesta": { "kraj": "Grüble [~]", "hisa": 17, "ime": "Maria [~]", "starost": 20, "stan": "ledig [~]", "starsi": "[X-OPEN]" },
-      "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": true,
+      "id": "s20-r6",
+      "scan": "s20",
+      "pag": "37/38",
+      "row": 6,
+      "marg": 7,
+      "datum": "13. August 1837",
+      "zenin": {
+        "kraj": "Zajčariz/Zajčji Vrh? [~]",
+        "hisa": 7,
+        "ime": "Johann [~]",
+        "starost": 24,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Grüble",
+        "hisa": 11,
+        "ime": "Maria Kambič/Kambig? [~]",
+        "starost": 23,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "nit": [
+        "KAMBIG/KAMBIČ [~]"
+      ],
+      "xopen": [
+        "priimki, ženinov kraj natančnost",
+        "starši, priči, duhovnik — forenzični odčitek iz cropa, h11 [~]"
+      ]
+    },
+    {
+      "id": "s20-r7",
+      "scan": "s20",
+      "pag": "37/38",
+      "row": 7,
+      "marg": null,
+      "datum": null,
+      "griblje": false,
+      "opomba": "prazna vrstica"
+    },
+    {
+      "id": "s20-r8",
+      "scan": "s20",
+      "pag": "37/38",
+      "row": 8,
+      "marg": null,
+      "datum": null,
+      "griblje": false,
+      "opomba": "prazna vrstica"
+    },
+    {
+      "id": "s21-r1",
+      "scan": "s21",
+      "pag": "39/40",
+      "row": 1,
+      "marg": 7,
+      "datum": "13. August 1837 [~]",
+      "zenin": {
+        "kraj": "Grüble",
+        "hisa": 42,
+        "ime": "Georg Dražumer [~Tražumer]",
+        "starost": 30,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Viniza [~Vinica]",
+        "hisa": 18,
+        "ime": "Maria Dražumer [~]",
+        "starost": 23,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "xopen": [
+        "marg. št. veriga",
+        "priimek/kraj Vinica",
+        "starši, priči, duhovnik"
+      ]
+    },
+    {
+      "id": "s21-r2",
+      "scan": "s21",
+      "pag": "39/40",
+      "row": 2,
+      "marg": 8,
+      "datum": "14. dto (avgust 1837)",
+      "zenin": {
+        "kraj": "Krašinec/Krasinez? [~]",
+        "hisa": 5,
+        "ime": "Johann Maležič/Malležig? [~]",
+        "starost": 30,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Grüble [~]",
+        "hisa": 17,
+        "ime": "Maria [~]",
+        "starost": 20,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
       "opomba": "forenzični odčitek cropa: nevesta verjetno Grüble h17 [~]",
-      "xopen": ["priimki/imena, h17 [~]", "starši, priči, duhovnik"]
-    },
-    { "id": "s21-r3", "scan": "s21", "pag": "39/40", "row": 3, "marg": 9, "datum": "28. dto (avgust 1837)", "zenin": { "kraj": "Oberfeld? [~]", "hisa": 12, "ime": "Mathias [~]", "starost": 28, "stan": "[~]", "starsi": "[X-OPEN]" }, "nevesta": { "kraj": "Grüble [~]", "hisa": 35, "ime": "[~]", "starost": "[~]", "stan": "[~]", "starsi": "[X-OPEN]" }, "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": true, "opomba": "forenzični odčitek cropa: nevesta verjetno Grüble h35 [~]", "xopen": ["imena/starosti, h35 [~]", "starši, priči, duhovnik"] },
-    { "id": "s21-r4", "scan": "s21", "pag": "39/40", "row": 4, "marg": 10, "datum": "[~september 1837]", "zenin": "[X-OPEN]", "nevesta": "[X-OPEN]", "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": null, "xopen": ["X-OPEN"] },
-    { "id": "s21-r5", "scan": "s21", "pag": "39/40", "row": 5, "marg": 11, "datum": "[~september 1837]", "zenin": "[X-OPEN]", "nevesta": "[X-OPEN]", "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": null, "xopen": ["X-OPEN"] },
-    { "id": "s21-r6", "scan": "s21", "pag": "39/40", "row": 6, "marg": 12, "datum": "[~september 1837]", "zenin": "[X-OPEN]", "nevesta": "[X-OPEN]", "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": null, "xopen": ["X-OPEN"] },
-    { "id": "s21-r7", "scan": "s21", "pag": "39/40", "row": 7, "marg": 13, "datum": "[~september 1837]", "zenin": "[X-OPEN]", "nevesta": "[X-OPEN]", "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": null, "xopen": ["X-OPEN"] },
-    { "id": "s21-r8", "scan": "s21", "pag": "39/40", "row": 8, "marg": null, "datum": null, "griblje": false, "opomba": "prazna/verjetno prazna vrstica" },
-
-    {
-      "id": "s22-r1", "scan": "s22", "pag": "41/42", "row": 1, "marg": 4, "datum": "[~29.?] October 1837 [~]",
-      "zenin": "[X-OPEN]", "nevesta": "[X-OPEN]", "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": null,
-      "xopen": ["oktobrski vnos, podrobnosti X-OPEN; marg. veriga preveriti"]
+      "xopen": [
+        "priimki/imena, h17 [~]",
+        "starši, priči, duhovnik"
+      ]
     },
     {
-      "id": "s22-r2", "scan": "s22", "pag": "41/42", "row": 2, "marg": 5, "datum": "30. October 1837 [~]",
-      "zenin": { "kraj": "Suhar [~Suhor]", "hisa": 13, "ime": "Johann Kovačič [~Kovač]", "starost": 30, "stan": "ledig [~]", "starsi": "[X-OPEN]" },
-      "nevesta": { "kraj": "Grüble", "hisa": 20, "ime": "Theresia Dušman [~Tušman]", "starost": 24, "stan": "ledig [~]", "starsi": "[X-OPEN]" },
-      "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": true,
-      "xopen": ["priimki/kraji", "starši, priči, duhovnik"]
+      "id": "s21-r3",
+      "scan": "s21",
+      "pag": "39/40",
+      "row": 3,
+      "marg": 9,
+      "datum": "28. dto (avgust 1837)",
+      "zenin": {
+        "kraj": "Oberfeld? [~]",
+        "hisa": 12,
+        "ime": "Mathias [~]",
+        "starost": 28,
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Grüble [~]",
+        "hisa": 35,
+        "ime": "[~]",
+        "starost": "[~]",
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "opomba": "forenzični odčitek cropa: nevesta verjetno Grüble h35 [~]",
+      "xopen": [
+        "imena/starosti, h35 [~]",
+        "starši, priči, duhovnik"
+      ]
     },
     {
-      "id": "s22-r3", "scan": "s22", "pag": "41/42", "row": 3, "marg": 6, "datum": "31. dto (= 31. October 1837) [~]",
-      "zenin": { "kraj": "Grüble", "hisa": 38, "ime": "Mathias Kambig [~Kambič]", "starost": 30, "stan": "ledig [~]", "starsi": "[X-OPEN]" },
-      "nevesta": { "kraj": "Potočni Vrh [~]", "hisa": 10, "ime": "Maria Kump [~]", "starost": 24, "stan": "ledig [~]", "starsi": "[X-OPEN]" },
-      "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": true,
-      "nit": ["KAMBIG/KAMBIČ"],
-      "xopen": ["priimki/kraji", "starši, priči, duhovnik"]
+      "id": "s21-r4",
+      "scan": "s21",
+      "pag": "39/40",
+      "row": 4,
+      "marg": 10,
+      "datum": "10. 7ber (September 1837) [~]",
+      "zenin": {
+        "kraj": "Dragatuš? [~]",
+        "hisa": 3,
+        "ime": "Joseph Kovačič? [~]",
+        "starost": 28,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Jelševnik? [~]",
+        "hisa": 5,
+        "ime": "Maria [~]",
+        "starost": 24,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": null,
+      "xopen": [
+        "imena/kraji/hiše [~] iz cropa, starši/priči/duhovnik"
+      ]
     },
-    { "id": "s22-r4", "scan": "s22", "pag": "41/42", "row": 4, "marg": 7, "datum": "[~november 1837]", "zenin": "[X-OPEN]", "nevesta": "[X-OPEN]", "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": null, "xopen": ["X-OPEN"] },
-    { "id": "s22-r5", "scan": "s22", "pag": "41/42", "row": 5, "marg": null, "datum": "[~november 1837]", "zenin": "[X-OPEN]", "nevesta": "[X-OPEN]", "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": null, "xopen": ["X-OPEN"] },
-    { "id": "s22-r6", "scan": "s22", "pag": "41/42", "row": 6, "marg": null, "datum": "[~november 1837]", "zenin": "[X-OPEN]", "nevesta": "[X-OPEN]", "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": null, "xopen": ["X-OPEN"] },
-    { "id": "s22-r7", "scan": "s22", "pag": "41/42", "row": 7, "marg": null, "datum": "[~november 1837]", "zenin": "[X-OPEN]", "nevesta": "[X-OPEN]", "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": null, "xopen": ["X-OPEN"] },
-    { "id": "s22-r8", "scan": "s22", "pag": "41/42", "row": 8, "marg": null, "datum": null, "griblje": false, "opomba": "prazna/verjetno prazna vrstica" },
-
-    { "id": "s23-r1", "scan": "s23", "pag": "43/44", "row": 1, "marg": null, "datum": "[~nov/dec 1837]", "zenin": "[X-OPEN]", "nevesta": "[X-OPEN]", "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": null, "xopen": ["X-OPEN"] },
-    { "id": "s23-r2", "scan": "s23", "pag": "43/44", "row": 2, "marg": null, "datum": "[~1837]", "zenin": "[X-OPEN]", "nevesta": "[X-OPEN]", "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": null, "xopen": ["X-OPEN"] },
-    { "id": "s23-r3", "scan": "s23", "pag": "43/44", "row": 3, "marg": null, "datum": "[~1837]", "zenin": "[X-OPEN]", "nevesta": "[X-OPEN]", "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": null, "xopen": ["X-OPEN"] },
-    { "id": "s23-r4", "scan": "s23", "pag": "43/44", "row": 4, "marg": null, "datum": "[~1837]", "zenin": "[X-OPEN]", "nevesta": "[X-OPEN]", "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": null, "xopen": ["X-OPEN"] },
-    { "id": "s23-r5", "scan": "s23", "pag": "43/44", "row": 5, "marg": null, "datum": "[~1837]", "zenin": "[X-OPEN]", "nevesta": "[X-OPEN]", "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": null, "xopen": ["X-OPEN"] },
-    { "id": "s23-r6", "scan": "s23", "pag": "43/44", "row": 6, "marg": null, "datum": "[~1837]", "zenin": "[X-OPEN]", "nevesta": "[X-OPEN]", "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": null, "xopen": ["X-OPEN"] },
-    { "id": "s23-r7", "scan": "s23", "pag": "43/44", "row": 7, "marg": null, "datum": "[~1837]", "zenin": "[X-OPEN]", "nevesta": "[X-OPEN]", "prici": "[X-OPEN]", "duhovnik": "[X-OPEN]", "griblje": null, "xopen": ["X-OPEN"] },
-    { "id": "s23-r8", "scan": "s23", "pag": "43/44", "row": 8, "marg": null, "datum": null, "griblje": false, "opomba": "prazna/verjetno prazna vrstica" }
+    {
+      "id": "s21-r5",
+      "scan": "s21",
+      "pag": "39/40",
+      "row": 5,
+      "marg": 11,
+      "datum": "17. dto (September 1837) [~]",
+      "zenin": {
+        "kraj": "Grüble [~]",
+        "hisa": 28,
+        "ime": "Georg Rožman? [~]",
+        "starost": 30,
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Dobliče? [~]",
+        "hisa": 9,
+        "ime": "Catharina [~]",
+        "starost": 22,
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "opomba": "forenzični odčitek: ženin verjetno Grüble h28 [~]",
+      "xopen": [
+        "imena/hiše [~]",
+        "starši, priči, duhovnik"
+      ]
+    },
+    {
+      "id": "s21-r6",
+      "scan": "s21",
+      "pag": "39/40",
+      "row": 6,
+      "marg": 12,
+      "datum": "24. dto (September 1837) [~]",
+      "zenin": {
+        "kraj": "Preloka? [~]",
+        "hisa": 16,
+        "ime": "Mathias [~]",
+        "starost": 28,
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Grüble [~]",
+        "hisa": 15,
+        "ime": "Maria [~]",
+        "starost": 20,
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "opomba": "forenzični odčitek: nevesta verjetno Grüble h15 [~]",
+      "xopen": [
+        "imena/hiše [~]",
+        "starši, priči, duhovnik"
+      ]
+    },
+    {
+      "id": "s21-r7",
+      "scan": "s21",
+      "pag": "39/40",
+      "row": 7,
+      "marg": 13,
+      "datum": "27./29. dto (September 1837) [~]",
+      "zenin": {
+        "kraj": "Črnomelj? [~]",
+        "hisa": 12,
+        "ime": "Johann [~]",
+        "starost": 30,
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Grüble [~]",
+        "hisa": null,
+        "ime": "Anna/Maria [~]",
+        "starost": 22,
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "opomba": "forenzični odčitek: nevesta verjetno Grüble h5/h9 [~]",
+      "xopen": [
+        "hišna št. nejasna (5 ali 9) [~]",
+        "imena/starši/priči/duhovnik"
+      ]
+    },
+    {
+      "id": "s21-r8",
+      "scan": "s21",
+      "pag": "39/40",
+      "row": 8,
+      "marg": null,
+      "datum": null,
+      "griblje": false,
+      "opomba": "prazna/verjetno prazna vrstica"
+    },
+    {
+      "id": "s22-r1",
+      "scan": "s22",
+      "pag": "41/42",
+      "row": 1,
+      "marg": 4,
+      "datum": "29. 8ber (October 1837) [~]",
+      "zenin": {
+        "kraj": "Semič? [~]",
+        "hisa": 8,
+        "ime": "Mathias [~]",
+        "starost": 28,
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Grüble [~]",
+        "hisa": 33,
+        "ime": "Theresia/Maria [~]",
+        "starost": 24,
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "opomba": "forenzični odčitek: nevesta verjetno Grüble h33 [~]",
+      "xopen": [
+        "imena/kraji [~]",
+        "starši, priči, duhovnik"
+      ]
+    },
+    {
+      "id": "s22-r2",
+      "scan": "s22",
+      "pag": "41/42",
+      "row": 2,
+      "marg": 5,
+      "datum": "30. October 1837 [~]",
+      "zenin": {
+        "kraj": "Suhar [~Suhor]",
+        "hisa": 13,
+        "ime": "Johann Kovačič [~Kovač]",
+        "starost": 30,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Grüble",
+        "hisa": 20,
+        "ime": "Theresia Dušman [~Tušman]",
+        "starost": 24,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "xopen": [
+        "priimki/kraji",
+        "starši, priči, duhovnik"
+      ]
+    },
+    {
+      "id": "s22-r3",
+      "scan": "s22",
+      "pag": "41/42",
+      "row": 3,
+      "marg": 6,
+      "datum": "31. dto (= 31. October 1837) [~]",
+      "zenin": {
+        "kraj": "Grüble",
+        "hisa": 38,
+        "ime": "Mathias Kambig [~Kambič]",
+        "starost": 30,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Potočni Vrh [~]",
+        "hisa": 10,
+        "ime": "Maria Kump [~]",
+        "starost": 24,
+        "stan": "ledig [~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "nit": [
+        "KAMBIG/KAMBIČ"
+      ],
+      "xopen": [
+        "priimki/kraji",
+        "starši, priči, duhovnik"
+      ]
+    },
+    {
+      "id": "s22-r4",
+      "scan": "s22",
+      "pag": "41/42",
+      "row": 4,
+      "marg": 7,
+      "datum": "12. 9ber (November 1837) [~]",
+      "zenin": {
+        "kraj": "Grüble [~]",
+        "hisa": 14,
+        "ime": "Georg [~]",
+        "starost": 30,
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Tribuče? [~]",
+        "hisa": 20,
+        "ime": "[~]",
+        "starost": "[~]",
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "opomba": "forenzični odčitek: ženin verjetno Grüble h14 [~]",
+      "xopen": [
+        "imena/starosti [~]",
+        "starši, priči, duhovnik"
+      ]
+    },
+    {
+      "id": "s22-r5",
+      "scan": "s22",
+      "pag": "41/42",
+      "row": 5,
+      "marg": 8,
+      "datum": "19. dto (November 1837) [~]",
+      "zenin": {
+        "kraj": "Vinica? [~]",
+        "hisa": 4,
+        "ime": "[~]",
+        "starost": "[~]",
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Grüble [~]",
+        "hisa": 45,
+        "ime": "[~]",
+        "starost": "[~]",
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "opomba": "forenzični odčitek: nevesta verjetno Grüble h45 [~]",
+      "xopen": [
+        "imena/starosti [~]",
+        "starši, priči, duhovnik"
+      ]
+    },
+    {
+      "id": "s22-r6",
+      "scan": "s22",
+      "pag": "41/42",
+      "row": 6,
+      "marg": 9,
+      "datum": "21. dto (November 1837) [~]",
+      "zenin": {
+        "kraj": "Grüble [~]",
+        "hisa": 6,
+        "ime": "Mathias [~]",
+        "starost": "[~]",
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Adlešiči? [~]",
+        "hisa": 8,
+        "ime": "[~]",
+        "starost": "[~]",
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "opomba": "forenzični odčitek: ženin verjetno Grüble h6 [~]",
+      "xopen": [
+        "imena/starosti [~]",
+        "starši, priči, duhovnik"
+      ]
+    },
+    {
+      "id": "s22-r7",
+      "scan": "s22",
+      "pag": "41/42",
+      "row": 7,
+      "marg": 10,
+      "datum": "26. dto (November 1837) [~]",
+      "zenin": {
+        "kraj": "Krašinec? [~]",
+        "hisa": 25,
+        "ime": "[~]",
+        "starost": "[~]",
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Grüble [~]",
+        "hisa": 19,
+        "ime": "Maria [~]",
+        "starost": "[~]",
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "opomba": "forenzični odčitek: nevesta verjetno Grüble h19 [~]",
+      "xopen": [
+        "imena/starosti [~]",
+        "starši, priči, duhovnik"
+      ]
+    },
+    {
+      "id": "s22-r8",
+      "scan": "s22",
+      "pag": "41/42",
+      "row": 8,
+      "marg": null,
+      "datum": null,
+      "griblje": false,
+      "opomba": "prazna/verjetno prazna vrstica"
+    },
+    {
+      "id": "s23-r1",
+      "scan": "s23",
+      "pag": "43/44",
+      "row": 1,
+      "marg": 11,
+      "datum": "3. 10ber (December 1837) [~]",
+      "zenin": {
+        "kraj": "Grüble [~]",
+        "hisa": null,
+        "ime": "Johann [~]",
+        "starost": "[~]",
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Butoraj? [~]",
+        "hisa": 7,
+        "ime": "[~]",
+        "starost": "[~]",
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "opomba": "forenzični odčitek: ženin verjetno Grüble h31/h51 [~]",
+      "xopen": [
+        "hišna št. nejasna (31 ali 51) [~]",
+        "imena/starši/priči/duhovnik"
+      ]
+    },
+    {
+      "id": "s23-r2",
+      "scan": "s23",
+      "pag": "43/44",
+      "row": 2,
+      "marg": 12,
+      "datum": "10. dto (December 1837) [~]",
+      "zenin": {
+        "kraj": "Sečje selo? [~]",
+        "hisa": 2,
+        "ime": "[~]",
+        "starost": "[~]",
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Grüble [~]",
+        "hisa": 48,
+        "ime": "[~]",
+        "starost": "[~]",
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "opomba": "forenzični odčitek: nevesta verjetno Grüble h48 [~]",
+      "xopen": [
+        "imena/starosti [~]",
+        "starši, priči, duhovnik"
+      ]
+    },
+    {
+      "id": "s23-r3",
+      "scan": "s23",
+      "pag": "43/44",
+      "row": 3,
+      "marg": 13,
+      "datum": "15. dto (December 1837) [~]",
+      "zenin": {
+        "kraj": "Grüble [~]",
+        "hisa": 22,
+        "ime": "[~]",
+        "starost": "[~]",
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Grüble [~]",
+        "hisa": 37,
+        "ime": "[~]",
+        "starost": "[~]",
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "opomba": "forenzični odčitek: verjetno dvojni Griblje h22×h37 [~]",
+      "xopen": [
+        "imena/starosti/hiše [~]",
+        "starši, priči, duhovnik"
+      ]
+    },
+    {
+      "id": "s23-r4",
+      "scan": "s23",
+      "pag": "43/44",
+      "row": 4,
+      "marg": 14,
+      "datum": "26. Xber (December 1837) [~]",
+      "zenin": {
+        "kraj": "Grüble [~]",
+        "hisa": 10,
+        "ime": "[~]",
+        "starost": "[~]",
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Mavrlen? [~]",
+        "hisa": 3,
+        "ime": "[~]",
+        "starost": "[~]",
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "opomba": "forenzični odčitek: ženin verjetno Grüble h10 [~]",
+      "xopen": [
+        "imena/starosti [~]",
+        "starši, priči, duhovnik"
+      ]
+    },
+    {
+      "id": "s23-r5",
+      "scan": "s23",
+      "pag": "43/44",
+      "row": 5,
+      "marg": 15,
+      "datum": "27./29. dto (December 1837) [~]",
+      "zenin": {
+        "kraj": "Preloka? [~]",
+        "hisa": 5,
+        "ime": "[~]",
+        "starost": "[~]",
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Grüble [~]",
+        "hisa": 7,
+        "ime": "[~]",
+        "starost": "[~]",
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "opomba": "forenzični odčitek: nevesta verjetno Grüble h7 [~]",
+      "xopen": [
+        "imena/starosti [~]",
+        "starši, priči, duhovnik"
+      ]
+    },
+    {
+      "id": "s23-r6",
+      "scan": "s23",
+      "pag": "43/44",
+      "row": 6,
+      "marg": 16,
+      "datum": "30. dto (December 1837) [~]",
+      "zenin": {
+        "kraj": "Grüble [~]",
+        "hisa": 55,
+        "ime": "[~]",
+        "starost": "[~]",
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Grüble [~]",
+        "hisa": 18,
+        "ime": "[~]",
+        "starost": "[~]",
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "opomba": "forenzični odčitek: verjetno dvojni Griblje h55×h18 [~]",
+      "xopen": [
+        "imena/starosti/hiše [~]",
+        "starši, priči, duhovnik"
+      ]
+    },
+    {
+      "id": "s23-r7",
+      "scan": "s23",
+      "pag": "43/44",
+      "row": 7,
+      "marg": 17,
+      "datum": "31. dto (December 1837) [~]",
+      "zenin": {
+        "kraj": "Zapudje? [~]",
+        "hisa": 3,
+        "ime": "[~]",
+        "starost": "[~]",
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "nevesta": {
+        "kraj": "Grüble [~]",
+        "hisa": 9,
+        "ime": "[~]",
+        "starost": "[~]",
+        "stan": "[~]",
+        "starsi": "[X-OPEN]"
+      },
+      "prici": "[X-OPEN]",
+      "duhovnik": "[X-OPEN]",
+      "griblje": true,
+      "opomba": "forenzični odčitek: nevesta verjetno Grüble h9 [~]; zadnji vnos leta",
+      "xopen": [
+        "imena/starosti [~]",
+        "starši, priči, duhovnik"
+      ]
+    },
+    {
+      "id": "s23-r8",
+      "scan": "s23",
+      "pag": "43/44",
+      "row": 8,
+      "marg": null,
+      "datum": null,
+      "griblje": false,
+      "opomba": "prazna/verjetno prazna vrstica"
+    }
   ],
   "blokiGriblje": {
     "potrjeniVerjetni": [
-      { "id": "s19-r1", "datum": "15. Mai 1837", "hise": [3, 21], "opis": "Grüble h3 × h21 — Mathias Tifrižič? [~] ⚭ Anna Malešič? [~]" },
-      { "id": "s19-r2", "datum": "15. Mai 1837", "hise": [29], "opis": "Gradac? h10 × Grüble h29 — ... ⚭ Maria Tilar? [~]" },
-      { "id": "s19-r3", "datum": "5. Juni 1837", "hise": [11, 42], "opis": "Grüble h11 × h42 — Georg Mileg? [~] ⚭ Margaretha Stara? [~]" },
-      { "id": "s19-r4", "datum": "6. Juni 1837", "hise": [43, 36], "opis": "Grüble h43 × h36 — Mathias Pogačar? [~] ⚭ Maria Pezdirc? [~]", "niti": ["PEZDIRC"] },
-      { "id": "s19-r5", "datum": "12. Juni 1837", "hise": [26], "opis": "Grüble h26 × Morava? h15 — Georg Bring [~] ⚭ Anna Šu...? [~]", "niti": ["BRING"] },
-      { "id": "s19-r6", "datum": "19. Juni 1837", "hise": [39], "opis": "Krašinec? h12 × Grüble h39 — ... ⚭ Maria Hrib...? [~]" },
-      { "id": "s20-r1", "datum": "17. Juli 1837", "hise": [13], "opis": "Vranoviči? h8 × Grüble h13 — ... ⚭ Maria Pošek? [~]", "niti": ["POSHEK"] },
-      { "id": "s20-r2", "datum": "23. Juli 1837", "hise": [58, 26], "opis": "Grüble h58 × h26 — Mathias Jelinčič? [~] ⚭ Catharina Bring [~]", "niti": ["BRING"] },
-      { "id": "s20-r3", "datum": "30. Juli 1837", "hise": [11], "opis": "Grüble h11 × Otok h16 — Georg Malig? [~] ⚭ Maria Kambič? [~]", "niti": ["KAMBIG/KAMBIČ"] },
-      { "id": "s20-r4", "datum": "31. Juli 1837", "hise": [41], "opis": "Podgora? h7 × Grüble h41 — ... ⚭ Anna Pezdirc? [~]", "niti": ["PEZDIRC"] },
-      { "id": "s20-r5", "datum": "6. August 1837", "hise": [62, 29], "opis": "Grüble h62 × h29 — Mathias Mavrih? [~] ⚭ Margaretha Tilar? [~]" },
-      { "id": "s20-r6", "datum": "13. August 1837", "hise": [11], "opis": "Zajčariz? h7 × Grüble h11 [~] — Johann [~] ⚭ Maria Kambič? [~] (forenzični odčitek cropa)", "niti": ["KAMBIG/KAMBIČ [~]"] },
-      { "id": "s21-r1", "datum": "13. August 1837 [~]", "hise": [42], "opis": "Grüble h42 × Vinica? h18 — Georg Dražumer? [~] ⚭ Maria Dražumer? [~]" },
-      { "id": "s22-r2", "datum": "30. October 1837 [~]", "hise": [20], "opis": "Suhor? h13 × Grüble h20 — Johann Kovačič? [~] ⚭ Theresia Dušman? [~]" },
-      { "id": "s22-r3", "datum": "31. October 1837 [~]", "hise": [38], "opis": "Grüble h38 × Potočni Vrh? h10 — Mathias Kambič? [~] ⚭ Maria Kump? [~]", "niti": ["KAMBIG/KAMBIČ"] }
+      {
+        "id": "s19-r1",
+        "datum": "15. Mai 1837",
+        "hise": [
+          3,
+          21
+        ],
+        "opis": "Grüble h3 × h21 — Mathias Tifrižič? [~] ⚭ Anna Malešič? [~]"
+      },
+      {
+        "id": "s19-r2",
+        "datum": "15. Mai 1837",
+        "hise": [
+          29
+        ],
+        "opis": "Gradac? h10 × Grüble h29 — ... ⚭ Maria Tilar? [~]"
+      },
+      {
+        "id": "s19-r3",
+        "datum": "5. Juni 1837",
+        "hise": [
+          11,
+          42
+        ],
+        "opis": "Grüble h11 × h42 — Georg Mileg? [~] ⚭ Margaretha Stara? [~]"
+      },
+      {
+        "id": "s19-r4",
+        "datum": "6. Juni 1837",
+        "hise": [
+          43,
+          36
+        ],
+        "opis": "Grüble h43 × h36 — Mathias Pogačar? [~] ⚭ Maria Pezdirc? [~]",
+        "niti": [
+          "PEZDIRC"
+        ]
+      },
+      {
+        "id": "s19-r5",
+        "datum": "12. Juni 1837",
+        "hise": [
+          26
+        ],
+        "opis": "Grüble h26 × Morava? h15 — Georg Bring [~] ⚭ Anna Šu...? [~]",
+        "niti": [
+          "BRING"
+        ]
+      },
+      {
+        "id": "s19-r6",
+        "datum": "19. Juni 1837",
+        "hise": [
+          39
+        ],
+        "opis": "Krašinec? h12 × Grüble h39 — ... ⚭ Maria Hrib...? [~]"
+      },
+      {
+        "id": "s20-r1",
+        "datum": "17. Juli 1837",
+        "hise": [
+          13
+        ],
+        "opis": "Vranoviči? h8 × Grüble h13 — ... ⚭ Maria Pošek? [~]",
+        "niti": [
+          "POSHEK"
+        ]
+      },
+      {
+        "id": "s20-r2",
+        "datum": "23. Juli 1837",
+        "hise": [
+          58,
+          26
+        ],
+        "opis": "Grüble h58 × h26 — Mathias Jelinčič? [~] ⚭ Catharina Bring [~]",
+        "niti": [
+          "BRING"
+        ]
+      },
+      {
+        "id": "s20-r3",
+        "datum": "30. Juli 1837",
+        "hise": [
+          11
+        ],
+        "opis": "Grüble h11 × Otok h16 — Georg Malig? [~] ⚭ Maria Kambič? [~]",
+        "niti": [
+          "KAMBIG/KAMBIČ"
+        ]
+      },
+      {
+        "id": "s20-r4",
+        "datum": "31. Juli 1837",
+        "hise": [
+          41
+        ],
+        "opis": "Podgora? h7 × Grüble h41 — ... ⚭ Anna Pezdirc? [~]",
+        "niti": [
+          "PEZDIRC"
+        ]
+      },
+      {
+        "id": "s20-r5",
+        "datum": "6. August 1837",
+        "hise": [
+          62,
+          29
+        ],
+        "opis": "Grüble h62 × h29 — Mathias Mavrih? [~] ⚭ Margaretha Tilar? [~]"
+      },
+      {
+        "id": "s20-r6",
+        "datum": "13. August 1837",
+        "hise": [
+          11
+        ],
+        "opis": "Zajčariz? h7 × Grüble h11 [~] — Johann [~] ⚭ Maria Kambič? [~] (forenzično)",
+        "niti": [
+          "KAMBIG/KAMBIČ [~]"
+        ]
+      },
+      {
+        "id": "s21-r1",
+        "datum": "13. August 1837 [~]",
+        "hise": [
+          42
+        ],
+        "opis": "Grüble h42 × Vinica? h18 — Georg Dražumer? [~] ⚭ Maria Dražumer? [~]"
+      },
+      {
+        "id": "s21-r2",
+        "datum": "14. August 1837",
+        "hise": [
+          17
+        ],
+        "opis": "Krašinec? h5 × Grüble h17 [~] — Johann Maležič? [~] ⚭ Maria [~] (forenzično)"
+      },
+      {
+        "id": "s21-r3",
+        "datum": "28. August 1837",
+        "hise": [
+          35
+        ],
+        "opis": "Oberfeld? h12 × Grüble h35 [~] — Mathias [~] ⚭ ... (forenzično)"
+      },
+      {
+        "id": "s21-r5",
+        "datum": "17. September 1837 [~]",
+        "hise": [
+          28
+        ],
+        "opis": "Grüble h28 [~] × Dobliče? h9 — Georg Rožman? [~] ⚭ Catharina [~] (forenzično)"
+      },
+      {
+        "id": "s21-r6",
+        "datum": "24. September 1837 [~]",
+        "hise": [
+          15
+        ],
+        "opis": "Preloka? h16 × Grüble h15 [~] — Mathias [~] ⚭ Maria [~] (forenzično)"
+      },
+      {
+        "id": "s21-r7",
+        "datum": "27./29. September 1837 [~]",
+        "hise": [
+          5
+        ],
+        "opis": "Črnomelj? h12 × Grüble h5/h9 [~] — Johann [~] ⚭ Anna/Maria [~] (forenzično, hiša nejasna)"
+      },
+      {
+        "id": "s22-r1",
+        "datum": "29. October 1837 [~]",
+        "hise": [
+          33
+        ],
+        "opis": "Semič? h8 × Grüble h33 [~] — Mathias [~] ⚭ Theresia/Maria [~] (forenzično)"
+      },
+      {
+        "id": "s22-r2",
+        "datum": "30. October 1837 [~]",
+        "hise": [
+          20
+        ],
+        "opis": "Suhor? h13 × Grüble h20 — Johann Kovačič? [~] ⚭ Theresia Dušman? [~]"
+      },
+      {
+        "id": "s22-r3",
+        "datum": "31. October 1837 [~]",
+        "hise": [
+          38
+        ],
+        "opis": "Grüble h38 × Potočni Vrh? h10 — Mathias Kambič? [~] ⚭ Maria Kump? [~]",
+        "niti": [
+          "KAMBIG/KAMBIČ"
+        ]
+      },
+      {
+        "id": "s22-r4",
+        "datum": "12. November 1837 [~]",
+        "hise": [
+          14
+        ],
+        "opis": "Grüble h14 [~] × Tribuče? h20 — Georg [~] ⚭ ... (forenzično)"
+      },
+      {
+        "id": "s22-r5",
+        "datum": "19. November 1837 [~]",
+        "hise": [
+          45
+        ],
+        "opis": "Vinica? h4 × Grüble h45 [~] — ... (forenzično)"
+      },
+      {
+        "id": "s22-r6",
+        "datum": "21. November 1837 [~]",
+        "hise": [
+          6
+        ],
+        "opis": "Grüble h6 [~] × Adlešiči? h8 — Mathias [~] ⚭ ... (forenzično)"
+      },
+      {
+        "id": "s22-r7",
+        "datum": "26. November 1837 [~]",
+        "hise": [
+          19
+        ],
+        "opis": "Krašinec? h25 × Grüble h19 [~] — ... ⚭ Maria [~] (forenzično)"
+      },
+      {
+        "id": "s23-r1",
+        "datum": "3. December 1837 [~]",
+        "hise": [
+          31
+        ],
+        "opis": "Grüble h31/h51 [~] × Butoraj? h7 — Johann [~] ⚭ ... (forenzično, hiša nejasna)"
+      },
+      {
+        "id": "s23-r2",
+        "datum": "10. December 1837 [~]",
+        "hise": [
+          48
+        ],
+        "opis": "Sečje selo? h2 × Grüble h48 [~] — ... (forenzično)"
+      },
+      {
+        "id": "s23-r3",
+        "datum": "15. December 1837 [~]",
+        "hise": [
+          22,
+          37
+        ],
+        "opis": "Grüble h22 [~] × Grüble h37 [~] — dvojni gribeljski (forenzično)"
+      },
+      {
+        "id": "s23-r4",
+        "datum": "26. December 1837 [~]",
+        "hise": [
+          10
+        ],
+        "opis": "Grüble h10 [~] × Mavrlen? h3 — ... (forenzično)"
+      },
+      {
+        "id": "s23-r5",
+        "datum": "27./29. December 1837 [~]",
+        "hise": [
+          7
+        ],
+        "opis": "Preloka? h5 × Grüble h7 [~] — ... (forenzično)"
+      },
+      {
+        "id": "s23-r6",
+        "datum": "30. December 1837 [~]",
+        "hise": [
+          55,
+          18
+        ],
+        "opis": "Grüble h55 [~] × Grüble h18 [~] — dvojni gribeljski (forenzično)"
+      },
+      {
+        "id": "s23-r7",
+        "datum": "31. December 1837 [~]",
+        "hise": [
+          9
+        ],
+        "opis": "Zapudje? h3 × Grüble h9 [~] — ... (forenzično, zadnji vnos leta)"
+      }
     ],
     "negotovi": [
-      { "id": "s19-r7", "opomba": "restart marg. 1, 1.7.1837 — gribeljskost nejasna" },
-      { "id": "s21-r2", "opomba": "14.8.1837, marg. 8 — verjetno nevesta Grüble h17 [~] (forenzični odčitek cropa)" },
-      { "id": "s21-r3", "opomba": "28.8.1837, marg. 9 — verjetno nevesta Grüble h35 [~]" },
-      { "id": "s21-r5", "opomba": "17.9.1837, marg. 11 — verjetno ženin Grüble h28 [~]" },
-      { "id": "s21-r6", "opomba": "24.9.1837, marg. 12 — verjetno nevesta Grüble h15 [~]" },
-      { "id": "s21-r7", "opomba": "27/29.9.1837, marg. 13 — verjetno nevesta Grüble h5/h9 [~]" },
-      { "id": "s22-r1", "opomba": "29.10.1837, marg. 4 — verjetno nevesta Grüble h33 [~]" },
-      { "id": "s22-r4", "opomba": "12.11.1837, marg. 7 — verjetno ženin Grüble h14 [~]" },
-      { "id": "s22-r5", "opomba": "19.11.1837, marg. 8 — verjetno nevesta Grüble h45 [~]" },
-      { "id": "s22-r6", "opomba": "21.11.1837, marg. 9 — verjetno ženin Grüble h6 [~]" },
-      { "id": "s22-r7", "opomba": "26.11.1837, marg. 10 — verjetno nevesta Grüble h19 [~]" },
-      { "id": "s23-r1", "opomba": "3.12.1837, marg. 11 — verjetno ženin Grüble h31/h51 [~]" },
-      { "id": "s23-r2", "opomba": "10.12.1837, marg. 12 — verjetno nevesta Grüble h48 [~]" },
-      { "id": "s23-r3", "opomba": "15.12.1837, marg. 13 — verjetno dvojni Griblje h22×h37 [~]" },
-      { "id": "s23-r4", "opomba": "26.12.1837, marg. 14 — verjetno ženin Grüble h10 [~]" },
-      { "id": "s23-r5", "opomba": "27/29.12.1837, marg. 15 — verjetno nevesta Grüble h7 [~]" },
-      { "id": "s23-r6", "opomba": "30.12.1837, marg. 16 — verjetno dvojni Griblje h55×h18 [~]" },
-      { "id": "s23-r7", "opomba": "31.12.1837, marg. 17 — verjetno nevesta Grüble h9 [~], zadnji vnos leta" }
+      {
+        "id": "s19-r7",
+        "opomba": "restart marg. 1, 1.7.1837 — gribeljskost nejasna"
+      },
+      {
+        "id": "s21-r7",
+        "opomba": "hišna št. neveste morda h5 ali h9 [~]"
+      },
+      {
+        "id": "s23-r1",
+        "opomba": "hišna št. ženina morda h31 ali h51 [~]"
+      }
     ],
-    "steviloPotrjenihVerjetnih": 15,
-    "steviloDodatnihVerjetnihSignalovForenzicno": 17,
-    "steviloDvojnihGribeljskih": 5,
+    "steviloPotrjenihVerjetnih": 32,
+    "steviloDvojnihGribeljskih": 7,
     "hise": {
-      "h3": { "m": ["s19-r1"] },
-      "h11": { "m": ["s19-r3", "s20-r3", "s20-r6"], "opomba": "s19-r3/s20-r3: Georg Mileg/Malig [~]; s20-r6 nevesta h11 [~forenzično] — preveriti identitete" },
-      "h13": { "m": ["s20-r1"] },
-      "h20": { "m": ["s22-r2"], "opomba": "ponovljiva hiša (cf. P260/P261)" },
-      "h21": { "m": ["s19-r1"] },
-      "h26": { "m": ["s19-r5", "s20-r2"], "opomba": "BRING (cf. P261 h26)" },
-      "h29": { "m": ["s19-r2", "s20-r5"] },
-      "h36": { "m": ["s19-r4"], "opomba": "PEZDIRC" },
-      "h38": { "m": ["s22-r3"], "opomba": "KAMBIG/KAMBIČ" },
-      "h39": { "m": ["s19-r6"], "opomba": "cf. P261 h39" },
-      "h41": { "m": ["s20-r4"], "opomba": "PEZDIRC (cf. P261 h41)" },
-      "h42": { "m": ["s19-r3", "s21-r1"] },
-      "h43": { "m": ["s19-r4"] },
-      "h58": { "m": ["s20-r2"] },
-      "h62": { "m": ["s20-r5"] }
+      "h3": {
+        "m": [
+          "s19-r1"
+        ]
+      },
+      "h11": {
+        "m": [
+          "s19-r3",
+          "s20-r3",
+          "s20-r6"
+        ],
+        "opomba": "s19-r3/s20-r3: Georg Mileg/Malig [~]; s20-r6 nevesta h11 [~forenzično]"
+      },
+      "h13": {
+        "m": [
+          "s20-r1"
+        ]
+      },
+      "h20": {
+        "m": [
+          "s22-r2"
+        ],
+        "opomba": "ponovljiva hiša (cf. P260/P261)"
+      },
+      "h21": {
+        "m": [
+          "s19-r1"
+        ]
+      },
+      "h26": {
+        "m": [
+          "s19-r5",
+          "s20-r2"
+        ],
+        "opomba": "BRING (cf. P261 h26)"
+      },
+      "h29": {
+        "m": [
+          "s19-r2",
+          "s20-r5"
+        ]
+      },
+      "h36": {
+        "m": [
+          "s19-r4"
+        ],
+        "opomba": "PEZDIRC"
+      },
+      "h38": {
+        "m": [
+          "s22-r3"
+        ],
+        "opomba": "KAMBIG/KAMBIČ"
+      },
+      "h39": {
+        "m": [
+          "s19-r6"
+        ],
+        "opomba": "cf. P261 h39"
+      },
+      "h41": {
+        "m": [
+          "s20-r4"
+        ],
+        "opomba": "PEZDIRC (cf. P261 h41)"
+      },
+      "h42": {
+        "m": [
+          "s19-r3",
+          "s21-r1"
+        ]
+      },
+      "h43": {
+        "m": [
+          "s19-r4"
+        ]
+      },
+      "h58": {
+        "m": [
+          "s20-r2"
+        ]
+      },
+      "h62": {
+        "m": [
+          "s20-r5"
+        ]
+      },
+      "h6": {
+        "m": [
+          "s22-r6"
+        ],
+        "opomba": "forenzično [~]"
+      },
+      "h7": {
+        "m": [
+          "s23-r5"
+        ],
+        "opomba": "forenzično [~]"
+      },
+      "h9": {
+        "m": [
+          "s23-r7"
+        ],
+        "opomba": "forenzično [~]; s21-r7 morda h5/h9 [~]"
+      },
+      "h10": {
+        "m": [
+          "s23-r4"
+        ],
+        "opomba": "forenzično [~]"
+      },
+      "h14": {
+        "m": [
+          "s22-r4"
+        ],
+        "opomba": "forenzično [~]"
+      },
+      "h15": {
+        "m": [
+          "s21-r6"
+        ],
+        "opomba": "forenzično [~]"
+      },
+      "h17": {
+        "m": [
+          "s21-r2"
+        ],
+        "opomba": "forenzično [~]"
+      },
+      "h18": {
+        "m": [
+          "s23-r6"
+        ],
+        "opomba": "forenzično [~], dvojni z h55"
+      },
+      "h19": {
+        "m": [
+          "s22-r7"
+        ],
+        "opomba": "forenzično [~]"
+      },
+      "h22": {
+        "m": [
+          "s23-r3"
+        ],
+        "opomba": "forenzično [~], dvojni z h37"
+      },
+      "h28": {
+        "m": [
+          "s21-r5"
+        ],
+        "opomba": "forenzično [~]"
+      },
+      "h31": {
+        "m": [
+          "s23-r1"
+        ],
+        "opomba": "forenzično [~], morda h31/h51"
+      },
+      "h33": {
+        "m": [
+          "s22-r1"
+        ],
+        "opomba": "forenzično [~]"
+      },
+      "h35": {
+        "m": [
+          "s21-r3"
+        ],
+        "opomba": "forenzično [~]"
+      },
+      "h37": {
+        "m": [
+          "s23-r3"
+        ],
+        "opomba": "forenzično [~], dvojni z h22"
+      },
+      "h45": {
+        "m": [
+          "s22-r5"
+        ],
+        "opomba": "forenzično [~]"
+      },
+      "h48": {
+        "m": [
+          "s23-r2"
+        ],
+        "opomba": "forenzično [~]"
+      },
+      "h55": {
+        "m": [
+          "s23-r6"
+        ],
+        "opomba": "forenzično [~], dvojni z h18"
+      },
+      "h5": {
+        "m": [
+          "s21-r7?"
+        ],
+        "opomba": "morda s21-r7 nevesta h5/h9 [~], forenzično"
+      }
     }
   },
   "niti": {
@@ -271,7 +1744,14 @@
       "s19-r3 ženin Georg Mileg? h11 (5.6.1837)",
       "s20-r3 ženin Georg Malig? h11 (30.7.1837) — morebiti ista oseba, preveriti"
     ],
-    "HISE_PONOVLJENE": ["h11", "h20", "h26", "h29", "h39", "h42"]
+    "HISE_PONOVLJENE": [
+      "h11",
+      "h20",
+      "h26",
+      "h29",
+      "h39",
+      "h42"
+    ]
   },
   "kraji": [
     "Grüble/Griblje",
