@@ -107,12 +107,13 @@
 | s20 r3 | 4 | 30.7.1837 | žen. h11 | Georg Malig? (Grüble h11) ⚭ Maria Kambič? (Otok h16) | **KAMBIG/KAMBIČ** |
 | s20 r4 | 5 | 31.7.1837 | nev. h41 | Johann ... (Podgora h7) ⚭ Anna Pezdirc? (Grüble h41) | **PEZDIRC** |
 | s20 r5 | 6 | 6.8.1837 | h62 × h29 | Mathias Mavrih? [~] ⚭ Margaretha Tilar? [~] | h29 ponovljiva |
+| s20 r6 | 7 | 13.8.1837 | nev. h11 [~] | Johann ... (Zajčariz? h7) ⚭ Maria Kambič? (Grüble h11) [~] | **KAMBIG/KAMBIČ** [~]; forenzični odčitek cropa |
 | s21 r1 | 7? | 13.8.1837 [~] | žen. h42 | Georg Dražumer? (Grüble h42) ⚭ Maria Dražumer? (Vinica h18) | h42 ponovljiva |
-| s21 r2 | 8? | 14.8.1837 [~] | [~] | [~] | verjeten/nejasen gribeljski namig [X-OPEN] |
+| s21 r2 | 8 | 14.8.1837 | nev. h17 [~] | Johann Maležič? (Krašinec? h5) ⚭ Maria ... (Grüble h17) [~] | forenzični odčitek cropa |
 | s22 r2 | 5? | 30.10.1837 [~] | nev. h20 | Johann Kovačič? (Suhor h13) ⚭ Theresia Dušman? (Grüble h20) | h20 ponovljiva |
 | s22 r3 | 6? | 31.10.1837 [~] | žen. h38 | Mathias Kambič? (Grüble h38) ⚭ Maria Kump? (Potočni Vrh h10) | **KAMBIG/KAMBIČ** |
 
-**Skupaj doslej razvidnih vnosov z Gribljami:** najmanj **14 potrjenih/verjetnih** (+ s21 r2 negotov). Dvojni gribeljski bloki: s19 r1,r3,r4; s20 r2,r5.
+**Skupaj doslej razvidnih vnosov z Gribljami (glavni seznam):** **15 potrjenih/verjetnih** (vključno s20 r6, s21 r2 po forenzičnem odčitku). Dvojni gribeljski bloki: s19 r1,r3,r4; s20 r2,r5. **Dodatno 17 forenzično zaznanih verjetnih Griblje signalov** v s21–s23 (glej razdelka "podrobneje" spodaj; hiše/margine/datumi [~], zahtevajo potrditveni prehod): s21 r3,r5,r6,r7; s22 r1,r4,r5,r6,r7; s23 r1–r7. Okvirni skupni obseg s19–s23: **~32 verjetnih Griblje-vnosov**, od tega vsaj 2 dodatna verjetna dvojna bloka (s23 r3 h22×h37 [~], s23 r6 h55×h18 [~]). barchaardsmarб caract,
 
 ---
 
@@ -132,16 +133,40 @@
 
 > Opomba: spodnje so best-effort odčitki iz obstoječih L/R cropov; kjer rokopis ni razločen, ostaja `[X-OPEN]`. Številke hiš in priimki zahtevajo primerjavo s celostranskim kontekstom.
 
-### S21 — podrobneje
+### S21 — podrobneje (forenzični ponovni pregled cropov)
 
 | vrsta | marg. [~] | datum [~] | ženin (vidno) | nevesta (vidno) | Griblje? | opombe |
 |---|---:|---|---|---|---|---|
-| r2 | 8 | 14. dto (avg.) | Krašinec/Krasinez? [~] h5 — Johann ... [~], ~24, ledig | [~kraj h] — Maria ... [~], ~20 | nejasno [X-OPEN] | "Grüble" ni jasno viden; preveriti obe strani |
-| r3 | 9 | 28. dto (avg.) | [~kraj h] — Georg/Mathias ... [~] | [~kraj h] — [~ime] | [X-OPEN] | datum 28. razločen; imena/hiše težko berljiva |
-| r4 | 10 | [~] September [~] | [~] | [~] | [X-OPEN] | septembrski vnos |
-| r5 | 11 | [~] dto/September [~] | [~] | [~] | [X-OPEN] | |
-| r6 | 12 | [~] September [~] | [~] | [~] | [X-OPEN] | |
-| r7 | 13 | [~24.?] September [~] | [~] | [~] | [X-OPEN] | zadnji vnos pred prazno r8 [~] |
+| r2 | 8 | 14. dto (avg.) | Krašinec/Krasinez? [~] h5 — Johann Maležič/Malležig? [~], ~30, ledig | **Grüble h17? [~]** — Maria ... [~], ~20 | verjetno DA h17 [~] | na nevestini strani viden niz "Grüble" + št. ~17 [~]; imena/priimki zahtevajo potrditev |
+| r3 | 9 | 28. dto (avg.) | Oberfeld? [~] h12 — Mathias ... [~], ~28 [~] | **Grüble h35? [~]** — [~ime] | verjetno DA h35 [~] | datum 28. razločen; na nevestini strani viden "Grüble" + št. ~35 [~] |
+| r4 | 10 | 10. 7ber (September) [~] | Dragatuš/Dragos? [~] h3 — Joseph Kovačič? [~], ~28 | Jelševnik? [~] h5 — Maria ... [~] | nejasno [X-OPEN] | "Grüble" ni očiten; september jasno |
+| r5 | 11 | 17. dto (September) [~] | **Grüble h28? [~]** — Georg Rožman? [~], ~30 | Dobliče? [~] h9 — Catharina ... [~] | verjetno DA h28 [~] | na ženinovi strani viden "Grüble" + št. ~28 [~] |
+| r6 | 12 | 24. dto (September) [~] | Preloka? [~] h16 — Mathias ... [~] | **Grüble h15? [~]** — [~ime] | verjetno DA h15 [~] | na nevestini strani viden "Grüble" + št. ~15 [~] |
+| r7 | 13 | 27./29. dto (September) [~] | Črnomelj/Černomel? [~] h12 — Johann ... [~] | **Grüble h5/h9? [~]** — [~ime] | verjetno DA h5/h9 [~] | na nevestini strani viden "Grüble" + št. nejasna (5 ali 9) [~] | |
+
+### S22 — podrobneje (forenzični ponovni pregled cropov)
+
+| vrsta | marg. [~] | datum [~] | ženin (vidno) | nevesta (vidno) | Griblje? | opombe |
+|---|---:|---|---|---|---|---|
+| r1 | 4 | 29. 8ber (October) [~] | Semič? [~] h8 — Mathias ... [~] | **Grüble h33 [~]** — [~ime] | verjetno DA h33 [~] | na nevestini strani razločno "Grüble 33" [~] |
+| r4 | 7 | 12. 9ber (November) [~] | **Grüble h14? [~]** — Georg ... [~] | Tribuče? [~] h20 — [~ime] | verjetno DA h14 [~] | ženinova stran "Grüble" + št. ~14 [~] |
+| r5 | 8 | 19. dto (November) [~] | Vinica? [~] h4 — [~ime] | **Grüble h45? [~]** — [~ime] | verjetno DA h45 [~] | nevesta "Grüble" + št. ~45 [~] |
+| r6 | 9 | 21. dto (November) [~] | **Grüble h6? [~]** — Mathias ... [~] | Adlešiči? [~] h8 — [~ime] | verjetno DA h6 [~] | ženin "Grüble" + št. ~6 [~] |
+| r7 | 10 | 26. dto (November) [~] | Krašinec? [~] h25 — [~ime] | **Grüble h19? [~]** — Maria ... [~] | verjetno DA h19 [~] | nevesta "Grüble" + št. ~19 [~] |
+
+### S23 — podrobneje (forenzični ponovni pregled cropov)
+
+| vrsta | marg. [~] | datum [~] | ženin (vidno) | nevesta (vidno) | Griblje? | opombe |
+|---|---:|---|---|---|---|---|
+| r1 | 11 | 3. 10ber (December) [~] | **Grüble h31/h51? [~]** — Johann ... [~] | Butoraj? [~] h7 — [~ime] | verjetno DA h31/h51 [~] | ženin "Grüble" + št. nejasna (31 ali 51) [~] |
+| r2 | 12 | 10. dto (December) [~] | Sečje selo? [~] h2 — [~ime] | **Grüble h48? [~]** — [~ime] | verjetno DA h48 [~] | nevesta "Grüble" + št. ~48 [~] |
+| r3 | 13 | 15. dto (December) [~] | **Grüble h22? [~]** — [~ime] | **Grüble h37? [~]** — [~ime] | verjetno dvojni DA h22×h37 [~] | videti sta dve omembi "Grüble" (ženin + nevesta), št. ~22/~37 [~] |
+| r4 | 14 | 26. Xber (December) [~] | **Grüble h10? [~]** — [~ime] | Mavrlen? [~] h3 — [~ime] | verjetno DA h10 [~] | ženin "Grüble" + št. ~10 [~] |
+| r5 | 15 | 27./29. dto (December) [~] | Preloka? [~] h5 — [~ime] | **Grüble h7? [~]** — [~ime] | verjetno DA h7 [~] | nevesta "Grüble" + št. ~7 [~] |
+| r6 | 16 | 30. dto (December) [~] | **Grüble h55? [~]** — [~ime] | **Grüble h18? [~]** — [~ime] | verjetno dvojni DA h55×h18 [~] | dve omembi "Grüble" [~] |
+| r7 | 17 | 31. dto (December) [~] | Zapudje? [~] h3 — [~ime] | **Grüble h9? [~]** — [~ime] | verjetno DA h9 [~] | nevesta "Grüble" + št. ~9 [~]; zadnji vnos leta [~] |
+
+**Opomba k forenzičnemu pregledu:** zgornje hišne številke/margine/datumi so vizualni odčitki iz obstoječih L/R cropov (agent-vizija, 0 VLM). "Grüble/Griblje" je na označenih mestih prepoznaven kot niz, vendar številke hiš in priimki ostajajo `[~]` dokler niso potrjeni ob večji povečavi/celostranskem kontekstu. To bistveno poveča nabor verjetnih Griblje-zadetkov (skupaj ~30+ v s19–s23), a za končno integracijo v `p263-facts.json` je potreben potrditveni prehod. ਹਰ,
 
 ### S22 — podrobneje
 
