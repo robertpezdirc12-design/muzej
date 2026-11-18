@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 """P262 — s18 odločilni mega-zoomi: r1 Haus-Nr + prečrtan-ort, datumi 6x, r4-ort, starosti, r6-bride-Nr."""
 import subprocess
+import sys
 import os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -38,7 +39,7 @@ crops = [
     ("mz_r7_bride", 860, 1175, 1146, 1340, 5),
 ]
 for tag, x0, y0, x1, y1, s in crops:
-    subprocess.run(["python3", "-c",
+    subprocess.run([sys.executable, "-c",
         f"from PIL import Image; im=Image.open('{SRC}'); "
         f"c=im.crop(({x0},{y0},{x1},{y1})); c.resize((int(c.width*{s}),int(c.height*{s})),Image.LANCZOS).save('{OUT}/{tag}.png')"], check=True)
 

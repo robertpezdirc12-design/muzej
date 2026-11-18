@@ -3,6 +3,7 @@
 """P262 — s18 per-row/cell zooms (AGENT-VIZIJA). 7 vrstic (m6–m12), L+R stran."""
 import os
 import subprocess
+import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = f"{ROOT}/research/issue17/p261-work/s18.jpg"
@@ -30,6 +31,6 @@ for tag, x0, y0, x1, y1 in cmds:
     code = (f"from PIL import Image; im=Image.open('{SRC}'); "
             f"im.crop(({x0},{y0},{x1},{y1})).resize((({x1}-{x0})*{scale},({y1}-{y0})*{scale}),Image.LANCZOS)"
             f".save('{OUT}/{tag}.png')")
-    subprocess.run(["python3", "-c", code], check=True)
+    subprocess.run([sys.executable, "-c", code], check=True)
 
 print("zooms:", len(os.listdir(OUT)))

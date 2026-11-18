@@ -32,8 +32,8 @@
    "sub dioe."
   ],
   "tiers": {
-   "six": 36,
-   "five": 32,
+   "six": 42,
+   "five": 26,
    "four": 8,
    "three": 8,
    "two": 8,
@@ -233,7 +233,13 @@
    "39": "★★★ P261-hiša: m14-1836-NEVESTA-Anna-ŠHRING-GRIBLJE-39-×-Mathias-BRING-h20-POLNI-DVOJNI! — h39-DVIG-1859→1836-ZA-23-LET + h39-ŠEST-KNJIŽNA-5→6 (01738-1.-blok!) — BRING×ŠHRING-endogamija!",
    "41": "★★★★★ P261-hiša: m2-RESTART-1836-ŽENIN-Georg-PEZDIRIZ-38-l-GRIBLJE-41-×-Anna-BRING-h26-POLNI-DVOJNI-ISTI-DAN-kot-m1! — h41-DVIG-1866→1836-ZA-30-LET + h41-ŠEST-KNJIŽNA-5→6 (01738-1.-blok!) — PEZDIRC-NIT!",
    "17": "★★★★★★ P262-hiša-DVIG-37-2.-NAJVEČJI-NOTRANJOSTI: m10-1838 (1. Februar d°!-proklamacija-6-Nov-1837!-s18-Pag. 33) — NEVESTA-Maria-KRAL-24-l-GRABLJE-17-×-ženin-Martin-PAPIGH-33-l-'Gerzhich-33'-[~X-OPEN!] = h17-1.-01738-BLOK — POROČNA-firstYear-1875→1838-DVIG-ZA-37-LET (2.-NAJVEČJI-DVIG-NOTRANJOSTI-po-h22-41-P255!-NAJVEČJI-P262!) — ŠEST-KNJIŽNA-5→6-knjig!",
-   "31": "★★★★★★ P262-hiša-DVIG-19: m8-1838 (1. Februar d°!-proklamacija-1-Nov-1837!-s18-Pag. 33) — NEVESTA-Anna-TILAH-18-l-GRABLJE-31-×-ženin-Johann-KRISCHAN-20-l-GRABLJE-63-POLNI-DVOJNI-ALL-GRABLJE = h31-1.-01738-BLOK — POROČNA-firstYear-1857→1838-DVIG-ZA-19-LET — ŠEST-KNJIŽNA-5→6-knjig! + mladoletni-par-18l×20l-NAJMLAJŠI-01738-ženin!"
+   "31": "★★★★★★ P262-hiša-DVIG-19: m8-1838 (1. Februar d°!-proklamacija-1-Nov-1837!-s18-Pag. 33) — NEVESTA-Anna-TILAH-18-l-GRABLJE-31-×-ženin-Johann-KRISCHAN-20-l-GRABLJE-63-POLNI-DVOJNI-ALL-GRABLJE = h31-1.-01738-BLOK — POROČNA-firstYear-1857→1838-DVIG-ZA-19-LET — ŠEST-KNJIŽNA-5→6-knjig! + mladoletni-par-18l×20l-NAJMLAJŠI-01738-ženin!",
+   "29": {
+    "blocks": 24,
+    "firstYear": 1837,
+    "span": 85,
+    "note": "P263: m14-1837-nevesta-Anna-MILEK-45-l-GRÜBLE-29 × Georg-SIMIG-62-l-h60 (isti-mož-1833-59-l!)-DVIG-22-ŠEST-KNJIŽNI-41→42"
+   }
   }
  },
  "missingBookAnalysis": {
@@ -439,9 +445,9 @@
   {
    "sig": "01738",
    "role": "poročna-predhodnik",
-   "years": "1828–1837 + 1873",
-   "blocks": 65,
-   "houses": 43
+   "years": "1828–1838 + 1873",
+   "blocks": 73,
+   "houses": 46
   },
   {
    "sig": "04104",
@@ -650,10 +656,10 @@
   {
    "houseNo": "11",
    "kind": "griblje",
-   "blocks": 31,
+   "blocks": 33,
    "books": 6,
    "perBook": {
-    "01738": 1,
+    "01738": 3,
     "04104": 7,
     "04105": 7,
     "04455": 3,
@@ -662,7 +668,7 @@
    },
    "firstYear": 1831,
    "lastYear": 1922,
-   "span": 91
+   "span": 92
   },
   {
    "houseNo": "12",
@@ -949,18 +955,19 @@
   {
    "houseNo": "29",
    "kind": "griblje",
-   "blocks": 23,
-   "books": 5,
+   "blocks": 24,
+   "books": 6,
    "perBook": {
+    "01738": 1,
     "04104": 5,
     "04105": 4,
     "04455": 3,
     "04106": 4,
     "04894": 7
    },
-   "firstYear": 1859,
+   "firstYear": 1837,
    "lastYear": 1921,
-   "span": 62
+   "span": 85
   },
   {
    "houseNo": "30",
@@ -1451,10 +1458,10 @@
   {
    "houseNo": "60",
    "kind": "griblje",
-   "blocks": 31,
+   "blocks": 32,
    "books": 6,
    "perBook": {
-    "01738": 1,
+    "01738": 2,
     "04104": 3,
     "04105": 9,
     "04455": 3,
@@ -1463,7 +1470,7 @@
    },
    "firstYear": 1833,
    "lastYear": 1923,
-   "span": 90
+   "span": 91
   },
   {
    "houseNo": "61",
@@ -2036,7 +2043,7 @@
   }
  ],
  "korpusUcinek": {
-  "vitalsTotal": 2043,
+  "vitalsTotal": 2085,
   "p255": "+3 bloki 1828 — šest-knjižne 9→12, razpon 66→96 (h6)",
   "p256": "+5 blokov 1829 — šest-knjižne 12→16, bothEra-poročna 13→17, dvigi 35/34/30/30/29",
   "p257": "+11 blokov 1830/1831 (1×h22-1830 + 10×1831!) — šest-knjižne 16→23 (NAJVEČJI-SKOK!), bothEra-poročna 17→26, dvigi h54-37 (2. vseh časov!)/h56-36/h27-33/h11-32/h1-30/h26-28[~]/h33-28[~]/h3-27/h50-27 (PEZDIRC-NIT-42-let!)/h65-26 (bila-prva-hiša-1857!), h22-3.-zaporedno-leto-1830, h50-span-93 (3. mesto!)",
@@ -2044,6 +2051,7 @@
   "newModule": "src/data/atlas/parish-house-stories.ts (regeneriran p257_gen.py)",
   "ui": "HouseStoriesP254 v ParishTab (Matrike) + Notranjost01738Leto1829 (P256) + P257-kartice",
   "qa": "qa-p254 (živa rekalkulacija!) + qa-p255/256 + qa-p257 (251. kontrola!)",
-  "verifier": "scripts/p254_house_stories.py --check + scripts/p256_1829.py + scripts/p257_1830_1831.py (I1–I10 + --live!)"
+  "verifier": "scripts/p254_house_stories.py --check + scripts/p256_1829.py + scripts/p257_1830_1831.py (I1–I10 + --live!)",
+  "p263": "+4 bloki 1837 (s19: h60+h29+h11×2) — šest-knjižne 41→42 (h29!), bothEra-poročna 41→42, dvig h29 1859→1837 (22 let)"
  }
 }

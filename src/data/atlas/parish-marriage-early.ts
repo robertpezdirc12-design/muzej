@@ -1503,3 +1503,39 @@ export const PREDHODNIK_262_KRAJI = {
   si: "★★★ NOVE-VASI-×7-P262 [~ALL-X-OPEN-garbles]: '(Kris)ching 35'-m6-ženin-Georg-Krischan + 'HARVINJHA/Garvinjha 11+5'-m7-ženin-Peter-Halzigh-+-m7-nevesta-Anna-Bulveg-ISTA-VAS-2-HIŠI! + '(PREČRTAN) 31'-m9-ženin-Mathias-Bilizhigh-PREČRTANA-VAS-1:1-forenzika! + 'GERZHICH/Gerzhigh 33'-m10-ženin-Martin-Papigh + 'VRANOVICH 14+6'-m9-nevesta-Maria-Kajsha-+-m12-nevesta-Agnes-Kajsha-ISTA-VAS-2-HIŠI-1:1-POTRDITEV! + 'KREASING 22'-m11-nevesta-Maria-Vipsauz + 'RUMPHANZ'-m12-annot-X-OPEN! + POZNAME-VASI: OLOK 2 (m11-ženin-Georg-Nagel-3.-OLOK-hiša-po-24/19-P261!) + GRADAG 20 (m12-ženin-Martin-Simonigh-GRADAC-2.-vpis-po-15-P261-P260-'Dragatz'-kontekst!) + GRABLJE-×4-hiše (m6-n-h36 + m8-ž-h63 + m8-n-h31 + m10-n-h17!)",
   en: "THE-NEW-VILLAGES-×7-P262 [~ALL-X-OPEN-garbles!]: '(Kris)ching-35'-m6 + 'HARVINJHA-11+5'-m7-THE-SAME-VILLAGE-2-HOUSES! + '(STRUCK-OUT)-31'-m9-THE-STRUCK-OUT-VILLAGE-1:1-forensics! + 'GERZHICH-33'-m10 + 'VRANOVICH-14+6'-m9+m12-THE-SAME-VILLAGE-2-HOUSES-1:1! + 'KREASING-22'-m11 + 'RUMPHANZ'-m12 [X-OPEN!] + the-known-villages: OLOK-2 (the-3rd-OLOK-house!) + GRADAG-20 (GRADAC-the-2nd-entry!) + GRABLJE-×4-houses (h36 + h63 + h31 + h17!)",
 } as const;
+
+/** P263 — NOTRANJOST 01738: 1837 (m12–m18, s19 = Pag. 35/36) + letni restart 1–2 (1838/1839 X-OPEN). */
+export const PREDHODNIK_1837_BLOCKS = {
+  noviBloki: 4,
+  vpisi: 8,
+  vitalsTotal: 2085,
+  byBook01738: 73,
+  dvigi: {
+    h29: "1859 → 1837 (22 let — m14-nevesta-Anna-MILEK-45-l-GRÜBLE-29! — PRVI-01738-blok-h29-ŠEST-KNJIŽNI-KLUB-41→42!)",
+  },
+  plusBlokiBrezDviga: {
+    h60: "+1 (m14-1837-ženin-Georg-SIMIG-ŠIMIČ!-62-l-=-P259-m24-1833-isti-mož-59-l!-firstYear-1833-ostaja!)",
+    h11: "+2 (m18-1837-ženin-Georg-Gerdofzhig-+-nevesta-Maria-[~Kraz/Kral] — POLNI-DVOJNI-h11×h11!-firstYear-1831-P257-ostaja!)",
+  },
+  polniDvojni: "h60×h29 (m14-oba-Griblje!) + h11×h11 (m18-OBA-PARTNERJA-ISTA-HIŠA!)",
+  stevilcenje: "12 (DUP-s-s18-m12!) → 14 (13-manjka!) → 15–18 → RESTART-na-1 (1.-Februar)-in-2 (4.-Februar) — zadnji-1837-vpis-=-11.-September-1837",
+  restart: "1.-Februar-1838|1839 [X-OPEN-glif-8↔9-kronologija-podpira-1839!]-+-4.-Februar — letno-številčenje-se-restarta-po-18-vpisih-1837",
+  foliacija: "Pag = 2·sken − 3 (s19 = 35/36-agent-vizija!) — serija-16/16-notranjosti (P259-10/10 + P260-3/3 + P261-1/1 + P262-1/1 + P263-1/1!)",
+  simicKontrola: "m14-ženin-Georg-SIMIG-62-l-=-P259-m24-1833-h60-59-l → +3-l-v-4-letih = KRONOLOŠKA-KONTROLA-1:1 (ŠIMIČ-nit-1833→1837!)",
+  urkunden: "6/8-'ohne-Aufgebot' + m17-Trauungsschein-Molling-31.-August-1837 (METLIKA!) + m18-k.k.-Trauungsschein-Nr-21-dd.-1.-August-1837 (vojaški!-»Nr 17-…-Comp.-…-aus-Molling-Nr 132«)",
+  duhovniki: "3-podpisnikov: Gregor-Dolinšek-Coop. (m12+m17) + Georg-[~Kraphovi(g/ž)]-Pfarrer (m14+m18+m1) + nečitljiv-[~Kampfi?] (m15+m16+m2)",
+  dokaz: "research/issue17/p263-work/ (s19-1:1-md5-117add77-507018B + s19_left/right/margins/dates + cal_L1/L1b/L2/L2b/L3/L4 + cal_R1/R2/R3 + zoom_m1y/m2y — 14-izrezov!-s20–s23-rezerve-md5-1:1) — metoda-AGENT-VIZIJA-0-VLM-klicev (P259-predpis!)",
+  p264: "s20+ = Pag. 37+ (1838/1839-nadaljevanje-m3+!) — s20–s23-REZERVE-že-na-disku (md5-13cbb85d/8c0faae3/e66f3d8a/8c64fd37!)",
+} as const;
+
+/** Niti P263: ŠIMIČ-1833→1837 + MILEK-h29-37-let + BRODARIČ + JURJEFZHIG-×3 + PAPIČ-×3 + KLEPEC-×2. */
+export const PREDHODNIK_263_NITI = {
+  si: "★★★★★ ŠIMIČ-KRONOLOŠKA-KONTROLA (m14-ženin-Georg-SIMIG-62-l-=-ISTI-ŽENIN-kot-P259-m24-1833-h60-59-l!-+3-l-v-4-letih!-Mathias-SCHMIG-+-Maria-SHMIG-3-vrstice-3-hiše-1832/33-P259!) + ★★★★★ MILEK-NIT-h29-1837→1874-=-37-LET (m14-nevesta-Anna-MILEK-45-l-↔-P250-m16-1874-h29-MILEK!-cf.-P249-m20-h22-1873-+-P257-m4-1830!) + ★★★ BRODARIČ-m15 (Georg-Brodarig-41-l-Krafing-7-+-oče-Nicolaus-+-priča-Mich.!-↔-P261-m4-1837-Dorothea-BRODARIIGH-+-P247-1877-MOH×BRODARIČ!) + ★★★ JURJEFZHIG-×3 (m12-ženin-Georg-+-oče-Mathias-+-m1-1838/9-nevesta-Maria-+-oče-Martin-+-priča-Nicolaus!) + ★★★ PAPIČ/POPIČ-×3 (m16-nevesta-Anna-Popish-+-m2-1838/9-nevesta-Maria-geb.-Popigh-+-oče-Georg-Popigh!) + ★★ KLEPEC-×2 (m15-mati-Maria-Klepec-+-m1-mati-Katherina-Klepec!) + ★★ KRIŽAN-izven-Gribelj (m17-ženin-Jacob-Hob.-Krisch-[~]-Gradaz-9 — hiša-NI-Griblje!-cf.-P262-×4-s18!)",
+  en: "★★★★★ THE-ŠIMIČ-CHRONOLOGY-CHECK (m14-groom-Georg-SIMIG-62-=-the-SAME-GROOM-as-P259-m24-1833-h60-59!-+3-in-4-years!-Mathias-SCHMIG-+-Maria-SHMIG-3-rows-3-houses!) + ★★★★★ THE-MILEK-THREAD-h29-1837→1874-=-37-YEARS (m14-bride-Anna-MILEK-↔-P250-m16-1874-h29-MILEK!) + ★★★ the-BRODARIČ-m15 (Georg-Brodarig-+-father-Nicolaus-+-witness-Mich.!-↔-P261-m4-1837-Dorothea-BRODARIIGH-+-P247-1877!) + ★★★ JURJEFZHIG-×3 (m12-groom+father-+-m1-1838/9-bride+father+witness!) + ★★★ PAPIČ/POPIČ-×3 (m16-bride-Anna-Popish-+-m2-bride-Maria-geb.-Popigh-+-father-Georg!) + ★★ KLEPEC-×2 (m15-mother-Maria-+-m1-mother-Katherina!) + ★★ the-KRIŽAN-outside-Griblje (m17-groom-Jacob-Hob.-Krisch-[~]-Gradaz-9!)",
+} as const;
+
+/** Kraji P263: GRÜBLE-h60/h29/h11 + Krafing + Gradaz + Molling + 5 X-OPEN vasi. */
+export const PREDHODNIK_263_KRAJI = {
+  si: "GRÜBLE (GRIBLJE): h60 (m14-ženin) + h29 (m14-nevesta) + h11 (m18-×2-oba-partnerja!) + pripisi-»zu Grüblau (dorf)« (m12+m15+m16+m1+m2!) · KRAFING: h4 (m12) + h7 (m15) + h3 (m15) + h22 (m2) [~Kranjig/Krajing-cf.-P257/P258] · GRADAZ (GRADAC): h9 (m17) + h15 (m1) · MOLLING (METLIKA): h59 (m17-+-Trauungsschein!) · [~X-OPEN]: 'Krapisse?'-h6 (m12) · 'Tribuche?'-h46 (m15) · 'Dobrauj?'-h10 (m16) · 'Gerzihje?'-h3 (m16) · '(R)Haun?'-h18 (m1) · 'Germ?'-h27 (m2)",
+  en: "GRÜBLE (GRIBLJE): h60 (m14-groom) + h29 (m14-bride) + h11 (m18-×2-both-partners!) + the-»zu Grüblau (dorf)«-notes (m12+m15+m16+m1+m2!) · KRAFING: h4 + h7 + h3 + h22 · GRADAZ (GRADAC): h9 + h15 · MOLLING (METLIKA): h59 (m17-+-the-Trauungsschein!) · [~X-OPEN]: 'Krapisse?'-h6 · 'Tribuche?'-h46 · 'Dobrauj?'-h10 · 'Gerzihje?'-h3 · '(R)Haun?'-h18 · 'Germ?'-h27",
+} as const;

@@ -18,7 +18,7 @@ bloki = re.findall(r'houseNo: "([^"]+)",\s*bookSignature: "04455",\s*year: 1882,
 check("I1 bloki 04455/1882 == 7 (6-novih + 1-MERGE-z-P80-sidrom-h36!)",
       len(bloki) == 7, f"najdeno {len(bloki)}")
 skupaj = src.count('bookSignature: "04455"')
-check("I2 vitals-2081 + 04455==269 (MERGE!-P243-živo!)", "HOUSE_VITALS.length !== 2011" not in src and skupaj == 269, f"04455={skupaj}")
+check("I2 vitals-2085 + 04455==269 (MERGE!-P243-živo!)", "HOUSE_VITALS.length !== 2011" not in src and skupaj == 269, f"04455={skupaj}")
 
 # hiše-1882 (vrstni red 35, 38, 56, 13, 8, 1, 36) — preko žive izvedbe filtra (regex po novih blokih + P80-sidro)
 nove = re.findall(r'houseNo: "([^"]+)",\s*bookSignature: "04455",\s*year: 1882,\s*scan: (\d+),\s*page: (\d+),', src)
@@ -47,8 +47,8 @@ check("I4c OBA-PEZDIRC-v9 + v13-vdova-48 + v16-NEVESTA-16 + IZMENA-vlog-v6/v7",
       "OBA-PEZDIRC" in an and "48" in an and "16" in an and "IZMENA-vlog" in an)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2081")
-check("I5 qa-p241 + števec-2012", "qa-p241-parish-marriage-early-04455-1882" in qa and st >= 145, f"2081-številcev={st}")
+st = qa.count("HOUSE_VITALS.length !== 2085")
+check("I5 qa-p241 + števec-2012", "qa-p241-parish-marriage-early-04455-1882" in qa and st >= 145, f"2085-številcev={st}")
 check("I5b sidra-262 + 1879:9-P244 + 1880:3-P243 (qa-sidra-message-P244-živo!)", "poročna sidra ≠ 262 (1873:4-P251! · 1874:11-P250! · 1875:1-P249! · 1876:6-P248! · 1877:5-P247! · 1878:7-P246! · 1879:9-P244! · 1880:3-P243!" in qa)
 check("I5c dobe-202 + 32-pred-linijskih (P244-živo!)", "dobe-bloki ≠ 236/7/26" in qa and "66 pred-linijskih 1873-P251×4!+1874-P250×11!+1875-P249×1!+1876-P248×6!+1877-P247×5!" in qa)
 
@@ -76,7 +76,7 @@ check("I9 UI-MarriageEarly1882-v-ParishTab + importi", "MarriageEarly1882" in op
       and "H1_1882_REKORD" in open(f"{ROOT}/src/components/museum/museum-atlas.tsx", encoding="utf-8").read())
 check("I9b worklog-P241-vnos", "## P241" in open(f"{ROOT}/worklog.md", encoding="utf-8").read())
 check("I9c stari-verifikatorji-na-živih-številkah (P258: 2059!)",
-      "2081" in open(f"{ROOT}/scripts/p238_parish_marriage_1885_04455.py", encoding="utf-8").read()
+      "2085" in open(f"{ROOT}/scripts/p238_parish_marriage_1885_04455.py", encoding="utf-8").read()
       and "269" in open(f"{ROOT}/scripts/p239_parish_marriage_1884_04455.py", encoding="utf-8").read()
       and "269" in open(f"{ROOT}/scripts/p240_parish_marriage_1883_04455.py", encoding="utf-8").read()
       and "269" in open(f"{ROOT}/scripts/p237_parish_forensics.py", encoding="utf-8").read())

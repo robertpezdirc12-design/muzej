@@ -51,8 +51,8 @@ check("I1d foliacija: Pag. 13/15/17 (2·sken−3 ×9 — svinčnik 15/16 + 17/18
 vseh = re.findall(r'bookSignature: "01738"', src)
 skupaj = len(re.findall(r'bookSignature: "', src))
 leta1738 = sorted(set(int(y) for h, b, y in re.findall(r'houseNo: "([^"]+)",\s*bookSignature: "(01738)",\s*year: (\d+)', src) if b == "01738"))
-check("I2 vitals == 2081 + 01738 == 69 + leta == 1828–1833+1873",
-      "HOUSE_VITALS.length !== 2081" not in src and len(vseh) == 69 and skupaj == 2081
+check("I2 vitals == 2085 + 01738 == 69 + leta == 1828–1833+1873",
+      "HOUSE_VITALS.length !== 2085" not in src and len(vseh) == 73 and skupaj == 2085
       and leta1738 == [1828, 1829, 1830, 1831, 1832, 1833, 1834, 1835, 1836, 1837, 1838, 1873],
       f"01738={len(vseh)} skupaj={skupaj} leta={leta1738}")
 
@@ -130,9 +130,9 @@ check("I7d h66-m22: KRIŽAN×KRIŽAN-PAR + 3:1-'66' + BREZ-04455",
       "KRIŽAN×KRIŽAN-PAR" in w66 and "3:1" in w66 and "BREZ-04455" in w66, "-")
 
 # ——— I8: hišne zgodbe — 31 šest-knjižnih + p258Dvigi + tierji 31/35/10 ———
-check("I8 HOUSE_STORY_SIX == 36 (+5: h24/h53/h60-P259 + h4/h9-P260!) + TOTALS-2069",
-      "sixBook: 41" in stories and "fiveBook: 27" in stories and "fourBook: 8" in stories
-      and "blocks: 2081" in stories and "bothEraPorocna: 41" in stories
+check("I8 HOUSE_STORY_SIX == 42 (+5: h24/h53/h60-P259 + h4/h9-P260!) + TOTALS-2085",
+      "sixBook: 42" in stories and "fiveBook: 26" in stories and "fourBook: 8" in stories
+      and "blocks: 2085" in stories and "bothEraPorocna: 42" in stories
       and "p258Dvigi" in stories and "h8/h46/h66/h35/h47/h42/h2/h48/h36/h49" in stories, "-")
 for h, n in [("2", 34), ("8", 39), ("35", 37), ("36", 35), ("42", 28), ("46", 39), ("47", 19), ("48", 33), ("50", 13), ("56", 15), ("61", 19), ("66", 14), ("22", 36), ("49", 29)]:
     m = re.search(rf'houseNo: "{h}", kind: "griblje", blocks: (\d+),', stories)

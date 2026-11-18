@@ -1,0 +1,279 @@
+{
+  "phase": "P263",
+  "scope": "NOTRANJOST-01738: 1837 (vrstice 12–18, s19 = Pag. 35/36) + letni restart 1–2 (1838/1839 X-OPEN) — P263-lead ① (s19+ = Pag. 35+)",
+  "vir": {
+    "bookSignature": "01738",
+    "source": "Matricula Online (data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/01738/)",
+    "scan": {
+      "s19": {
+        "bytes": 507018,
+        "dims": "2119×1500",
+        "md5": "117add7703c78acc3ad6f8ce9b0d81cb",
+        "pag": "35/36",
+        "rows": 8,
+        "header": "Trauungs Buch + Jahr 1837"
+      }
+    },
+    "rezerve": {
+      "s20": { "bytes": 486259, "md5": "13cbb85d7b680cd28eba97ccfee0358a", "pag": "37/38 [~predvideno]" },
+      "s21": { "bytes": 527361, "md5": "8c0faae39039b4529a7ce4605b4960a0", "pag": "39/40 [~predvideno]" },
+      "s22": { "bytes": 534595, "md5": "e66f3d8aa2ede04a793bc99f745641a1", "pag": "41/42 [~predvideno]" },
+      "s23": { "bytes": 527382, "md5": "8c64fd37e33e666669e1e87835c21022", "pag": "43/44 [~predvideno]" }
+    },
+    "foliacija": "Pag = 2·sken − 3 → s19 = 35/36 (serija 16/16 notranjosti: P259 10/10 + P260 3/3 + P261 1/1 + P262 1/1 + P263 1/1)"
+  },
+  "struktura": {
+    "postavitev": "dvostranski razpon: levo Pag. 35 = datum | Wohnort | Haus Nr | ime | ledig/verw. | Altersjahre | … | nevesta; desno Pag. 36 = starši ženina (oče/mati) | starši neveste (oče/mati) | Beystände | Stand | Urkunden | Unterschrift",
+    "vrstice": "12, 14, 15, 16, 17, 18 + restart 1, 2 (13 manjka; 12 je DUP s s18 m12) = 8 vpisov; pod vrstico 2 = prazno",
+    "datumi": "12. Juni, 8. Mai, 20. Juli, 4. August, 31. August, 11. September [1837 po glavi strani] + 1. Februar in 4. Februar [1838/1839 X-OPEN — glif 8/9]",
+    "letnaMeja": "zadnji vpis 1837 = margina 18 (11. September 1837); nato RESTART številčenja na 1 (1. Februar) — prvi vpis novega leta je šele februarja"
+  },
+  "vpisi": [
+    {
+      "m": 12,
+      "datum": "12. Juni 1837",
+      "margina": "12 (DUP s s18 m12 — anomalija številčenja)",
+      "zenin": {
+        "ime": "Georg Jurjefzhig [~Jurjevič]",
+        "starost": 29,
+        "wohnort": "Krapisse? [X-OPEN]",
+        "hisa": 6,
+        "stan": "ledig",
+        "pripis": "zu Grüblau dorf",
+        "starsi": { "oce": "Mathias Jurjefzhig (zu Grüblau)", "mati": "Maria Tifak" }
+      },
+      "nevesta": {
+        "ime": "Anna Zajnar [~Zajner/Zajk]",
+        "starost": 40,
+        "wohnort": "Krafing",
+        "hisa": 4,
+        "stan": "Witwe [~]",
+        "pripis": "in Grüblau dorf",
+        "starsi": { "oce": "Georg [Zajk?]", "mati": "Anna [Zink?]" }
+      },
+      "prici": ["Johann [Till?]", "Michael [Brod?]"],
+      "urkunde": "ohne Aufgebot",
+      "duhovnik": "Gregor Dolinšek Coop.",
+      "blok": false
+    },
+    {
+      "m": 14,
+      "datum": "8. Mai 1837",
+      "zenin": {
+        "ime": "Georg SIMIG [ŠIMIČ!]",
+        "starost": 62,
+        "wohnort": "Grüble",
+        "hisa": 60,
+        "stan": "Häusler [~]",
+        "starsi": { "oce": "Mathias Simig [~SCHMIG]", "mati": "Maria Simig [~SHMIG]" }
+      },
+      "nevesta": {
+        "ime": "Anna MILEK",
+        "starost": 45,
+        "wohnort": "Grüble",
+        "hisa": 29,
+        "stan": "[~Witwe/gewesene Gattin — X-OPEN]",
+        "starsi": { "oce": "Jakob [~Trobec/Trobog?]", "mati": "Katharina [~Korenič/Korajzhig?]" }
+      },
+      "prici": ["[~Lorenz Hollo?]", "[~Josef]"],
+      "urkunde": "ohne Aufgebot",
+      "duhovnik": "Georg [~Kraphovi(g/ž)] Pfarrer",
+      "blok": true,
+      "bloki": ["60", "29"],
+      "opomba": "isti ženin kot 1833 (h60, 59 l) → 62 l v 4 letih = kronološka kontrola 1:1; POLNI DVOJNI h60×h29 (oba Griblje!)"
+    },
+    {
+      "m": 15,
+      "datum": "20. Juli 1837",
+      "zenin": {
+        "ime": "Georg Brodarig [BRODARIČ]",
+        "starost": 41,
+        "wohnort": "Krafing",
+        "hisa": 7,
+        "pripis": "zu Grüblau",
+        "starsi": { "oce": "Nicolaus Brodarig", "mati": "Maria Klepec" }
+      },
+      "nevesta": {
+        "ime": "Maria Vlashigh [~Vlašič]",
+        "starost": 28,
+        "wohnort": "Tribuche? [X-OPEN] 46 / in Krafing 3",
+        "pripis": "zu Grüblau",
+        "starsi": { "oce": "Nicolaus Vlashigh", "mati": "Maria [~Prijanovič]" }
+      },
+      "prici": ["Mich. Brodarigh", "Nicol. Vlashigh"],
+      "urkunde": "ohne Aufgebot",
+      "duhovnik": "[~Kampfi? — X-OPEN]",
+      "blok": false
+    },
+    {
+      "m": 16,
+      "datum": "4. August 1837",
+      "zenin": {
+        "ime": "Nicolaus Hudnig [~Hudnik]",
+        "starost": 36,
+        "wohnort": "Dobrauj? [X-OPEN]",
+        "hisa": 10,
+        "pripis": "zu Grüblau",
+        "starsi": { "oce": "Jacob Hudnig", "mati": "Catharina Jakopin" }
+      },
+      "nevesta": {
+        "ime": "Anna Popish [PAPIČ?]",
+        "starost": 37,
+        "wohnort": "Gerzihje? [X-OPEN]",
+        "hisa": 3,
+        "stan": "Witwe [~]",
+        "starsi": { "oce": "Martin [~Ruz/Malenšek]", "mati": "Maria [?]" }
+      },
+      "urkunde": "ohne Aufgebot",
+      "duhovnik": "[~Kampfi? — X-OPEN]",
+      "blok": false
+    },
+    {
+      "m": 17,
+      "datum": "31. August 1837",
+      "zenin": {
+        "ime": "Jacob Hob. Krisch [KRIŽAN?]",
+        "starost": 44,
+        "wohnort": "Gradaz",
+        "hisa": 9,
+        "starsi": { "oce": "Martin Hob. Krisch (zu Grüblau? [X-OPEN])", "mati": "Anna [Gstfl?]" }
+      },
+      "nevesta": {
+        "ime": "Mojsja [~Mojca] Lanzigh [~Lončarič]",
+        "starost": 24,
+        "wohnort": "Molling (Metlika)",
+        "hisa": 59,
+        "starsi": { "oce": "Andreas [Tanz?]", "mati": "Maria [~Nozkevar]" }
+      },
+      "prici": ["[~Franz Sugoj]", "[~Lorenz]"],
+      "urkunde": "Trauungsschein Molling dto 31. August 1837",
+      "duhovnik": "Gregor Dolinšek Coop.",
+      "blok": false
+    },
+    {
+      "m": 18,
+      "datum": "11. September 1837",
+      "zenin": {
+        "ime": "Georg Gerdofzhig [~Grdošič/Gerdovič]",
+        "starost": 30,
+        "wohnort": "Grüble",
+        "hisa": 11,
+        "stan": "Inwohner + vojaški pripis »Nr 17 … Comp. … aus Molling Nr 132«",
+        "starsi": { "oce": "[~Joshef Gerde/Gerdofzhig] (von Molling?)", "mati": "Barbara [~Pöbigh/Pobič]" }
+      },
+      "nevesta": {
+        "ime": "Maria [~Kraz/Kral — X-OPEN]",
+        "starost": 25,
+        "wohnort": "Grüble",
+        "hisa": 11,
+        "starsi": { "oce": "[~Leonora Kaus/Kauf] + [~Joseph Fabian / Math. Gerdofzhig]", "mati": "[~X-OPEN]" }
+      },
+      "urkunde": "k.k. Trauungsschein Nr 21 dd. 1. August 1837",
+      "duhovnik": "Georg [~Kraphovi(g/ž)] Pfarrer",
+      "blok": true,
+      "bloki": ["11", "11"],
+      "opomba": "POLNI DVOJNI h11×h11 — oba partnerja iz iste hiše (2. in 3. 01738-blok h11 po 1831!)"
+    },
+    {
+      "m": 1,
+      "datum": "1. Februar 1838/1839 [X-OPEN: glif 8↔9; kronologija podpira 1839]",
+      "margina": "1 (restart letnega številčenja)",
+      "zenin": {
+        "ime": "Anton Maron [~Mavrin]",
+        "starost": 25,
+        "wohnort": "Gradaz",
+        "hisa": 15,
+        "pripis": "zu Grüblau",
+        "starsi": { "oce": "Johann [~Marzenligh/Mavrinligh] (zu Grüblau)", "mati": "Barbara Milavy" }
+      },
+      "nevesta": {
+        "ime": "Maria Jurjefzhig",
+        "starost": 17,
+        "wohnort": "(R)Haun? [X-OPEN]",
+        "hisa": 18,
+        "pripis": "zu Grüblau dorf",
+        "stan": "MLADOLETNA (17 l)",
+        "starsi": { "oce": "Martin Jurjefzhig (zu Grüblau)", "mati": "Katherina Klepec" }
+      },
+      "prici": ["Nicolaus Jurjefzhig", "Joseph Plos"],
+      "urkunde": "ohne Aufgebot",
+      "duhovnik": "Georg [~Kraphovi(g/ž)] Pfarrer",
+      "blok": false
+    },
+    {
+      "m": 2,
+      "datum": "4. Februar 1838/1839 [X-OPEN]",
+      "zenin": {
+        "ime": "Johann Zarafzhinig [X-OPEN]",
+        "starost": 25,
+        "wohnort": "Krafing",
+        "hisa": 22,
+        "pripis": "zu Grüblau",
+        "starsi": { "oce": "Peter Zarafzhinig (zu Grüblau)", "mati": "Maria Moroz" }
+      },
+      "nevesta": {
+        "ime": "Maria geb. Popigh [PAPIČ?], Witwe",
+        "starost": 25,
+        "wohnort": "Germ? [X-OPEN]",
+        "hisa": 27,
+        "starsi": { "oce": "Georg Popigh (zu Grüblau)", "mati": "Maria Popigh" }
+      },
+      "prici": ["Matthias [Lorenz?]", "Nicolaus [Tony?]"],
+      "urkunde": "ohne Aufgebot",
+      "duhovnik": "[~Kampfi? — X-OPEN]",
+      "blok": false
+    }
+  ],
+  "blokiGriblje": {
+    "hisa": {
+      "h60": { "vas": "Grüble", "m": [14], "prvic": false, "opomba": "2. 01738-blok (prvi 1833, isti ženin Georg ŠIMIG 59→62 l!)" },
+      "h29": { "vas": "Grüble", "m": [14], "prvic": true, "opomba": "1. 01738-blok → DVIG firstYear 1859→1837 (22 let); ŠEST-KNJIŽNI-KLUB 5→6" },
+      "h11": { "vas": "Grüble", "m": [18, 18], "prvic": false, "opomba": "2. in 3. 01738-blok (prvi 1831); POLNI DVOJNI h11×h11" }
+    },
+    "skupaj": 4,
+    "polniDvojni": ["h60×h29", "h11×h11"]
+  },
+  "niti": {
+    "simic": "h60 1833 (Mathias SCHMIG × Maria SHMIG, ženin Georg 59 l) → h60 1837 (isti ženin 62 l) = 2. 01738-blok v 4 letih; starost +3 = kronološka kontrola 1:1",
+    "milek": "h29 1837 (Anna Milek 45 l) ↔ P250 m16 1874 (h29 MILEK) = nit 37 let; + P249 m20 h22 1873 + P257 1830",
+    "brodaric": "m15 1837 (Georg Brodarig + oče Nicolaus + priča Mich.) ↔ P261 m4 1837 Dorothea BRODARIIGH + P247 1877 MOH×BRODARIČ",
+    "jurjefzhig": "m12 (ženin + oče Mathias) + m1 1838/9 (nevesta Maria + oče Martin + priča Nicolaus) = 3 omembe v 2 vpisih",
+    "papic": "m16 nevesta Anna Popish + m2 (1838/9) nevesta Maria geb. Popigh + oče Georg Popigh",
+    "klepec": "m15 mati Maria Klepec + m1 1838/9 mati Katherina Klepec",
+    "krizan": "m17 ženin Jacob Hob. Krisch [~] (Gradaz 9 — hiša NI Griblje) + s18 P262 ×4 → konglomerat se nadaljuje izven Gribelj"
+  },
+  "kraji": {
+    "Grüble": "h60 (m14), h29 (m14), h11 (m18 ×2) + pripisi »zu Grüblau (dorf)« (m12, m15, m16, m1, m2)",
+    "Krafing": "h4 (m12), h7 (m15), h3 (m15), h22 (m2) — [~Kranjig/Krajing, cf. P257/P258]",
+    "Krapisse?": "h6 (m12) — X-OPEN (nova vas v seriji?)",
+    "Gradaz": "h9 (m17), h15 (m1) — GRADAC (potrjeno P260/P261/P262)",
+    "Molling": "h59 (m17) — METLIKA (Trauungsschein!)",
+    "Tribuche?": "h46 (m15) — X-OPEN",
+    "Dobrauj?": "h10 (m16) — X-OPEN",
+    "Gerzihje?": "h3 (m16) — X-OPEN",
+    "(R)Haun?": "h18 (m1) — X-OPEN",
+    "Germ?": "h27 (m2) — X-OPEN"
+  },
+  "opazke": {
+    "stevilcenje": "12 (DUP s s18 m12) → 14 (13 manjka) → 15–18, nato restart na 1 (1. Februar) in 2 (4. Februar)",
+    "letnicaRestarta": "v celici pisano 1838 (glif 8; možno 1839) — kronologija (za njim 4. Februar iste letnice, pred tem 18 vpisov 1837) podpira 1839, zato X-OPEN do človeške paleografske potrditve (issue #12)",
+    "s18P262": "p262-facts.json (START) bere 1./6. februar 1837; končna P262-integracija uporablja 1. februar 1838 + proklamacije 1./6. november — s19 tega ne razreši (urkunde s18 = 29./15. Juni 1837 podpirajo 1838, številčenje 6–12 pa 1837); P263 P262-podatkov NE spreminja",
+    "dokumenti": "6/8 »ohne Aufgebot« + 1× Trauungsschein Molling (m17) + 1× k.k. Trauungsschein Nr 21 dd. 1. August 1837 (m18); nobenega Verkündigsscheina",
+    "duhovniki": "Gregor Dolinšek Coop. (m12, m17) + Georg [~Kraphovi(g/ž)] Pfarrer (m14, m18, m1) + nečitljiv [~Kampfi?] (m15, m16, m2)",
+    "mladoletna": "m1 (1838/9) nevesta Maria Jurjefzhig 17 l — »ohne Aufgebot« (cf. P262 v8 18 l + Einwilligung)",
+    "vojaskaListina": "m18: k.k. Trauungsschein Nr 21 dd. 1. August 1837 + pripis »Nr 17 … Comp. … aus Molling Nr 132« = vojaška enota (cf. P258 k.k. upokojenec + P250) "
+  },
+  "korpusUcinek": {
+    "pred": { "vitals": 2081, "01738": 69, "leta": "1828–1838+1873", "sixBook": 41, "fiveBook": 27, "bothEraPorocna": 41 },
+    "po": { "vitals": 2085, "01738": 73, "leta": "1828–1838+1873", "sixBook": 42, "fiveBook": 26, "bothEraPorocna": 42 },
+    "noveHise": 1,
+    "opomba": "4 novi bloki (h60, h29, h11 ×2) — h29 prvič v 01738; h60/h11 brez dviga firstYear"
+  },
+  "metodaDokaz": {
+    "agentVizija": "0 VLM klicev — Read-tool na 14 izrezih (research/issue17/p263-work/cal_*.png, zoom_*.png, s19_left/right/margins/dates)",
+    "highMag": "letnica restarta 14× (zoom_m1y/zoom_m2y) + datumski stolpec ×3 + pasovi po 2 vrstici ×7",
+    "korekcije": "prvotno branje letnice restarta '1838' → po kronologiji označeno [1838|1839 X-OPEN]"
+  },
+  "generatedAt": "2026-11-18T14:30:00Z",
+  "pushStatus": "P263-START + INTEGRACIJA — lokalni commit; push na GitHub origin (žeton) + GitLab mirror + Vercel"
+}

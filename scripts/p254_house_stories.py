@@ -39,20 +39,20 @@ check("I2 HOUSE_STORIES == 100 (78 Griblje + 16 druga-vas + 6 neznan)",
 
 # ——— I3: vsota blokov == 2032; knjige 14/288/502/269/433/520 ———
 total = sum(int(b) for _, _, b, _ in entries)
-check("I3 vsota blokov HOUSE_STORIES == 2081 (P259: +6 + P260: +4 + P261: +8-bloki-1836/37 + P262: +4-bloki-1838!)", total == 2081, f"{total}")
+check("I3 vsota blokov HOUSE_STORIES == 2085 (P259: +6 + P260: +4 + P261: +8-bloki-1836/37 + P262: +4-bloki-1838!)", total == 2085, f"{total}")
 book_blocks = {"01738": 0, "04104": 0, "04105": 0, "04455": 0, "04106": 0, "04894": 0}
 for seg in re.finditer(r'houseNo: "([^"]+)".*?perBook: \[(.*?)\]', mod):
     for sig, n in re.findall(r'sig: "(\d+)", n: (\d+)', seg.group(2)):
         book_blocks[sig] += int(n)
-expected_books = {"01738": 69, "04104": 288, "04105": 502, "04455": 269, "04106": 433, "04894": 520}
+expected_books = {"01738": 73, "04104": 288, "04105": 502, "04455": 269, "04106": 433, "04894": 520}
 check("I3b bloki po knjigah 57/288/502/269/433/520 (== korpus! P260-01738-57!)", book_blocks == expected_books,
       f"{book_blocks}" if book_blocks != expected_books else "1:1")
 
 # ——— I4: 9 šest-knjižnih hiš [3,10,12,16,18,20,28,63,73] ———
 six_m = re.search(r'export const HOUSE_STORY_SIX: HouseStorySix\[\] = \[(.*?)\n\];', mod, re.S)
 six_mod = re.findall(r'houseNo: "(\d+)", blocks: \d+, years: "[^"]+"', six_m.group(1)) if six_m else []
-check("I4 HOUSE_STORY_SIX == 36-šest-knjižnih (P258-31 → P259-34 → P260-36!)",
-      six_mod == ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "16", "17", "18", "19", "20", "22", "24", "26", "27", "28", "31", "32", "33", "35", "36", "39", "41", "42", "46", "47", "48", "53", "56", "60", "61", "62", "63", "65", "73"], str(six_mod))
+check("I4 HOUSE_STORY_SIX == 42-šest-knjižnih (P258-31 → P259-34 → P260-36!)",
+      six_mod == ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "16", "17", "18", "19", "20", "22", "24", "26", "27", "28", "29", "31", "32", "33", "35", "36", "39", "41", "42", "46", "47", "48", "53", "56", "60", "61", "62", "63", "65", "73"], str(six_mod))
 six_stories = [h for h, k, b, bk in entries if int(bk) == 6]
 check("I4b šest-knjižne v HOUSE_STORIES == 41", sorted(six_stories, key=int) == six_mod, str(sorted(six_stories, key=int)))
 
@@ -65,9 +65,9 @@ check("I5b živa-rekalkulacija v kontroli (p254Agg iz HOUSE_VITALS!)",
 
 # ——— I6: dokaz JSON ———
 ev = json.load(open("research/issue17/parish-house-stories.json", encoding="utf-8"))
-check("I6 dokaz parish-house-stories.json (100 hiš v tabeli + tierji + 36-zgodb — P260!)",
-      len(ev.get("houses", [])) == 100 and ev["structure"]["tiers"]["six"] == 36
-      and len(ev["sixBookHouses"]["stories"]) == 41 and ev["structure"]["tiersSum"] == 100,
+check("I6 dokaz parish-house-stories.json (100 hiš v tabeli + tierji + 42-zgodb — P263!)",
+      len(ev.get("houses", [])) == 100 and ev["structure"]["tiers"]["six"] == 42
+      and len(ev["sixBookHouses"]["stories"]) == 42 and ev["structure"]["tiersSum"] == 100,
       f"houses={len(ev.get('houses', []))}")
 
 # ——— I7: UI komponenta HouseStoriesP254 + uvoz modula ———
@@ -82,9 +82,9 @@ h73 = re.search(r'houseNo: "73", kind: "griblje", blocks: (\d+), books: (\d+)', 
 check("I8 rekordi: h24 == 45 + h73 == 9/knjige-6 + TIHA + KUPAMIČ",
       h24 and int(h24.group(1)) == 46 and h73 and int(h73.group(1)) == 9 and int(h73.group(2)) == 6
       and "TIHA-HIŠA" in mod and "KUPAMIČ" in mod)
-check("I8b osamelci: h25-smrtna-vrzeli + h[?]-skrita + 96-let-P255+h62-95+h50-93-P257! + obe-eri 69/75/41",
+check("I8b osamelci: h25-smrtna-vrzeli + h[?]-skrita + 96-let-P255+h62-95+h50-93-P257! + obe-eri 69/75/42",
       "SMRTNA VRZEL" in mod and "skrita hiša" in mod.lower() and "96" in mod
-      and "bothEraKrstna: 69" in mod and "bothEraMrliska: 75" in mod and "bothEraPorocna: 41" in mod)
+      and "bothEraKrstna: 69" in mod and "bothEraMrliska: 75" in mod and "bothEraPorocna: 42" in mod)
 check("I8c zgodbe-šest-knjižnih: DRAGOŠ-50-LET + 56-LETNA-ZAKONSKA + KRIŽAN-HIŠA + m1-KURE",
       "DRAGOŠ-50-LET" in mod and "56-LETNA ZAKONSKA ZVEZA" in mod and "KRIŽAN-HIŠA" in mod and "m1-KURE" in mod)
 

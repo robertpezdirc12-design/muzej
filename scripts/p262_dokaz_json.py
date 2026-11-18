@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """P262 — kirurška posodobitev dokaz-JSON datotek (json-indent-1 = forma-intakt! cf. P261-lekcija):
-parish-house-stories.json (six 39→41 + h17/h31-stories!) + pt-luknja-18-final.json (vitals 2077→2081, 01738 65→69)."""
+parish-house-stories.json (six 39→41 + h17/h31-stories!) + pt-luknja-18-final.json (vitals 2077→2085, 01738 65→69)."""
 import json
 import os
 
@@ -30,11 +30,11 @@ P2 = f"{ROOT}/research/issue17/pt-luknja-18-final.json"
 pt2 = json.load(open(P2, encoding="utf-8"))
 pt2["generatedAt"] = "2026-11-15 (P262-posodobitev)"
 corpus = pt2["corpus"]
-corpus["vitalsTotal"] = 2081
+corpus["vitalsTotal"] = 2085
 corpus["byBook"]["01738"] = 69
 note = corpus.get("housesNote", "")
 if "P262: +4-bloki-1838-s18" not in note:
-    corpus["housesNote"] = note + (" | P262: +4-bloki-1838-s18 (vitals 2077→2081, 01738 65→69!-h36-m6-nevesta-Anna-KRISCHAN "
+    corpus["housesNote"] = note + (" | P262: +4-bloki-1838-s18 (vitals 2077→2085, 01738 65→69!-h36-m6-nevesta-Anna-KRISCHAN "
                                    "+ h63-m8-ženin-Johann-KRISCHAN-4.-blok + h31-m8-nevesta-Anna-TILAH-DVIG-19 + h17-m10-nevesta-Maria-KRAL-DVIG-37-2.-NAJVEČJI-NOTRANJOSTI! "
                                    "- POLNI-DVOJNI-h63×h31-ALL-GRABLJE!-RESTART-(D)-1.-FEBRUAR-1838-7-porok-VSI-d°-PROKLAMACIJE-1-Nov/6-Nov-1837!-leta-01738-1828–1838-11-let-notranjosti!-ŠEST-KNJIŽNI-39→41!)")
 json.dump(pt2, open(P2, "w", encoding="utf-8"), ensure_ascii=False, indent=1)

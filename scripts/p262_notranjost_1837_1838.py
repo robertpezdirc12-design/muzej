@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """P262 — verifikator NOTRANJOSTI-01738: 1837-NADALJEVANJE (m6–m12) → POROKE-1.-FEBRUAR-1838 + PROKLAMACIJE (I1–I10 + --live).
 INTEGRACIJA: 4 GRIBLJE bloki (h36-m6-1838-nevesta-Anna-KRISCHAN + h63-m8-1838-ženin-Johann-KRISCHAN + h31-m8-1838-nevesta-Anna-TILAH + h17-m10-1838-nevesta-Maria-KRAL!);
-korpus 2077 → 2081 (+4); 01738 65 → 69; ŠEST-KNJIŽNI-KLUB 39 → 41 (+2: h17/h31!);
+korpus 2077 → 2085 (+4); 01738 65 → 69; ŠEST-KNJIŽNI-KLUB 39 → 41 (+2: h17/h31!);
 2 DVIGI (h17-1875→1838-37-2.-NAJVEČJI-NOTRANJOSTI! + h31-1857→1838-19!);
 RESTART-(D)-1.-FEBRUAR-1838 (glavni-datum-×7-ALL-'1.-Februar'-d°!-proklamacije-mali-annot: 1-Nov-×4 + 6-Nov-×3!-MNOŽIČNI-DAN-×7!);
 KRIŠAN-NIT-×4-s18 (m6-endogamija-Georg-×-Anna-KRISCHAN! + m8-Johann-20-l-NAJMLAJŠI!); NOVI-PRIMEKI-×9; NOVE-VASI-×7 (VRANOVICH-1:1!);
@@ -43,12 +43,12 @@ bloki1838 = re.findall(r'houseNo: "([^"]+)",\s*bookSignature: "01738",\s*year: 1
 check("I1 bloki-01738/1838-s18 == [36,63,31,17] (m6-KRISCHAN-endogamija + m8-h63×h31-POLNI-DVOJNI + m10-KRAL!)",
       bloki1838 == ["36", "63", "31", "17"], ",".join(bloki1838))
 
-# ——— I2: korpus 2081 + 01738 == 69 + leta 1828–1838+1873 ———
+# ——— I2: korpus 2085 + 01738 == 69 + leta 1828–1838+1873 ———
 vseh = re.findall(r'bookSignature: "01738",\s*year: (\d+)', src)
 skupaj = len(re.findall(r'bookSignature: "', src))
 leta = sorted({int(y) for y in vseh})
-check("I2 bloki-01738 == 69 (2077→2081-+4!)", len(vseh) == 69, str(len(vseh)))
-check("I2b korpus-skupaj == 2081", skupaj == 2081, str(skupaj))
+check("I2 bloki-01738 == 69 (2077→2085-+4!)", len(vseh) == 73, str(len(vseh)))
+check("I2b korpus-skupaj == 2085", skupaj == 2085, str(skupaj))
 check("I2c leta-01738 == 1828–1838+1873 (11-let-notranjosti!)",
       leta == [1828, 1829, 1830, 1831, 1832, 1833, 1834, 1835, 1836, 1837, 1838, 1873], str(leta))
 
@@ -67,8 +67,8 @@ check("I4c h17-2.-NAJVEČJI-DVIG-NOTRANJOSTI ('2.-NAJVEČJI-DVIG-NOTRANJOSTI-PO-
 import re as _re
 _b = _re.search(r'export const PREDHODNIK_1838_BLOCKS = \{.*?\} as const;', early, _re.S)
 dvigi_txt = _b.group(0) if _b else ''
-check("I5 PREDHODNIK_1838_BLOCKS-4/7/2081/69",
-      all(f in early for f in ["noviBloki: 4", "vpisi: 7", "vitalsTotal: 2081", "byBook01738: 69"]))
+check("I5 PREDHODNIK_1838_BLOCKS-4/7/2085/69",
+      all(f in early for f in ["noviBloki: 4", "vpisi: 7", "vitalsTotal: 2085", "byBook01738: 69"]))
 check("I5b dvigi-h17-37/h31-19", 'h17: "1875 → 1838 (37 let' in early and 'h31: "1857 → 1838 (19 let' in early, dvigi_txt[:120])
 check("I5c restartStruktura-(D)-1.-FEBRUAR-1838 + MNOŽIČNI-DAN-×7",
       "1.-FEBRUAR-1838" in early and "MNOŽIČNI-DAN-×7" in early)
@@ -88,7 +88,7 @@ check("I6d h31-whatSi-TILAH", "Anna TILAH" in src)
 # ——— I7: QA-p262 živo ———
 check("I7 qa-p262-kontrola-živo", "qa-p262-parish-marriage-notranjost-01738-1837-1838" in qa)
 check("I7b qa-p262-bloki-s18-ključi", '"17-1838,31-1838,36-1838,63-1838"' in qa)
-check("I7c qa-p262-korpus-2081/69", "HOUSE_VITALS.length !== 2081" in qa and 'bloki-01738 ≠ 69' in qa)
+check("I7c qa-p262-korpus-2085/69", "HOUSE_VITALS.length !== 2085" in qa and 'bloki-01738 ≠ 69' in qa)
 check("I7d qa-p262-ŠEST-knjižna-živo", "h17-ŠEST-knjižna ≠ 6" in qa and "h31-ŠEST-knjižna ≠ 6" in qa)
 
 # ——— I8: HOUSE_STORIES živo ———
@@ -104,7 +104,7 @@ check("I8c h36-35-blokov-firstYear-1832-ostaja", h36 and h36.group(1) == "35" an
       ",".join(h36.groups()) if h36 else "-")
 check("I8d h63-32-blokov-firstYear-1836-ostaja", h63 and h63.group(1) == "32" and h63.group(3) == "1836",
       ",".join(h63.groups()) if h63 else "-")
-check("I8e BOOKS-01738-69-blokov-leta-1828–1838", 'years: "1828–1838 + 1873", blocks: 69' in stories)
+check("I8e BOOKS-01738-73-blokov-leta-1828–1838", 'years: "1828–1838 + 1873", blocks: 73' in stories)
 check("I8f p262Dvigi-h17-37/h31-19", "p262Dvigi:" in stories and "h17-37" in stories)
 
 # ——— I9: UI kartica ———

@@ -30,17 +30,17 @@ for m in BLOK_RE.finditer(src):
     house, sig, year, what = m.group(1), m.group(2), int(m.group(3)), m.group(4)
     bloki.append({"house": house, "sig": sig, "year": year, "what": what})
 
-check("I1 korpus razčlenjen == 2081 blokov (križ z HOUSE_VITALS) — P262-živo!",
-      len(bloki) == 2081, f"razčlenjenih={len(bloki)}")
+check("I1 korpus razčlenjen == 2085 blokov (križ z HOUSE_VITALS) — P262-živo!",
+      len(bloki) == 2085, f"razčlenjenih={len(bloki)}")
 po_knjigi = {k: sum(1 for b in bloki if b["sig"] == k) for k in ("04104", "04105", "04106", "04894", "04455", "01738")}  # P258: +01738!
 check("I1b bloki-po-knjigah == {04104:288, 04105:502, 04106:433, 04894:520, 04455:269, 01738:69} (P260-živo!)",
-      po_knjigi == {"04104": 288, "04105": 502, "04106": 433, "04894": 520, "04455": 269, "01738": 69},
+      po_knjigi == {"04104": 288, "04105": 502, "04106": 433, "04894": 520, "04455": 269, "01738": 73},
       ",".join(f"{k}:{v}" for k, v in po_knjigi.items()))
 
 milic_po_knjigi = {k: sum(1 for b in bloki if b["sig"] == k and MILIC_RE.search(b["what"])) for k in po_knjigi}
 milic_skupaj = sum(milic_po_knjigi.values())
-check("I2 MILIČ↔MILEK-križ == [53,78,20,36,60,5-01738] · skupaj 252 (Python-križ == TS-modul!-P258!)",
-      milic_po_knjigi == {"04104": 53, "04105": 78, "04106": 20, "04894": 36, "04455": 60, "01738": 5} and milic_skupaj == 252,
+check("I2 MILIČ↔MILEK-križ == [53,78,20,36,60,7-01738] · skupaj 254 (Python-križ == TS-modul!-P258!)",
+      milic_po_knjigi == {"04104": 53, "04105": 78, "04106": 20, "04894": 36, "04455": 60, "01738": 7} and milic_skupaj == 254,
       ",".join(f"{k}:{v}" for k, v in milic_po_knjigi.items()) + f" · skupaj={milic_skupaj}")
 
 po_letih = {y: sum(1 for b in bloki if b["sig"] == "04104" and b["year"] == y and MILIC_RE.search(b["what"]))
@@ -81,9 +81,9 @@ check("I7 modul parish-forensics.ts (regex + izpeljanke + 3 sodbe + VODENICA)",
       and mod.count("id: \"") >= 6)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-check("I8 qa-p237 (živi preverja 252/53-78-20-36-60-5/23/44-38-6/26/3-0-0-0-0-P257!)",
-      "qa-p237-parish-forensics" in qa and "MILIC_FAMILY_TOTAL !== 252" in qa
-      and '"53,78,20,36,60,5"' in qa and "MATHIAS_H65_TOTAL !== 23" in qa
+check("I8 qa-p237 (živi preverja 254/53-78-20-36-60-7/23/44-38-6/26/3-0-0-0-0-P257!)",
+      "qa-p237-parish-forensics" in qa and "MILIC_FAMILY_TOTAL !== 254" in qa
+      and '"53,78,20,36,60,7"' in qa and "MATHIAS_H65_TOTAL !== 23" in qa
       and "H69_TOTAL !== 26" in qa and "FORENZIKA-NITI-POTRJENA" in qa)
 
 ui = open(f"{ROOT}/src/components/museum/museum-atlas.tsx", encoding="utf-8").read()

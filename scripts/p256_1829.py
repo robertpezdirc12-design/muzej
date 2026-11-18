@@ -46,8 +46,8 @@ check("I1c foliacija: Pag. 5/7/9 (2·sken−3)",
 vseh = re.findall(r'bookSignature: "01738"', src)
 skupaj = len(re.findall(r'bookSignature: "', src))
 leta = [int(y) for y in re.findall(r'bookSignature: "[^"]+",\s*year: (\d+)', src)]
-check("I2 vitals == 2081 + 01738 == 69 + korpus-prvi-vpis == 1828",
-      "HOUSE_VITALS.length !== 2081" not in src and len(vseh) == 69 and skupaj == 2081 and min(leta) == 1828,
+check("I2 vitals == 2085 + 01738 == 69 + korpus-prvi-vpis == 1828",
+      "HOUSE_VITALS.length !== 2085" not in src and len(vseh) == 73 and skupaj == 2085 and min(leta) == 1828,
       f"01738={len(vseh)} skupaj={skupaj} min-leto={min(leta)}")
 
 # ——— I3: modul PREDHODNIK_1829_* (9 izvozov) ———
@@ -82,10 +82,10 @@ check("I5b KRIŽAN-1829 + HRIŽAN-1873-ŠIV = ISTA-HIŠA-44-LET",
       and "THE-SAME-HOUSE-44-YEARS" in src, "-")
 
 # ——— I6: hišne zgodbe regenerirane (16 šest-knjižnih + h62-95 + bothEra 17) ———
-check("I6 stories: SIX-×31 + blocks-2043 + bothEraPorocna-34 + tierji-31/35",
-      stories.count('houseNo: "') >= 31 and 'blocks: 2081,' in stories
-      and "bothEraPorocna: 41" in stories and "sixBook: 41" in stories
-      and "fiveBook: 27" in stories and "firstYear: 1829" in stories
+check("I6 stories: SIX-×42 + blocks-2085 + bothEraPorocna-34 + tierji-42/26",
+      stories.count('houseNo: "') >= 31 and 'blocks: 2085,' in stories
+      and "bothEraPorocna: 42" in stories and "sixBook: 42" in stories
+      and "fiveBook: 26" in stories and "firstYear: 1829" in stories
       and "longestSpan: 96" in stories and 'longestSpanHouses: ["6"]' in stories
       and len(re.findall(r'houseNo: "\d+", blocks: \d+, years: "1829–\d+"', stories)) == 5, "-")
 h62m = re.search(r'houseNo: "62", kind: "griblje", blocks: 29, books: 6.*?firstYear: 1829, lastYear: 1924, span: 95', stories)
@@ -95,15 +95,15 @@ h20m = re.search(r'houseNo: "20", kind: "griblje", blocks: 37, books: 6.*?firstY
 check("I6c h20-story: 37-blokov-1829–1922-span-93 (P261: +2-m14/m3!)",
       bool(h20m), "-" if h20m else "h20-ni-tako")
 pt = json.load(open(f"{ROOT}/research/issue17/parish-house-stories.json", encoding="utf-8"))
-check("I6d dokaz-stories: 100-hiš + tiers-six-31 + stories-23 + bothEra-34 (P258!)",
-      len(pt.get("houses", [])) == 100 and pt["structure"]["tiers"]["six"] == 36
-      and len(pt["sixBookHouses"]["stories"]) == 41
+check("I6d dokaz-stories: 100-hiš + tiers-six-42 + stories-42 + bothEra-42 (P263!)",
+      len(pt.get("houses", [])) == 100 and pt["structure"]["tiers"]["six"] == 42
+      and len(pt["sixBookHouses"]["stories"]) == 42
       and pt["records"]["firstYearLiftsP256"]["h62"] == 35, "-")
 
 # ——— I7: qa-p256 (250.) + živa kontrola ———
 check("I7 qa-p256-notranjost kontrola obstaja + korpus-prvi-vpis-živo",
       '"qa-p256-parish-marriage-notranjost-01738-1829"' in qa
-      and "korpus-prvi-vpis ≠ 1828" in qa and "HOUSE_VITALS.length !== 2081" in qa, "-")
+      and "korpus-prvi-vpis ≠ 1828" in qa and "HOUSE_VITALS.length !== 2085" in qa, "-")
 
 # ——— I8: UI Notranjost01738Leto1829 (komponenta + render + uvozi) ———
 check("I8 UI Notranjost01738Leto1829 (komponenta + render + uvozi-×9)",

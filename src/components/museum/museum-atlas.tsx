@@ -293,6 +293,7 @@ PREDHODNIK_1833N_STRUNA,
   PREDHODNIK_183536_BLOCKS,
   PREDHODNIK_1836_37_BLOCKS,
   PREDHODNIK_1838_BLOCKS,
+  PREDHODNIK_1837_BLOCKS,
   PREDHODNIK_261_NITI,
   PREDHODNIK_261_KRAJI,
   PREDHODNIK_260_NITI,
@@ -2584,6 +2585,89 @@ function Notranjost01738Leto1837_1838() {
   );
 }
 
+function Notranjost01738Leto1837() {
+  const { t } = useLang();
+  const rows: { m: string; d: string; h?: string; x?: boolean }[] = [
+    { m: "12", d: "12. Jun. 1837", h: "DUP", x: true },
+    { m: "14", d: "8. Maj 1837", h: "60·29" },
+    { m: "15", d: "20. Jul. 1837", x: true },
+    { m: "16", d: "4. Avg. 1837", x: true },
+    { m: "17", d: "31. Avg. 1837", x: true },
+    { m: "18", d: "11. Sep. 1837", h: "11·11" },
+    { m: "1", d: "1. Feb. 1838|9", x: true },
+    { m: "2", d: "4. Feb. 1838|9", x: true },
+  ];
+  return (
+    <div className="rounded-xl border bg-card/60 p-5">
+      <h3 className="flex items-center gap-2 font-serif text-lg font-semibold">
+        <BookOpenCheck className="h-4 w-4 text-primary" aria-hidden />
+        {t(
+          "Notranjost knjige 01738: leto 1837 (m12–m18) + letni restart 1–2 (8 vpisov — 4 bloki / 1 dvig / h11 × h11!)",
+          "The interior of the book 01738: the year 1837 (m12–m18) + the annual restart 1–2 (8 entries — 4 blocks / 1 lift / h11 × h11!)",
+        )}
+      </h3>
+      <p className="mt-2 text-sm text-muted-foreground [overflow-wrap:anywhere]">
+        {t(
+          "s19 = Pag. 35/36 (foliacija 'Pag = 2·sken−3' — serija 16/16 notranjosti!). Številčenje: 12 (DUP s s18 m12!) → 14 (13 manjka!) → 15–18 (zadnji 1837 = 11. september) → RESTART na 1 (1. februar) in 2 (4. februar) — letnica v celici 1838|1839 [X-OPEN: glif 8↔9, kronologija podpira 1839!]. Metoda: agent-vizija pri kvoti 0 — 14 izrezov (robovi + datumski stolpec ×3 + pasovi po 2 vrstici ×7 + letnici ×14 + desna stran ×3).",
+          "s19 = Pag. 35/36 (the foliation 'Pag = 2·scan−3' — the 16/16 series of the interior!). The numbering: 12 (a DUP with s18 m12!) → 14 (13 missing!) → 15–18 (the last 1837 = Sep 11) → the RESTART at 1 (Feb 1) and 2 (Feb 4) — the year in the cell 1838|1839 [X-OPEN: the glyph 8↔9, the chronology favours 1839!]. The method: agent vision at quota 0 — 14 crops (margins + the date column ×3 + 2-row bands ×7 + the years ×14 + the right page ×3).",
+        )}
+      </p>
+
+      <div className="mt-4 rounded-lg border border-emerald-500/40 bg-emerald-500/10 p-4">
+        <p className="text-sm font-medium text-emerald-700 dark:text-emerald-300 [overflow-wrap:anywhere]">
+          {t("★★★★★ 4 NOVI BLOKI — 1 DVIG — 2 POLNA DVOJNA (ŠEST-KNJIŽNI KLUB 41→42!): ", "★★★★★ 4 NEW BLOCKS — 1 LIFT — 2 FULL DOUBLES (the six-book club 41→42!): ")}
+          {t(
+            `h29 1859→1837 (+22 — m14-nevesta-Anna-MILEK-45-l-GRÜBLE-29!-NOVA-01738-hiša-5→6-knjig!) · brez dviga: h60 (m14-ženin-Georg-SIMIG/ŠIMIČ-62-l-=-isti-mož-kot-1833-59-l!-+3-v-4-letih = kronološka-kontrola-1:1!) · h11 ×2 (m18-ženin-Georg-Gerdofzhig + nevesta-Maria — OBA-GRÜBLE-11 = POLNI DVOJNI h11 × h11!) — POLNA DVOJNA: h60×h29 + h11×h11. Korpus ${PREDHODNIK_1837_BLOCKS.vitalsTotal} vitalov / 01738 = ${PREDHODNIK_1837_BLOCKS.byBook01738} blokov / leta 1828–1838+1873`,
+            `h29 1859→1837 (+22 — the-m14-bride-Anna-MILEK-45-GRÜBLE-29!-the-NEW-01738-house-5→6-books!) · no-lift: h60 (m14-groom-Georg-SIMIG/ŠIMIČ-62-=-the-SAME-MAN-as-1833-59!-+3-in-4-years = the chronology check 1:1!) · h11 ×2 (m18-groom-Georg-Gerdofzhig + bride-Maria — BOTH-GRÜBLE-11 = the FULL DOUBLE h11 × h11!) — THE FULL DOUBLES: h60×h29 + h11×h11. The corpus ${PREDHODNIK_1837_BLOCKS.vitalsTotal} vitals / 01738 = ${PREDHODNIK_1837_BLOCKS.byBook01738} blocks / the years 1828–1838+1873`,
+          )}
+        </p>
+      </div>
+
+      <div className="mt-4 rounded-lg border border-primary/50 bg-primary/10 p-4">
+        <p className="text-sm font-medium [overflow-wrap:anywhere]">
+          {t(
+            "★★★★★ ŠIMIČ kronološka kontrola 1:1 (1833 Georg SCHIMIG 59 l → 1837 Georg SIMIG 62 l — isti mož, +3 leta!) + MILEK-nit h29 1837→1874 = 37 let (P250 m16 h29!) + BRODARIČ-m15 (↔ P261 m4 1837 + P247 1877 MOH×BRODARIČ!) + JURJEFZHIG ×3 + PAPIČ/POPIČ ×3 + KLEPEC ×2 + ★★★ URKUNDEN: 6/8 'ohne Aufgebot' + Trauungsschein Molling 31. 8. 1837 (m17 — METLIKA!) + k.k. Trauungsschein Nr 21 dd. 1. 8. 1837 (m18 — vojaški!) + duhovniki 3 (Gregor Dolinšek Coop. + Georg [~Kraphovi(g/ž)] Pfarrer + [~Kampfi?]).",
+            "★★★★★ The ŠIMIČ chronology check 1:1 (1833 Georg SCHIMIG 59 → 1837 Georg SIMIG 62 — the same man, +3 years!) + the MILEK thread h29 1837→1874 = 37 years (P250 m16 h29!) + the BRODARIČ-m15 (↔ P261 m4 1837 + P247 1877!) + JURJEFZHIG ×3 + PAPIČ/POPIČ ×3 + KLEPEC ×2 + ★★★ the URKUNDEN: 6/8 'ohne Aufgebot' + a Trauungsschein Molling Aug 31 1837 (m17 — METLIKA!) + a k.k. Trauungsschein No 21 dd. Aug 1 1837 (m18 — military!) + 3 priests (Gregor Dolinšek Coop. + Georg [~Kraphovi(g/ž)] Pfarrer + [~Kampfi?]).",
+          )}
+        </p>
+      </div>
+
+      <div className="mt-4 overflow-x-auto pb-1">
+        <p className="mb-1 text-xs font-semibold text-muted-foreground">{t("Vrstice s19: 1837 (12–18) + restart 1838|1839 (1–2) — polna dvojna zelena", "The s19 rows: 1837 (12–18) + the restart 1838|1839 (1–2) — full doubles in green")}</p>
+        <div className="flex min-w-[880px] items-end gap-1 sm:min-w-0" role="listbox" aria-label={t("Vrstice s19-P263", "The rows of s19-P263")}>
+          {rows.map((e, i) => {
+            const isDouble = (e.h || "").includes("·");
+            return (
+              <div key={`p263-${e.m}-${i}`} role="option" aria-selected={false} className="flex flex-1 flex-col items-center gap-1 rounded-lg border border-transparent px-1 py-2">
+                <span className="text-[10px] font-medium text-muted-foreground" style={{ overflowWrap: "anywhere" }}>{e.d}</span>
+                <span className={`flex h-9 min-w-9 items-center justify-center rounded-full border px-1 text-[11px] font-semibold ${isDouble ? "border-emerald-500 bg-emerald-500/20 text-emerald-700 dark:text-emerald-300" : e.x ? "border-dashed border-amber-500/60 bg-amber-500/10 text-amber-700 dark:text-amber-300" : "border-primary/50 bg-primary/10 text-primary"}`}>{e.m}</span>
+                <span className="text-[10px] text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
+                  {e.h ? (isDouble ? e.h.replace("·", " × h") : e.h) : ""}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div className="mt-4 rounded-lg border border-amber-500/40 bg-amber-500/10 p-4">
+        <p className="text-sm font-medium text-amber-700 dark:text-amber-300 [overflow-wrap:anywhere]">
+          {t(
+            "★★★ KRAJI P263: GRÜBLE/GRIBLJE h60 + h29 + h11 ×2 (+ pripisi 'zu Grüblau dorf') · KRAFING h4/h7/h3/h22 · GRADAZ (GRADAC) h9/h15 · MOLLING (METLIKA) h59 + Trauungsschein · X-OPEN vasi: 'Krapisse?' 6 · 'Tribuche?' 46 · 'Dobrauj?' 10 · 'Gerzihje?' 3 · '(R)Haun?' 18 · 'Germ?' 27 · MLADOLETNA nevesta m1 (17 l, 'ohne Aufgebot').",
+            "★★★ THE P263 VILLAGES: GRÜBLE/GRIBLJE h60 + h29 + h11 ×2 (+ the 'zu Grüblau dorf' notes) · KRAFING h4/h7/h3/h22 · GRADAZ (GRADAC) h9/h15 · MOLLING (METLIKA) h59 + the Trauungsschein · X-OPEN villages: 'Krapisse?' 6 · 'Tribuche?' 46 · 'Dobrauj?' 10 · 'Gerzihje?' 3 · '(R)Haun?' 18 · 'Germ?' 27 · an underage bride m1 (17, 'ohne Aufgebot').",
+          )}
+        </p>
+      </div>
+      <p className="mt-2 text-xs text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
+        {t(
+          "★★★★★ X-OPEN ostanki: letnica restarta 1838|1839 (glif 8↔9!) · 5 vasnih garbles · m12 'Krapisse 6' + m15 'Tribuche 46' + m18 nevesta 'Maria [~Kraz/Kral]' · P262 s18-letni-model (facts 1837 vs integracija 1838) ostaja odprt do človeške paleografske potrditve (issue #12). P264+: s20+ = Pag. 37+ (nadaljevanje m3+ — s20–s23 rezerve so že na disku!).",
+          "★★★★★ The X-OPEN remains: the restart year 1838|1839 (the glyph 8↔9!) · 5 village garbles · the m12 'Krapisse 6' + the m15 'Tribuche 46' + the m18 bride 'Maria [~Kraz/Kral]' · the P262 s18 year-model (the facts 1837 vs the integration 1838) stays open until human palaeographic confirmation (issue #12). P264+: s20+ = Pag. 37+ (the m3+ continuation — the s20–s23 reserves are already on disk!).",
+        )}
+      </p>
+    </div>
+  );
+}
+
 function HouseStoriesP254() {
   const { t } = useLang();
   const tierMax = Math.max(...HOUSE_STORY_TIERS.map((x) => x.houses));
@@ -4141,6 +4225,7 @@ function ParishTab() {
       <Notranjost01738Leto1835_1836 />
       <Notranjost01738Leto1836_1837 />
       <Notranjost01738Leto1837_1838 />
+      <Notranjost01738Leto1837 />
 
       {/* brskalnik knjig */}
       <div>

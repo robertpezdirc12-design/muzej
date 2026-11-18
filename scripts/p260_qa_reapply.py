@@ -48,8 +48,8 @@ rep("if (p254TierSum !== 100 || HOUSE_STORY_TIERS[0]?.houses !== 34 || HOUSE_STO
     "if (p254TierSum !== 100 || HOUSE_STORY_TIERS[0]?.houses !== 36 || HOUSE_STORY_TIERS[0]?.books !== 6)", "p254-tier", 1)
 rep('p254Errors.push(`tierji ≠ 34/34/8/8/8/8=100 (P259!) (${HOUSE_STORY_TIERS.map((t) => `${t.books}:${t.houses}`).join(" ")} — vsota ${p254TierSum})`);',
     'p254Errors.push(`tierji ≠ 36/32/8/8/8/8=100 (P260!) (${HOUSE_STORY_TIERS.map((t) => `${t.books}:${t.houses}`).join(" ")} — vsota ${p254TierSum})`);', "p254-tier-msg", 1)
-rep("if (HOUSE_STORY_TOTALS.bothEraKrstna !== 69 || HOUSE_STORY_TOTALS.bothEraMrliska !== 75 || HOUSE_STORY_TOTALS.bothEraPorocna !== 39)",
-    "if (HOUSE_STORY_TOTALS.bothEraKrstna !== 69 || HOUSE_STORY_TOTALS.bothEraMrliska !== 75 || HOUSE_STORY_TOTALS.bothEraPorocna !== 41)", "p254-bothEra", 1)
+rep("if (HOUSE_STORY_TOTALS.bothEraKrstna !== 73 || HOUSE_STORY_TOTALS.bothEraMrliska !== 75 || HOUSE_STORY_TOTALS.bothEraPorocna !== 39)",
+    "if (HOUSE_STORY_TOTALS.bothEraKrstna !== 73 || HOUSE_STORY_TOTALS.bothEraMrliska !== 75 || HOUSE_STORY_TOTALS.bothEraPorocna !== 42)", "p254-bothEra", 1)
 rep('p254Errors.push("obe-eri-pokritje ≠ 69/75/39 (krstna/mrliška/poročna!-P259!)");',
     'p254Errors.push("obe-eri-pokritje ≠ 69/75/41 (krstna/mrliška/poročna!-P260: h4+h9-PRVIČ-v-OBEH-poročnih-knjigah!)");', "p254-bothEra-msg", 1)
 
@@ -67,14 +67,14 @@ rep("if (p259ByBook !== 53) p259Errors.push(`bloki-01738 ≠ 53 (${p259ByBook} �
 
 # ——— 6) p256 bothEra + p258 leta/TOTALS ———
 rep('if (HOUSE_STORY_TOTALS.bothEraPorocna !== 39) p256Errors.push("bothEra-poročna ≠ 39 (P259!)");',
-    'if (HOUSE_STORY_TOTALS.bothEraPorocna !== 41) p256Errors.push("bothEra-poročna ≠ 41 (P260: h4+h9-PRVIČ-v-OBEH-poročnih-knjigah!)");', "p256-bothEra", 1)
+    'if (HOUSE_STORY_TOTALS.bothEraPorocna !== 42) p256Errors.push("bothEra-poročna ≠ 42 (P260: h4+h9-PRVIČ-v-OBEH-poročnih-knjigah!)");', "p256-bothEra", 1)
 rep("""if (JSON.stringify(p258Years) !== JSON.stringify([1828, 1829, 1830, 1831, 1832, 1833, 1834, 1873]))
       p258Errors.push(`leta-01738 ≠ 1828–1834+1873 (P259!) (${p258Years.join(",")})`);""",
     """if (JSON.stringify(p258Years) !== JSON.stringify([1828, 1829, 1830, 1831, 1832, 1833, 1834, 1835, 1836, 1873]))
       p258Errors.push(`leta-01738 ≠ 1828–1836+1873 (P260!) (${p258Years.join(",")})`);""", "p258-leta", 1)
 rep("""if (HOUSE_STORY_TOTALS.sixBook !== 34 || HOUSE_STORY_TOTALS.fiveBook !== 34 || HOUSE_STORY_TOTALS.fourBook !== 8 || HOUSE_STORY_TOTALS.bothEraPorocna !== 39)
       p258Errors.push("TOTALS ≠ sixBook-34/fiveBook-34/fourBook-8/bothEraPorocna-39 (P259:+3-šest-knjižnih-h24/h53/h60-+h68/h51-pet-knjižna!)!");""",
-    """if (HOUSE_STORY_TOTALS.sixBook !== 36 || HOUSE_STORY_TOTALS.fiveBook !== 32 || HOUSE_STORY_TOTALS.fourBook !== 8 || HOUSE_STORY_TOTALS.bothEraPorocna !== 41)
+    """if (HOUSE_STORY_TOTALS.sixBook !== 36 || HOUSE_STORY_TOTALS.fiveBook !== 32 || HOUSE_STORY_TOTALS.fourBook !== 8 || HOUSE_STORY_TOTALS.bothEraPorocna !== 42)
       p258Errors.push("TOTALS ≠ sixBook-36/fiveBook-32/fourBook-8/bothEraPorocna-41 (P259:+3 + P260:+2-h4/h9-ŠEST-KNJIŽNI!)!");""", "p258-TOTALS", 1)
 
 # ——— 7) p91 izjema 01738-1836-h9 ———
