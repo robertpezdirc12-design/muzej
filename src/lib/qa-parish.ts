@@ -9448,9 +9448,9 @@ function parishChecksPart5(push: Push): void {
     if (!B2.noviPrimeki.includes("×9")) p262Errors.push("noviPrimeki: ×9 manjka!");
     if (!B2.urkunden1837.includes("3.-Februar-1837")) p262Errors.push("urkunden1837: m12-3.-Februar-1837 manjka!");
     // korpus živo
-    if (HOUSE_VITALS.length !== 2088) p262Errors.push(`HOUSE_VITALS ≠ 2088 (${HOUSE_VITALS.length} — P262: +4!)`);
+    if (HOUSE_VITALS.length !== 2088) p262Errors.push(`HOUSE_VITALS ≠ 2088 (${HOUSE_VITALS.length} — živo po P264!)`);
     const p262ByBook = HOUSE_VITALS.filter((v) => v.bookSignature === "01738").length;
-    if (p262ByBook !== 76) p262Errors.push(`bloki-01738 ≠ 69 (${p262ByBook} — P262: +4!)`);
+    if (p262ByBook !== 76) p262Errors.push(`bloki-01738 ≠ 76 živo (${p262ByBook} — po P264)`);
     if (Math.min(...HOUSE_VITALS.map((v) => v.year)) !== 1828) p262Errors.push("korpus-prvi-vpis ≠ 1828");
     // polni-dvojni živo (h63×h31 po (house, year) 1838)
     const p262Have = new Set(p262Live.map((v) => `${v.houseNo}-${v.year}`));
@@ -9511,9 +9511,9 @@ function parishChecksPart5(push: Push): void {
     if (!B3.foliacija.includes("16/16")) p263Errors.push("foliacija: serija-16/16 manjka!");
     if (!B3.urkunden.includes("Molling") || !B3.urkunden.includes("Nr-21")) p263Errors.push("urkunden: Molling + Nr 21 manjkata!");
     // korpus živo
-    if (HOUSE_VITALS.length !== 2088) p263Errors.push(`HOUSE_VITALS ≠ 2088 (${HOUSE_VITALS.length} — P263: +4!)`);
+    if (HOUSE_VITALS.length !== 2088) p263Errors.push(`HOUSE_VITALS ≠ 2088 živo (${HOUSE_VITALS.length})`);
     const p263ByBook = HOUSE_VITALS.filter((v) => v.bookSignature === "01738").length;
-    if (p263ByBook !== 76) p263Errors.push(`bloki-01738 ≠ 76 (${p263ByBook} — P263: +4!)`);
+    if (p263ByBook !== 76) p263Errors.push(`bloki-01738 ≠ 76 živo (${p263ByBook})`);
     if (Math.min(...HOUSE_VITALS.map((v) => v.year)) !== 1828) p263Errors.push("korpus-prvi-vpis ≠ 1828");
     // ŠEST-knjižni klub: h29 5→6
     const h29Story = HOUSE_STORIES.find((s) => s.houseNo === "29");
@@ -9524,7 +9524,7 @@ function parishChecksPart5(push: Push): void {
     const h11Story = HOUSE_STORIES.find((s) => s.houseNo === "11");
     if (!h11Story || h11Story.blocks !== 33 || h11Story.span !== 92) p263Errors.push("h11-33-blokov/span-92 manjka!");
     if (HOUSE_STORY_TOTALS.sixBook !== 43 || HOUSE_STORY_TOTALS.fiveBook !== 25 || HOUSE_STORY_TOTALS.bothEraPorocna !== 42)
-      p263Errors.push(`TOTALS ≠ sixBook-42/fiveBook-26/bothEraPorocna-42 (${HOUSE_STORY_TOTALS.sixBook}/${HOUSE_STORY_TOTALS.fiveBook}/${HOUSE_STORY_TOTALS.bothEraPorocna})`);
+      p263Errors.push(`TOTALS ≠ sixBook-43/fiveBook-25/bothEraPorocna-42 (${HOUSE_STORY_TOTALS.sixBook}/${HOUSE_STORY_TOTALS.fiveBook}/${HOUSE_STORY_TOTALS.bothEraPorocna})`);
     // niti + kraji
     if (!PREDHODNIK_263_NITI.si.includes("ŠIMIČ") || !PREDHODNIK_263_NITI.si.includes("MILEK-NIT"))
       p263Errors.push("NITI-P263: ŠIMIČ + MILEK manjkata!");
@@ -9536,7 +9536,7 @@ function parishChecksPart5(push: Push): void {
       "P263: THE PARISH OF PODZEMELJ — THE-01738-INTERIOR: THE-YEAR-1837 (m12–m18) + THE-ANNUAL-RESTART-1–2! (s19 = Pag. 35/36 — the-foliation-series-16/16!): 8-entries — the-numbering-12 (a-DUP-with-s18-m12!) → 14 (13-missing!) → 15–18 → RESTART-at-1 (Feb-1)-and-2 (Feb-4)-[1838|1839-X-OPEN!] + ★★★★★ 4-GRIBLJE-BLOCKS (h60 + h29 + h11-×2 — 2-FULL-DOUBLES: h60×h29 + h11×h11-BOTH-THE-SAME-HOUSE!) + ★★★★★ THE-ŠIMIČ-CHRONOLOGY-CHECK-1:1 (m14-groom-Georg-SIMIG/ŠIMIČ-62-=-the-SAME-GROOM-as-P259-m24-1833-h60-59!-+3-in-4-years!) + ★★★★★ the-h29-01738-FIRST-BLOCK (bride-Anna-MILEK-45-GRÜBLE-29!) — LIFT-1859→1837-BY-22 (SIX-BOOKS-CLUB-41→42!) + h60-2nd/h11-2nd+3rd-block-NO-LIFT + ★★★ THREADS: MILEK-h29-1837→1874-=-37-YEARS (P250-m16!) + BRODARIČ-m15 + JURJEFZHIG-×3 + PAPIČ-×3 + KLEPEC-×2 + ★★★ URKUNDEN: 6/8-ohne-Aufgebot + a-Trauungsschein-Molling-31-8-1837 (m17-METLIKA!) + a-k.k.-Trauungsschein-No-21-dd-1-8-1837 (m18-military!) + 3-priests + ★★ an-underage-bride-m1-17",
       p263Errors.length === 0,
       p263Errors.length === 0
-        ? `notranjost-01738-1837: 8-vpisov (m12-DUP→14–18-1837 + restart-1/2-Februar-1838|1839!) · ŠTEVILČENJE: 12-DUP-s-s18 + 13-manjka + RESTART-1 · 4-bloki-[60-1837,29-1837,11-1837,11-1837] (2-POLNA-DVOJNA: h60×h29 + h11×h11!) · h29-DVIG-22-ŠEST-KNJIŽNI-41→42 · ŠIMIČ-59→62-=-kronološka-kontrola-1:1 · MILEK-37-let · foliacija-16/16 · X-OPEN: 5-vasi + letnica-restarta + P262-s18-model · korpus 2085/73`
+        ? `notranjost-01738-1837: 8-vpisov (m12-DUP→14–18-1837 + restart-1/2-Februar-1838|1839!) · ŠTEVILČENJE: 12-DUP-s-s18 + 13-manjka + RESTART-1 · 4-bloki-[60-1837,29-1837,11-1837,11-1837] (2-POLNA-DVOJNA: h60×h29 + h11×h11!) · h29-DVIG-22-ŠEST-KNJIŽNI-41→42 · ŠIMIČ-59→62-=-kronološka-kontrola-1:1 · MILEK-37-let · foliacija-16/16 · X-OPEN: 5-vasi + letnica-restarta + P262-s18-model · korpus živo 2088/76 (P263-snapshot 2085/73)`
         : p263Errors.join("; "),
     );
   }
