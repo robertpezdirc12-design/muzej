@@ -13,30 +13,29 @@
 
 ---
 
-## Numeracijski okvir (po cropih)
+## Numeracijski okvir (po cropih + avtoritativnem p263-facts.json)
 
 - **s18/P262** se konča z m12 (7. maj 1837).
-- **s19 r1–r6:** marginalne št. **13–18** (15.5.–19.6.1837) — nadaljevanje iste serije.
-- **s19 r7:** marginalna št. **1**, datum **1. Juli 1837** — viden **restart lokalne serije** z julijem [~potrebna potrditev konteksta na celi strani].
-- **s20:** št. **2–6(7?)** (17.7.–13.8.1837 [~]) — nadaljevanje od r7.
-- **s21:** št. **7?–13?** (avgust–september [~]), nadaljevanje.
-- **s22:** št. v območju **~4–6+** z oktobrskimi datumi [~; veriga zahtevna preverbo, morda nova podserija ali nadaljevanje].
-- **s23:** november/december 1837 [~], vrstice večinoma [X-OPEN].
+- **s19 (Pag 35/36, 8 vnosov):** marginalne št. **12** (DUP), **14, 15, 16, 17, 18** (1837; 13 manjka) — datumi 12.6., 8.5., 20.7., 4.8., 31.8., 11.9.1837 — nato **restart 1, 2** (1. in 4. februar 1838/1839 [X-OPEN glif 8/9]). *Prejšnje branje tega osnutka za s19 (marg. 13–18 od 15.5., restart 1.7.) je bilo napačno; popravljeno po `research/issue17/p263-facts.json`.*
+- **s20:** št. **2–6(7?)** (17.7.–13.8.1837 [~]) — nadaljevanje verige; povezava s s19 restartom za potrditev.
+- **s21:** št. **~7–13** (avgust–september 1837 [~]), okvirno potrjeno iz cropov.
+- **s22:** št. **~4–10** (oktober–november 1837 [~]), okvirno potrjeno iz cropov.
+- **s23:** št. **~11–17** (december 1837 [~]), okvirno potrjeno iz cropov (do 31.12. [~]).
 
 ---
 
-## S19 — Pag 35/36 (1837)
+## S19 — Pag 35/36 (1837 + restart 1838/9 [X-OPEN]) — popravljeno po p263-facts.json
 
-| vrsta | marg. | datum | ženin (kraj h, ime, starost, stan, starši) | nevesta (kraj h, ime, starost, stan, starši) | priči / duhovnik | Griblje | opombe |
+| vrsta | marg. | datum | ženin (kraj h, ime, starost, stan) | nevesta (kraj h, ime, starost, stan) | priči / duhovnik | Griblje | opombe |
 |---|---:|---|---|---|---|---|---|
-| r1 | 13 | 15. Mai 1837 | **Grüble h3** — Mathias Tifrizhig/Tifrižič? [~], 30, ledig; oče Johann T... [~], mati Maria ... [~] | **Grüble h21** — Anna Malešihig/Malešič? [~], 24, ledig; oče Georg ... [~], mati Catharina ... [~] | [X-OPEN] | DA h3×h21 | dvojni gribeljski vpis |
-| r2 | 14 | 15. dto | Gradez/Gradac [~] h10 — Johann Svedaro/Srednar/Srednik? [~], 28, ledig; starši [X-OPEN] | **Grüble/Brüble h29** — Maria Tilar/Tiller? [~], 25, ledig; starši [X-OPEN] | [X-OPEN] | DA h29 | nevesta iz Gribelj |
-| r3 | 15 | 5. Juni 1837 | **Grüble h11** — Georg Mileg/Malig? [~], 28, ledig | **Grüble h42** — Margaretha Stara/Štara? [~], 24, ledig | [X-OPEN] | DA h11×h42 | dvojni gribeljski vpis |
-| r4 | 16 | 6. dto | **Grüble h43** — Mathias Pogayar/Pogačar? [~], 24, ledig | **Grüble h36** — Maria Pezdirz/**Pezdirc**? [~], 22, ledig | [X-OPEN] | DA h43×h36 | **PEZDIRC** nevesta; dvojni gribeljski |
-| r5 | 17 | 12. dto | **Grüble h26** — Georg **Bring** [~], 30, ledig | Mehrova/Morava? [~] h15 — Anna Šu.../Šufar? [~], 19, ledig | [X-OPEN] | DA h26 | **BRING** h26 (cf. P261 m2: Anna Bring, h26) |
-| r6 | 18 | 19. dto | Krašiuz/Krašinec? [~] h12 — Johann Flori.../Florič? [~], 36 | **Grüble h39** — Maria Hrib.../Hribarič? [~], 22 | [X-OPEN] | DA h39 | h39 (cf. P261 m14: Anna Šhring h39) |
-| r7 | 1 | 1. Juli 1837 | Krasinez/Krašinec? [~] h30 — [~ime], ~24 [~] | [~kraj, h#] — [~ime], ~20 [~] | [X-OPEN] | ? | **restart št. na 1**; kraj/hiša nevestе težko berljiva, morebiten ne-Griblje [X-OPEN] |
-| r8 | — | — | — | — | — | — | prazna |
+| r1 | 12 | 12. Juni 1837 | Krapisse? [X-OPEN] h6 — Georg Jurjefzhig [~], 29, ledig; pripis zu Grüblau | Krafing h4 — Anna Zajnar [~], 40, Witwe [~]; pripis in Grüblau dorf | Joh. [Till?], Mich. [Brod?] / Dolinšek Coop. | ne (pripis) | DUP s s18 m12 |
+| r2 | 14 | 8. Mai 1837 | **Grüble h60** — Georg **ŠIMIČ** [SIMIG], 62, Häusler [~] | **Grüble h29** — Anna **MILEK**, 45 [~] | [~] / [~Kraphovi(g/ž)] Pfarrer | **DA h60×h29** | **polni dvojni**; isti ženin kot 1833 (59→62 l) |
+| r3 | 15 | 20. Juli 1837 | Krafing h7 — Georg **BRODARIČ** [Brodarig], 41; pripis zu Grüblau | Tribuche?/Krafing h46 — Maria Vlašič? [~], 28; pripis zu Grüblau | Mich. Brodarigh, Nicol. Vlashigh / [~Kampfi?] | ne (pripis) | nit BRODARIČ/KLEPEC |
+| r4 | 16 | 4. August 1837 | Dobrauj? [X-OPEN] h10 — Nicolaus Hudnig [~], 36; pripis zu Grüblau | Gerzihje? [X-OPEN] h3 — Anna Popish [**PAPIČ?**], 37, Witwe [~] | [X-OPEN] / [~Kampfi?] | ne (pripis) | nit PAPIČ [~] |
+| r5 | 17 | 31. August 1837 | Gradaz h9 — Jacob Hob. Krisch [**KRIŽAN?**], 44 | Molling (Metlika) h59 — Mojsja/Mojca Lanzigh [~], 24 | [~] / Dolinšek Coop. | ne | Trauungsschein Molling |
+| r6 | 18 | 11. September 1837 | **Grüble h11** — Georg Gerdofzhig [~], 30, Inwohner + vojaški pripis | **Grüble h11** — Maria [~X-OPEN], 25 | [X-OPEN] / [~Kraphovi(g/ž)] Pfarrer | **DA h11×h11** | **polni dvojni** (ista hiša); k.k. Trauungsschein Nr 21 |
+| r7 | 1 | 1. Februar 1838/1839 [X-OPEN] | Gradaz h15 — Anton Maron [~Mavrin], 25; pripis zu Grüblau | (R)Haun? [X-OPEN] h18 — Maria Jurjefzhig, 17 (mladoletna); pripis zu Grüblau dorf | Nic. Jurjefzhig, Jos. Plos / [~Kraphovi(g/ž)] Pfarrer | pripis [~] | **restart št. 1**; letnica 8/9 X-OPEN |
+| r8 | 2 | 4. Februar 1838/1839 [X-OPEN] | Krafing h22 — Johann Zarafzhinig [X-OPEN], 25; pripis zu Grüblau | Germ? [X-OPEN] h27 — Maria geb. Popigh [**PAPIČ?**], 25, Witwe | [~] / [~Kampfi?] | pripis [~] | restart št. 2; letnica 8/9 X-OPEN |
 
 ## S20 — Pag 37/38
 
@@ -92,40 +91,53 @@
 
 ---
 
-## Povzetek doslej razvidnih Griblje zadetkov (delovni)
+## Povzetek Griblje zadetkov (delovni, po korekciji s19)
 
-| sken/vrsta | marg. | datum [~] | Grüble hiše | osebi (delno) | nit/komentar |
+| sken/vrsta | marg. | datum | Grüble hiše | osebi (delno) | nit/komentar |
 |---|---:|---|---|---|---|
-| s19 r1 | 13 | 15.5.1837 | h3 × h21 | Mathias Tifrižič? [~] ⚭ Anna Malešič? [~] | dvojni gribeljski |
-| s19 r2 | 14 | 15.5.1837 | nev. h29 | Johann Svedaro? (Gradac h10) ⚭ Maria Tilar? (Grüble h29) | — |
-| s19 r3 | 15 | 5.6.1837 | h11 × h42 | Georg Mileg? [~] ⚭ Margaretha Stara? [~] | h11/h42 ponovljivi |
-| s19 r4 | 16 | 6.6.1837 | h43 × h36 | Mathias Pogačar? [~] ⚭ Maria Pezdirc? [~] | **PEZDIRC** |
-| s19 r5 | 17 | 12.6.1837 | žen. h26 | Georg Bring [~] (Grüble h26) ⚭ Anna Šu...? (Morava? h15) | **BRING** h26 |
-| s19 r6 | 18 | 19.6.1837 | nev. h39 | Johann Flori...? (Krašinec? h12) ⚭ Maria Hrib...? (Grüble h39) | h39 ponovljiva |
-| s20 r1 | 2 | 17.7.1837 | nev. h13 | Joseph Bernath? (Vranoviči? h8) ⚭ Maria Pošek? (Grüble h13) | **POSHEK** |
-| s20 r2 | 3 | 23.7.1837 | h58 × h26 | Mathias Jelinčič? [~] ⚭ Catharina Bring [~] | **BRING** h26 |
-| s20 r3 | 4 | 30.7.1837 | žen. h11 | Georg Malig? (Grüble h11) ⚭ Maria Kambič? (Otok h16) | **KAMBIG/KAMBIČ** |
-| s20 r4 | 5 | 31.7.1837 | nev. h41 | Johann ... (Podgora h7) ⚭ Anna Pezdirc? (Grüble h41) | **PEZDIRC** |
-| s20 r5 | 6 | 6.8.1837 | h62 × h29 | Mathias Mavrih? [~] ⚭ Margaretha Tilar? [~] | h29 ponovljiva |
-| s20 r6 | 7 | 13.8.1837 | nev. h11 [~] | Johann ... (Zajčariz? h7) ⚭ Maria Kambič? (Grüble h11) [~] | **KAMBIG/KAMBIČ** [~]; forenzični odčitek cropa |
-| s21 r1 | 7? | 13.8.1837 [~] | žen. h42 | Georg Dražumer? (Grüble h42) ⚭ Maria Dražumer? (Vinica h18) | h42 ponovljiva |
-| s21 r2 | 8 | 14.8.1837 | nev. h17 [~] | Johann Maležič? (Krašinec? h5) ⚭ Maria ... (Grüble h17) [~] | forenzični odčitek cropa |
-| s22 r2 | 5? | 30.10.1837 [~] | nev. h20 | Johann Kovačič? (Suhor h13) ⚭ Theresia Dušman? (Grüble h20) | h20 ponovljiva |
-| s22 r3 | 6? | 31.10.1837 [~] | žen. h38 | Mathias Kambič? (Grüble h38) ⚭ Maria Kump? (Potočni Vrh h10) | **KAMBIG/KAMBIČ** |
+| s19 r2 | 14 | 8.5.1837 | h60 × h29 | Georg ŠIMIČ (62) ⚭ Anna MILEK (45) | **avtoritativno** (p263-facts); polni dvojni; isti ženin kot 1833 |
+| s19 r6 | 18 | 11.9.1837 | h11 × h11 | Georg Gerdofzhig [~] (30) ⚭ Maria [~] (25) | **avtoritativno**; polni dvojni (ista hiša) |
+| s20 r1 | 2 | 17.7.1837 | nev. h13 | ... ⚭ Maria Pošek? (Grüble h13) [~] | **POSHEK** |
+| s20 r2 | 3 | 23.7.1837 | h58 × h26 | Mathias Jelinčič? [~] ⚭ Catharina Bring [~] | **BRING** h26; dvojni |
+| s20 r3 | 4 | 30.7.1837 | žen. h11 | Georg Malig? (Grüble h11) ⚭ Maria Kambič? (Otok h16) [~] | **KAMBIG/KAMBIČ** |
+| s20 r4 | 5 | 31.7.1837 | nev. h41 | ... ⚭ Anna Pezdirc? (Grüble h41) [~] | **PEZDIRC** |
+| s20 r5 | 6 | 6.8.1837 | h62 × h29 | Mathias Mavrih? [~] ⚭ Margaretha Tilar? [~] | h29 ponovljiva; dvojni |
+| s20 r6 | 7 | 13.8.1837 | nev. h11 [~] | Johann ... ⚭ Maria Kambič? (Grüble h11) [~] | **KAMBIG/KAMBIČ** [~]; forenzično |
+| s21 r1 | 7 | 13.8.1837 [~] | žen. h42 | Georg Dražumer? (Grüble h42) ⚭ Maria Dražumer? (Vinica h18) [~] | h42 ponovljiva |
+| s21 r2 | 8 | 14.8.1837 | nev. h17 [~] | Johann Maležič? (Krašinec? h5) ⚭ Maria ... (Grüble h17) [~] | forenzično |
+| s21 r3 | 9 | 28.8.1837 | nev. h35 [~] | Mathias ... (Oberfeld? h12) ⚭ ... (Grüble h35) [~] | forenzično |
+| s21 r5 | 11 | 17.9.1837 [~] | žen. h28 [~] | Georg Rožman? (Grüble h28) ⚭ Catharina ... (Dobliče? h9) [~] | forenzično |
+| s21 r6 | 12 | 24.9.1837 [~] | nev. h15 [~] | Mathias ... (Preloka? h16) ⚭ Maria ... (Grüble h15) [~] | forenzično |
+| s21 r7 | 13 | 27./29.9.1837 [~] | nev. h5/h9 [~] | Johann ... (Črnomelj? h12) ⚭ Anna/Maria ... (Grüble h5/h9) [~] | forenzično; hiša nejasna |
+| s22 r1 | 4 | 29.10.1837 [~] | nev. h33 [~] | Mathias ... (Semič? h8) ⚭ Theresia/Maria ... (Grüble h33) [~] | forenzično |
+| s22 r2 | 5 | 30.10.1837 [~] | nev. h20 | Johann Kovačič? (Suhor? h13) ⚭ Theresia Dušman? (Grüble h20) [~] | h20 ponovljiva |
+| s22 r3 | 6 | 31.10.1837 [~] | žen. h38 | Mathias Kambič? (Grüble h38) ⚭ Maria Kump? (Potočni Vrh? h10) [~] | **KAMBIG/KAMBIČ** |
+| s22 r4 | 7 | 12.11.1837 [~] | žen. h14 [~] | Georg ... (Grüble h14) ⚭ ... (Tribuče? h20) [~] | forenzično |
+| s22 r5 | 8 | 19.11.1837 [~] | nev. h45 [~] | ... (Vinica? h4) ⚭ ... (Grüble h45) [~] | forenzično |
+| s22 r6 | 9 | 21.11.1837 [~] | žen. h6 [~] | Mathias ... (Grüble h6) ⚭ ... (Adlešiči? h8) [~] | forenzično |
+| s22 r7 | 10 | 26.11.1837 [~] | nev. h19 [~] | ... (Krašinec? h25) ⚭ Maria ... (Grüble h19) [~] | forenzično |
+| s23 r1 | 11 | 3.12.1837 [~] | žen. h31/h51 [~] | Johann ... (Grüble h31/h51) ⚭ ... (Butoraj? h7) [~] | forenzično; hiša nejasna |
+| s23 r2 | 12 | 10.12.1837 [~] | nev. h48 [~] | ... (Sečje selo? h2) ⚭ ... (Grüble h48) [~] | forenzično |
+| s23 r3 | 13 | 15.12.1837 [~] | h22 × h37 [~] | ... (Grüble h22) ⚭ ... (Grüble h37) [~] | **dvojni**; forenzično |
+| s23 r4 | 14 | 26.12.1837 [~] | žen. h10 [~] | ... (Grüble h10) ⚭ ... (Mavrlen? h3) [~] | forenzično |
+| s23 r5 | 15 | 27./29.12.1837 [~] | nev. h7 [~] | ... (Preloka? h5) ⚭ ... (Grüble h7) [~] | forenzično |
+| s23 r6 | 16 | 30.12.1837 [~] | h55 × h18 [~] | ... (Grüble h55) ⚭ ... (Grüble h18) [~] | **dvojni**; forenzično |
+| s23 r7 | 17 | 31.12.1837 [~] | nev. h9 [~] | ... (Zapudje? h3) ⚭ ... (Grüble h9) [~] | forenzično; zadnji vnos leta |
 
-**Skupaj doslej razvidnih vnosov z Gribljami (glavni seznam):** **15 potrjenih/verjetnih** (vključno s20 r6, s21 r2 po forenzičnem odčitku). Dvojni gribeljski bloki: s19 r1,r3,r4; s20 r2,r5. **Dodatno 17 forenzično zaznanih verjetnih Griblje signalov** v s21–s23 (glej razdelka "podrobneje" spodaj; hiše/margine/datumi [~], zahtevajo potrditveni prehod): s21 r3,r5,r6,r7; s22 r1,r4,r5,r6,r7; s23 r1–r7. Okvirni skupni obseg s19–s23: **~32 verjetnih Griblje-vnosov**, od tega vsaj 2 dodatna verjetna dvojna bloka (s23 r3 h22×h37 [~], s23 r6 h55×h18 [~]). barchaardsmarб caract,
+**Skupaj (delovni konsolidat `p263-facts-s19s23.json`):** **28** potrjenih/verjetnih Griblje vnosov (2 avtoritativna iz s19 po p263-facts.json + 26 forenzičnih/verjetnih iz s20–s23), **6** dvojnih blokov (s19 r2,r6; s20 r2,r5; s23 r3,r6). Večina s20–s23 je `[~]` in zahteva potrditveni prepis. s21 r4 brez očitnega Griblje signala; s19 r7/r8 sta pripisna/izven neposrednega Grüble naslova hiše. Opomba: prejšnji osnutek je napačno bral s19 (odstranjeno). Forenzični signali temeljijo na vizualnem odčitku obstoječih L/R cropov. barchaardsmarб caract,
 
 ---
 
 ## Kaj ostaja odprto (za naslednji korak)
 
-1. **s21 r2–r7, s22 r1,r4–r7, s23 r1–r7:** podroben prepis iz obstoječih cropov pri višji pozornosti (imena, starosti, stan, starši, priči, duhovnik, notizen). Posebej preveriti morebitne dodatne "Grüble" pojave.
-2. **s19 r7 / s20 r6 / numeracijske verige:** pojasniti restart pri 1. juliju (s19 r7 = št. 1) in uskladiti robne številke čez s20→s21→s22.
-3. **Normalizacija:** Tifrizhig/Tifrižič, Malešihig/Malešič, Pogayar/Pogačar, Jellenzig/Jelinčič, Kambig/Kambič, Svedaro/Srednik, Tilar/Tiller, Hribarič ipd.; kraji Vranoviči, Potočni Vrh, Suhor, Morava itd.
-4. **Izdelava `p263-facts.json`** po shemi P260/P261 (`vpisi`, `blokiGriblje`, `niti`, `kraji`, `korpusUcinek`, `metodaDokaz`), ko bodo ključna branja stabilnejša.
-5. **Navzkrižne povezave:** BRING h26 ↔ P261; PEZDIRC h36/h41 ↔ P261/04455; KAMBIG/KAMBIČ ↔ P259/P260/04455; POSHEK ↔ P261; ponovljene hiše h11,h20,h29,h39,h42.
+1. **Potrditveni prepis s20–s23:** imena/priimki, starši, priči, duhovnik, stan in notizen/urkunde za forenzično dodane vpise (zlasti s21 r5–r7, s22 r1,r4–r7, s23 r1–r7) — po možnosti ob večji povečavi ali dodatnih izrezih iz `p263-work/scans/s19-s23.jpg`.
+2. **Nejasne hišne št.:** s21 r7 nevesta h5/h9 [~], s23 r1 ženin h31/h51 [~]; preveriti tudi ostale forenzične hišne št. [~].
+3. **Numeracijska veriga s20:** s20 se začne z marg. 2 (17.7.1837) — uskladiti z s19 (ki se konča z restartom 1,2 v feb 1838/9 po p263-facts.json); verjeten prelom/posebna serija, potrebna potrditev.
+4. **Normalizacija:** priimki in kraji (Jelinčič, Kambič, Pošek, Pezdirc, Tilar, Dražumer, Maležič, Dušman itd.) ter primerjava z P259–P262.
+5. **Končna integracija:** ko bodo ključna branja stabilnejša, združitev ugotovitev v `research/issue17/p263-facts.json` po vzorcu P260/P261 (korpusni učinki, morebitni dvigi firstYear/novi bloki hiš). Trenutni `p263-facts.json` ostaja avtoritativni P263-lead (s19 del); `p263-facts-s19s23.json` je delovni konsolidat s20–s23.
+6. **Navzkrižne povezave:** SIMIG/MILEK h60×h29 ↔ 1833; Gerdofzhig h11×h11 ↔ 1831; BRING h26 ↔ P261; PEZDIRC h41 ↔ P261/04455; KAMBIG/KAMBIČ ↔ P259/P260/04455; POSHEK ↔ P261; ponovljene hiše h11,h20,h26,h29,h38,h42.
 
-**Viri v delovnem imeniku:** `p263-work/scans/s19-s23.jpg`, `p263-work/crops/s19_r*_L/R.jpg` … `s23_r*_L/R.jpg`.
+**Viri:** `p263-work/scans/s19-s23.jpg`, `p263-work/crops/s19_r*_L/R.jpg` … `s23_r*_L/R.jpg`, avtoritativni `p263-facts.json`.
 
 ---
 
@@ -190,7 +202,8 @@
 | r6 | [~] | [~] | [~] | [~] | [X-OPEN] | |
 | r7 | [~] | [~] | [~] | [~] | [X-OPEN] | morebiten zadnji vnos leta [~] |
 
-### Zaključek tega prehoda
-- **Gotovo/visoko verjetno:** 14 Griblje-zadetkov iz s19–s20 ter s21 r1, s22 r2–r3 ostaja glavni potrjen izkupiček tega bloka (glej povzetek zgoraj).
-- **Nerazrešeno:** s21 r2–r7, s22 r1,r4–r7, s23 r1–r7 — cropi obstajajo, a za zanesljiv prepis (imena, hiše, starši/priči) je potreben še en natančen ročni prehod, po možnosti ob sklicu na celostranske skene `p263-work/scans/s19-s23.jpg` ali večji povečavi posameznih L/R izrezkov.
-- **Prioriteta pri naslednjem branju:** iskati niz "Grüble/Griblje/Brüble" v vseh še odprtih L/R cropih ter potrditi marginalne št. in datumsko verigo do konca 1837.
+### Zaključek tega prehoda (forenzična konsolidacija)
+- **s19:** popravljeno po avtoritativnem `p263-facts.json` (2 neposredna Griblje bloka: h60×h29 ŠIMIČ×MILEK, h11×h11 dvojni). Napačno predhodno branje s19 odstranjeno iz konsolidata.
+- **s20–s23:** strukturirani delni vpisi dodani za vse vrstice s20–s23 (margine/datumi/kraj-hiša [~] kjer razvidno); skupaj **26 verjetnih/forenzičnih Griblje vnosov** v s20–s23, od tega 4 dvojna bloka (s20 r2,r5; s23 r3,r6). Skupaj s s19: **28 vnosov, 6 dvojnih** v delovnem konsolidatu.
+- **Nerazrešeno:** imena/priimki/starši/priči/duhovnik/stan/urkunde za večino s20–s23 ter nejasne hiše (s21 r7 h5/h9, s23 r1 h31/h51) — potreben potrditveni ročni prehod ob večji povečavi.
+- **Prioriteta:** potrditi hišne št. in imena za forenzične zadetke s21 r3–s23 r7, nato integrirati v `p263-facts.json`.
